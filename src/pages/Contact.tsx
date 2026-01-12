@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, Phone, MapPin, Clock, Send, MessageSquare, Briefcase, HelpCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
+import { toast } from 'sonner';
+import { initEmailJS, sendContactEmail, EMAILJS_CONFIG } from '@/lib/emailjs';
 import {
   Accordion,
   AccordionContent,
@@ -90,6 +91,7 @@ const faqs = [
 ];
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -100,11 +102,53 @@ export default function Contact() {
     consent: false
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you! We\'ll respond within 24 hours.');
+    
+    if (!formData.consent) {
+      toast.error('Please agree to be contacted before submitting.');
+      return;
+    }
+
+    // Check if EmailJS is configured
+    if (EMAILJS_CONFIG.publicKey === 'YOUR_PUBLIC_KEY') {
+      toast.error('EmailJS is not configured. Please set up your EmailJS credentials in src/lib/emailjs.ts');
+      console.log('Form data (EmailJS not configured):', formData);
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      await sendContactEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        inquiryType: formData.inquiryType,
+        message: formData.message,
+      });
+      
+      toast.success('Thank you! We\'ll respond within 24 hours.');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        inquiryType: '',
+        message: '',
+        consent: false
+      });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      toast.error('Failed to send message. Please try again or email us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -294,9 +338,18 @@ export default function Contact() {
                     </label>
                   </div>
 
-                  <Button type="submit" variant="hero" size="lg" className="w-full">
-                    Send Message
-                    <Send className="ml-2 h-4 w-4" />
+                  <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="ml-2 h-4 w-4" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </div>
