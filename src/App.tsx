@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import VornHR from "./pages/VornHR";
+import VorQard from "./pages/VorQard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,7 +29,7 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/vorn-hr" element={<VornHR />} />
-          <Route path="/products/vorqard" element={<VornHR />} />
+          <Route path="/products/vorqard" element={<VorQard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
