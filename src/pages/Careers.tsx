@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Briefcase, BookOpen, Globe, Rocket, MapPin, Clock, ChevronRight, Upload } from 'lucide-react';
+import { ArrowRight, Briefcase, BookOpen, Globe, Rocket, MapPin, Clock, ChevronRight, Upload, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Layout from '@/components/layout/Layout';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { toast } from 'sonner';
+import { initEmailJS, sendApplicationEmail, EMAILJS_CONFIG } from '@/lib/emailjs';
 
 const benefits = [
   {
@@ -123,6 +124,7 @@ const processSteps = [
 
 export default function Careers() {
   const [selectedPosition, setSelectedPosition] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -132,10 +134,54 @@ export default function Careers() {
     coverLetter: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Application submitted:', { ...formData, position: selectedPosition });
-    alert('Thank you for your application! We\'ll be in touch within a week.');
+
+    if (!selectedPosition) {
+      toast.error('Please select a position.');
+      return;
+    }
+
+    // Check if EmailJS is configured
+    if (EMAILJS_CONFIG.publicKey === 'YOUR_PUBLIC_KEY') {
+      toast.error('EmailJS is not configured. Please set up your EmailJS credentials in src/lib/emailjs.ts');
+      console.log('Application data (EmailJS not configured):', { ...formData, position: selectedPosition });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      await sendApplicationEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        position: selectedPosition,
+        experience: formData.experience,
+        portfolio: formData.portfolio,
+        coverLetter: formData.coverLetter,
+      });
+      
+      toast.success('Thank you for your application! We\'ll be in touch within a week.');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        experience: '',
+        portfolio: '',
+        coverLetter: ''
+      });
+      setSelectedPosition('');
+    } catch (error) {
+      console.error('Failed to send application:', error);
+      toast.error('Failed to submit application. Please try again or email us directly at careers@abhivorn.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -448,9 +494,18 @@ export default function Careers() {
                   />
                 </div>
 
-                <Button type="submit" variant="hero" size="lg" className="w-full">
-                  Submit Application
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Submit Application
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </>
+                  )}
                 </Button>
               </form>
             </div>
