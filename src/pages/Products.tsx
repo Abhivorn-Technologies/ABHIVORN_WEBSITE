@@ -82,12 +82,7 @@ export default function Products() {
             {/* Hero Section */}
             <section className="section-padding bg-gradient-to-b from-muted/50 to-background">
                 <div className="container-custom">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="max-w-3xl mx-auto text-center"
-                    >
+                    <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
                         <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
                             Enterprise-Grade{' '}
                             <span className="text-accent">SaaS Solutions</span>
@@ -95,7 +90,7 @@ export default function Products() {
                         <p className="text-lg text-muted-foreground">
                             Ready-to-deploy products built for modern businesses. Choose the solution that fits your needs.
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
@@ -123,7 +118,7 @@ export default function Products() {
                                 />
 
                                 {product.badge && (
-                                    <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-medium z-10">
+                                    <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-accent/10 text-primary text-xs font-medium z-10">
                                         {product.badge}
                                     </div>
                                 )}
@@ -136,6 +131,8 @@ export default function Products() {
                                             <img
                                                 src={product.logo}
                                                 alt={`${product.name} Logo`}
+                                                width="80"
+                                                height="80"
                                                 className="w-full h-full object-contain p-2 bg-white"
                                             />
                                         </div>
@@ -153,7 +150,7 @@ export default function Products() {
                                     <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-muted/50 rounded-xl">
                                         {product.metrics.map((metric) => (
                                             <div key={metric.label} className="text-center">
-                                                <div className="text-2xl font-bold text-accent">{metric.value}</div>
+                                                <div className="text-2xl font-bold text-primary">{metric.value}</div>
                                                 <div className="text-xs text-muted-foreground">{metric.label}</div>
                                             </div>
                                         ))}
@@ -163,7 +160,7 @@ export default function Products() {
                                     <div className="grid sm:grid-cols-2 gap-3 mb-6">
                                         {product.features.map((feature) => (
                                             <div key={feature} className="flex items-center gap-2 text-sm text-foreground/80">
-                                                <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                                                <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                                                 {feature}
                                             </div>
                                         ))}
@@ -177,13 +174,13 @@ export default function Products() {
                                     {/* CTA */}
                                     <div className="flex gap-4">
                                         <Link to={product.href} className="flex-1">
-                                            <Button variant="hero" className="w-full">
+                                            <Button variant="hero" className="w-full" aria-label={`Learn More about ${product.name}`}>
                                                 Learn More
                                                 <ArrowRight className="ml-2 h-4 w-4" />
                                             </Button>
                                         </Link>
                                         <Link to="/contact">
-                                            <Button variant="outline">
+                                            <Button variant="outline" aria-label={`Get Demo for ${product.name}`}>
                                                 Get Demo
                                             </Button>
                                         </Link>
@@ -232,12 +229,7 @@ export default function Products() {
             {/* CTA Section */}
             <section className="section-padding bg-primary">
                 <div className="container-custom">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="max-w-2xl mx-auto text-center"
-                    >
+                    <div className="max-w-2xl mx-auto text-center animate-fade-in-up">
                         <h2 className="text-3xl font-bold text-primary-foreground mb-6">
                             Ready to Transform Your Business?
                         </h2>
@@ -245,12 +237,12 @@ export default function Products() {
                             Schedule a demo to see how our products can help streamline your operations.
                         </p>
                         <Link to="/contact">
-                            <Button variant="hero" size="lg" className="bg-accent hover:bg-accent/90">
+                            <Button variant="hero" size="lg" className="bg-accent hover:bg-accent/90" aria-label="Book a Free Demo">
                                 Book a Free Demo
                                 <ArrowRight className="ml-2 h-5 w-5" />
                             </Button>
                         </Link>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
         </Layout>

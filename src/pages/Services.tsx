@@ -139,21 +139,16 @@ export default function Services() {
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-b from-muted/50 to-background">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
               Comprehensive{' '}
               <span className="text-accent">Technology Solutions</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              From ready-to-deploy SaaS products to custom enterprise solutions, 
+              From ready-to-deploy SaaS products to custom enterprise solutions,
               we have the expertise to transform your business.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -207,7 +202,7 @@ export default function Services() {
 
                 <div className="flex flex-wrap gap-4 mb-6">
                   {product.metrics.map((metric) => (
-                    <span key={metric} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                    <span key={metric} className="px-3 py-1 bg-accent/10 text-primary rounded-full text-sm font-medium">
                       {metric}
                     </span>
                   ))}
@@ -219,13 +214,13 @@ export default function Services() {
 
                 <div className="flex gap-4">
                   <Link to={product.href}>
-                    <Button variant="hero">
+                    <Button variant="hero" aria-label={`Get Demo for ${product.title}`}>
                       {product.cta}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
                   <Link to="/contact">
-                    <Button variant="outline">View Pricing</Button>
+                    <Button variant="outline" aria-label={`View Pricing for ${product.title}`}>View Pricing</Button>
                   </Link>
                 </div>
               </motion.div>
@@ -296,11 +291,10 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`rounded-2xl p-8 ${
-                  model.highlighted
+                className={`rounded-2xl p-8 ${model.highlighted
                     ? 'bg-primary text-primary-foreground'
                     : 'bg-card border border-border'
-                }`}
+                  }`}
               >
                 <h3 className={`text-xl font-bold mb-2 ${model.highlighted ? '' : 'text-foreground'}`}>
                   {model.title}
@@ -337,6 +331,7 @@ export default function Services() {
                   <Button
                     variant={model.highlighted ? 'hero' : 'outline'}
                     className={model.highlighted ? 'bg-accent hover:bg-accent/90 w-full' : 'w-full'}
+                    aria-label={`${model.cta} for ${model.title}`}
                   >
                     {model.cta}
                   </Button>
@@ -382,12 +377,7 @@ export default function Services() {
       {/* CTA Section */}
       <section className="section-padding bg-primary">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-center"
-          >
+          <div className="max-w-2xl mx-auto text-center animate-fade-in-up">
             <h2 className="text-3xl font-bold text-primary-foreground mb-6">
               Ready to Start Your Project?
             </h2>
@@ -395,12 +385,12 @@ export default function Services() {
               Let's discuss your requirements and find the perfect solution for your business.
             </p>
             <Link to="/contact">
-              <Button variant="hero" size="lg" className="bg-accent hover:bg-accent/90">
+              <Button variant="hero" size="lg" className="bg-accent hover:bg-accent/90" aria-label="Get a Free Consultation">
                 Get a Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

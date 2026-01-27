@@ -117,12 +117,8 @@ export default function VornHR() {
 
         <div className="container-custom relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary text-sm font-medium mb-6">
                 <Zap className="h-4 w-4" />
                 Smart HR Automation
               </div>
@@ -140,13 +136,13 @@ export default function VornHR() {
 
               <div className="flex flex-wrap gap-4 mb-10">
                 <a href="https://www.vornhr.com/pricing" target="_blank" rel="noopener noreferrer">
-                  <Button variant="hero" size="xl">
+                  <Button variant="hero" size="xl" aria-label="Get Started with Vorn HR for Free">
                     Get Started Free
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
                 <a href="https://www.vornhr.com/contact" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="xl" className="border-foreground/20 text-foreground hover:bg-foreground/5">
+                  <Button variant="outline" size="xl" className="border-foreground/20 text-foreground hover:bg-foreground/5" aria-label="Book a Vorn HR Demo">
                     <Calendar className="mr-2 h-5 w-5" />
                     Book Demo
                   </Button>
@@ -184,7 +180,7 @@ export default function VornHR() {
                   <div className="text-sm text-muted-foreground">Rating</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -198,6 +194,8 @@ export default function VornHR() {
                   <img
                     src="https://www.vornhr.com/hr_with_laptop.png"
                     alt="VORN HR Dashboard Preview"
+                    width="800"
+                    height="500"
                     className="w-full rounded-2xl"
                   />
                 </div>
@@ -227,7 +225,7 @@ export default function VornHR() {
                 className="text-center group"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-secondary/20 transition-colors">
-                  <feature.icon className="h-6 w-6 text-secondary" />
+                  <feature.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground text-sm">{feature.title}</h3>
                 <p className="text-xs text-muted-foreground">{feature.description}</p>
@@ -272,7 +270,7 @@ export default function VornHR() {
               <ul className="space-y-3">
                 {coreHRFeatures.map((feature) => (
                   <li key={feature} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -288,13 +286,13 @@ export default function VornHR() {
               className="bg-card border border-border rounded-2xl p-8 card-hover"
             >
               <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6">
-                <Fingerprint className="h-7 w-7 text-secondary" />
+                <Fingerprint className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">Time & Attendance</h3>
               <ul className="space-y-3">
                 {timeAttendanceFeatures.map((feature) => (
                   <li key={feature} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -310,13 +308,13 @@ export default function VornHR() {
               className="bg-card border border-border rounded-2xl p-8 card-hover"
             >
               <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
-                <DollarSign className="h-7 w-7 text-accent" />
+                <DollarSign className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">Payroll</h3>
               <ul className="space-y-3">
                 {payrollFeatures.map((feature) => (
                   <li key={feature} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -382,8 +380,8 @@ export default function VornHR() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`rounded-2xl p-8 ${plan.highlighted
-                    ? 'bg-primary text-primary-foreground ring-2 ring-secondary shadow-xl scale-105'
-                    : 'bg-card border border-border'
+                  ? 'bg-primary text-primary-foreground ring-2 ring-secondary shadow-xl scale-105'
+                  : 'bg-card border border-border'
                   }`}
               >
                 <h3 className={`text-xl font-bold mb-2 ${plan.highlighted ? '' : 'text-foreground'}`}>
@@ -402,7 +400,7 @@ export default function VornHR() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm">
-                      <CheckCircle className={`h-4 w-4 ${plan.highlighted ? 'text-secondary' : 'text-secondary'}`} />
+                      <CheckCircle className={`h-4 w-4 ${plan.highlighted ? 'text-secondary' : 'text-primary'}`} />
                       {feature}
                     </li>
                   ))}
@@ -412,6 +410,7 @@ export default function VornHR() {
                   <Button
                     variant={plan.variant}
                     className={`w-full ${plan.highlighted ? 'bg-secondary hover:bg-secondary/90 text-secondary-foreground' : ''}`}
+                    aria-label={`Select ${plan.name} Plan`}
                   >
                     {plan.cta}
                   </Button>
@@ -467,12 +466,7 @@ export default function VornHR() {
         </div>
 
         <div className="container-custom relative">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
+          <div className="text-center animate-fade-in-up">
             <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-6">
               Ready to Transform Your HR Processes?
             </h2>
@@ -482,18 +476,18 @@ export default function VornHR() {
 
             <div className="flex flex-wrap justify-center gap-4">
               <a href="https://www.vornhr.com/contact" target="_blank" rel="noopener noreferrer">
-                <Button size="xl" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                <Button size="xl" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground" aria-label="Book a Vorn HR Demo">
                   Book a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </a>
               <a href="https://www.vornhr.com/pricing" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+                <Button variant="outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10" aria-label="Start Vorn HR Free Trial">
                   Start Free Trial
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

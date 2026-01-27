@@ -134,16 +134,12 @@ export default function VorQard() {
 
         <div className="container-custom relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div className="animate-fade-in-up">
               <div className="flex flex-wrap gap-3 mb-6">
-                <span className="px-4 py-1.5 rounded-full bg-secondary text-white text-sm font-medium">
+                <span className="px-4 py-1.5 rounded-full bg-secondary text-primary text-sm font-medium">
                   Beta Access
                 </span>
-                <span className="px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium">
+                <span className="px-4 py-1.5 rounded-full bg-accent/10 text-primary text-sm font-medium">
                   HIPAA Compliant
                 </span>
                 <span className="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
@@ -164,18 +160,18 @@ export default function VorQard() {
 
               <div className="flex flex-wrap gap-4">
                 <Link to="/contact">
-                  <Button variant="hero" size="xl" className="bg-secondary hover:bg-secondary/90">
+                  <Button variant="hero" size="xl" className="bg-secondary hover:bg-secondary/90" aria-label="Join VorQard Beta Program">
                     Join Beta Program
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button variant="heroOutline" size="xl">
+                  <Button variant="heroOutline" size="xl" aria-label="Request VorQard Demo">
                     Request Demo
                   </Button>
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -187,6 +183,8 @@ export default function VorQard() {
                 <img
                   src={VorQardClinic}
                   alt="VorQard Healthcare Management System"
+                  width="800"
+                  height="600"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-6">
@@ -232,7 +230,7 @@ export default function VorQard() {
                 className="bg-card border border-border rounded-2xl p-6 card-hover"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-secondary" />
+                  <feature.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">{feature.description}</p>
@@ -269,7 +267,7 @@ export default function VorQard() {
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                   <h3 className="text-2xl font-bold text-foreground mb-4">{benefit.title}</h3>
                   <p className="text-muted-foreground mb-4">{benefit.description}</p>
-                  <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-lg text-sm font-medium">
+                  <span className="inline-block px-4 py-2 bg-secondary/10 text-primary rounded-lg text-sm font-medium">
                     {benefit.stats}
                   </span>
                 </div>
@@ -278,6 +276,8 @@ export default function VorQard() {
                   <img
                     src={benefit.image}
                     alt={benefit.title}
+                    width="600"
+                    height="400"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -311,7 +311,7 @@ export default function VorQard() {
                 className="bg-card border border-border rounded-2xl p-6 card-hover"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
-                  <Heart className="h-6 w-6 text-secondary" />
+                  <Heart className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{useCase.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{useCase.description}</p>
@@ -339,7 +339,7 @@ export default function VorQard() {
               </span>
             ))}
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Shield className="h-4 w-4 text-secondary" />
+              <Shield className="h-4 w-4 text-primary" />
               HIPAA Compliant
             </div>
           </div>
@@ -355,7 +355,7 @@ export default function VorQard() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-white text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-primary text-sm font-medium mb-6">
               Limited Beta Access
             </span>
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -370,8 +370,9 @@ export default function VorQard() {
               <Input
                 placeholder="Enter your email"
                 className="flex-1"
+                aria-label="Email Address for Beta Access"
               />
-              <Button variant="hero" className="bg-secondary hover:bg-secondary/90">
+              <Button variant="hero" className="bg-secondary hover:bg-secondary/90" aria-label="Join VorQard Beta">
                 Join Beta
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -424,12 +425,7 @@ export default function VorQard() {
         </div>
 
         <div className="container-custom relative">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
+          <div className="text-center animate-fade-in-up">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Modernize Your Healthcare Facility?
             </h2>
@@ -439,18 +435,18 @@ export default function VorQard() {
 
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/contact">
-                <Button size="xl" className="bg-white text-secondary hover:bg-white/90">
+                <Button size="xl" className="bg-white text-secondary hover:bg-white/90" aria-label="Request VorQard Demo">
                   Request Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="xl" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="xl" variant="outline" className="border-white text-white hover:bg-white/10" aria-label="Contact VorQard Sales">
                   Contact Sales
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

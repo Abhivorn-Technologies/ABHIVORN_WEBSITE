@@ -63,12 +63,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-b from-muted/50 to-background">
         <div className="container-custom">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={fadeInUp}
-            className="max-w-3xl mx-auto text-center"
-          >
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
               Building the Future of{' '}
               <span className="text-accent">Enterprise Software</span>
@@ -77,7 +72,7 @@ export default function About() {
               Founded in 2025, headquartered in Hyderabad. We're an MSME-registered software company
               specializing in HR and healthcare solutions.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -113,7 +108,7 @@ export default function About() {
                   <span className="text-sm text-primary font-medium">MSME Registered</span>
                 </div>
                 <div className="px-4 py-2 bg-accent/10 rounded-lg">
-                  <span className="text-sm text-accent font-medium">10+ Team Members</span>
+                  <span className="text-sm text-primary font-medium">10+ Team Members</span>
                 </div>
               </div>
             </motion.div>
@@ -129,6 +124,8 @@ export default function About() {
                 <img
                   src={AboutOffice}
                   alt="Abhivorn Technologies Office"
+                  width="600"
+                  height="600"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
@@ -213,7 +210,7 @@ export default function About() {
                 className="text-center"
               >
                 <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="h-8 w-8 text-accent" />
+                  <value.icon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{value.title}</h3>
                 <p className="text-sm text-muted-foreground">{value.description}</p>
@@ -250,9 +247,9 @@ export default function About() {
                   className="relative pl-20 pb-12 last:pb-0"
                 >
                   <div className="absolute left-0 w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <Calendar className="h-6 w-6 text-accent" />
+                    <Calendar className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="text-sm text-accent font-medium mb-1">{milestone.date}</div>
+                  <div className="text-sm text-primary font-medium mb-1">{milestone.date}</div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">{milestone.title}</h3>
                   <p className="text-muted-foreground">{milestone.description}</p>
                 </motion.div>
@@ -265,12 +262,7 @@ export default function About() {
       {/* CTA Section */}
       <section className="section-padding bg-primary">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-center"
-          >
+          <div className="max-w-2xl mx-auto text-center animate-fade-in-up">
             <h2 className="text-3xl font-bold text-primary-foreground mb-6">
               Want to Join Our Team?
             </h2>
@@ -278,11 +270,11 @@ export default function About() {
               We're always looking for talented individuals to help us build the future of enterprise software.
             </p>
             <Link to="/careers">
-              <Button variant="hero" size="lg" className="bg-accent hover:bg-accent/90">
+              <Button variant="hero" size="lg" className="bg-accent hover:bg-accent/90" aria-label="View Open Positions at Abhivorn">
                 View Open Positions
               </Button>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

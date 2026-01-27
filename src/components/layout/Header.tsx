@@ -49,17 +49,16 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-background/95 backdrop-blur-md shadow-sm border-b border-border/50'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Abhivorn Technologies" className="h-10 w-auto" />
+            <img src={logo} alt="Abhivorn Technologies" width="160" height="40" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -74,16 +73,14 @@ export default function Header() {
                 <Link to={link.href}>
                   <Button
                     variant="nav"
-                    className={`flex items-center gap-1 ${
-                      location.pathname === link.href ? 'text-primary' : ''
-                    }`}
+                    className={`flex items-center gap-1 ${location.pathname === link.href ? 'text-primary' : ''
+                      }`}
                   >
                     {link.name}
                     {link.dropdown && (
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          activeDropdown === link.name ? 'rotate-180' : ''
-                        }`}
+                        className={`h-4 w-4 transition-transform ${activeDropdown === link.name ? 'rotate-180' : ''
+                          }`}
                       />
                     )}
                   </Button>
