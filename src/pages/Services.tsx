@@ -20,7 +20,7 @@ const saasProducts = [
       'Role-Based Access Control'
     ],
     metrics: ['10+ companies', '99.8% uptime'],
-    pricing: 'Starting at ₹5,000/month',
+    pricing: 'Starting at ₹499/month',
     cta: 'Get Demo',
     href: '/products/vorn-hr'
   },

@@ -53,34 +53,70 @@ const stats = [
 
 const pricingPlans = [
   {
-    name: 'Starter',
-    price: 'Free',
-    period: 'Forever',
-    description: 'Perfect for small teams getting started',
-    features: ['Up to 20 employees', 'Basic attendance', 'Leave management', 'Email support'],
-    cta: 'Get Started Free',
+    name: 'Starter Plan',
+    price: '₹499',
+    period: '/month',
+    subtitle: 'Up to 10 employees',
+    features: [
+      'Employee Management',
+      'Attendance Tracking',
+      'Leave Management',
+      'Employee Directory',
+      'Basic Reports',
+      'Email Support',
+      'No Payroll / Payslip',
+      '100 AI Credits'
+    ],
+    cta: 'Start 7-Day Trial',
     variant: 'outline' as const
   },
   {
-    name: 'Professional',
-    price: '₹10,000',
+    name: 'Growth Plan',
+    price: '₹1,499',
     period: '/month',
-    description: 'For growing businesses with advanced needs',
-    features: ['Up to 500 employees', 'All features', 'Facial recognition', 'Priority support', 'API access', 'Custom reports'],
-    cta: 'Start Free Trial',
+    subtitle: 'Up to 25 employees',
     highlighted: true,
+    badge: 'BEST VALUE',
+    features: [
+      'Everything in Starter',
+      'Payroll Management',
+      'Payslip Generation',
+      'Performance Tracking',
+      'Employee Self-Service Portal',
+      'Email Notifications',
+      '150 AI Credits'
+    ],
+    cta: 'Start 7-Day Trial',
     variant: 'hero' as const
   },
   {
-    name: 'Enterprise',
-    price: 'Custom',
-    period: 'Pricing',
-    description: 'For large organizations with custom requirements',
-    features: ['500+ employees', 'Custom features', 'Dedicated support', 'On-premise option', 'SLA guarantee', 'Training included'],
-    cta: 'Contact Sales',
+    name: 'Business Plan',
+    price: '₹3,499',
+    period: '/month',
+    subtitle: 'Up to 50 employees',
+    features: [
+      'Everything in Growth',
+      'Advanced HR Analytics',
+      'Role-Based Access Control',
+      'HR Insights Dashboard',
+      'Priority Support',
+      '500 AI Credits'
+    ],
+    cta: 'Start 7-Day Trial',
     variant: 'outline' as const
+  },
+  {
+    name: 'Enterprise',
+    isEnterprise: true,
+    subtitle: 'Tailored for teams with 50+ employees.',
+    description: 'Custom workflows, dedicated account manager, and API access.',
+    cta: 'Contact Sales',
+    variant: 'hero' as const
   }
 ];
+
+
+
 
 const faqs = [
   {
@@ -190,17 +226,24 @@ export default function VornHR() {
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl blur-2xl" />
-                <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl">
-                  <img
-                    src="https://www.vornhr.com/hr_with_laptop.png"
-                    alt="VORN HR Dashboard Preview"
-                    width="800"
-                    height="500"
-                    className="w-full rounded-2xl"
+                <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl overflow-hidden aspect-video">
+                  <video
+                    src="/src/assets/vornhr_video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover rounded-2xl"
                   />
+                  {/* Play Icon Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/5 opacity-0 hover:opacity-100 transition-opacity">
+                    <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <Zap className="h-8 w-8 text-white fill-white" />
+                    </div>
+                  </div>
                 </div>
                 {/* Floating Badge */}
-                <div className="absolute -right-4 top-1/4 transform rotate-6">
+                <div className="absolute -right-4 top-1/4 transform rotate-6 animate-float">
                   <div className="bg-card border border-border rounded-xl p-3 shadow-lg">
                     <div className="text-xs text-muted-foreground">Explore More</div>
                   </div>
@@ -369,9 +412,7 @@ export default function VornHR() {
           >
             <h2 className="text-3xl font-bold text-foreground mb-4">Simple, Transparent Pricing</h2>
             <p className="text-muted-foreground">Choose the plan that fits your needs</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          </motion.div>          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
@@ -379,51 +420,104 @@ export default function VornHR() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`rounded-2xl p-8 ${plan.highlighted
-                  ? 'bg-primary text-primary-foreground ring-2 ring-secondary shadow-xl scale-105'
-                  : 'bg-card border border-border'
+                className={`relative flex flex-col rounded-[2rem] p-8 transition-all duration-300 shadow-sm border-2 ${plan.highlighted
+                  ? 'bg-[#005c7a] text-white border-[#38BDF8] shadow-xl z-10'
+                  : 'bg-white text-[#0F172A] border-slate-100/80 hover:border-[#38BDF8]/30'
                   }`}
               >
-                <h3 className={`text-xl font-bold mb-2 ${plan.highlighted ? '' : 'text-foreground'}`}>
-                  {plan.name}
-                </h3>
-                <div className="flex items-baseline gap-1 mb-2">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className={plan.highlighted ? 'text-primary-foreground/70' : 'text-muted-foreground'}>
-                    {plan.period}
-                  </span>
-                </div>
-                <p className={`text-sm mb-6 ${plan.highlighted ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
-                  {plan.description}
-                </p>
+                {plan.badge && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="bg-[#38BDF8] text-white text-[10px] font-black px-4 py-1.5 rounded-lg whitespace-nowrap tracking-widest uppercase">
+                      {plan.badge}
+                    </span>
+                  </div>
+                )}
 
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm">
-                      <CheckCircle className={`h-4 w-4 ${plan.highlighted ? 'text-secondary' : 'text-primary'}`} />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                {plan.isEnterprise ? (
+                  <div className="flex flex-col items-center text-center h-full">
+                    <div className="w-16 h-16 rounded-2xl bg-[#eff6ff] flex items-center justify-center mb-8">
+                      <Zap className="h-8 w-8 text-[#38BDF8] fill-[#38BDF8]/10" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-[#0F172A] mb-8">
+                      {plan.name}
+                    </h3>
+                    
+                    <p className="text-slate-500 text-sm leading-relaxed mb-8 max-w-[200px] flex-grow font-medium">
+                      {plan.subtitle}<br />
+                      {plan.description}
+                    </p>
 
-                <a href="https://www.vornhr.com/contact" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant={plan.variant}
-                    className={`w-full ${plan.highlighted ? 'bg-secondary hover:bg-secondary/90 text-secondary-foreground' : ''}`}
-                    aria-label={`Select ${plan.name} Plan`}
-                  >
-                    {plan.cta}
-                  </Button>
-                </a>
+                    <a href="https://www.vornhr.com/contact" target="_blank" rel="noopener noreferrer" className="w-full mt-auto">
+                      <Button
+                        className="w-full h-14 rounded-xl bg-[#0F172A] hover:bg-[#1E293B] text-white font-bold group transition-all duration-300"
+                        aria-label="Contact Sales"
+                      >
+                        {plan.cta}
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </a>
+                  </div>
+                ) : (
+                  <>
+                    <div className="mb-6">
+                      <h3 className={`text-xl font-bold mb-4 ${plan.highlighted ? 'text-white' : 'text-[#0F172A]'}`}>
+                        {plan.name}
+                      </h3>
+                      <div className="flex items-baseline gap-1 mb-1">
+                        <span className="text-4xl font-bold">{plan.price}</span>
+                        <span className={`text-sm font-medium ${plan.highlighted ? 'text-blue-100' : 'text-slate-400'}`}>
+                          {plan.period}
+                        </span>
+                      </div>
+                      {plan.subtitle && (
+                        <p className={`text-sm font-medium ${plan.highlighted ? 'text-blue-100/70' : 'text-slate-500'}`}>
+                          {plan.subtitle}
+                        </p>
+                      )}
+                    </div>
+
+                    <ul className="space-y-4 mb-10 flex-grow">
+                      {plan.features?.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3 text-sm">
+                          <div className={`mt-0.5 rounded-full border p-0.5 flex-shrink-0 ${plan.highlighted ? 'border-white/20' : 'border-slate-200'}`}>
+                            <CheckCircle className={`h-3 w-3 ${plan.highlighted ? 'text-white' : 'text-[#006080]'}`} />
+                          </div>
+                          <span className={plan.highlighted ? 'text-white/90' : 'text-slate-600 font-medium'}>
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <a href="https://www.vornhr.com/contact" target="_blank" rel="noopener noreferrer" className="mt-auto">
+                      <Button
+                        variant="outline"
+                        className={`w-full h-12 rounded-xl text-sm font-bold transition-all duration-300 border-2 group ${plan.highlighted
+                          ? 'bg-[#38BDF8] border-[#38BDF8] text-white hover:bg-[#38BDF8]/90 hover:border-[#38BDF8]/90'
+                          : 'bg-transparent border-[#38BDF8] text-[#38BDF8] hover:bg-transparent hover:border-[#38BDF8] hover:shadow-[0_0_15px_rgba(56,189,248,0.1)]'
+                          }`}
+                        aria-label={plan.cta}
+                      >
+                        {plan.cta}
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </a>
+                  </>
+                )}
               </motion.div>
             ))}
           </div>
 
-          <p className="text-center text-sm text-muted-foreground mt-8">
-            All plans include free implementation support
-          </p>
+
+          <div className="mt-12 text-center">
+            <p className="text-sm font-medium text-slate-500">
+              All plans include free implementation support
+            </p>
+          </div>
         </div>
       </section>
+
 
       {/* FAQ Section */}
       <section className="section-padding bg-muted/30">

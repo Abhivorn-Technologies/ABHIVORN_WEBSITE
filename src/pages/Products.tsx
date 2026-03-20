@@ -27,7 +27,7 @@ const products = [
             { value: '5,000+', label: 'Employees' },
             { value: '99.8%', label: 'Uptime' }
         ],
-        pricing: 'Starting at ₹5,000/month',
+        pricing: 'Starting at ₹499/month',
         href: '/products/vorn-hr',
         badge: 'Most Popular',
         logo: VornHRLogo
