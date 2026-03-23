@@ -104,9 +104,9 @@ export default function Index() {
         </div>
 
         <div className="container-custom relative">
-          <div className="py-20 lg:py-32">
-            <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-              <div className="flex items-center justify-center gap-4 mb-6 flex-wrap">
+          <div className="py-20 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-xl animate-fade-in-up">
+              <div className="flex items-center gap-4 mb-6 flex-wrap">
                 <span className="px-4 py-1.5 rounded-full bg-accent/10 text-primary text-sm font-medium">
                   99.8% Uptime
                 </span>
@@ -124,11 +124,11 @@ export default function Index() {
                 {' '}Solutions
               </h1>
 
-              <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl">
                 Trusted by 10+ companies managing 5,000+ employees across India. Build, manage, and scale your business with our modern SaaS solutions.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Link to="/contact">
                   <Button variant="hero" size="xl" aria-label="Book a Demo for Enterprise Solutions">
                     Book a Demo
@@ -142,6 +142,39 @@ export default function Index() {
                 </Link>
               </div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative hidden lg:block"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl blur-2xl" />
+                <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl overflow-hidden aspect-video">
+                  <video
+                    src="/src/assets/vornhr_video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
+                  {/* Play Icon Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/5 opacity-0 hover:opacity-100 transition-opacity">
+                    <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <Zap className="h-8 w-8 text-white fill-white" />
+                    </div>
+                  </div>
+                </div>
+                {/* Floating Badge */}
+                <div className="absolute -right-4 top-1/4 transform rotate-6 animate-float">
+                  <div className="bg-card border border-border rounded-xl p-3 shadow-lg">
+                    <div className="text-xs text-muted-foreground font-medium">Explore More</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
