@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Layout from '@/components/layout/Layout';
+import VornHRVideo from '@/assets/vornhr_video.mp4';
 import {
   Accordion,
   AccordionContent,
@@ -228,7 +229,7 @@ export default function VornHR() {
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl blur-2xl" />
                 <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl overflow-hidden aspect-video">
                   <video
-                    src="/src/assets/vornhr_video.mp4"
+                    src={VornHRVideo}
                     autoPlay
                     loop
                     muted
@@ -412,7 +413,8 @@ export default function VornHR() {
           >
             <h2 className="text-3xl font-bold text-foreground mb-4">Simple, Transparent Pricing</h2>
             <p className="text-muted-foreground">Choose the plan that fits your needs</p>
-          </motion.div>          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch">
+          </motion.div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}

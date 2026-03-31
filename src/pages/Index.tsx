@@ -5,6 +5,7 @@ import { FaReact, FaAws, FaDocker, FaPython } from 'react-icons/fa';
 import { SiDjango, SiPostgresql, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import { Button } from '@/components/ui/button';
 import Layout from '@/components/layout/Layout';
+import VornHRVideo from '@/assets/vornhr_video.mp4';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -153,7 +154,7 @@ export default function Index() {
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl blur-2xl" />
                 <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl overflow-hidden aspect-video">
                   <video
-                    src="/src/assets/vornhr_video.mp4"
+                    src={VornHRVideo}
                     autoPlay
                     loop
                     muted
