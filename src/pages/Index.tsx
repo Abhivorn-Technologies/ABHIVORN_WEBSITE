@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Building, TrendingUp, Heart, Code, Zap, BarChart3, CheckCircle } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { FaReact, FaAws, FaDocker, FaPython } from 'react-icons/fa';
 import { SiDjango, SiPostgresql, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import { Button } from '@/components/ui/button';
@@ -94,6 +100,41 @@ const techStack = [
   { name: 'Tailwind', icon: <SiTailwindcss className="text-[#06B6D4]" /> }
 ];
 
+const whyChooseUs = [
+  { title: '1+ Year Experience', description: 'Deep expertise in custom software development' },
+  { title: '15+ Companies Served', description: 'Proven track record with happy clients' },
+  { title: '5,000+ Users', description: 'Products used by thousands daily' },
+  { title: '99.8% Uptime', description: 'Enterprise-grade reliability' }
+];
+
+const industries = [
+  { name: 'Healthcare', icon: Heart },
+  { name: 'Finance', icon: BarChart3 },
+  { name: 'Retail', icon: Building },
+  { name: 'Manufacturing', icon: Code },
+  { name: 'Education', icon: Users },
+  { name: 'Logistics', icon: TrendingUp }
+];
+
+const faqs = [
+  {
+    question: 'What industries do you serve?',
+    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and more. Our solutions are adaptable to any business that needs HR management or healthcare solutions.'
+  },
+  {
+    question: 'Do you offer free trials?',
+    answer: 'Yes! VORN HR offers a freemium plan for up to 20 employees. For larger organizations, we offer a 14-day free trial of our Professional plan.'
+  },
+  {
+    question: 'What is your typical project timeline?',
+    answer: 'For VORN HR implementation, we typically complete deployment within 2-3 weeks. Custom development projects range from 6-12 weeks depending on scope and complexity.'
+  },
+  {
+    question: 'Do you provide ongoing support?',
+    answer: 'Yes, we offer dedicated support for all our products. Our support team is available during business hours and provides timely assistance for any issues.'
+  }
+];
+
 export default function Index() {
   return (
     <Layout>
@@ -120,25 +161,25 @@ export default function Index() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Enterprise-Grade{' '}
-                <span className="text-accent">HR & Healthcare</span>
-                {' '}Solutions
+                Custom Software,{' '}
+                <span className="text-accent">HRMS & AI</span>
+                {' '}Development Company
               </h1>
 
               <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl">
-                Trusted by 10+ companies managing 5,000+ employees across India. Build, manage, and scale your business with our modern SaaS solutions.
+                We build scalable web apps, HRMS platforms, AI tools, and enterprise solutions for startups and companies across India.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Link to="/contact">
-                  <Button variant="hero" size="xl" aria-label="Book a Demo for Enterprise Solutions">
-                    Book a Demo
+                  <Button variant="hero" size="xl" aria-label="Get Free Consultation">
+                    Get Free Consultation
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link to="/services">
-                  <Button variant="heroOutline" size="xl" aria-label="View Our Products and Services">
-                    View Our Products
+                <Link to="/contact">
+                  <Button variant="heroOutline" size="xl" aria-label="Book a Demo">
+                    Book Demo
                   </Button>
                 </Link>
               </div>
@@ -240,6 +281,78 @@ export default function Index() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Why Choose Abhivorn
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Your trusted software development partner
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-card rounded-xl border border-border p-6 text-center"
+              >
+                <h3 className="text-2xl font-bold text-accent mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries We Serve */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Custom solutions for every sector
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {industries.map((industry, index) => (
+              <motion.div
+                key={industry.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="bg-card rounded-xl border border-border p-6 text-center hover:border-accent/50 transition-colors"
+              >
+                <industry.icon className="h-8 w-8 text-accent mx-auto mb-3" />
+                <h3 className="font-semibold text-foreground">{industry.name}</h3>
               </motion.div>
             ))}
           </div>
@@ -366,6 +479,91 @@ export default function Index() {
                 <span className="font-medium text-foreground">{tech.name}</span>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Development Process */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Our Development Process
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Transparent and agile methodology
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              { step: '01', title: 'Discovery', desc: 'Requirements analysis' },
+              { step: '02', title: 'Design', desc: 'UI/UX and architecture' },
+              { step: '03', title: 'Development', desc: 'Agile coding' },
+              { step: '04', title: 'Testing', desc: 'Quality assurance' },
+              { step: '05', title: 'Deployment', desc: 'Launch support' },
+              { step: '06', title: 'Support', desc: 'Ongoing maintenance' }
+            ].map((p, index) => (
+              <motion.div
+                key={p.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-card rounded-xl border border-border p-6 text-center"
+              >
+                <div className="text-3xl font-bold text-accent/30 mb-2">{p.step}</div>
+                <h3 className="font-semibold text-foreground mb-1">{p.title}</h3>
+                <p className="text-sm text-muted-foreground">{p.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Get answers to common questions about our solutions
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="max-w-3xl mx-auto"
+          >
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border-border">
+                  <AccordionTrigger className="text-lg font-medium text-foreground hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </motion.div>
         </div>
       </section>

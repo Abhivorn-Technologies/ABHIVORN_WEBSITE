@@ -49,7 +49,7 @@ const productContacts = [
   },
   {
     title: 'VorQard (Healthcare)',
-    email: 'healthcare@abhivorn.com',
+    email: 'support@vorqard.com',
     website: 'www.vorqard.com'
   }
 ];

@@ -12,6 +12,7 @@ const footerLinks = {
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Projects', href: '/projects' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ],
@@ -19,6 +20,10 @@ const footerLinks = {
     { icon: Mail, text: 'hello@abhivorn.com', href: 'mailto:hello@abhivorn.com' },
     { icon: Phone, text: '+91 9966629766', href: 'tel:+919966629766' },
     { icon: MapPin, text: 'Hyderabad, Telangana, India', href: '#' },
+  ],
+  vorqardContact: [
+    { text: 'support@vorqard.com', href: 'mailto:support@vorqard.com', label: 'VorQard (Healthcare)' },
+    { text: 'www.vorqard.com', href: 'https://www.vorqard.com', label: '' },
   ],
 };
 
@@ -31,7 +36,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/" className="inline-block group">
@@ -116,13 +121,41 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* VorQard Healthcare */}
+          <div>
+            <h4 className="font-semibold text-lg mb-6">VorQard (Healthcare)</h4>
+            <ul className="space-y-3">
+              {footerLinks.vorqardContact.map((item, index) => (
+                <li key={item.text}>
+                  {index === 0 ? (
+                    <a
+                      href={item.href}
+                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    >
+                      {item.text}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/60 text-sm text-center md:text-left">
-              © 2026 Abhivorn Technologies Pvt Ltd. All rights reserved.
+              © 2025 Abhivorn Technologies Pvt Ltd. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link to="/privacy" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">

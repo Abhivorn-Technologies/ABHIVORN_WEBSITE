@@ -13,8 +13,16 @@ const Products = lazy(() => import("./pages/Products"));
 const Projects = lazy(() => import("./pages/Projects"));
 const Careers = lazy(() => import("./pages/Careers"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 const VornHR = lazy(() => import("./pages/VornHR"));
 const VorQard = lazy(() => import("./pages/VorQard"));
+const CustomSoftware = lazy(() => import("./pages/CustomSoftware"));
+const HRMSSoftware = lazy(() => import("./pages/HRMSSoftware"));
+const AIDevelopment = lazy(() => import("./pages/AIDevelopment"));
+const MobileAppDevelopment = lazy(() => import("./pages/MobileAppDevelopment"));
+const HealthcareSoftware = lazy(() => import("./pages/HealthcareSoftware"));
+const WebDevelopmentHyderabad = lazy(() => import("./pages/WebDevelopmentHyderabad"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -41,8 +49,17 @@ const App = () => (
             <Route path="/projects" element={<Projects />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/products/vorn-hr" element={<VornHR />} />
             <Route path="/products/vorqard" element={<VorQard />} />
+            {/* Service Pages */}
+            <Route path="/custom-software-development" element={<CustomSoftware />} />
+            <Route path="/hrms-software-development" element={<HRMSSoftware />} />
+            <Route path="/ai-development-company" element={<AIDevelopment />} />
+            <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
+            <Route path="/healthcare-software-development" element={<HealthcareSoftware />} />
+            <Route path="/web-development-company-hyderabad" element={<WebDevelopmentHyderabad />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
