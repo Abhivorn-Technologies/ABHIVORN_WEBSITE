@@ -29,9 +29,15 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    title: 'Office',
+    title: 'Office (HITEC City)',
     content: 'Cyber Towers - HITEC City, Hyderabad',
     href: 'https://www.google.com/maps/place/Cyber+Towers+-+HITEC+City/@17.4503676,78.3784705,16z/data=!3m1!4b1!4m6!3m5!1s0x3bcb930036e02df5:0xafd92e6778539645!8m2!3d17.4503676!4d78.3810454!16s%2Fg%2F11xdl26znk!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D'
+  },
+  {
+    icon: MapPin,
+    title: 'Office (Kukatpally)',
+    content: 'KPHB, Hyderabad 500072',
+    href: 'https://www.google.com/maps/place/Abhivorn+Technologies/@17.4868787,78.3940046,17z/data=!3m1!4b1!4m6!3m5!1s0x49f364b62c0799dd:0x97e0bc47c22fdf60!8m2!3d17.4868787!4d78.3965795!16s%2Fg%2F11yn9kw_tm?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D'
   },
   {
     icon: Clock,
