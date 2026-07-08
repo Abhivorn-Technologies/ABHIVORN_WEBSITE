@@ -19,7 +19,7 @@ const footerLinks = {
   contact: [
     { icon: Mail, text: 'hello@abhivorn.com', href: 'mailto:hello@abhivorn.com' },
     { icon: Phone, text: '+91 9966629766', href: 'tel:+919966629766' },
-    { icon: MapPin, text: 'Hyderabad, Telangana, India', href: '#' },
+    { icon: MapPin, text: 'Cyber Towers - HITEC City, Hyderabad', href: 'https://www.google.com/maps/place/Cyber+Towers+-+HITEC+City/@17.4503676,78.3784705,16z/data=!3m1!4b1!4m6!3m5!1s0x3bcb930036e02df5:0xafd92e6778539645!8m2!3d17.4503676!4d78.3810454!16s%2Fg%2F11xdl26znk!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D' },
   ],
   vorqardContact: [
     { text: 'support@vorqard.com', href: 'mailto:support@vorqard.com', label: 'VorQard (Healthcare)' },

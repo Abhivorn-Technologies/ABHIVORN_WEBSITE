@@ -179,6 +179,7 @@ export default function Careers() {
       // Reset forms manually if needed
       if (mainFormRef.current) mainFormRef.current.reset();
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error('Failed to send application:', error);
 
