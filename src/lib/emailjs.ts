@@ -41,6 +41,7 @@ export const sendContactEmail = async (data: {
       inquiry_type: data.inquiryType,
       message: data.message,
       to_name: 'Abhivorn Technologies',
+      to_email: 'abhivornpvtltd@gmail.com',
     }
   );
 };

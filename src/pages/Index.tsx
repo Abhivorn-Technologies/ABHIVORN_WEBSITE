@@ -1,6 +1,47 @@
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
+
+function AnimatedCounter({ value, suffix, decimals = 0 }: { value: number, suffix: string, decimals?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "0px" });
+
+  useEffect(() => {
+    if (inView) {
+      const end = value;
+      const duration = 2500; 
+      const fps = 60;
+      const totalFrames = (duration / 1000) * fps;
+      let frame = 0;
+
+      const easeOutQuart = (x: number): number => 1 - Math.pow(1 - x, 4);
+
+      const timer = setInterval(() => {
+        frame++;
+        const progress = frame / totalFrames;
+        const currentCount = end * easeOutQuart(progress);
+
+        if (frame >= totalFrames) {
+          setCount(end);
+          clearInterval(timer);
+        } else {
+          setCount(currentCount);
+        }
+      }, 1000 / fps);
+
+      return () => clearInterval(timer);
+    }
+  }, [inView, value]);
+
+  const formattedCount = count.toLocaleString('en-US', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  });
+
+  return <span ref={ref}>{formattedCount}{suffix}</span>;
+}
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Building, TrendingUp, Heart, Code, Zap, BarChart3, CheckCircle } from 'lucide-react';
+import { ArrowRight, Users, Building, TrendingUp, Heart, Code, Zap, BarChart3, CheckCircle, ChevronDown, Search, PenTool, ShieldCheck, Rocket, Headset } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -8,23 +49,43 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FaReact, FaAws, FaDocker, FaPython } from 'react-icons/fa';
-import { SiDjango, SiPostgresql, SiTypescript, SiTailwindcss } from 'react-icons/si';
+import { SiDjango, SiPostgresql, SiTypescript, SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 import { Button } from '@/components/ui/button';
 import Layout from '@/components/layout/Layout';
-import VornHRVideo from '@/assets/vornhr_video.mp4';
+import ReviewMarquee from '@/components/common/ReviewMarquee';
+import HeroCustom from '@/assets/hero_custom.jpg';
+import HeroHRMS from '@/assets/hero_hrms.jpg';
+import HeroAI from '@/assets/hero_ai.jpg';
+import HeroHealthcare from '@/assets/hero_healthcare.jpg';
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
+const heroTitles = [
+  "Custom Software",
+  "HRMS Platforms",
+  "AI Development",
+  "Healthcare Solutions"
+];
+
+const heroBackgrounds = [
+  HeroCustom,
+  HeroHRMS,
+  HeroAI,
+  HeroHealthcare
+];
+
+// Elegant, professional slow blur fade in
+const slowFadeIn = {
+  initial: { opacity: 0, y: 50, filter: 'blur(20px)' },
+  whileInView: { opacity: 1, y: 0, filter: 'blur(0px)' },
+  viewport: { once: true, margin: "100px" },
+  transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1] } 
 };
 
 const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
+  initial: {},
+  whileInView: {
+    transition: { staggerChildren: 0.15 }
+  },
+  viewport: { once: true, margin: "100px" }
 };
 
 const products = [
@@ -52,46 +113,22 @@ const products = [
     title: 'Custom Solutions',
     subtitle: 'Tailored for Your Business',
     features: ['Web Apps', 'System Integration', 'Cloud Architecture', 'API Development'],
-    href: '/services',
+    href: '/custom-software-development',
     cta: 'Start Your Project',
     color: 'accent'
   }
 ];
 
 const metrics = [
-  { value: '10+', label: 'Companies Trust Us', icon: Building },
-  { value: '5,000+', label: 'Employees Managed', icon: Users },
-  { value: '99.8%', label: 'System Uptime', icon: Zap },
-  { value: '95%', label: 'Customer Satisfaction', icon: TrendingUp }
-];
-
-const caseStudies = [
-  {
-    company: 'Elevate Rootz',
-    industry: 'Healthcare',
-    result: '100+ patients onboarded in first month',
-    metric: '80% reduction in booking time',
-    href: '/projects'
-  },
-  {
-    company: 'US Mortgage Processing',
-    industry: 'Finance',
-    result: '98.5% extraction accuracy',
-    metric: '85% time reduction',
-    href: '/projects'
-  },
-  {
-    company: 'HRMS Implementation',
-    industry: 'Enterprise',
-    result: '10+ companies deployed',
-    metric: '5,000+ employees managed',
-    href: '/projects'
-  }
+  { value: 10, suffix: '+', decimals: 0, label: 'Companies Trust Us' },
+  { value: 5000, suffix: '+', decimals: 0, label: 'Employees Managed' },
+  { value: 99.8, suffix: '%', decimals: 1, label: 'System Uptime' },
+  { value: 95, suffix: '%', decimals: 0, label: 'Customer Satisfaction' }
 ];
 
 const techStack = [
   { name: 'React', icon: <FaReact className="text-[#61DAFB]" /> },
-  { name: 'Django', icon: <SiDjango className="text-[#092E20] dark:text-[#0C4B33]" /> },
+  { name: 'Django', icon: <SiDjango className="text-[#092E20]" /> },
   { name: 'PostgreSQL', icon: <SiPostgresql className="text-[#336791]" /> },
   { name: 'AWS', icon: <FaAws className="text-[#FF9900]" /> },
   { name: 'TypeScript', icon: <SiTypescript className="text-[#3178C6]" /> },
@@ -101,25 +138,16 @@ const techStack = [
 ];
 
 const whyChooseUs = [
-  { title: '1+ Year Experience', description: 'Deep expertise in custom software development' },
-  { title: '15+ Companies Served', description: 'Proven track record with happy clients' },
-  { title: '5,000+ Users', description: 'Products used by thousands daily' },
-  { title: '99.8% Uptime', description: 'Enterprise-grade reliability' }
-];
-
-const industries = [
-  { name: 'Healthcare', icon: Heart },
-  { name: 'Finance', icon: BarChart3 },
-  { name: 'Retail', icon: Building },
-  { name: 'Manufacturing', icon: Code },
-  { name: 'Education', icon: Users },
-  { name: 'Logistics', icon: TrendingUp }
+  { title: '1+ Year Experience', description: 'Deep expertise in building robust custom software solutions.' },
+  { title: '15+ Companies Served', description: 'Proven track record of delivering value to diverse clients.' },
+  { title: '5,000+ Users', description: 'Our scalable products are relied upon by thousands daily.' },
+  { title: '99.8% Uptime', description: 'Enterprise-grade reliability and seamless infrastructure.' }
 ];
 
 const faqs = [
   {
     question: 'What industries do you serve?',
-    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and more. Our solutions are adaptable to any business that needs HR management or healthcare solutions.'
+    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and more. Our solutions are adaptable to any business that needs reliable, scalable software.'
   },
   {
     question: 'Do you offer free trials?',
@@ -131,479 +159,408 @@ const faqs = [
   },
   {
     question: 'Do you provide ongoing support?',
-    answer: 'Yes, we offer dedicated support for all our products. Our support team is available during business hours and provides timely assistance for any issues.'
+    answer: 'Yes, we offer dedicated support for all our products. Our technical team is available to ensure your systems run flawlessly.'
   }
 ];
 
 export default function Index() {
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTitleIndex((prevIndex) => (prevIndex + 1) % heroTitles.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-muted/50 to-background">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-32 pb-12 sm:pb-20 bg-black">
+        <div className="absolute inset-0 z-0">
+          <AnimatePresence>
+            <motion.img 
+              key={titleIndex}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 2, ease: "easeInOut" }}
+              src={heroBackgrounds[titleIndex]} 
+              alt="Hero Background" 
+              className="absolute inset-0 w-full h-full object-cover max-sm:object-contain max-sm:object-top sm:object-center"
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 max-sm:bg-gradient-to-b max-sm:from-black/80 max-sm:via-black/40 max-sm:to-black/90 sm:bg-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent sm:hidden" />
         </div>
 
-        <div className="container-custom relative">
-          <div className="py-20 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
-            <div className="max-w-xl animate-fade-in-up">
-              <div className="flex items-center gap-4 mb-6 flex-wrap">
-                <span className="px-4 py-1.5 rounded-full bg-accent/10 text-primary text-sm font-medium">
-                  99.8% Uptime
-                </span>
-                <span className="px-4 py-1.5 rounded-full bg-secondary/10 text-primary text-sm font-medium">
-                  5,000+ Users
-                </span>
-                <span className="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  MSME Registered
-                </span>
-              </div>
+        <div className="container-custom relative z-10 w-full mt-10 sm:mt-0">
+          <motion.div
+            initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-5xl mx-auto text-center relative"
+          >
+            {/* A massive, ultra-soft dark glow perfectly positioned behind the text to guarantee perfect legibility without dimming the whole background */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-4xl h-[160%] bg-black/60 blur-[100px] -z-10 rounded-[100%] pointer-events-none hidden sm:block" />
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Custom Software,{' '}
-                <span className="text-accent">HRMS & AI</span>
-                {' '}Development Company
-              </h1>
-
-              <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl">
-                We build scalable web apps, HRMS platforms, AI tools, and enterprise solutions for startups and companies across India.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center gap-4">
-                <Link to="/contact">
-                  <Button variant="hero" size="xl" aria-label="Get Free Consultation">
-                    Get Free Consultation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="heroOutline" size="xl" aria-label="Book a Demo">
-                    Book Demo
-                  </Button>
-                </Link>
-              </div>
+            <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-10 flex-wrap">
+              <span className="px-3 py-1.5 sm:px-5 sm:py-2 rounded-full bg-white/10 border border-white/20 text-white text-[10px] sm:text-sm font-bold backdrop-blur-xl shadow-lg uppercase tracking-wider">
+                99.8% Uptime
+              </span>
+              <span className="px-3 py-1.5 sm:px-5 sm:py-2 rounded-full bg-white/10 border border-white/20 text-white text-[10px] sm:text-sm font-bold backdrop-blur-xl shadow-lg uppercase tracking-wider">
+                5,000+ Users
+              </span>
+              <span className="px-3 py-1.5 sm:px-5 sm:py-2 rounded-full bg-white/10 border border-white/20 text-white text-[10px] sm:text-sm font-bold backdrop-blur-xl shadow-lg uppercase tracking-wider">
+                MSME Registered
+              </span>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative hidden lg:block"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl blur-2xl" />
-                <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl overflow-hidden aspect-video">
-                  <video
-                    src={VornHRVideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover rounded-2xl"
-                  />
-                  {/* Play Icon Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/5 opacity-0 hover:opacity-100 transition-opacity">
-                    <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                      <Zap className="h-8 w-8 text-white fill-white" />
-                    </div>
-                  </div>
-                </div>
-                {/* Floating Badge */}
-                <div className="absolute -right-4 top-1/4 transform rotate-6 animate-float">
-                  <div className="bg-card border border-border rounded-xl p-3 shadow-lg">
-                    <div className="text-xs text-muted-foreground font-medium">Explore More</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+            <h1 className="text-[8vw] sm:text-6xl lg:text-7xl font-black text-white mb-4 sm:mb-6 leading-[1.1] drop-shadow-2xl">
+              Enterprise Grade <br />
+              <span className="text-white inline-block relative h-[1.2em] w-full max-w-[1000px] overflow-hidden align-bottom mt-1 sm:mt-2">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={titleIndex}
+                    initial={{ y: 60, opacity: 0, filter: 'blur(10px)' }}
+                    animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
+                    exit={{ y: -60, opacity: 0, filter: 'blur(10px)' }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute inset-0 flex justify-center items-center text-accent drop-shadow-2xl whitespace-nowrap"
+                  >
+                    {heroTitles[titleIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+            </h1>
+            
+            <p className="text-sm sm:text-xl max-w-2xl mx-auto text-white/90 font-medium leading-relaxed mb-8 sm:mb-10 px-4 sm:px-0">
+              We build scalable web apps, HRMS platforms, AI tools, and enterprise solutions for startups and companies across India.
+            </p>
+            
+            <div className="flex items-center justify-center px-6 sm:px-0">
+              <Link to="/contact" className="w-full sm:w-auto">
+                <Button size="lg" className="h-12 px-8 sm:h-14 sm:px-10 text-sm sm:text-base font-bold rounded-full bg-accent hover:bg-accent/90 text-white shadow-[0_0_30px_-10px_rgba(6,182,212,0.8)] transition-all duration-300 group w-full sm:w-auto">
+                  Get Free Consultation <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Products Section */}
-      <section className="section-padding bg-background">
+      {/* Metrics Section (Ultra Minimalist) */}
+      <section className="py-20 bg-background border-b border-border/40">
+        <div className="container-custom">
+          <motion.div 
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "100px" }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-10 divide-x divide-border/40"
+          >
+            {metrics.map((metric, index) => (
+              <div key={metric.label} className={`text-center ${index === 0 ? '' : 'pl-6 md:pl-10'}`}>
+                <div className="text-4xl md:text-5xl font-bold text-foreground mb-3 tracking-tighter">
+                  <AnimatedCounter value={metric.value} suffix={metric.suffix} decimals={metric.decimals} />
+                </div>
+                <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
+                  {metric.label}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Products & Services Section */}
+      <section id="services" className="relative section-padding bg-background scroll-mt-20">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "100px" }}
+            className="text-center mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-5 tracking-tight">
               Our Solutions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Built for modern businesses with enterprise-grade security and scalability
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+              Enterprise-grade platforms engineered for flawless performance and infinite scalability.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product, index) => (
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "100px" }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {products.map((product) => (
               <motion.div
                 key={product.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-card rounded-2xl border border-border p-8 card-hover"
+                variants={slowFadeIn}
+                className="group bg-white rounded-2xl border border-border/60 p-10 hover:border-border hover:shadow-lg transition-all duration-500 flex flex-col"
               >
-                {product.badge && (
-                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium">
-                    {product.badge}
-                  </span>
-                )}
-
-                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                  <product.icon className="h-7 w-7 text-accent" />
+                <div className="flex justify-between items-start mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-accent/5 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-500">
+                    <product.icon className="h-5 w-5" />
+                  </div>
+                  {product.badge && (
+                    <span className="px-3 py-1 rounded-md bg-secondary/10 text-secondary text-xs font-bold tracking-widest uppercase">
+                      {product.badge}
+                    </span>
+                  )}
                 </div>
 
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-2xl font-bold text-foreground mb-3 tracking-tight">
                   {product.title}
                 </h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-sm text-muted-foreground mb-8 leading-relaxed flex-grow">
                   {product.subtitle}
                 </p>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-10">
                   {product.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-3 text-sm text-foreground/80">
-                      <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                    <li key={feature} className="flex items-center gap-3 text-sm font-medium text-foreground/80">
+                      <CheckCircle className="h-4 w-4 text-primary" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link to={product.href}>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                <Link to={product.href} className="mt-auto">
+                  <Button variant="outline" className="w-full h-12 rounded-lg border-border/60 hover:bg-foreground hover:text-white transition-colors">
                     {product.cta}
-                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="section-padding bg-muted/30">
+      <section className="relative section-padding bg-muted/20 border-y border-border/40">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "100px" }}
+            className="text-center mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Why Choose Abhivorn
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-5 tracking-tight">
+              Why Abhivorn?
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Your trusted software development partner
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+              We combine deep technical expertise with a relentless focus on delivering measurable business value.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "100px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-xl border border-border p-6 text-center"
+                variants={slowFadeIn}
+                className="bg-white rounded-2xl border border-border/50 p-6 sm:p-8 hover:border-primary/20 hover:shadow-md transition-all duration-300"
               >
-                <h3 className="text-2xl font-bold text-accent mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <div className="text-sm font-mono font-bold text-primary/70 mb-4 sm:mb-6">0{index + 1}</div>
+                <h3 className="text-base sm:text-lg font-bold text-foreground mb-2 sm:mb-3">{item.title}</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed font-medium">{item.description}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Industries We Serve */}
-      <section className="section-padding bg-background">
+      {/* Our Process (Card-less Horizontal Flow) */}
+      <section className="relative section-padding bg-background overflow-hidden">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "100px" }}
+            className="text-center mb-24"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Industries We Serve
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-5 tracking-tight">
+              Our Methodology
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Custom solutions for every sector
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+              A transparent, agile, and fiercely results-driven approach.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={industry.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-card rounded-xl border border-border p-6 text-center hover:border-accent/50 transition-colors"
-              >
-                <industry.icon className="h-8 w-8 text-accent mx-auto mb-3" />
-                <h3 className="font-semibold text-foreground">{industry.name}</h3>
-              </motion.div>
-            ))}
+          <div className="max-w-6xl mx-auto relative">
+            <motion.div 
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true, margin: "100px" }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-x-12"
+            >
+              {[
+                { step: '1', icon: Search, title: 'Discovery', desc: 'Comprehensive requirements analysis and goal setting.' },
+                { step: '2', icon: PenTool, title: 'Design', desc: 'Robust architecture and high-fidelity prototyping.' },
+                { step: '3', icon: Code, title: 'Development', desc: 'Agile coding, implementation, and integration.' },
+                { step: '4', icon: ShieldCheck, title: 'Testing', desc: 'Rigorous automated and manual quality assurance.' },
+                { step: '5', icon: Rocket, title: 'Deployment', desc: 'Zero-downtime launch into enterprise infrastructure.' },
+                { step: '6', icon: Headset, title: 'Support', desc: 'Ongoing maintenance, scaling, and technical support.' }
+              ].map((p, index) => (
+                <motion.div
+                  key={p.step}
+                  variants={slowFadeIn}
+                  className="relative flex flex-col items-center text-center group"
+                >
+                  {(index % 3 !== 2) && (
+                    <div className="hidden md:block absolute top-7 left-1/2 w-full border-t border-dashed border-border/80 -z-10" />
+                  )}
+                  
+                  <div className="w-14 h-14 rounded-full border border-border/80 bg-background flex items-center justify-center mb-6 group-hover:border-foreground transition-colors duration-500 z-10 relative">
+                    <p.icon className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors duration-500" />
+                  </div>
+                  
+                  <span className="text-xs font-bold text-primary/80 uppercase tracking-widest mb-3">
+                    STEP {p.step}
+                  </span>
+                  
+                  <h3 className="text-xl font-bold text-foreground mb-3">{p.title}</h3>
+                  <p className="text-sm text-foreground/70 leading-relaxed max-w-[250px] font-medium">{p.desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Metrics Section */}
-      <section className="section-padding bg-gradient-to-b from-muted/30 to-background">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {metrics.map((metric, index) => (
-              <motion.div
-                key={metric.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <metric.icon className="h-8 w-8 text-accent" />
-                </div>
-                <div className="text-4xl sm:text-5xl font-bold text-foreground mb-2">
-                  {metric.value}
-                </div>
-                <div className="text-muted-foreground">
-                  {metric.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies Section */}
-      <section className="section-padding bg-background">
+      {/* Tech Stack */}
+      <section className="relative py-24 bg-white border-y border-border/40 overflow-hidden">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Proven Results
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Real impact for real businesses
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <motion.div
-                key={study.company}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-card rounded-2xl border border-border p-8 card-hover"
-              >
-                <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-medium mb-4">
-                  {study.industry}
-                </span>
-
-                <h3 className="text-lg font-semibold text-foreground mb-3">
-                  {study.company}
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  {study.result}
-                </p>
-
-                <div className="flex items-center gap-2 text-accent font-medium mb-6">
-                  <BarChart3 className="h-4 w-4" />
-                  {study.metric}
-                </div>
-
-                <Link to={study.href} className="inline-flex items-center text-sm font-medium text-primary hover:text-accent transition-colors">
-                  Read Case Study
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Stack Section */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "100px" }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Built with Modern Technology
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base text-muted-foreground font-medium">
               Enterprise-grade tech stack for reliability and performance
             </p>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-wrap justify-center gap-6"
+          
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "100px" }}
+            className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto"
           >
-            {techStack.map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="flex items-center gap-3 px-6 py-3 bg-background rounded-xl border border-border hover:border-accent/50 hover:shadow-card transition-all"
+            {techStack.map((tech) => (
+              <motion.div 
+                variants={slowFadeIn}
+                key={tech.name} 
+                className="flex items-center gap-3 px-5 py-2.5 bg-white border border-border/60 rounded-xl shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_20px_-8px_rgba(0,0,0,0.1)] hover:border-border transition-all duration-300"
               >
-                <span className="text-2xl">{tech.icon}</span>
-                <span className="font-medium text-foreground">{tech.name}</span>
+                <div className="text-xl">{tech.icon}</div>
+                <span className="text-sm font-semibold text-foreground/80">{tech.name}</span>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Development Process */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Our Development Process
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Transparent and agile methodology
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[
-              { step: '01', title: 'Discovery', desc: 'Requirements analysis' },
-              { step: '02', title: 'Design', desc: 'UI/UX and architecture' },
-              { step: '03', title: 'Development', desc: 'Agile coding' },
-              { step: '04', title: 'Testing', desc: 'Quality assurance' },
-              { step: '05', title: 'Deployment', desc: 'Launch support' },
-              { step: '06', title: 'Support', desc: 'Ongoing maintenance' }
-            ].map((p, index) => (
-              <motion.div
-                key={p.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-xl border border-border p-6 text-center"
-              >
-                <div className="text-3xl font-bold text-accent/30 mb-2">{p.step}</div>
-                <h3 className="font-semibold text-foreground mb-1">{p.title}</h3>
-                <p className="text-sm text-muted-foreground">{p.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* What Our Clients Say - Auto-scrolling Marquee */}
+      <ReviewMarquee />
 
       {/* FAQ Section */}
-      <section className="section-padding bg-background">
+      <section className="relative section-padding bg-background">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "100px" }}
+            className="max-w-4xl mx-auto bg-white rounded-3xl sm:rounded-[2rem] border border-border/40 p-5 sm:p-8 md:p-12 shadow-sm"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Get answers to common questions about our solutions
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="max-w-3xl mx-auto"
-          >
-            <Accordion type="single" collapsible className="w-full">
+            <h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-8 sm:mb-12 text-center">Frequently Asked Questions</h2>
+            <div className="divide-y divide-border/40">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-border">
-                  <AccordionTrigger className="text-lg font-medium text-foreground hover:no-underline">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
+                <div key={index} className="group">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    className="w-full text-left py-4 sm:py-6 flex justify-between items-center focus:outline-none group"
+                  >
+                    <span className="font-bold text-foreground group-hover:text-primary transition-colors text-sm sm:text-lg pr-4">
+                      {faq.question}
+                    </span>
+                    <ChevronDown 
+                      className={`w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${openFaq === index ? 'rotate-180 text-primary' : ''}`} 
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {openFaq === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <p className="pb-4 sm:pb-6 text-xs sm:text-base text-foreground/70 leading-relaxed font-medium">
+                          {faq.answer}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
-            </Accordion>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container-custom relative">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
-              Ready to transform your business?
-            </h2>
-            <p className="text-lg text-primary-foreground/80 mb-10">
-              Join 10+ companies already using our solutions to streamline operations and boost productivity.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact">
-                <Button variant="hero" size="xl" className="bg-accent hover:bg-accent/90">
-                  Schedule a Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                  Talk to Sales
-                </Button>
-              </Link>
+      <section className="py-16 sm:py-24 bg-background px-4 sm:px-0">
+        <div className="container-custom">
+          <div className="bg-gradient-to-br from-primary via-[#007090] to-accent rounded-3xl sm:rounded-[3rem] px-6 py-10 sm:p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+            {/* Background elements */}
+            <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-accent opacity-20 rounded-full blur-3xl"></div>
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6 leading-tight">
+                Ready to scale your <br className="hidden sm:block" /> business?
+              </h2>
+              <p className="text-sm sm:text-lg text-white/90 mb-8 sm:mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+                Join industry leaders who rely on our enterprise solutions to streamline operations, automate workflows, and dominate their markets.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 max-w-sm mx-auto sm:max-w-none">
+                <Link to="/contact" className="w-full sm:w-auto">
+                  <Button size="lg" className="h-12 sm:h-14 px-8 text-sm sm:text-base font-bold bg-white text-primary hover:bg-white/90 rounded-full w-full transition-transform hover:scale-105 shadow-lg">
+                    Start a Project
+                  </Button>
+                </Link>
+                <Link to="/contact" className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="h-12 sm:h-14 px-8 text-sm sm:text-base font-bold border-white/30 text-white hover:bg-white/10 rounded-full w-full backdrop-blur-sm transition-transform hover:scale-105">
+                    Talk to Sales
+                  </Button>
+                </Link>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

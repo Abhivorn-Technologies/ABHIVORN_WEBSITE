@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight, Users, Clock, Shield, BarChart3, Smartphone, Database,
@@ -7,13 +7,29 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Layout from '@/components/layout/Layout';
-import VornHRVideo from '@/assets/vornhr_video.mp4';
+// import VornHRVideo from '@/assets/vornhr_video.mp4'; // Video removed
+import HeroHRMS from '@/assets/hero_hrms.jpg';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+const slowFadeIn = {
+  initial: { opacity: 0, y: 50, filter: 'blur(20px)' },
+  whileInView: { opacity: 1, y: 0, filter: 'blur(0px)' },
+  viewport: { once: true, margin: "100px" },
+  transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1] } 
+};
+
+const staggerContainer = {
+  initial: {},
+  whileInView: {
+    transition: { staggerChildren: 0.15 }
+  },
+  viewport: { once: true, margin: "100px" }
+};
 
 const quickFeatures = [
   { icon: Users, title: 'Smart Recruitment', description: 'Automate hiring workflows' },
@@ -116,9 +132,6 @@ const pricingPlans = [
   }
 ];
 
-
-
-
 const faqs = [
   {
     question: 'How long does implementation take?',
@@ -146,290 +159,277 @@ export default function VornHR() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl" />
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-32 pb-12 sm:pb-20 bg-black">
+        <div className="absolute inset-0 z-0">
+          <AnimatePresence>
+            <motion.img 
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 2, ease: "easeInOut" }}
+              src={HeroHRMS} 
+              alt="VORN HR Hero Background" 
+              className="absolute inset-0 w-full h-full object-cover max-sm:object-contain max-sm:object-top sm:object-center"
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 max-sm:bg-gradient-to-b max-sm:from-black/80 max-sm:via-black/40 max-sm:to-black/90 sm:bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent sm:hidden" />
         </div>
 
-        <div className="container-custom relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary text-sm font-medium mb-6">
-                <Zap className="h-4 w-4" />
-                Smart HR Automation
-              </div>
+        <div className="container-custom relative z-10 w-full mt-10 sm:mt-0 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white text-sm font-bold mb-8 border border-white/20"
+          >
+            <Zap className="h-4 w-4 text-[#38BDF8]" />
+            Smart HR Automation
+          </motion.div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Simplifying{' '}
-                <span className="text-secondary">HR</span>{' '}
-                <span className="text-accent">Management</span>
-              </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-5xl sm:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight leading-[1.1]"
+          >
+            VORN HR
+          </motion.h1>
 
-              <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-                Empower your workforce with an intelligent, data-driven HR platform.
-                From payroll to performance, we automate it all with precision and ease.
-              </p>
+          <motion.p
+            initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="text-lg sm:text-2xl text-slate-200 font-medium mb-10 max-w-2xl mx-auto leading-relaxed"
+          >
+            Empower your workforce with an intelligent, data-driven HR platform. From payroll to performance, we automate it all.
+          </motion.p>
 
-              <div className="flex flex-wrap gap-4 mb-10">
-                <a href="https://www.vornhr.com/pricing" target="_blank" rel="noopener noreferrer">
-                  <Button variant="hero" size="xl" aria-label="Get Started with Vorn HR for Free">
-                    Get Started Free
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </a>
-                <a href="https://www.vornhr.com/contact" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="xl" className="border-foreground/20 text-foreground hover:bg-foreground/5" aria-label="Book a Vorn HR Demo">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Book Demo
-                  </Button>
-                </a>
-              </div>
-
-              {/* Stats Row */}
-              <div className="flex flex-wrap items-center gap-6">
-                <div className="flex items-center gap-2">
-                  <div className="flex -space-x-2">
-                    {[...Array(4)].map((_, i) => (
-                      <div key={i} className="w-8 h-8 rounded-full bg-muted border-2 border-background" />
-                    ))}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <span className="text-sm text-muted-foreground">5+ Companies</span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-6 mt-8">
-                <div>
-                  <div className="text-2xl font-bold text-foreground">200+</div>
-                  <div className="text-sm text-muted-foreground">Active Users</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-foreground">99.9%</div>
-                  <div className="text-sm text-muted-foreground">Uptime SLA</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-foreground">4.9/5</div>
-                  <div className="text-sm text-muted-foreground">Rating</div>
-                </div>
-              </div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl blur-2xl" />
-                <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl overflow-hidden aspect-video">
-                  <video
-                    src={VornHRVideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover rounded-2xl"
-                  />
-                  {/* Play Icon Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/5 opacity-0 hover:opacity-100 transition-opacity">
-                    <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                      <Zap className="h-8 w-8 text-white fill-white" />
-                    </div>
-                  </div>
-                </div>
-                {/* Floating Badge */}
-                <div className="absolute -right-4 top-1/4 transform rotate-6 animate-float">
-                  <div className="bg-card border border-border rounded-xl p-3 shadow-lg">
-                    <div className="text-xs text-muted-foreground">Explore More</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+          >
+            <a href="https://www.vornhr.com/pricing" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button size="lg" className="h-14 sm:h-16 px-8 sm:px-10 text-base sm:text-lg font-bold bg-[#38BDF8] text-white hover:bg-[#38BDF8]/90 rounded-full w-full transition-transform hover:scale-105 shadow-[0_0_40px_rgba(56,189,248,0.3)]">
+                Get Started Free
+                <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
+              </Button>
+            </a>
+            <a href="https://www.vornhr.com/contact" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="h-14 sm:h-16 px-8 sm:px-10 text-base sm:text-lg font-bold border-2 border-white/20 text-white bg-white/5 hover:bg-white/10 rounded-full w-full backdrop-blur-sm transition-colors">
+                <Calendar className="mr-2 h-5 w-5" />
+                Book Demo
+              </Button>
+            </a>
+          </motion.div>
         </div>
       </section>
 
       {/* Quick Features Strip */}
-      <section className="py-12 bg-muted/50 border-y border-border">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <section className="py-16 relative overflow-hidden bg-slate-50">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none" />
+        <div className="container-custom relative z-10">
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
+          >
             {quickFeatures.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center group"
+                variants={slowFadeIn}
+                className="text-center group bg-white/40 backdrop-blur-sm rounded-3xl p-6 border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.02)] hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-secondary/20 transition-colors">
+                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mx-auto mb-4 border border-slate-100 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-sm">
                   <feature.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground text-sm">{feature.title}</h3>
-                <p className="text-xs text-muted-foreground">{feature.description}</p>
+                <h3 className="font-bold text-slate-900 text-sm mb-1">{feature.title}</h3>
+                <p className="text-xs text-slate-500 font-bold">{feature.description}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Comprehensive Solution Section */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
+      {/* Comprehensive Solution Section (Stunning Glassy Design) */}
+      <section className="section-padding relative overflow-hidden bg-[#f8fafc]">
+        {/* Animated Background Mesh */}
+        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-[#38BDF8]/10 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-[30rem] h-[30rem] bg-indigo-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/40 via-transparent to-transparent pointer-events-none" />
+
+        <div className="container-custom relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            className="text-center mb-16 max-w-3xl mx-auto"
           >
-            <span className="text-sm font-medium text-secondary mb-2 block">Comprehensive Solution</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md text-primary text-sm font-bold mb-6 border border-white shadow-sm">
+              <Star className="h-4 w-4" />
+              Advanced Features
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-6 tracking-tight">
               Everything You Need in One Platform
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 font-bold">
               From core HR management to advanced analytics, our platform provides a complete suite
               of tools to streamline your entire workforce operations.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Core HR */}
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {/* Core HR - Glassy Card */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-card border border-border rounded-2xl p-8 card-hover"
+              variants={slowFadeIn}
+              className="group relative bg-white/40 backdrop-blur-xl rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,112,144,0.1)] transition-all duration-500 hover:-translate-y-2 border border-white/80 overflow-hidden flex flex-col"
             >
-              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-                <Building2 className="h-7 w-7 text-primary" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 rounded-[1.25rem] bg-white shadow-sm flex items-center justify-center mb-8 border border-slate-100 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                  <Building2 className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-black text-slate-900 mb-6 tracking-tight">Core HR</h3>
+                <ul className="space-y-4">
+                  {coreHRFeatures.map((feature) => (
+                    <li key={feature} className="flex items-center gap-4 text-slate-700 font-bold text-lg">
+                      <div className="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-100">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                      </div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Core HR</h3>
-              <ul className="space-y-3">
-                {coreHRFeatures.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
             </motion.div>
 
-            {/* Time & Attendance */}
+            {/* Time & Attendance - Glassy Card */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-card border border-border rounded-2xl p-8 card-hover"
+              variants={slowFadeIn}
+              className="group relative bg-white/40 backdrop-blur-xl rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,112,144,0.1)] transition-all duration-500 hover:-translate-y-2 border border-white/80 overflow-hidden flex flex-col"
             >
-              <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6">
-                <Fingerprint className="h-7 w-7 text-primary" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 rounded-[1.25rem] bg-white shadow-sm flex items-center justify-center mb-8 border border-slate-100 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                  <Fingerprint className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-black text-slate-900 mb-6 tracking-tight">Time & Attendance</h3>
+                <ul className="space-y-4">
+                  {timeAttendanceFeatures.map((feature) => (
+                    <li key={feature} className="flex items-center gap-4 text-slate-700 font-bold text-lg">
+                      <div className="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-100">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                      </div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Time & Attendance</h3>
-              <ul className="space-y-3">
-                {timeAttendanceFeatures.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
             </motion.div>
 
-            {/* Payroll */}
+            {/* Payroll - Glassy Card */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="bg-card border border-border rounded-2xl p-8 card-hover"
+              variants={slowFadeIn}
+              className="group relative bg-white/40 backdrop-blur-xl rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,112,144,0.1)] transition-all duration-500 hover:-translate-y-2 border border-white/80 overflow-hidden flex flex-col"
             >
-              <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
-                <DollarSign className="h-7 w-7 text-primary" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 rounded-[1.25rem] bg-white shadow-sm flex items-center justify-center mb-8 border border-slate-100 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                  <DollarSign className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-black text-slate-900 mb-6 tracking-tight">Payroll</h3>
+                <ul className="space-y-4">
+                  {payrollFeatures.map((feature) => (
+                    <li key={feature} className="flex items-center gap-4 text-slate-700 font-bold text-lg">
+                      <div className="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-100">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                      </div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Payroll</h3>
-              <ul className="space-y-3">
-                {payrollFeatures.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
             </motion.div>
-          </div>
+          </motion.div>
+          
+          {/* Video removed as per request */}
+          
         </div>
       </section>
 
       {/* Proven Results Section */}
-      <section className="section-padding bg-gradient-to-b from-muted/30 to-background">
+      <section className="section-padding bg-slate-50 border-y border-slate-100/50">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
             className="text-center mb-16"
           >
-            <span className="text-sm font-medium text-secondary mb-2 block">Proven Results</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-4 tracking-tight">
               Industry-Leading Performance
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
+                variants={slowFadeIn}
+                className="bg-white/60 backdrop-blur-md rounded-[2rem] p-8 text-center border border-white shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(0,112,144,0.08)] transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="text-5xl font-bold text-secondary mb-2">{stat.value}</div>
-                <div className="text-lg font-semibold text-foreground mb-1">{stat.label}</div>
-                <p className="text-sm text-muted-foreground">{stat.description}</p>
+                <div className="text-5xl font-black text-primary mb-4">{stat.value}</div>
+                <div className="text-xl font-bold text-slate-900 mb-2">{stat.label}</div>
+                <p className="text-slate-500 font-bold">{stat.description}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="section-padding bg-background">
+      {/* Pricing Section (Commented Out as requested) */}
+      {/*
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-muted-foreground">Choose the plan that fits your needs</p>
+            <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-4 tracking-tight">Simple, Transparent Pricing</h2>
+            <p className="text-lg text-slate-600 font-medium">Choose the plan that fits your needs</p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch">
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch"
+          >
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                variants={slowFadeIn}
                 className={`relative flex flex-col rounded-[2rem] p-8 transition-all duration-300 shadow-sm border-2 ${plan.highlighted
                   ? 'bg-[#005c7a] text-white border-[#38BDF8] shadow-xl z-10'
-                  : 'bg-white text-[#0F172A] border-slate-100/80 hover:border-[#38BDF8]/30'
+                  : 'bg-white text-slate-900 border-slate-100 hover:border-[#38BDF8]/30 hover:shadow-md'
                   }`}
               >
                 {plan.badge && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-[#38BDF8] text-white text-[10px] font-black px-4 py-1.5 rounded-lg whitespace-nowrap tracking-widest uppercase">
+                    <span className="bg-[#38BDF8] text-white text-[10px] font-black px-4 py-1.5 rounded-lg whitespace-nowrap tracking-widest uppercase shadow-sm">
                       {plan.badge}
                     </span>
                   </div>
@@ -441,11 +441,11 @@ export default function VornHR() {
                       <Zap className="h-8 w-8 text-[#38BDF8] fill-[#38BDF8]/10" />
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-[#0F172A] mb-8">
+                    <h3 className="text-2xl font-black text-[#0F172A] mb-8">
                       {plan.name}
                     </h3>
                     
-                    <p className="text-slate-500 text-sm leading-relaxed mb-8 max-w-[200px] flex-grow font-medium">
+                    <p className="text-slate-500 text-sm leading-relaxed mb-8 max-w-[200px] flex-grow font-bold">
                       {plan.subtitle}<br />
                       {plan.description}
                     </p>
@@ -463,17 +463,17 @@ export default function VornHR() {
                 ) : (
                   <>
                     <div className="mb-6">
-                      <h3 className={`text-xl font-bold mb-4 ${plan.highlighted ? 'text-white' : 'text-[#0F172A]'}`}>
+                      <h3 className={`text-xl font-black mb-4 ${plan.highlighted ? 'text-white' : 'text-[#0F172A]'}`}>
                         {plan.name}
                       </h3>
                       <div className="flex items-baseline gap-1 mb-1">
-                        <span className="text-4xl font-bold">{plan.price}</span>
-                        <span className={`text-sm font-medium ${plan.highlighted ? 'text-blue-100' : 'text-slate-400'}`}>
+                        <span className="text-4xl font-black">{plan.price}</span>
+                        <span className={`text-sm font-bold ${plan.highlighted ? 'text-blue-100' : 'text-slate-400'}`}>
                           {plan.period}
                         </span>
                       </div>
                       {plan.subtitle && (
-                        <p className={`text-sm font-medium ${plan.highlighted ? 'text-blue-100/70' : 'text-slate-500'}`}>
+                        <p className={`text-sm font-bold ${plan.highlighted ? 'text-blue-100/70' : 'text-slate-500'}`}>
                           {plan.subtitle}
                         </p>
                       )}
@@ -483,9 +483,9 @@ export default function VornHR() {
                       {plan.features?.map((feature) => (
                         <li key={feature} className="flex items-start gap-3 text-sm">
                           <div className={`mt-0.5 rounded-full border p-0.5 flex-shrink-0 ${plan.highlighted ? 'border-white/20' : 'border-slate-200'}`}>
-                            <CheckCircle className={`h-3 w-3 ${plan.highlighted ? 'text-white' : 'text-[#006080]'}`} />
+                            <CheckCircle className={`h-3 w-3 ${plan.highlighted ? 'text-white' : 'text-primary'}`} />
                           </div>
-                          <span className={plan.highlighted ? 'text-white/90' : 'text-slate-600 font-medium'}>
+                          <span className={plan.highlighted ? 'text-white/90 font-bold' : 'text-slate-600 font-bold'}>
                             {feature}
                           </span>
                         </li>
@@ -509,81 +509,88 @@ export default function VornHR() {
                 )}
               </motion.div>
             ))}
-          </div>
-
-
-          <div className="mt-12 text-center">
-            <p className="text-sm font-medium text-slate-500">
-              All plans include free implementation support
-            </p>
-          </div>
+          </motion.div>
         </div>
       </section>
+      */}
 
 
       {/* FAQ Section */}
-      <section className="section-padding bg-muted/30">
+      <section className="section-padding bg-slate-50 border-t border-slate-100">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-4 tracking-tight">Frequently Asked Questions</h2>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto">
+          <motion.div 
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            className="max-w-3xl mx-auto"
+          >
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-card border border-border rounded-xl px-6"
+                  className="bg-white/60 backdrop-blur-md border border-white rounded-[1.5rem] px-8 shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <AccordionTrigger className="text-left font-medium text-foreground hover:text-secondary">
+                  <AccordionTrigger className="text-left font-black text-slate-900 hover:text-primary py-6 text-lg">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-slate-600 font-bold pb-6 leading-relaxed text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container-custom relative">
-          <div className="text-center animate-fade-in-up">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-6">
-              Ready to Transform Your HR Processes?
-            </h2>
-            <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Join 5+ companies already using VORN HR to manage their workforce efficiently.
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://www.vornhr.com/contact" target="_blank" rel="noopener noreferrer">
-                <Button size="xl" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground" aria-label="Book a Vorn HR Demo">
-                  Book a Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </a>
-              <a href="https://www.vornhr.com/pricing" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10" aria-label="Start Vorn HR Free Trial">
-                  Start Free Trial
-                </Button>
-              </a>
+      <section className="py-16 sm:py-24 bg-background px-4 sm:px-0">
+        <div className="container-custom">
+          <motion.div 
+            variants={slowFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            className="bg-gradient-to-br from-primary via-[#007090] to-accent rounded-3xl sm:rounded-[3rem] px-6 py-10 sm:p-12 md:p-20 text-center relative overflow-hidden shadow-2xl"
+          >
+            {/* Background elements */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
             </div>
-          </div>
+
+            <div className="relative z-10">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+                Ready to Transform Your HR Processes?
+              </h2>
+              <p className="text-sm sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto font-bold leading-relaxed">
+                Join 5+ companies already using VORN HR to manage their workforce efficiently.
+              </p>
+
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 max-w-sm mx-auto sm:max-w-none">
+                <a href="https://www.vornhr.com/contact" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                  <Button size="lg" className="h-12 sm:h-14 px-8 text-sm sm:text-base font-bold bg-white text-primary hover:bg-white/90 rounded-full w-full transition-transform hover:scale-105 shadow-lg" aria-label="Book a Vorn HR Demo">
+                    Book a Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
+                <a href="https://www.vornhr.com/pricing" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="h-12 sm:h-14 px-8 text-sm sm:text-base font-bold border-2 border-white/30 text-white hover:bg-white/10 rounded-full w-full backdrop-blur-sm transition-transform hover:scale-105" aria-label="Start Vorn HR Free Trial">
+                    Start Free Trial
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
     </Layout>

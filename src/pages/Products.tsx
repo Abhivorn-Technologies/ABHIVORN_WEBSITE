@@ -227,21 +227,32 @@ export default function Products() {
             </section>
 
             {/* CTA Section */}
-            <section className="section-padding bg-primary">
+            <section className="py-16 sm:py-24 bg-background px-4 sm:px-0">
                 <div className="container-custom">
-                    <div className="max-w-2xl mx-auto text-center animate-fade-in-up">
-                        <h2 className="text-3xl font-bold text-primary-foreground mb-6">
-                            Ready to Transform Your Business?
-                        </h2>
-                        <p className="text-primary-foreground/80 mb-8">
-                            Schedule a demo to see how our products can help streamline your operations.
-                        </p>
-                        <Link to="/contact">
-                            <Button variant="hero" size="lg" className="bg-accent hover:bg-accent/90" aria-label="Book a Free Demo">
-                                Book a Free Demo
-                                <ArrowRight className="ml-2 h-5 w-5" />
-                            </Button>
-                        </Link>
+                    <div className="bg-gradient-to-br from-primary via-[#007090] to-accent rounded-3xl sm:rounded-[3rem] px-6 py-10 sm:p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+                        {/* Background elements */}
+                        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                            <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
+                            <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+                        </div>
+
+                        <div className="relative z-10 animate-fade-in-up">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+                                Ready to Transform Your Business?
+                            </h2>
+                            <p className="text-sm sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+                                Schedule a demo to see how our products can help streamline your operations.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 max-w-sm mx-auto sm:max-w-none">
+                                <Link to="/contact" className="w-full sm:w-auto">
+                                    <Button size="lg" className="h-12 sm:h-14 px-8 text-sm sm:text-base font-bold bg-white text-primary hover:bg-white/90 rounded-full w-full transition-transform hover:scale-105 shadow-lg" aria-label="Book a Free Demo">
+                                        Book a Free Demo
+                                        <ArrowRight className="ml-2 h-5 w-5" />
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

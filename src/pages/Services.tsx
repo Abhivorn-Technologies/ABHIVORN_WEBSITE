@@ -1,135 +1,70 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Heart, Code, Cloud, Database, Globe, Smartphone, Settings, Shield, BarChart3, Zap, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ArrowRight, Code, Users, Brain, Smartphone, Heart, Globe } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
+import HeroBg from '@/assets/hero_bg.jpg';
 
-const saasProducts = [
-  {
-    title: 'VORN HR',
-    description: 'Complete HR Management System',
-    icon: Users,
-    features: [
-      'Employee Management & Database',
-      'Attendance Tracking (Facial Recognition)',
-      'Leave Management & Workflows',
-      'Performance Management (OKRs)',
-      'Payroll & Compensation',
-      'HR Analytics & Reports',
-      'Mobile Apps (iOS & Android)',
-      'Role-Based Access Control'
-    ],
-    metrics: ['10+ companies', '99.8% uptime'],
-    pricing: 'Starting at ₹499/month',
-    cta: 'Get Demo',
-    href: '/products/vorn-hr'
-  },
-  {
-    title: 'VorQard',
-    description: 'QR-Based Healthcare Management',
-    icon: Heart,
-    features: [
-      'Patient Management System',
-      'Appointment Scheduling',
-      'QR-Based Check-in',
-      'Billing & Invoicing',
-      'Medical Records Management',
-      'Analytics Dashboard'
-    ],
-    badge: 'Beta Access Available',
-    metrics: ['HIPAA compliant', '40% wait time reduction'],
-    cta: 'Join Beta Program',
-    href: '/products/vorqard'
-  }
-];
+const slowFadeIn = {
+  initial: { opacity: 0, y: 50, filter: 'blur(20px)' },
+  whileInView: { opacity: 1, y: 0, filter: 'blur(0px)' },
+  viewport: { once: true, margin: "100px" },
+  transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1] }
+};
+
+const staggerContainer = {
+  initial: {},
+  whileInView: { transition: { staggerChildren: 0.12 } },
+  viewport: { once: true, margin: "100px" }
+};
 
 const services = [
   {
-    icon: Globe,
-    title: 'Web Application Development',
-    description: 'Custom web applications built with modern frameworks',
-    tech: ['React', 'Django', 'PostgreSQL', 'TypeScript']
-  },
-  {
-    icon: Heart,
-    title: 'Healthcare Technology',
-    description: 'HIPAA-compliant healthcare management systems',
-    tech: ['Patient Management', 'Telemedicine', 'EMR Integration']
+    icon: Code,
+    title: 'Custom Software Development',
+    description: 'Tailor-made software solutions built from scratch to solve your unique business challenges and drive operational excellence.',
+    href: '/custom-software-development',
+    image: '/images/services/service_custom_software_1788517183588.jpg',
+    color: 'from-blue-500/20 to-indigo-500/20'
   },
   {
     icon: Users,
-    title: 'HRMS Implementation',
-    description: 'VORN HR deployment with custom configurations',
-    tech: ['Biometric Integration', 'Payroll Setup', 'Training']
+    title: 'HRMS Software Development',
+    description: 'End-to-end HR management systems with payroll, attendance, performance tracking, and smart analytics built-in.',
+    href: '/hrms-software-development',
+    image: '/images/services/service_hrms_1788517201808.jpg',
+    color: 'from-teal-500/20 to-cyan-500/20'
   },
   {
-    icon: Settings,
-    title: 'System Integration',
-    description: 'Connect your existing systems seamlessly',
-    tech: ['API Development', 'ERP Integration', 'CRM Sync']
+    icon: Brain,
+    title: 'AI Development',
+    description: 'Leverage the power of artificial intelligence and machine learning to automate processes and unlock deeper insights.',
+    href: '/ai-development-company',
+    image: '/images/services/service_ai_1788517217693.jpg',
+    color: 'from-purple-500/20 to-pink-500/20'
   },
   {
-    icon: Cloud,
-    title: 'Cloud Architecture',
-    description: 'Scalable cloud infrastructure on AWS',
-    tech: ['AWS', 'DevOps', 'CI/CD', 'Kubernetes']
+    icon: Smartphone,
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform mobile applications for iOS and Android, built for performance and seamless user experience.',
+    href: '/mobile-app-development',
+    image: '/images/services/service_mobile_1788517254178.jpg',
+    color: 'from-orange-500/20 to-red-500/20'
   },
   {
-    icon: Database,
-    title: 'Data Processing',
-    description: 'ETL pipelines and document processing',
-    tech: ['OCR', 'Data Extraction', 'Automation']
-  }
-];
-
-const engagementModels = [
-  {
-    title: 'Fixed Project',
-    description: 'Best for well-defined projects with clear requirements',
-    timeline: '6-12 weeks',
-    investment: '₹2,00,000 - ₹20,00,000',
-    features: ['Fixed scope & budget', 'Milestone-based delivery', 'Clear timeline'],
-    cta: 'Discuss Your Project'
+    icon: Heart,
+    title: 'Healthcare Software Development',
+    description: 'HIPAA-compliant, patient-centric healthcare solutions that streamline clinical workflows and improve outcomes.',
+    href: '/healthcare-software-development',
+    image: '/images/services/service_healthcare_1788517271459.jpg',
+    color: 'from-green-500/20 to-emerald-500/20'
   },
   {
-    title: 'Time & Material',
-    description: 'Best for evolving requirements and agile development',
-    timeline: 'Flexible',
-    investment: '₹2,000/day or ₹500/hour',
-    features: ['Flexible scope', 'Pay for actual work', 'Agile methodology'],
-    cta: 'Get Quote',
-    highlighted: true
-  },
-  {
-    title: 'Retainer Model',
-    description: 'Best for ongoing support and maintenance',
-    timeline: '20-40 hours/month',
-    investment: '₹25,000 - ₹50,000/month',
-    features: ['Dedicated support', 'Priority response', 'Regular updates'],
-    cta: 'Subscribe'
-  }
-];
-
-const processSteps = [
-  {
-    step: '01',
-    title: 'Discovery & Planning',
-    description: 'We understand your requirements, analyze your needs, and create a detailed project plan.'
-  },
-  {
-    step: '02',
-    title: 'Design & Development',
-    description: 'Our team designs the solution and develops it using agile methodology with regular updates.'
-  },
-  {
-    step: '03',
-    title: 'Testing & Deployment',
-    description: 'Rigorous testing ensures quality, followed by smooth deployment to your environment.'
-  },
-  {
-    step: '04',
-    title: 'Support & Maintenance',
-    description: 'Ongoing support, updates, and maintenance to keep your solution running optimally.'
+    icon: Globe,
+    title: 'Web Development – Hyderabad',
+    description: 'Full-stack web development with modern frameworks, stellar UI/UX design, and robust backend architecture.',
+    href: '/web-development-company-hyderabad',
+    image: '/images/services/service_web_1788517237399.jpg',
+    color: 'from-sky-500/20 to-blue-500/20'
   }
 ];
 
@@ -137,262 +72,117 @@ export default function Services() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-b from-muted/50 to-background">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-              Comprehensive{' '}
-              <span className="text-accent">Technology Solutions</span>
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              From ready-to-deploy SaaS products to custom enterprise solutions,
-              we have the expertise to transform your business.
-            </p>
-          </div>
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center overflow-hidden pt-24 sm:pt-32 pb-16 bg-black">
+        <div className="absolute inset-0 z-0">
+          <AnimatePresence>
+            <motion.img
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 2, ease: "easeInOut" }}
+              src={HeroBg}
+              alt="Services Hero Background"
+              className="absolute inset-0 w-full h-full object-cover sm:object-center opacity-50"
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-4xl h-[160%] bg-black/40 blur-[120px] rounded-[100%] pointer-events-none hidden sm:block" />
+        </div>
+
+        <div className="container-custom relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white text-sm font-bold mb-8 border border-white/20"
+          >
+            <Code className="h-4 w-4 text-[#38BDF8]" />
+            What We Do
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-5xl sm:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight leading-[1.1]"
+          >
+            Our Services
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="text-lg sm:text-2xl text-slate-200 font-medium max-w-2xl mx-auto leading-relaxed"
+          >
+            From enterprise HR to AI-driven healthcare, we build transformative software that powers your growth.
+          </motion.p>
         </div>
       </section>
 
-      {/* SaaS Products Section */}
-      <section id="products" className="section-padding bg-background">
-        <div className="container-custom">
+      {/* Services Grid */}
+      <section className="section-padding bg-slate-50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#38BDF8]/10 rounded-full blur-[120px] animate-pulse pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-indigo-500/10 rounded-full blur-[120px] animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
+
+        <div className="container-custom relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-4">Our SaaS Products</h2>
-            <p className="text-muted-foreground">Ready-to-deploy solutions for modern businesses</p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {saasProducts.map((product, index) => (
-              <motion.div
-                key={product.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card border border-border rounded-2xl p-8 relative"
-              >
-                {product.badge && (
-                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium">
-                    {product.badge}
-                  </span>
-                )}
-
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <product.icon className="h-7 w-7 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">{product.title}</h3>
-                    <p className="text-muted-foreground">{product.description}</p>
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-3 mb-6">
-                  {product.features.map((feature) => (
-                    <div key={feature} className="flex items-center gap-2 text-sm text-foreground/80">
-                      <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
-                      {feature}
+            {services.map((service) => (
+              <motion.div key={service.href} variants={slowFadeIn}>
+                <Link
+                  to={service.href}
+                  className="group relative bg-white/50 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_rgba(0,0,0,0.10)] transition-all duration-500 hover:-translate-y-2 flex flex-col h-full block"
+                >
+                  {/* Image */}
+                  <div className="relative h-52 overflow-hidden rounded-t-[2.5rem]">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-60`} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent" />
+                    
+                    {/* Floating Icon */}
+                    <div className="absolute bottom-4 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-white/80 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                      <service.icon className="h-7 w-7 text-primary" />
                     </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap gap-4 mb-6">
-                  {product.metrics.map((metric) => (
-                    <span key={metric} className="px-3 py-1 bg-accent/10 text-primary rounded-full text-sm font-medium">
-                      {metric}
-                    </span>
-                  ))}
-                </div>
-
-                {product.pricing && (
-                  <p className="text-lg font-semibold text-foreground mb-6">{product.pricing}</p>
-                )}
-
-                <div className="flex gap-4">
-                  <Link to={product.href}>
-                    <Button variant="hero" aria-label={`Get Demo for ${product.title}`}>
-                      {product.cta}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                  <Link to="/contact">
-                    <Button variant="outline" aria-label={`View Pricing for ${product.title}`}>View Pricing</Button>
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Custom Development Section */}
-      <section id="custom" className="section-padding bg-muted/30">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-foreground mb-4">Custom Development Services</h2>
-            <p className="text-muted-foreground">Enterprise-grade solutions tailored to your needs</p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card border border-border rounded-2xl p-6 card-hover"
-              >
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                  <service.icon className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{service.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {service.tech.map((tech) => (
-                    <span key={tech} className="px-2 py-1 bg-muted text-muted-foreground rounded text-xs">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Engagement Models Section */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-foreground mb-4">How We Work</h2>
-            <p className="text-muted-foreground">Flexible engagement models to suit your needs</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {engagementModels.map((model, index) => (
-              <motion.div
-                key={model.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`rounded-2xl p-8 ${model.highlighted
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-card border border-border'
-                  }`}
-              >
-                <h3 className={`text-xl font-bold mb-2 ${model.highlighted ? '' : 'text-foreground'}`}>
-                  {model.title}
-                </h3>
-                <p className={`text-sm mb-6 ${model.highlighted ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
-                  {model.description}
-                </p>
-
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <div className={`text-xs ${model.highlighted ? 'text-primary-foreground/60' : 'text-muted-foreground'}`}>
-                      Timeline
-                    </div>
-                    <div className="font-semibold">{model.timeline}</div>
                   </div>
-                  <div>
-                    <div className={`text-xs ${model.highlighted ? 'text-primary-foreground/60' : 'text-muted-foreground'}`}>
-                      Investment
+
+                  {/* Content */}
+                  <div className="p-8 flex-1 flex flex-col">
+                    <h3 className="text-xl font-black text-slate-900 mb-3 tracking-tight group-hover:text-primary transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-slate-600 font-bold leading-relaxed flex-grow">
+                      {service.description}
+                    </p>
+
+                    <div className="mt-8 flex items-center gap-2 text-primary font-black text-sm group-hover:gap-3 transition-all duration-300">
+                      Learn More
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 duration-300" />
                     </div>
-                    <div className="font-semibold">{model.investment}</div>
                   </div>
-                </div>
-
-                <ul className="space-y-2 mb-8">
-                  {model.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm">
-                      <CheckCircle className={`h-4 w-4 ${model.highlighted ? 'text-secondary' : 'text-accent'}`} />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link to="/contact">
-                  <Button
-                    variant={model.highlighted ? 'hero' : 'outline'}
-                    className={model.highlighted ? 'bg-accent hover:bg-accent/90 w-full' : 'w-full'}
-                    aria-label={`${model.cta} for ${model.title}`}
-                  >
-                    {model.cta}
-                  </Button>
                 </Link>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-foreground mb-4">Our Development Process</h2>
-            <p className="text-muted-foreground">A proven methodology for successful project delivery</p>
           </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-5xl font-bold text-accent/20 mb-4">{step.step}</div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-primary">
-        <div className="container-custom">
-          <div className="max-w-2xl mx-auto text-center animate-fade-in-up">
-            <h2 className="text-3xl font-bold text-primary-foreground mb-6">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-primary-foreground/80 mb-8">
-              Let's discuss your requirements and find the perfect solution for your business.
-            </p>
-            <Link to="/contact">
-              <Button variant="hero" size="lg" className="bg-accent hover:bg-accent/90" aria-label="Get a Free Consultation">
-                Get a Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
     </Layout>
   );
+
+  /* =====================================================
+     PREVIOUS SERVICES PAGE UI — COMMENTED OUT
+  ======================================================
+
+  (Original ~25KB Services page JSX content removed
+  and replaced with the clean 6-card grid above.
+  If you need to restore it, check git history.)
+
+  ===================================================== */
 }
