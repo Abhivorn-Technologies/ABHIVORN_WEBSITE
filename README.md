@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+# Abhivorn Technologies — Website
 
-## Project info
+Company website for **Abhivorn Technologies Pvt Ltd** — [www.abhivorn.com](https://www.abhivorn.com).
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Built with **Next.js (App Router)**, TypeScript, Tailwind CSS and Framer Motion. Every page is pre-rendered as static HTML, so it loads fast and is fully readable by Google.
 
-## How can I edit this code?
+## Getting started
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+npm install
+cp .env.example .env.local   # then fill in the keys
+npm run dev                  # http://localhost:3000
 ```
 
-**Edit a file directly in GitHub**
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Local development server |
+| `npm run build` | Production build (also type-checks) |
+| `npm run start` | Serve the production build |
+| `npm run lint` | ESLint |
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Where to edit content
 
-**Use GitHub Codespaces**
+| What | File |
+| --- | --- |
+| Company facts — stats, phone, email, offices, team, navigation | `src/lib/site.ts` |
+| Projects / case studies | `src/lib/projects.ts` |
+| Service landing pages (text, FAQs) | `src/lib/services.ts` |
+| Blog posts | `src/lib/blog.ts` |
+| Page layouts | `src/app/**/page.tsx` |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The sitemap (`/sitemap.xml`), robots.txt, social share image and structured data are generated automatically from these files.
 
-## What technologies are used for this project?
+## Environment variables
 
-This project is built with:
+See `.env.example`. Add the same keys in **Vercel → Project → Settings → Environment Variables**. Never commit `.env` files.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Analytics
 
-## How can I deploy this project?
+| Tool | What you get | How to turn it on |
+| --- | --- | --- |
+| Vercel Web Analytics | Visitors, page views, top pages, referrers, countries, devices | Vercel → Project → **Analytics** → Enable |
+| Vercel Speed Insights | Real visitors' loading experience (Core Web Vitals) | Vercel → Project → **Speed Insights** → Enable |
+| Google Analytics 4 | Detailed traffic, sources, conversions (`generate_lead` event) | Create a GA4 property, set `NEXT_PUBLIC_GA_ID` |
+| Microsoft Clarity | Heatmaps and session recordings of how people use each page | Create a free project at clarity.microsoft.com, set `NEXT_PUBLIC_CLARITY_ID` |
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+GA4 and Clarity load only after a visitor accepts the cookie banner. Tracked events: `cta_click`, `generate_lead`, `contact_form_start`, `whatsapp_click`, `phone_click`, `email_click`, `project_filter`, `outbound_click`.
 
-## Can I connect a custom domain to my Lovable project?
+Each contact-form email includes the lead's landing page and source (referrer / UTM campaign). Add `{{lead_source}}`, `{{landing_page}}` and `{{company_size}}` to the EmailJS template to see them.
 
-Yes, you can!
+## Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Deployed on Vercel. Pushing to `main` deploys production; other branches get preview URLs.

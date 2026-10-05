@@ -1,174 +1,142 @@
-import { Link } from 'react-router-dom';
-import { Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import Link from "next/link";
+import Image from "next/image";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import TrackedLink from "@/components/TrackedLink";
+import { offices, productLinks, serviceLinks, site } from "@/lib/site";
+import logo from "@/assets/logo.png";
 
-const footerLinks = {
-  products: [
-    { name: 'VORN HR', href: '/products/vorn-hr' },
-    { name: 'VorQard', href: '/products/vorqard' },
-    { name: 'Custom Development', href: '/services#custom' },
-  ],
-  company: [
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-  ],
-  contact: [
-    { icon: Mail, text: 'hello@abhivorn.com', href: 'mailto:hello@abhivorn.com' },
-    { icon: Phone, text: '+91 9966629766', href: 'tel:+919966629766' },
-    { icon: MapPin, text: 'Cyber Towers - HITEC City, Hyderabad', href: 'https://www.google.com/maps/place/Cyber+Towers+-+HITEC+City/@17.4503676,78.3784705,16z/data=!3m1!4b1!4m6!3m5!1s0x3bcb930036e02df5:0xafd92e6778539645!8m2!3d17.4503676!4d78.3810454!16s%2Fg%2F11xdl26znk!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D' },
-    { icon: MapPin, text: 'KPHB, Hyderabad 500072', href: 'https://www.google.com/maps/place/Abhivorn+Technologies/@17.4868787,78.3940046,17z/data=!3m1!4b1!4m6!3m5!1s0x49f364b62c0799dd:0x97e0bc47c22fdf60!8m2!3d17.4868787!4d78.3965795!16s%2Fg%2F11yn9kw_tm?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D' },
-  ],
-  vorqardContact: [
-    { text: 'support@vorqard.com', href: 'mailto:support@vorqard.com', label: 'VorQard (Healthcare)' },
-    { text: 'www.vorqard.com', href: 'https://www.vorqard.com', label: '' },
-  ],
-};
-
-const socialLinks = [
-  { icon: Linkedin, href: 'https://linkedin.com/company/abhivorn-technologies', label: 'LinkedIn' },
-  { icon: Instagram, href: 'https://www.instagram.com/abhivorn_technologies?igsh=amh3bWw2d2N1bDVq', label: 'Instagram' },
+const company = [
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Products", href: "/products" },
+  { name: "Projects", href: "/projects" },
+  { name: "Blog", href: "/blog" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Company Info */}
-          <div className="space-y-6">
-            <Link to="/" className="inline-block group">
-              <img
-                src={logo}
-                alt="Abhivorn Technologies"
-                width="160"
-                height="40"
-                className="h-10 w-auto brightness-0 invert transition-all duration-300 group-hover:brightness-100 group-hover:invert-0"
-              />
+      <div className="container-custom py-16 md:py-20">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
+          <div className="space-y-6 lg:col-span-4">
+            <Link href="/" className="inline-block" aria-label={`${site.name} home`}>
+              <Image src={logo} alt={site.name} className="h-10 w-auto brightness-0 invert" sizes="160px" />
             </Link>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Enterprise-grade HR & Healthcare solutions for modern businesses. Building the future of enterprise software.
+            <p className="max-w-sm text-sm leading-relaxed text-primary-foreground/80">
+              Custom software, web and mobile apps, HRMS, healthcare and AI solutions — designed, built and supported by
+              our team in Hyderabad.
             </p>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center transition-all duration-300 ${social.label === 'LinkedIn'
-                    ? 'hover:bg-[#0A66C2] hover:scale-110'
-                    : 'hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#E1306C] hover:to-[#F77737] hover:scale-110'
-                    }`}
-                  aria-label={social.label}
+            <ul className="space-y-3 text-sm">
+              <li>
+                <TrackedLink
+                  href={`mailto:${site.email}`}
+                  event="email_click"
+                  eventParams={{ location: "footer" }}
+                  className="flex items-center gap-3 text-primary-foreground/80 transition-colors hover:text-primary-foreground"
                 >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
+                  <Mail className="h-4 w-4 flex-shrink-0" aria-hidden /> {site.email}
+                </TrackedLink>
+              </li>
+              <li>
+                <TrackedLink
+                  href={site.phoneHref}
+                  event="phone_click"
+                  eventParams={{ location: "footer" }}
+                  className="flex items-center gap-3 text-primary-foreground/80 transition-colors hover:text-primary-foreground"
+                >
+                  <Phone className="h-4 w-4 flex-shrink-0" aria-hidden /> {site.phone}
+                </TrackedLink>
+              </li>
+            </ul>
+            <div className="flex gap-3">
+              <a
+                href={site.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abhivorn on LinkedIn"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 transition hover:scale-110 hover:bg-[#0A66C2]"
+              >
+                <FaLinkedinIn className="h-5 w-5" />
+              </a>
+              <a
+                href={site.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abhivorn on Instagram"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 transition hover:scale-110 hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#E1306C] hover:to-[#F77737]"
+              >
+                <FaInstagram className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
-          {/* Products */}
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Products</h4>
-            <ul className="space-y-3">
-              {footerLinks.products.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <FooterCol title="Services" className="lg:col-span-3" links={serviceLinks} />
+
+          <div className="space-y-10 lg:col-span-2">
+            <FooterCol title="Company" links={company} />
+            <FooterCol title="Products" links={productLinks} />
           </div>
 
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Contact</h4>
-            <ul className="space-y-3">
-              {footerLinks.contact.map((item) => (
-                <li key={item.text}>
+          <div className="lg:col-span-3">
+            <h2 className="mb-5 text-base font-semibold">Our Offices</h2>
+            <ul className="space-y-4">
+              {offices.map((o) => (
+                <li key={o.name}>
                   <a
-                    href={item.href}
-                    className="flex items-center gap-3 text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    href={o.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex gap-3 text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
                   >
-                    <item.icon className="h-4 w-4 flex-shrink-0" />
-                    <span>{item.text}</span>
+                    <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" aria-hidden />
+                    <span>
+                      <span className="block font-medium text-primary-foreground">
+                        {o.name} <span className="font-normal text-primary-foreground/60">· {o.label}</span>
+                      </span>
+                      {o.address}
+                    </span>
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* VorQard Healthcare */}
-          <div>
-            <h4 className="font-semibold text-lg mb-6">VorQard (Healthcare)</h4>
-            <ul className="space-y-3">
-              {footerLinks.vorqardContact.map((item, index) => (
-                <li key={item.text}>
-                  {index === 0 ? (
-                    <a
-                      href={item.href}
-                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
-                    >
-                      {item.text}
-                    </a>
-                  ) : (
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
-                    >
-                      {item.text}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-primary-foreground/20">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-primary-foreground/60 text-sm text-center md:text-left">
-              © 2025 Abhivorn Technologies Pvt Ltd. All rights reserved.
-            </p>
-            <div className="flex gap-6">
-              <Link to="/privacy" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
-                Terms of Service
-              </Link>
-            </div>
+        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/20 pt-8 text-sm text-primary-foreground/70 md:flex-row">
+          <p className="text-center md:text-left">
+            © {year} {site.legalName}. All rights reserved. MSME registered.
+          </p>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="transition-colors hover:text-primary-foreground">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="transition-colors hover:text-primary-foreground">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterCol({ title, links, className }: { title: string; links: { name: string; href: string }[]; className?: string }) {
+  return (
+    <div className={className}>
+      <h2 className="mb-5 text-base font-semibold">{title}</h2>
+      <ul className="space-y-3">
+        {links.map((l) => (
+          <li key={l.href}>
+            <Link href={l.href} className="text-sm text-primary-foreground/75 transition-colors hover:text-primary-foreground">
+              {l.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

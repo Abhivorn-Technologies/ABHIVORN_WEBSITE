@@ -1,81 +1,55 @@
-import emailjs from '@emailjs/browser';
+"use client";
 
-// EmailJS Configuration
-// These are PUBLIC keys and safe to include in the codebase
-// To set up EmailJS:
-// 1. Go to https://emailjs.com and create an account
-// 2. Create an Email Service (e.g., Gmail, Outlook)
-// 3. Create an Email Template
-// 4. Get your Public Key from Account > API Keys
-// 5. Replace the values below with your own
+import emailjs from "@emailjs/browser";
+import { getAttribution } from "./analytics";
 
-export const EMAILJS_CONFIG = {
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || '',
-  contactTemplateId: import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID || '',
-  applicationTemplateId: import.meta.env.VITE_EMAILJS_APPLICATION_TEMPLATE_ID || '',
-  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '',
+const config = {
+  serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+  contactTemplateId: process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID || "",
+  publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
 };
 
-// Initialize EmailJS
-export const initEmailJS = () => {
-  emailjs.init(EMAILJS_CONFIG.publicKey);
-};
+export const isEmailConfigured = () => Boolean(config.serviceId && config.contactTemplateId && config.publicKey);
 
-// Send contact form email
-export const sendContactEmail = async (data: {
+export type ContactPayload = {
   name: string;
   email: string;
   phone?: string;
   company?: string;
+  companySize?: string;
   inquiryType: string;
   message: string;
-}) => {
+};
+
+/**
+ * Sends the enquiry to the team inbox. Lead-source details (landing page, referrer, UTM campaign)
+ * are attached automatically so every lead shows where it came from.
+ * Note: add {{lead_source}}, {{landing_page}}, {{company_size}} to the EmailJS template to see them.
+ */
+export async function sendContactEmail(data: ContactPayload) {
+  const a = getAttribution();
+  const source = a
+    ? [a.utmSource && `${a.utmSource}${a.utmMedium ? ` / ${a.utmMedium}` : ""}`, a.utmCampaign && `campaign: ${a.utmCampaign}`, a.referrer]
+        .filter(Boolean)
+        .join(" · ")
+    : "Unknown";
+
   return emailjs.send(
-    EMAILJS_CONFIG.serviceId,
-    EMAILJS_CONFIG.contactTemplateId,
+    config.serviceId,
+    config.contactTemplateId,
     {
       from_name: data.name,
       from_email: data.email,
-      phone: data.phone || 'Not provided',
-      company: data.company || 'Not provided',
+      phone: data.phone || "Not provided",
+      company: data.company || "Not provided",
+      company_size: data.companySize || "Not provided",
       inquiry_type: data.inquiryType,
       message: data.message,
-      to_name: 'Abhivorn Technologies',
-    }
+      to_name: "Abhivorn Technologies",
+      lead_source: source,
+      landing_page: a?.landingPage || "Unknown",
+      submitted_from: typeof window !== "undefined" ? window.location.pathname : "",
+    },
+    { publicKey: config.publicKey },
   );
-};
-
-// Send job application email via Form (Support for attachments)
-export const sendApplicationForm = async (formElement: HTMLFormElement) => {
-  return emailjs.sendForm(
-    EMAILJS_CONFIG.serviceId,
-    EMAILJS_CONFIG.applicationTemplateId,
-    formElement
-  );
-};
-
-// Deprecated: Send job application email (JSON only)
-export const sendApplicationEmail = async (data: {
-  name: string;
-  email: string;
-  phone: string;
-  position: string;
-  experience?: string;
-  portfolio?: string;
-  coverLetter?: string;
-}) => {
-  return emailjs.send(
-    EMAILJS_CONFIG.serviceId,
-    EMAILJS_CONFIG.applicationTemplateId,
-    {
-      from_name: data.name,
-      from_email: data.email,
-      phone: data.phone,
-      position: data.position,
-      experience: data.experience || 'Not specified',
-      portfolio: data.portfolio || 'Not provided',
-      cover_letter: data.coverLetter || 'No cover letter provided',
-      to_name: 'Abhivorn Technologies HR',
-    }
-  );
-};
+}
