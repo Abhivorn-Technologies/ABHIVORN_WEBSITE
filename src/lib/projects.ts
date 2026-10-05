@@ -164,15 +164,22 @@ export const projects: Project[] = [
   {
     slug: "lorven-golf",
     name: "Lorven Golf",
-    client: "Lorven Golf",
+    client: "Lorven Golf, Hyderabad",
     category: "E-commerce",
-    status: "Delivered",
-    headline: "An e-commerce store for premium golf equipment and apparel",
-    summary: "Lorven Golf's online store for clubs, bags, shoes and apparel, with customer accounts and a persistent cart.",
-    challenge: "The brand needed a clean, fast store that works well on mobile for golfers browsing premium equipment.",
-    solution: "A Next.js storefront with authentication, cart, product listings and SEO-friendly pages.",
-    highlights: ["Customer sign-in and accounts", "Persistent shopping cart", "SEO-friendly product pages"],
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    status: "Live",
+    headline: "An online store for premium golf equipment and apparel",
+    summary:
+      "Lorven Golf's e-commerce store for clubs, shoes, apparel, bags, balls and accessories from leading golf brands.",
+    challenge: "The retailer needed a clean, fast store that works well on mobile for golfers browsing premium equipment.",
+    solution:
+      "A Next.js storefront with six product categories, deals and new arrivals, customer accounts with order tracking, and secure online checkout.",
+    highlights: [
+      "Shop by clubs, shoes, apparel, bags, balls and accessories",
+      "Customer accounts with order tracking",
+      "Secure online checkout with Razorpay",
+    ],
+    tech: ["Next.js", "TypeScript", "MongoDB", "Razorpay"],
+    url: "https://lorvengolf.com/",
   },
   {
     slug: "donor-management-system",
@@ -199,19 +206,21 @@ export const projects: Project[] = [
     name: "Costita",
     client: "Costita",
     category: "Import & Export",
-    status: "Delivered",
-    headline: "Cost tracking and budget platform for an import & export business",
-    summary: "A dashboard that brings costs from every department of an import & export business into one real-time view.",
+    status: "Live",
+    headline: "A B2B sourcing platform connecting global buyers with Indian manufacturers",
+    summary:
+      "Costita's platform for factory-direct sourcing from India, covering product discovery, quality inspection and global logistics.",
     challenge:
-      "A growing import & export business had scattered cost centres and no unified view of real-time spending against budgets.",
+      "International buyers needed one trustworthy place to find verified Indian manufacturers, see order terms and request quotes for bulk orders.",
     solution:
-      "A dashboard that aggregates costs across departments with real-time alerts and predictive budget forecasting.",
-    highlights: ["Unified, real-time spend vs budget view", "Alerts on budget overruns", "Predictive forecasting"],
-    results: [
-      { metric: "15%", label: "Average cost savings" },
-      { metric: "Real-time", label: "Spend visibility" },
+      "A B2B website with a product catalogue across 10+ categories showing MOQs and dispatch timelines, custom quote requests, and clear logistics and buyer-protection pages.",
+    highlights: [
+      "Product catalogue with MOQs and dispatch timelines",
+      "Custom quote request form for bulk and custom orders",
+      "Logistics, shipping and buyer-protection information",
     ],
-    tech: ["Next.js", "TypeScript", "PostgreSQL"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    url: "https://costita.com/",
   },
   {
     slug: "elevate-rootz",
@@ -264,7 +273,7 @@ export const projects: Project[] = [
       "Payroll, payslips and HR analytics",
     ],
     tech: ["React", "Django", "PostgreSQL", "AWS"],
-    url: "/products/vorn-hr",
+    url: "https://www.vornhr.com/",
   },
 ];
 
