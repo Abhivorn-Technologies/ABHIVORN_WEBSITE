@@ -41,12 +41,11 @@ export default function ProjectCard({ project, className }: { project: Project; 
         {project.url && (
           <a
             href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...(project.url.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="ml-auto inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-accent"
             aria-label={`Visit ${project.name} website`}
           >
-            Visit <ArrowUpRight className="h-4 w-4" aria-hidden />
+            {project.url.startsWith("http") ? "Visit" : "View"} <ArrowUpRight className="h-4 w-4" aria-hidden />
           </a>
         )}
       </div>

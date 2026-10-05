@@ -1,4 +1,4 @@
-export type ProjectCategory = "Healthcare" | "E-commerce" | "Enterprise" | "Finance" | "Websites" | "Community";
+export type ProjectCategory = "Healthcare" | "E-commerce" | "Enterprise" | "Finance" | "Import & Export" | "Websites" | "Community";
 
 export type Project = {
   slug: string;
@@ -24,6 +24,7 @@ export const projectCategories: ("All" | ProjectCategory)[] = [
   "Websites",
   "Enterprise",
   "Finance",
+  "Import & Export",
   "Community",
 ];
 
@@ -64,15 +65,15 @@ export const projects: Project[] = [
     challenge:
       "Thousands of seva bookings, donations and priest sankalpam lists had to be collected online from devotees in India and abroad, in three languages.",
     solution:
-      "A multilingual Next.js portal with a 4-step booking wizard, Razorpay and UPI payments, printable seva tickets and an admin command centre for the temple team.",
+      "A multilingual Next.js portal with a step-by-step seva booking flow, Razorpay and UPI payments, printable seva tickets and an admin command centre for the temple team.",
     highlights: [
-      "English, Telugu and Hindi",
+      "Multilingual, with Telugu spiritual content",
       "Razorpay cards, net banking and UPI QR payments",
       "Admin centre with bookings, donations, gallery and live-stream control",
       "Priest Sankalpam register and CSV exports",
     ],
     tech: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Razorpay", "Cloudinary"],
-    url: "https://srikariatirudram.org",
+    url: "https://www.srikariatirudram.com/en",
     featured: true,
   },
   {
@@ -120,25 +121,25 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "the-sculpt-aesthetics",
-    name: "The Sculpt Aesthetics",
-    client: "The Sculpt Aesthetics, Hyderabad",
+    slug: "sculpt-aesthetic-plastic-surgery",
+    name: "Sculpt Aesthetic & Plastic Surgery Hospital",
+    client: "Sculpt, Madhapur, Hyderabad",
     category: "Healthcare",
     status: "Live",
-    headline: "A premium website for a cosmetic and plastic surgery clinic",
+    headline: "A premium website for a cosmetic, plastic surgery and hair transplant hospital",
     summary:
-      "A refined, consultation-focused website presenting the clinic's surgical and skin treatments.",
+      "A refined, consultation-focused website presenting the hospital's surgical, hair transplant and non-surgical treatments.",
     challenge:
-      "The clinic needed a site that builds trust with patients researching sensitive procedures and makes booking a consultation effortless.",
+      "The hospital needed a site that builds trust with patients researching sensitive procedures and makes booking a consultation effortless.",
     solution:
-      "A Next.js website with treatment pages, a consultation pop-up, floating call and WhatsApp actions, and a calm editorial design.",
+      "A Next.js website with treatment pages, doctor profiles, appointment booking and floating call and WhatsApp actions, in a calm editorial design.",
     highlights: [
-      "Treatment-wise pages for face, body, breast and skin",
-      "Consultation booking pop-up and floating contact actions",
+      "Treatment pages for face, body, breast, hair and skin",
+      "Appointment booking with floating call and WhatsApp actions",
       "Fast, mobile-first build with optimised images",
     ],
     tech: ["Next.js", "React", "Tailwind CSS"],
-    url: "https://thesculptaesthetics.com",
+    url: "https://thesculpt.co.in/",
   },
   {
     slug: "kolli-graphics",
@@ -161,13 +162,13 @@ export const projects: Project[] = [
     tech: ["React", "TypeScript", "Vite"],
   },
   {
-    slug: "golfpro",
-    name: "GolfPro",
-    client: "GolfPro",
+    slug: "lorven-golf",
+    name: "Lorven Golf",
+    client: "Lorven Golf",
     category: "E-commerce",
     status: "Delivered",
     headline: "An e-commerce store for premium golf equipment and apparel",
-    summary: "An online store for clubs, bags, shoes and apparel with customer accounts and a persistent cart.",
+    summary: "Lorven Golf's online store for clubs, bags, shoes and apparel, with customer accounts and a persistent cart.",
     challenge: "The brand needed a clean, fast store that works well on mobile for golfers browsing premium equipment.",
     solution: "A Next.js storefront with authentication, cart, product listings and SEO-friendly pages.",
     highlights: ["Customer sign-in and accounts", "Persistent shopping cart", "SEO-friendly product pages"],
@@ -197,12 +198,12 @@ export const projects: Project[] = [
     slug: "costita",
     name: "Costita",
     client: "Costita",
-    category: "Finance",
+    category: "Import & Export",
     status: "Delivered",
-    headline: "Cost tracking and budget optimisation platform",
-    summary: "A fintech dashboard that brings costs from every department into one real-time view.",
+    headline: "Cost tracking and budget platform for an import & export business",
+    summary: "A dashboard that brings costs from every department of an import & export business into one real-time view.",
     challenge:
-      "A growing enterprise had scattered cost centres and no unified view of real-time spending against budgets.",
+      "A growing import & export business had scattered cost centres and no unified view of real-time spending against budgets.",
     solution:
       "A dashboard that aggregates costs across departments with real-time alerts and predictive budget forecasting.",
     highlights: ["Unified, real-time spend vs budget view", "Alerts on budget overruns", "Predictive forecasting"],
@@ -248,18 +249,22 @@ export const projects: Project[] = [
     tech: ["Python", "OCR", "AWS Lambda", "PostgreSQL"],
   },
   {
-    slug: "vorn-hr-insurance",
-    name: "VORN HR rollout",
-    client: "Insurance company",
+    slug: "vorn-hr",
+    name: "VORN HR",
+    client: "In-house product",
     category: "Enterprise",
     status: "Live",
-    headline: "HRMS rollout with biometric attendance for an insurance company",
-    summary: "VORN HR deployed with biometric integration and HR analytics dashboards.",
-    challenge: "Attendance was tracked manually and HR had no analytics on leave, attendance or performance.",
-    solution: "We deployed VORN HR with biometric integration, automated attendance and custom HR dashboards.",
-    highlights: ["Biometric attendance integration", "Leave and attendance automation", "HR analytics dashboards"],
-    results: [{ metric: "70%", label: "Less HR admin time" }],
-    tech: ["VORN HR", "Biometric integration", "Power BI"],
+    headline: "A complete HRMS for Indian businesses",
+    summary: "Our own HR management software covering the full employee lifecycle in one place.",
+    challenge: "Growing companies juggle spreadsheets and separate tools for attendance, leave, payroll and employee records.",
+    solution: "We built VORN HR as one complete HRMS: employee records, attendance, leave, payroll, performance and self-service, with HR analytics.",
+    highlights: [
+      "Employee records and self-service",
+      "Attendance with biometric integration, and leave workflows",
+      "Payroll, payslips and HR analytics",
+    ],
+    tech: ["React", "Django", "PostgreSQL", "AWS"],
+    url: "/products/vorn-hr",
   },
 ];
 

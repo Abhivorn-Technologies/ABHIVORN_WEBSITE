@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Our Work — Case Studies & Recent Projects",
   description:
-    "Recent projects by Abhivorn Technologies: healthcare apps, e-commerce stores, real estate launch sites, booking portals, HRMS rollouts and AI document extraction.",
+    "Recent projects by Abhivorn Technologies: healthcare apps, e-commerce stores, real estate launch sites, booking portals, HRMS software and AI document extraction.",
   path: "/projects",
 });
 

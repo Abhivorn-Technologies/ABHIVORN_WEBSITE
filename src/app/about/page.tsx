@@ -12,7 +12,7 @@ import aboutOffice from "@/assets/about-office.png";
 export const metadata = pageMetadata({
   title: "About Us — Software Company in Hyderabad",
   description:
-    "Abhivorn Technologies is an MSME-registered software company founded in 2025 in Hyderabad, with a 15-member team, 3 offices and 50+ projects delivered.",
+    "Abhivorn Technologies is a Startup India certified software company founded in 2025 in Hyderabad, with a 15-member team, 3 offices and 50+ projects delivered.",
   path: "/about",
 });
 
@@ -24,7 +24,7 @@ const values = [
 ];
 
 const journey = [
-  { when: "2025", title: "Founded in Hyderabad", text: "Abhivorn Technologies Pvt Ltd is established at Cyber Towers, HITEC City, and registered as an MSME." },
+  { when: "2025", title: "Founded in Hyderabad", text: "Abhivorn Technologies Pvt Ltd is established at Cyber Towers, HITEC City, and certified under Startup India." },
   { when: "Products", title: "VORN HR goes live", text: "Our HR management product is deployed with its first enterprise client." },
   { when: "Growth", title: "Branches in KPHB and Karimnagar", text: "We expand to three offices across Telangana to serve more clients." },
   { when: "Today", title: "50+ projects and VORQARD live", text: "VORQARD Doctor and Patient apps launch on Google Play, alongside 50+ client projects delivered." },
@@ -40,7 +40,7 @@ export default function AboutPage() {
             A Hyderabad team building <span className="text-accent">software that works</span>
           </>
         }
-        description="Founded in 2025 and MSME-registered, we design, build and support web, mobile and enterprise software for businesses across India."
+        description="Founded in 2025 and Startup India certified, we design, build and support web, mobile and enterprise software for businesses across India."
         breadcrumb={[{ name: "About", path: "/about" }]}
       />
 

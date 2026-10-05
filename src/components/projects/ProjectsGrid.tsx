@@ -120,12 +120,11 @@ function ProjectDetail({ project: p }: { project: Project }) {
         {p.url && (
           <a
             href={p.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...(p.url.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             onClick={() => trackEvent("project_visit", { project: p.name })}
             className="ml-auto inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-accent"
           >
-            Visit site <ArrowUpRight className="h-4 w-4" aria-hidden />
+            {p.url.startsWith("http") ? "Visit site" : "View product"} <ArrowUpRight className="h-4 w-4" aria-hidden />
           </a>
         )}
       </div>

@@ -75,7 +75,7 @@ export default function HomePage() {
         <div className="container-custom relative grid items-center gap-12 py-14 md:py-20 lg:grid-cols-2 lg:py-28">
           <div className="animate-fade-in-up">
             <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-primary">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" /> MSME registered · Hyderabad
+              <span className="h-2 w-2 rounded-full bg-emerald-500" /> Startup India certified · Hyderabad
             </span>
             <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
               Software, web &amp; mobile apps <span className="text-accent">built to grow</span> your business

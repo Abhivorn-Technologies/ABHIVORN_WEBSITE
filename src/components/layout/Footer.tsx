@@ -108,7 +108,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/20 pt-8 text-sm text-primary-foreground/70 md:flex-row">
           <p className="text-center md:text-left">
-            © {year} {site.legalName}. All rights reserved. MSME registered.
+            © {year} {site.legalName}. All rights reserved. Startup India certified.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="transition-colors hover:text-primary-foreground">
