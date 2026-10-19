@@ -8,6 +8,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { Toaster } from "@/components/ui/sonner";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SITE_URL, site } from "@/lib/site";
+import { CONSENT_KEY } from "@/lib/consent";
 import "./globals.css";
 
 // Self-hosted Inter (variable weight) — no request to Google Fonts, faster first paint.
@@ -49,9 +50,30 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+// Google Tag Manager container. The ID is public (it ships in every page that uses GTM).
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-PSX78PTV";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-IN" className={inter.variable}>
+      <head>
+        {/*
+          Google Tag Manager with Consent Mode v2. The container loads on every page so Google can detect it,
+          but consent defaults to "denied": Google tags set no cookies until the visitor clicks Accept,
+          and the Analytics component then sends a consent "update".
+        */}
+        <script
+          id="gtm"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c;try{c=localStorage.getItem('${CONSENT_KEY}')==='granted'?'granted':'denied';}catch(e){c='denied';}
+gtag('consent','default',{ad_storage:c,ad_user_data:c,ad_personalization:c,analytics_storage:c,wait_for_update:500});
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');})();`,
+          }}
+        />
+      </head>
       <body className="flex min-h-screen flex-col">
         <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
         <SmoothScroll />
