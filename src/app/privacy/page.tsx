@@ -20,7 +20,7 @@ export default function PrivacyPage() {
       <h2>Information we collect</h2>
       <ul>
         <li>
-          <strong>Information you give us:</strong> when you fill in our contact form, email, call or message us on WhatsApp, we receive your
+          <strong>Information you give us:</strong> when you fill in our contact form or email us, we receive your
           name, email address, phone number, company, team size and the details of your enquiry.
         </li>
         <li>
@@ -73,8 +73,7 @@ export default function PrivacyPage() {
 
       <h2>Contact</h2>
       <p>
-        {site.legalName}, Cyber Towers, HITEC City, Hyderabad, Telangana, India. Email: <a href={`mailto:${site.email}`}>{site.email}</a> ·
-        Phone: {site.phone}
+        {site.legalName}, Cyber Towers, HITEC City, Hyderabad, Telangana, India. Email: <a href={`mailto:${site.email}`}>{site.email}</a>
       </p>
     </LegalPage>
   );

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { mainNav, site } from "@/lib/site";
@@ -17,8 +17,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
-  const { scrollYProgress } = useScroll();
-  const progress = useSpring(scrollYProgress, { stiffness: 140, damping: 30, mass: 0.3 });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -57,8 +55,8 @@ export default function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,border-color] duration-300",
         scrolled || mobileOpen
-          ? "border-b border-border/60 bg-background/90 shadow-sm backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
+          ? "border-b border-border bg-background/90 backdrop-blur-md"
+          : "border-b border-transparent bg-background",
       )}
     >
       <a
@@ -71,7 +69,7 @@ export default function Header() {
       <nav className="container-custom" aria-label="Main">
         <div className="flex h-16 items-center justify-between md:h-20">
           <Link href="/" className="flex items-center" aria-label={`${site.name} home`}>
-            <Image src={logo} alt={site.name} priority className="h-9 w-auto md:h-10" sizes="160px" />
+            <Image src={logo} alt={site.name} priority className="h-8 w-auto md:h-9" sizes="160px" />
           </Link>
 
           {/* Desktop */}
@@ -92,8 +90,8 @@ export default function Header() {
                   aria-haspopup={item.children ? "true" : undefined}
                   aria-expanded={item.children ? openGroup === item.name : undefined}
                   className={cn(
-                    "relative flex items-center gap-1 rounded-lg px-3 py-2 text-[15px] font-medium transition-colors",
-                    isActive(item.href) ? "text-primary" : "text-foreground/75 hover:text-primary",
+                    "relative flex items-center gap-1 rounded-md px-3 py-2 text-sm transition-colors",
+                    isActive(item.href) ? "text-foreground" : "text-muted-foreground hover:text-foreground",
                   )}
                 >
                   {item.name}
@@ -101,13 +99,6 @@ export default function Header() {
                     <ChevronDown
                       aria-hidden
                       className={cn("h-4 w-4 transition-transform duration-200", openGroup === item.name && "rotate-180")}
-                    />
-                  )}
-                  {isActive(item.href) && (
-                    <motion.span
-                      layoutId="nav-underline"
-                      className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
                 </Link>
@@ -121,14 +112,14 @@ export default function Header() {
                       transition={{ duration: 0.18 }}
                       className="absolute left-0 top-full pt-3"
                     >
-                      <ul className="w-80 rounded-2xl border border-border bg-background p-2 shadow-xl">
+                      <ul className="w-80 rounded-lg border border-border bg-background p-2 shadow-md">
                         {item.children.map((c) => (
                           <li key={c.href}>
                             <Link
                               href={c.href}
                               className="block rounded-xl px-4 py-3 transition-colors hover:bg-muted focus-visible:bg-muted"
                             >
-                              <span className="block text-sm font-semibold text-foreground">{c.name}</span>
+                              <span className="block text-sm font-medium text-foreground">{c.name}</span>
                               {c.description && (
                                 <span className="mt-0.5 block text-xs text-muted-foreground">{c.description}</span>
                               )}
@@ -144,7 +135,7 @@ export default function Header() {
           </ul>
 
           <div className="hidden lg:block">
-            <Button asChild variant="hero" size="lg">
+            <Button asChild variant="hero">
               <Link href="/contact" onClick={() => trackEvent("cta_click", { label: "Header – Get a quote", location: "header" })}>
                 Get a Free Quote
               </Link>
@@ -163,13 +154,6 @@ export default function Header() {
           </button>
         </div>
       </nav>
-
-      {/* Scroll progress */}
-      <motion.div
-        aria-hidden
-        className="absolute inset-x-0 bottom-0 h-[2px] origin-left bg-gradient-to-r from-primary to-accent"
-        style={{ scaleX: progress }}
-      />
 
       {/* Mobile menu */}
       <AnimatePresence>
@@ -196,7 +180,7 @@ export default function Header() {
                     <>
                       <button
                         type="button"
-                        className="flex w-full items-center justify-between py-4 text-left text-lg font-semibold text-foreground"
+                        className="flex w-full items-center justify-between py-4 text-left text-lg font-medium text-foreground"
                         aria-expanded={openGroup === item.name}
                         onClick={() => setOpenGroup(openGroup === item.name ? null : item.name)}
                       >
@@ -233,7 +217,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className={cn("block py-4 text-lg font-semibold", isActive(item.href) ? "text-primary" : "text-foreground")}
+                      className={cn("block py-4 text-lg font-medium", isActive(item.href) ? "text-primary" : "text-foreground")}
                     >
                       {item.name}
                     </Link>
@@ -246,11 +230,6 @@ export default function Header() {
                 <Link href="/contact" onClick={() => trackEvent("cta_click", { label: "Mobile menu – Get a quote", location: "mobile_menu" })}>
                   Get a Free Quote
                 </Link>
-              </Button>
-              <Button asChild variant="heroOutline" size="lg" className="w-full">
-                <a href={site.phoneHref} onClick={() => trackEvent("phone_click", { location: "mobile_menu" })}>
-                  Call {site.phone}
-                </a>
               </Button>
             </div>
           </motion.div>

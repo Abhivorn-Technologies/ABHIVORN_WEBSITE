@@ -30,6 +30,55 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    slug: "web-development",
+    path: "/web-development-company-hyderabad",
+    name: "Web Development",
+    icon: Globe,
+    summary: "Fast, SEO-ready websites, e-commerce stores and web apps built with Next.js and React.",
+    metaTitle: "Web Development Company in Hyderabad — Websites, E-commerce & Web Apps",
+    metaDescription:
+      "Web development company in Hyderabad building fast, SEO-friendly websites, e-commerce stores and web applications with Next.js and React. See our recent projects.",
+    keywords: ["web development company Hyderabad", "website development Hyderabad", "ecommerce website development", "Next.js development India"],
+    h1: "Web Development Company in Hyderabad",
+    intro:
+      "Your website is often the first conversation with a customer. We build fast, mobile-first websites, online stores and web applications that rank well on Google, load instantly and turn visitors into enquiries.",
+    offerings: [
+      { title: "Business & corporate websites", description: "Modern websites that explain what you do clearly and make it easy to get in touch." },
+      { title: "E-commerce stores", description: "Catalogues, carts, checkout with Razorpay/UPI/COD, order tracking and an admin console." },
+      { title: "Landing pages", description: "High-converting launch and campaign pages with lead capture built in." },
+      { title: "Web applications & SaaS", description: "Booking systems, portals and SaaS platforms with secure logins and dashboards." },
+      { title: "SEO & performance", description: "Server-rendered pages, structured data, sitemaps and Core Web Vitals tuned from day one." },
+      { title: "Multilingual sites", description: "English, Telugu and Hindi versions for audiences across India." },
+    ],
+    whyUs: [
+      "Built on Next.js for speed and search visibility",
+      "Every page tested on phones, tablets and desktops before launch",
+      "Analytics and lead tracking set up so you can see what's working",
+      "Recent launches for real estate, healthcare, retail and community organisations",
+    ],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "PostgreSQL", "Razorpay"],
+    projectCategories: ["Websites", "E-commerce"],
+    faqs: [
+      {
+        question: "How long does it take to build a website?",
+        answer: "A business website usually takes 2–4 weeks. E-commerce stores and web applications typically take 6–10 weeks depending on features.",
+      },
+      {
+        question: "Will my website be mobile-friendly and SEO-ready?",
+        answer:
+          "Yes. Every site we build is mobile-first, server-rendered for search engines, and ships with page titles, descriptions, a sitemap and structured data.",
+      },
+      {
+        question: "Can I update the content myself?",
+        answer: "Yes. We can add an admin panel or CMS so your team can update products, pages and blog posts without a developer.",
+      },
+      {
+        question: "Do you provide hosting and domain setup?",
+        answer: "We handle deployment, domain connection, SSL and analytics setup as part of the launch.",
+      },
+    ],
+  },
+  {
     slug: "custom-software-development",
     path: "/custom-software-development",
     name: "Custom Software Development",
@@ -76,55 +125,6 @@ export const services: Service[] = [
       {
         question: "Can you work with our existing systems?",
         answer: "Yes. We regularly integrate with payment gateways, accounting tools, biometric devices, ERPs and custom APIs.",
-      },
-    ],
-  },
-  {
-    slug: "web-development",
-    path: "/web-development-company-hyderabad",
-    name: "Web Development",
-    icon: Globe,
-    summary: "Fast, SEO-ready websites, e-commerce stores and web apps built with Next.js and React.",
-    metaTitle: "Web Development Company in Hyderabad — Websites, E-commerce & Web Apps",
-    metaDescription:
-      "Web development company in Hyderabad building fast, SEO-friendly websites, e-commerce stores and web applications with Next.js and React. See our recent projects.",
-    keywords: ["web development company Hyderabad", "website development Hyderabad", "ecommerce website development", "Next.js development India"],
-    h1: "Web Development Company in Hyderabad",
-    intro:
-      "Your website is often the first conversation with a customer. We build fast, mobile-first websites, online stores and web applications that rank well on Google, load instantly and turn visitors into enquiries.",
-    offerings: [
-      { title: "Business & corporate websites", description: "Modern websites that explain what you do clearly and make it easy to get in touch." },
-      { title: "E-commerce stores", description: "Catalogues, carts, checkout with Razorpay/UPI/COD, order tracking and an admin console." },
-      { title: "Landing pages", description: "High-converting launch and campaign pages with lead capture built in." },
-      { title: "Web applications & SaaS", description: "Booking systems, portals and SaaS platforms with secure logins and dashboards." },
-      { title: "SEO & performance", description: "Server-rendered pages, structured data, sitemaps and Core Web Vitals tuned from day one." },
-      { title: "Multilingual sites", description: "English, Telugu and Hindi versions for audiences across India." },
-    ],
-    whyUs: [
-      "Built on Next.js for speed and search visibility",
-      "Every page tested on phones, tablets and desktops before launch",
-      "Analytics and lead tracking set up so you can see what's working",
-      "Recent launches for real estate, healthcare, retail and community organisations",
-    ],
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "PostgreSQL", "Razorpay"],
-    projectCategories: ["Websites", "E-commerce"],
-    faqs: [
-      {
-        question: "How long does it take to build a website?",
-        answer: "A business website usually takes 2–4 weeks. E-commerce stores and web applications typically take 6–10 weeks depending on features.",
-      },
-      {
-        question: "Will my website be mobile-friendly and SEO-ready?",
-        answer:
-          "Yes. Every site we build is mobile-first, server-rendered for search engines, and ships with page titles, descriptions, a sitemap and structured data.",
-      },
-      {
-        question: "Can I update the content myself?",
-        answer: "Yes. We can add an admin panel or CMS so your team can update products, pages and blog posts without a developer.",
-      },
-      {
-        question: "Do you provide hosting and domain setup?",
-        answer: "We handle deployment, domain connection, SSL and analytics setup as part of the launch.",
       },
     ],
   },

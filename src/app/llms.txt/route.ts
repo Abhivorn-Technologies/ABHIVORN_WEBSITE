@@ -18,7 +18,6 @@ export function GET() {
     "",
     `- Founded: ${site.foundingYear}`,
     `- Email: ${site.email}`,
-    `- Phone / WhatsApp: ${site.phone}`,
     `- Hours: ${site.hours}`,
     ...offices.map((o) => `- ${o.label} (${o.name}): ${o.address}`),
     "",

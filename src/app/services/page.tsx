@@ -44,7 +44,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title={
           <>
-            Everything you need to <span className="text-accent">build and run</span> great software
+            Everything you need to build and run <span className="text-muted-foreground">great software</span>
           </>
         }
         description="From a single website to a full product with web, mobile and admin apps — one team handles design, development, testing, deployment and support."
@@ -65,13 +65,13 @@ export default function ServicesPage() {
               <StaggerItem key={s.slug}>
                 <Link
                   href={s.path}
-                  className="group flex h-full flex-col rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-card-hover"
+                  className="group flex h-full flex-col rounded-lg border border-border bg-card p-8 transition-all duration-300 hover:border-accent/40"
                 >
                   <div className="flex items-center gap-4">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-md border border-border">
                       <s.icon className="h-6 w-6 text-accent" aria-hidden />
                     </span>
-                    <h2 className="text-2xl font-bold text-foreground">{s.name}</h2>
+                    <h2 className="text-2xl font-semibold text-foreground">{s.name}</h2>
                   </div>
                   <p className="mt-4 text-muted-foreground">{s.summary}</p>
                   <ul className="mt-5 grid gap-2 sm:grid-cols-2">
@@ -101,9 +101,9 @@ export default function ServicesPage() {
           />
           <Stagger className="grid gap-6 md:grid-cols-3">
             {models.map((m) => (
-              <StaggerItem key={m.title} className="flex flex-col rounded-3xl border border-border bg-card p-8">
+              <StaggerItem key={m.title} className="flex flex-col rounded-lg border border-border bg-card p-8">
                 <m.icon className="h-8 w-8 text-accent" aria-hidden />
-                <h3 className="mt-4 text-xl font-bold text-foreground">{m.title}</h3>
+                <h3 className="mt-4 text-xl font-semibold text-foreground">{m.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">Best for: {m.best}</p>
                 <ul className="mt-5 flex-1 space-y-2">
                   {m.points.map((p) => (

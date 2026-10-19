@@ -21,7 +21,7 @@ export default function BlogPage() {
         eyebrow="Blog"
         title={
           <>
-            Insights from <span className="text-accent">our team</span>
+            Insights from <span className="text-muted-foreground">our team</span>
           </>
         }
         description="Practical guides on software, HR technology, healthcare and AI for growing businesses."
@@ -34,7 +34,7 @@ export default function BlogPage() {
               <StaggerItem as="article" key={post.slug}>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+                  className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-300"
                 >
                   <div className="relative aspect-video overflow-hidden">
                     <Image
@@ -42,10 +42,10 @@ export default function BlogPage() {
                       alt=""
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover transition-transform duration-500 group-"
                       priority={i === 0}
                     />
-                    <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-primary">
+                    <span className="absolute left-4 top-4 rounded-md bg-background/95 px-2.5 py-1 text-xs font-medium text-foreground">
                       {post.category}
                     </span>
                   </div>
@@ -60,7 +60,7 @@ export default function BlogPage() {
                         {post.readTime}
                       </span>
                     </div>
-                    <h2 className="mt-3 text-xl font-bold leading-snug text-foreground group-hover:text-primary">{post.title}</h2>
+                    <h2 className="mt-3 text-xl font-semibold leading-snug text-foreground group-hover:text-primary">{post.title}</h2>
                     <p className="mt-2 flex-1 text-sm text-muted-foreground">{post.excerpt}</p>
                     <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary">
                       Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />

@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { ArrowRight, Building2, CalendarCheck, FileText, FlaskConical, Pill, QrCode, ShieldCheck, Smartphone, Stethoscope, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import TrackedLink from "@/components/TrackedLink";
-import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { ScrollMe } from "@/components/motion/ScrollMe";
 import PageHero from "@/components/sections/PageHero";
 import SectionHeading from "@/components/sections/SectionHeading";
 import FaqSection from "@/components/sections/FaqSection";
@@ -10,10 +10,6 @@ import CtaBand from "@/components/sections/CtaBand";
 import JsonLd from "@/components/seo/JsonLd";
 import { SITE_URL } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
-import clinic from "@/assets/vorqard-clinic.jpg";
-import paperless from "@/assets/vorqard-paperless.jpg";
-import tracking from "@/assets/vorqard-tracking.jpg";
-import patient from "@/assets/vorqard-patient.jpg";
 
 export const metadata = pageMetadata({
   title: "VORQARD — Connected Healthcare Ecosystem for Patients & Doctors",
@@ -40,10 +36,10 @@ const features = [
 ];
 
 const benefits = [
-  { title: "Faster front desk", text: "QR check-in replaces long registration forms, so patients spend less time waiting.", image: clinic },
-  { title: "Paperless workflows", text: "Digital records, prescriptions and reports remove paper files from the clinic.", image: paperless },
-  { title: "Live patient journey", text: "See where every patient is — from check-in to consultation to pharmacy.", image: tracking },
-  { title: "Patients stay in control", text: "Patients carry their records on their phone and share them with any provider.", image: patient },
+  { title: "Faster front desk", text: "QR check-in replaces long registration forms, so patients spend less time waiting." },
+  { title: "Paperless workflows", text: "Digital records, prescriptions and reports remove paper files from the clinic." },
+  { title: "Live patient journey", text: "See where every patient is — from check-in to consultation to pharmacy." },
+  { title: "Patients stay in control", text: "Patients carry their records on their phone and share them with any provider." },
 ];
 
 const faqs = [
@@ -73,16 +69,16 @@ export default function VorqardPage() {
         eyebrow="VORQARD · Healthcare"
         title={
           <>
-            One connected <span className="text-accent">healthcare ecosystem</span>
+            One QR code for your <span className="text-muted-foreground">entire medical history.</span>
           </>
         }
-        description="VORQARD links patients, doctors, hospitals, labs and pharmacies around a single patient identity — records, appointments, prescriptions and reports, all in one place."
+        description="Scan once, treat better. VORQARD links patients, doctors, hospitals, labs and pharmacies around a single patient identity — records, appointments, prescriptions and reports in one place, with no commission on consultations, tests or orders."
         breadcrumb={[
           { name: "Products", path: "/products" },
           { name: "VORQARD", path: "/products/vorqard" },
         ]}
       >
-        <Button asChild variant="hero" size="xl">
+        <Button asChild size="xl" className="bg-vorqard text-white hover:bg-vorqard/90">
           <TrackedLink href="https://www.vorqard.com" event="outbound_click" eventParams={{ product: "vorqard", location: "vorqard_hero" }}>
             Visit vorqard.com <ArrowRight className="ml-1 h-5 w-5" />
           </TrackedLink>
@@ -94,57 +90,53 @@ export default function VorqardPage() {
         </Button>
       </PageHero>
 
-      <section className="border-y border-border bg-background">
-        <div className="container-custom py-10">
-          <p className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">Everyone in the care journey, connected</p>
-          <Stagger className="flex flex-wrap items-center justify-center gap-4">
+      <section className="bg-vorqard-soft">
+        <div className="container-custom py-12">
+          <p className="eyebrow mb-6">Everyone in the care journey, connected</p>
+          <ul className="flex flex-wrap gap-x-10 gap-y-4">
             {ecosystem.map((e) => (
-              <StaggerItem key={e.name} className="flex items-center gap-3 rounded-full border border-border bg-card px-5 py-3">
-                <e.icon className="h-5 w-5 text-accent" aria-hidden />
-                <span className="font-medium text-foreground">{e.name}</span>
-              </StaggerItem>
+              <li key={e.name} className="flex items-center gap-3 text-lg text-foreground">
+                <e.icon className="h-5 w-5 text-vorqard" aria-hidden />
+                {e.name}
+              </li>
             ))}
-          </Stagger>
+          </ul>
         </div>
       </section>
 
       <section className="section-padding">
         <div className="container-custom">
           <SectionHeading eyebrow="Features" title="Everything a modern care journey needs" />
-          <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger as="ul" className="grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((f) => (
-              <StaggerItem key={f.title} className="rounded-2xl border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-card-hover">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/10">
-                  <f.icon className="h-6 w-6 text-secondary" aria-hidden />
-                </span>
-                <h3 className="mt-4 text-lg font-semibold text-foreground">{f.title}</h3>
-                <p className="mt-2 text-muted-foreground">{f.text}</p>
+              <StaggerItem as="li" key={f.title} className="border-t border-border pt-6">
+                <f.icon className="h-5 w-5 text-vorqard" aria-hidden />
+                <h3 className="mt-4 text-lg font-medium text-foreground">{f.title}</h3>
+                <p className="mt-2 leading-relaxed text-muted-foreground">{f.text}</p>
               </StaggerItem>
             ))}
           </Stagger>
         </div>
       </section>
 
-      <section className="section-padding bg-muted/40">
-        <div className="container-custom space-y-16 md:space-y-24">
-          {benefits.map((b, i) => (
-            <div key={b.title} className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-              <Reveal from={i % 2 ? "right" : "left"} className={i % 2 ? "md:order-2" : ""}>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
-                  <Image src={b.image} alt={b.title} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" placeholder="blur" />
-                </div>
-              </Reveal>
-              <Reveal from={i % 2 ? "left" : "right"}>
-                <span className="text-sm font-semibold text-accent">0{i + 1}</span>
-                <h2 className="mt-2 text-3xl font-bold text-foreground">{b.title}</h2>
-                <p className="mt-4 text-lg text-muted-foreground">{b.text}</p>
-              </Reveal>
-            </div>
-          ))}
+      <section className="section-padding border-t border-border">
+        <div className="container-custom grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-16">
+          <SectionHeading eyebrow="Why clinics choose it" title="Less paperwork, shorter queues" className="mb-0 md:mb-0" />
+          <ScrollMe from={{ y: 40, opacity: 0.3 }}>
+            <ol className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
+              {benefits.map((b, i) => (
+                <li key={b.title} className="border-t border-border pt-6">
+                  <span className="text-sm tabular-nums text-muted-foreground">0{i + 1}</span>
+                  <h3 className="mt-3 text-xl font-medium text-foreground">{b.title}</h3>
+                  <p className="mt-2 leading-relaxed text-muted-foreground">{b.text}</p>
+                </li>
+              ))}
+            </ol>
+          </ScrollMe>
         </div>
       </section>
 
-      <FaqSection faqs={faqs} />
+      <FaqSection faqs={faqs} className="border-t border-border" />
       <CtaBand location="vorqard" title="Bring VORQARD to your clinic" description="Talk to our team about onboarding your doctors, clinic or hospital." />
     </>
   );

@@ -21,12 +21,8 @@ type Props = {
 /** Top-of-page hero used by inner pages, with breadcrumb (visible + structured data). */
 export default function PageHero({ eyebrow, title, description, children, breadcrumb, className, align = "center" }: Props) {
   return (
-    <section className={cn("relative overflow-hidden bg-gradient-to-b from-muted/60 to-background", className)}>
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
-        <div className="absolute -bottom-40 -left-32 h-80 w-80 rounded-full bg-secondary/10 blur-3xl" />
-      </div>
-      <div className="container-custom relative py-14 md:py-24">
+    <section className={cn("border-b border-border", className)}>
+      <div className="container-custom py-16 md:py-28">
         {breadcrumb && (
           <>
             <JsonLd data={breadcrumbJsonLd(breadcrumb)} />
@@ -58,13 +54,13 @@ export default function PageHero({ eyebrow, title, description, children, breadc
         <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
           {eyebrow && (
             <div className={rise}>
-              <span className="mb-5 inline-block rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-primary">{eyebrow}</span>
+              <p className="eyebrow mb-6">{eyebrow}</p>
             </div>
           )}
-          <h1 className="text-balance text-4xl font-bold leading-tight text-foreground sm:text-5xl">{title}</h1>
+          <h1 className="text-balance text-4xl font-medium leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">{title}</h1>
           {description && (
             <div className={cn(rise, "[animation-delay:100ms]")}>
-              <p className="mt-6 text-pretty text-lg text-muted-foreground">{description}</p>
+              <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">{description}</p>
             </div>
           )}
           {children && (

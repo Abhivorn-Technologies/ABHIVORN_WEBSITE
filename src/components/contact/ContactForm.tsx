@@ -97,7 +97,7 @@ export default function ContactForm() {
     }
 
     if (!isEmailConfigured()) {
-      toast.error(`We couldn't send your message right now. Please email us at ${site.email} or WhatsApp ${site.phone}.`);
+      toast.error(`We couldn't send your message right now. Please email us at ${site.email}.`);
       trackEvent("contact_form_error", { reason: "not_configured" });
       return;
     }
@@ -131,11 +131,11 @@ export default function ContactForm() {
 
   if (sent) {
     return (
-      <div className="flex flex-col items-center rounded-3xl border border-border bg-card p-10 text-center" role="status">
+      <div className="flex flex-col items-center rounded-lg border border-border bg-card p-10 text-center" role="status">
         <CheckCircle2 className="h-14 w-14 text-emerald-500" aria-hidden />
-        <h2 className="mt-4 text-2xl font-bold text-foreground">Thank you — message received!</h2>
+        <h2 className="mt-4 text-2xl font-semibold text-foreground">Thank you — message received!</h2>
         <p className="mt-2 max-w-md text-muted-foreground">
-          Our team will get back to you within one business day. For anything urgent, call or WhatsApp us on {site.phone}.
+          Our team will get back to you within one business day. For anything urgent, email {site.email}.
         </p>
         <Button variant="outline" className="mt-6" onClick={() => setSent(false)}>
           Send another message
@@ -145,9 +145,9 @@ export default function ContactForm() {
   }
 
   return (
-    <form ref={formRef} onSubmit={onSubmit} className="relative space-y-5 rounded-3xl border border-border bg-card p-6 shadow-card md:p-8" noValidate>
+    <form ref={formRef} onSubmit={onSubmit} className="relative space-y-5 rounded-lg border border-border bg-card p-6 md:p-8" noValidate>
       <div>
-        <h2 className="text-2xl font-bold text-foreground">Tell us about your project</h2>
+        <h2 className="text-2xl font-semibold text-foreground">Tell us about your project</h2>
         <p className="mt-1 text-sm text-muted-foreground">Fields marked * are required. We reply within one business day.</p>
       </div>
 
@@ -187,7 +187,7 @@ export default function ContactForm() {
             {...errorProps("email")}
           />
         </Field>
-        <Field id="phone" label="Phone / WhatsApp" error={errors.phone}>
+        <Field id="phone" label="Phone" error={errors.phone}>
           <Input
             id="phone"
             name="phone"

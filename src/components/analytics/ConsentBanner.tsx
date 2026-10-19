@@ -26,7 +26,7 @@ export default function ConsentBanner({ onChoice }: { onChoice: (v: ConsentValue
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: 1.2 }}
       className="fixed inset-x-3 bottom-3 z-[60] sm:inset-x-auto sm:left-4 sm:max-w-md"
     >
-      <div className="rounded-2xl border border-border bg-background/95 p-5 shadow-2xl backdrop-blur-md">
+      <div className="rounded-lg border border-border bg-background/95 p-5 backdrop-blur-md">
         <div className="flex gap-3">
           <Cookie className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" aria-hidden />
           <p className="text-sm text-muted-foreground">

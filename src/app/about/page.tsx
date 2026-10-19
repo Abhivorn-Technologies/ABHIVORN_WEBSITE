@@ -36,7 +36,7 @@ export default function AboutPage() {
         eyebrow="About Abhivorn"
         title={
           <>
-            A Hyderabad team building <span className="text-accent">software that works</span>
+            A Hyderabad team building <span className="text-muted-foreground">software that works</span>
           </>
         }
         description="Founded in 2025 and Startup India certified, we design, build and support web, mobile and enterprise software for businesses across India."
@@ -46,7 +46,7 @@ export default function AboutPage() {
       <section className="section-padding">
         <div className="container-custom grid items-center gap-14 lg:grid-cols-2">
           <div className="animate-fade-in-up [animation-fill-mode:both]">
-            <h2 className="text-3xl font-bold text-foreground">Our story</h2>
+            <h2 className="text-3xl font-semibold text-foreground">Our story</h2>
             <div className="mt-6 space-y-4 text-lg text-muted-foreground">
               <p>
                 Abhivorn Technologies started with a simple idea: businesses of every size deserve software that fits the way they
@@ -65,10 +65,10 @@ export default function AboutPage() {
           </div>
           {/* Real office photos can go here once available — the previous AI-generated "office" image was removed so nothing on the page misrepresents the company. */}
           <ScrollMe from={{ y: 48, scale: 0.97, opacity: 0.25 }}>
-            <div className="rounded-3xl bg-primary p-8 text-primary-foreground shadow-2xl sm:p-10">
-              <p className="text-sm font-semibold uppercase tracking-wider text-water">Head office</p>
-              <h2 className="mt-3 text-2xl font-bold sm:text-3xl">{offices[0].address}</h2>
-              <p className="mt-4 text-primary-foreground/80">
+            <div className="rounded-lg border border-border bg-card p-8 sm:p-10">
+              <p className="eyebrow">Head office</p>
+              <h2 className="mt-3 text-2xl font-medium text-foreground sm:text-3xl">{offices[0].address}</h2>
+              <p className="mt-4 text-muted-foreground">
                 Branch offices: {offices
                   .slice(1)
                   .map((o) => o.name)
@@ -79,7 +79,7 @@ export default function AboutPage() {
                 href={offices[0].mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 font-semibold text-water underline-offset-4 hover:underline"
+                className="mt-6 inline-flex items-center gap-2 font-medium text-foreground underline-offset-4 hover:underline"
               >
                 <MapPin className="h-5 w-5" aria-hidden /> Get directions
                 <span className="sr-only"> (opens Google Maps)</span>
@@ -94,7 +94,7 @@ export default function AboutPage() {
           <Stagger className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {stats.map((s) => (
               <StaggerItem key={s.label} className="text-center">
-                <CountUp value={s.value} suffix={s.suffix} className="block text-4xl font-bold text-primary sm:text-5xl" />
+                <CountUp value={s.value} suffix={s.suffix} className="block text-4xl font-semibold text-primary sm:text-5xl" />
                 <div className="mt-2 font-semibold text-foreground">{s.label}</div>
               </StaggerItem>
             ))}
@@ -111,8 +111,8 @@ export default function AboutPage() {
           />
           <Stagger className="grid grid-cols-2 gap-4 md:grid-cols-3">
             {team.map((t) => (
-              <StaggerItem key={t.role} className="rounded-2xl border border-border bg-card p-6 text-center">
-                <div className="text-4xl font-bold text-accent">{t.count}</div>
+              <StaggerItem key={t.role} className="rounded-lg border border-border bg-card p-6 text-center">
+                <div className="text-4xl font-semibold text-accent">{t.count}</div>
                 <div className="mt-2 font-medium text-foreground">{t.role}</div>
               </StaggerItem>
             ))}
@@ -125,8 +125,8 @@ export default function AboutPage() {
           <SectionHeading eyebrow="What we value" title="How we work with clients" />
           <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
-              <StaggerItem key={v.title} className="rounded-2xl bg-card p-7 text-center shadow-card">
-                <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10">
+              <StaggerItem key={v.title} className="rounded-lg bg-card p-7 text-center">
+                <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-md border border-border">
                   <v.icon className="h-7 w-7 text-primary" aria-hidden />
                 </span>
                 <h3 className="mt-4 text-lg font-semibold text-foreground">{v.title}</h3>
@@ -163,11 +163,11 @@ export default function AboutPage() {
                   href={o.mapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-card-hover"
+                  className="group flex h-full flex-col rounded-lg border border-border bg-card p-7 transition"
                 >
                   <MapPin className="h-6 w-6 text-accent" aria-hidden />
                   <span className="mt-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{o.label}</span>
-                  <span className="mt-1 text-xl font-bold text-foreground">{o.name}</span>
+                  <span className="mt-1 text-xl font-semibold text-foreground">{o.name}</span>
                   <span className="mt-2 text-muted-foreground">{o.address}</span>
                   <span className="mt-4 text-sm font-semibold text-primary group-hover:text-accent">Get directions →</span>
                 </a>

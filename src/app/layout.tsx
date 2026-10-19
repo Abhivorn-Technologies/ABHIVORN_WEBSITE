@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import FloatingContact from "@/components/layout/FloatingContact";
 import SmoothScroll from "@/components/motion/SmoothScroll";
 import Analytics from "@/components/analytics/Analytics";
 import JsonLd from "@/components/seo/JsonLd";
@@ -61,7 +60,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
-        <FloatingContact />
         <Toaster position="top-center" richColors />
         <Analytics />
       </body>

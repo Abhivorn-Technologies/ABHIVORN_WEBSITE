@@ -36,6 +36,10 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        vorqard: {
+          DEFAULT: "hsl(var(--vorqard))",
+          soft: "hsl(var(--vorqard-soft))",
+        },
         water: {
           DEFAULT: "hsl(var(--water))",
           foreground: "hsl(var(--primary-foreground))",
@@ -112,8 +116,8 @@ export default {
         "float": "float 3s ease-in-out infinite",
       },
       boxShadow: {
-        'card': '0 4px 24px -4px hsla(210, 100%, 23%, 0.1)',
-        'card-hover': '0 12px 40px -8px hsla(210, 100%, 23%, 0.2)',
+        'card': '0 1px 2px hsla(222, 18%, 11%, 0.04)',
+        'card-hover': '0 1px 2px hsla(222, 18%, 11%, 0.06)',
         'button': '0 4px 16px -4px hsla(200, 100%, 31%, 0.35)',
       },
     },

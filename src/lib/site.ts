@@ -12,9 +12,6 @@ export const site = {
     "Abhivorn Technologies is a Hyderabad-based software company building custom web apps, mobile apps, HRMS, healthcare and AI solutions for businesses across India.",
   foundingYear: 2025,
   email: "hello@abhivorn.com",
-  phone: "+91 99666 29766",
-  phoneHref: "tel:+919966629766",
-  whatsappHref: "https://wa.me/919966629766?text=Hi%20Abhivorn%2C%20I%27d%20like%20to%20discuss%20a%20project.",
   hours: "Mon–Fri, 9:00 AM – 6:00 PM IST",
   social: {
     linkedin: "https://www.linkedin.com/company/abhivorn-technologies",
@@ -70,8 +67,8 @@ export const team = [
 export type NavItem = { name: string; href: string; description?: string; children?: NavItem[] };
 
 export const serviceLinks: NavItem[] = [
-  { name: "Custom Software", href: "/custom-software-development", description: "Business software built around your workflow" },
   { name: "Web Development", href: "/web-development-company-hyderabad", description: "Fast, SEO-ready websites and web apps" },
+  { name: "Custom Software", href: "/custom-software-development", description: "Business software built around your workflow" },
   { name: "Mobile Apps", href: "/mobile-app-development", description: "iOS and Android apps with React Native" },
   { name: "HRMS Development", href: "/hrms-software-development", description: "HR, attendance and payroll systems" },
   { name: "Healthcare Software", href: "/healthcare-software-development", description: "Clinic, doctor and patient platforms" },
@@ -84,12 +81,12 @@ export const productLinks: NavItem[] = [
 ];
 
 export const mainNav: NavItem[] = [
-  { name: "About", href: "/about" },
   { name: "Services", href: "/services", children: serviceLinks },
+  { name: "VORQARD", href: "/products/vorqard" },
   { name: "Products", href: "/products", children: productLinks },
-  { name: "Projects", href: "/projects" },
+  { name: "Work", href: "/projects" },
+  { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export const techStack = [

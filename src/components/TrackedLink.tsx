@@ -6,7 +6,7 @@ import { trackEvent } from "@/lib/analytics";
 
 type Props = ComponentProps<"a"> & {
   href: string;
-  /** Analytics event name, e.g. "cta_click", "whatsapp_click" */
+  /** Analytics event name, e.g. "cta_click", "email_click" */
   event?: string;
   eventParams?: Record<string, string>;
 };

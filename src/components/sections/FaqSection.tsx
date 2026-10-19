@@ -23,12 +23,13 @@ export default function FaqSection({
     <section className={cn("section-padding", className)}>
       <JsonLd data={faqJsonLd(faqs)} />
       <div className="container-custom">
-        <SectionHeading eyebrow="FAQ" title={title} description={description} />
-        <Reveal className="mx-auto max-w-3xl">
-          <Accordion type="single" collapsible className="space-y-3">
+        <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
+        <SectionHeading eyebrow="FAQ" title={title} description={description} className="mb-0 md:mb-0" />
+        <Reveal>
+          <Accordion type="single" collapsible className="border-t border-border">
             {faqs.map((f, i) => (
-              <AccordionItem key={f.question} value={`faq-${i}`} className="rounded-xl border border-border bg-card px-5">
-                <AccordionTrigger className="text-left text-base font-semibold text-foreground hover:text-primary hover:no-underline">
+              <AccordionItem key={f.question} value={`faq-${i}`} className="border-b border-border">
+                <AccordionTrigger className="py-5 text-left text-base font-medium text-foreground hover:no-underline">
                   {f.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-base leading-relaxed text-muted-foreground">{f.answer}</AccordionContent>
@@ -36,6 +37,7 @@ export default function FaqSection({
             ))}
           </Accordion>
         </Reveal>
+        </div>
       </div>
     </section>
   );

@@ -67,7 +67,7 @@ export default function VornHrPage() {
         eyebrow="VORN HR · HR management"
         title={
           <>
-            HR that runs itself, <span className="text-accent">built for India</span>
+            HR that runs itself, <span className="text-muted-foreground">built for India</span>
           </>
         }
         description="Attendance, leave, payroll and performance in one simple HRMS — so your HR team spends less time on spreadsheets and more time on people."
@@ -93,7 +93,7 @@ export default function VornHrPage() {
           <SectionHeading eyebrow="Modules" title="Everything HR needs, in one place" />
           <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {modules.map((m) => (
-              <StaggerItem key={m.title} className="rounded-2xl border border-border bg-card p-6 transition hover:-translate-y-1 hover:shadow-card-hover">
+              <StaggerItem key={m.title} className="rounded-lg border border-border bg-card p-6 transition">
                 <m.icon className="h-7 w-7 text-accent" aria-hidden />
                 <h3 className="mt-4 text-lg font-semibold text-foreground">{m.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{m.text}</p>
@@ -115,7 +115,7 @@ export default function VornHrPage() {
               ))}
             </ul>
           </Reveal>
-          <Reveal from="right" className="flex flex-col items-center justify-center rounded-3xl border border-border bg-background p-10 text-center">
+          <Reveal from="right" className="flex flex-col items-center justify-center rounded-lg border border-border bg-background p-10 text-center">
             <Image src={vornLogo} alt="VORN HR logo" className="h-auto w-64" sizes="256px" />
             <FileCheck2 className="mt-8 h-10 w-10 text-accent" aria-hidden />
             <p className="mt-3 text-lg font-semibold text-foreground">Plans for every team size</p>

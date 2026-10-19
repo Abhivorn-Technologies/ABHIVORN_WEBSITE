@@ -16,30 +16,25 @@ export default function CtaBand({
   location: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-primary">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-24 top-0 h-96 w-96 rounded-full bg-accent/25 blur-3xl" />
-        <div className="absolute -left-24 bottom-0 h-96 w-96 rounded-full bg-secondary/25 blur-3xl" />
-      </div>
-      <ScrollMe className="container-custom relative py-16 text-center md:py-24" from={{ y: 40, scale: 0.96, opacity: 0.3 }}>
-        <h2 className="mx-auto max-w-3xl text-balance text-3xl font-bold text-primary-foreground sm:text-4xl lg:text-5xl">{title}</h2>
-        <p className="mx-auto mt-5 max-w-2xl text-lg text-primary-foreground/80">{description}</p>
-        <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-          <Button asChild variant="hero" size="xl" className="bg-accent hover:bg-accent/90">
-            <TrackedLink href="/contact" eventParams={{ label: "CTA band – Get a free quote", location }}>
-              Get a Free Quote <ArrowRight className="ml-1 h-5 w-5" />
-            </TrackedLink>
-          </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="xl"
-            className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-          >
-            <TrackedLink href={site.whatsappHref} event="whatsapp_click" eventParams={{ location }}>
-              Chat on WhatsApp
-            </TrackedLink>
-          </Button>
+    <section className="border-t border-border">
+      <ScrollMe className="container-custom py-20 md:py-32" from={{ y: 32, opacity: 0.3 }}>
+        <div className="grid items-end gap-10 md:grid-cols-[1fr_auto]">
+          <div className="max-w-2xl">
+            <h2 className="text-balance text-3xl font-medium text-foreground sm:text-5xl">{title}</h2>
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{description}</p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
+            <Button asChild variant="hero" size="xl">
+              <TrackedLink href="/contact" eventParams={{ label: "CTA band – Get a free quote", location }}>
+                Get a Free Quote <ArrowRight className="h-4 w-4" />
+              </TrackedLink>
+            </Button>
+            <Button asChild variant="heroOutline" size="xl">
+              <TrackedLink href={`mailto:${site.email}`} event="email_click" eventParams={{ location }}>
+                {site.email}
+              </TrackedLink>
+            </Button>
+          </div>
         </div>
       </ScrollMe>
     </section>

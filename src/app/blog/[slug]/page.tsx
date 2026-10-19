@@ -61,13 +61,13 @@ export default async function BlogPostPage({ params }: Props) {
         ]}
       />
       <article>
-        <header className="bg-gradient-to-b from-muted/60 to-background">
+        <header className="border-b border-border">
           <div className="container-custom max-w-3xl py-12 md:py-16">
             <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary">
               <ArrowLeft className="h-4 w-4" aria-hidden /> All articles
             </Link>
-            <span className="mt-6 block w-fit rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-primary">{post.category}</span>
-            <h1 className="mt-4 text-balance text-3xl font-bold leading-tight text-foreground sm:text-4xl md:text-5xl">{post.title}</h1>
+            <span className="eyebrow mt-6 block">{post.category}</span>
+            <h1 className="mt-4 text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl md:text-5xl">{post.title}</h1>
             <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" aria-hidden /> <time dateTime={post.date}>{formatDate(post.date)}</time>
@@ -81,13 +81,13 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
 
         <div className="container-custom max-w-4xl">
-          <Reveal className="relative aspect-video overflow-hidden rounded-3xl shadow-xl">
+          <Reveal className="relative aspect-video overflow-hidden rounded-lg shadow-xl">
             <Image src={post.image} alt="" fill priority sizes="(min-width: 1024px) 896px, 100vw" className="object-cover" />
           </Reveal>
         </div>
 
         <div className="container-custom max-w-3xl py-12 md:py-16">
-          <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary">
+          <div className="prose prose-lg max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary">
             {post.content.map((block, i) =>
               block.startsWith("## ") ? (
                 <h2 key={i}>{block.slice(3)}</h2>
@@ -104,13 +104,13 @@ export default async function BlogPostPage({ params }: Props) {
       {more.length > 0 && (
         <section className="section-padding bg-muted/40">
           <div className="container-custom max-w-5xl">
-            <h2 className="mb-8 text-2xl font-bold text-foreground">Keep reading</h2>
+            <h2 className="mb-8 text-2xl font-semibold text-foreground">Keep reading</h2>
             <div className="grid gap-6 md:grid-cols-2">
               {more.map((p) => (
                 <Link
                   key={p.slug}
                   href={`/blog/${p.slug}`}
-                  className="group rounded-2xl border border-border bg-card p-6 transition hover:-translate-y-1 hover:shadow-card-hover"
+                  className="group rounded-lg border border-border bg-card p-6 transition"
                 >
                   <span className="text-xs font-medium text-accent">{p.category}</span>
                   <h3 className="mt-2 text-lg font-semibold text-foreground group-hover:text-primary">{p.title}</h3>

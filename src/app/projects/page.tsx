@@ -17,7 +17,7 @@ export default function ProjectsPage() {
         eyebrow="Our work"
         title={
           <>
-            Real projects, <span className="text-accent">real businesses</span>
+            Real projects, <span className="text-muted-foreground">real businesses</span>
           </>
         }
         description="A selection of the 50+ projects we've delivered — from healthcare platforms and online stores to event portals and enterprise systems."

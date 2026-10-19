@@ -56,7 +56,6 @@ export const organizationJsonLd = {
   description: site.shortDescription,
   foundingDate: String(site.foundingYear),
   email: site.email,
-  telephone: "+91-9966629766",
   openingHours: "Mo-Fr 09:00-18:00",
   areaServed: { "@type": "Country", name: "India" },
   address: {
@@ -72,7 +71,7 @@ export const organizationJsonLd = {
     address: o.address,
   })),
   contactPoint: [
-    { "@type": "ContactPoint", telephone: "+91-9966629766", email: site.email, contactType: "sales", areaServed: "IN", availableLanguage: ["English", "Telugu", "Hindi"] },
+    { "@type": "ContactPoint", email: site.email, contactType: "sales", areaServed: "IN", availableLanguage: ["English", "Telugu", "Hindi"] },
   ],
   sameAs: [site.social.linkedin, site.social.instagram, "https://www.vorqard.com"],
   knowsAbout: ["Custom Software Development", "Web Development", "Mobile App Development", "HRMS Software", "Healthcare Software", "AI Development"],

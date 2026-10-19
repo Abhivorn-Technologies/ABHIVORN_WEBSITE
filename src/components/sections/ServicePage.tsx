@@ -66,7 +66,7 @@ export default function ServicePage({ service }: { service: Service }) {
           <SectionHeading eyebrow="What we deliver" title={`Our ${service.name.toLowerCase()} services`} />
           <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {service.offerings.map((o) => (
-              <StaggerItem key={o.title} className="rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
+              <StaggerItem key={o.title} className="rounded-lg border border-border bg-card p-7 transition-all duration-300">
                 <h3 className="text-lg font-semibold text-foreground">{o.title}</h3>
                 <p className="mt-2 text-muted-foreground">{o.description}</p>
               </StaggerItem>
@@ -88,8 +88,8 @@ export default function ServicePage({ service }: { service: Service }) {
               ))}
             </Stagger>
             {service.product && (
-              <Reveal className="mt-8 rounded-2xl border border-accent/30 bg-background p-6">
-                <p className="text-sm font-semibold uppercase tracking-wider text-accent">Our product</p>
+              <Reveal className="mt-8 rounded-lg border border-accent/30 bg-background p-6">
+                <p className="eyebrow">Our product</p>
                 <p className="mt-1 text-lg font-semibold text-foreground">{service.product.name}</p>
                 <p className="mt-1 text-muted-foreground">{service.product.blurb}</p>
                 <Link href={service.product.href} className="mt-3 inline-flex items-center gap-1 font-semibold text-primary hover:text-accent">
@@ -98,7 +98,7 @@ export default function ServicePage({ service }: { service: Service }) {
               </Reveal>
             )}
           </div>
-          <Reveal from="right" className="rounded-3xl border border-border bg-background p-8">
+          <Reveal from="right" className="rounded-lg border border-border bg-background p-8">
             <h2 className="text-xl font-semibold text-foreground">Technologies we use</h2>
             <div className="mt-5 flex flex-wrap gap-2">
               {service.tech.map((t) => (
@@ -112,7 +112,7 @@ export default function ServicePage({ service }: { service: Service }) {
               {["Free consultation & requirements", "Proposal with scope and timeline", "Design, build and weekly demos", "QA testing and launch", "Warranty support and improvements"].map(
                 (step, i) => (
                   <li key={step} className="flex items-center gap-3 text-muted-foreground">
-                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-accent/15 text-sm font-semibold text-primary">
+                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md border border-border text-sm font-medium text-foreground">
                       {i + 1}
                     </span>
                     {step}
@@ -149,7 +149,7 @@ export default function ServicePage({ service }: { service: Service }) {
               <Link
                 key={o.slug}
                 href={o.path}
-                className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 transition hover:border-accent/40 hover:shadow-card"
+                className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 transition hover:border-accent/40"
               >
                 <o.icon className="h-5 w-5 flex-shrink-0 text-accent" aria-hidden />
                 <span className="text-sm font-semibold text-foreground group-hover:text-primary">{o.name}</span>

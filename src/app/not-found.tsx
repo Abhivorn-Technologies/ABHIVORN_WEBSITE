@@ -7,10 +7,10 @@ export const metadata = { title: "Page not found", robots: { index: false } };
 
 export default function NotFound() {
   return (
-    <section className="flex min-h-[70vh] items-center bg-gradient-to-b from-muted/60 to-background">
+    <section className="flex min-h-[70vh] items-center border-b border-border">
       <div className="container-custom py-20 text-center">
-        <p className="text-8xl font-bold text-accent/30 sm:text-9xl">404</p>
-        <h1 className="mt-4 text-3xl font-bold text-foreground sm:text-4xl">This page doesn&apos;t exist</h1>
+        <p className="text-8xl font-semibold text-accent/30 sm:text-9xl">404</p>
+        <h1 className="mt-4 text-3xl font-semibold text-foreground sm:text-4xl">This page doesn&apos;t exist</h1>
         <p className="mx-auto mt-4 max-w-md text-lg text-muted-foreground">
           The link may be old or mistyped. Try one of these pages instead.
         </p>
@@ -29,7 +29,7 @@ export default function NotFound() {
         <ul className="mt-10 flex flex-wrap justify-center gap-3">
           {mainNav.map((n) => (
             <li key={n.href}>
-              <Link href={n.href} className="rounded-full bg-muted px-4 py-2 text-sm font-medium text-foreground hover:bg-accent/10 hover:text-primary">
+              <Link href={n.href} className="rounded-md border border-border px-4 py-2 text-sm text-foreground hover:border-foreground/40">
                 {n.name}
               </Link>
             </li>

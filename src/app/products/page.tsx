@@ -22,7 +22,6 @@ const products = [
     tag: "Healthcare · Live on Google Play",
     logo: vorqardLogo,
     href: "/products/vorqard",
-    accent: "from-pink-500 to-rose-500",
     text: "A connected healthcare ecosystem that links patients, doctors, hospitals, labs and pharmacies around a single patient identity.",
     features: ["Doctor & Patient mobile apps", "Unified patient records", "Appointments & e-prescriptions", "QR-based check-in"],
   },
@@ -31,7 +30,6 @@ const products = [
     tag: "HR management",
     logo: vornLogo,
     href: "/products/vorn-hr",
-    accent: "from-primary to-accent",
     text: "An HRMS designed for Indian businesses — attendance, leave, payroll and employee self-service in one place.",
     features: ["Biometric & geo-fenced attendance", "Leave policies & approvals", "Payroll with PF / ESI", "Employee mobile app"],
   },
@@ -44,7 +42,7 @@ export default function ProductsPage() {
         eyebrow="Products"
         title={
           <>
-            Software we <span className="text-accent">build and run</span>
+            Software we <span className="text-muted-foreground">build and run</span>
           </>
         }
         description="Alongside client projects, we build our own products. Running them every day keeps our engineering, design and support sharp."
@@ -54,16 +52,15 @@ export default function ProductsPage() {
         <div className="container-custom grid gap-8 lg:grid-cols-2">
           {products.map((p, i) => (
             <Reveal key={p.name} delay={i * 0.1}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
-                <div className={`h-1.5 bg-gradient-to-r ${p.accent}`} />
+              <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-300">
                 <div className="flex flex-1 flex-col p-8 lg:p-10">
                   <div className="flex items-center gap-5">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-muted/60 p-3">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-muted/60 p-3">
                       <Image src={p.logo} alt={`${p.name} logo`} className="h-auto max-h-16 w-full object-contain" sizes="80px" />
                     </div>
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-wider text-accent">{p.tag}</span>
-                      <h2 className="text-3xl font-bold text-foreground">{p.name}</h2>
+                      <span className="eyebrow">{p.tag}</span>
+                      <h2 className="text-3xl font-semibold text-foreground">{p.name}</h2>
                     </div>
                   </div>
                   <p className="mt-6 text-lg text-muted-foreground">{p.text}</p>

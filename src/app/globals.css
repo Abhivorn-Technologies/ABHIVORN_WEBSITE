@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    /* Abhivorn Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 210 29% 24%;
+    /* Calm, light editorial palette: warm off-white page, near-black text, logo navy for actions */
+    --background: 40 20% 98%;
+    --foreground: 222 18% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 29% 24%;
+    --card-foreground: 222 18% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 29% 24%;
+    --popover-foreground: 222 18% 11%;
 
     /* Logo navy (#003A75) */
     --primary: 210 100% 23%;
@@ -26,25 +26,25 @@
     --accent: 200 100% 31%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 210 16% 38%;
+    --muted: 40 14% 94.5%;
+    --muted-foreground: 222 7% 37%;
 
     --destructive: 0 72% 42%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 31% 91%;
-    --input: 210 31% 91%;
+    --border: 40 9% 88%;
+    --input: 40 6% 82%;
     --ring: 200 100% 31%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Custom Abhivorn tokens */
     --gradient-primary: linear-gradient(135deg, hsl(210, 100%, 23%) 0%, hsl(200, 100%, 31%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(205, 40%, 98%) 0%, hsl(205, 40%, 96%) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(210, 100%, 23%) 0%, hsl(200, 100%, 31%) 100%);
-    --shadow-card: 0 4px 24px -4px hsla(210, 100%, 23%, 0.1);
-    --shadow-card-hover: 0 12px 40px -8px hsla(210, 100%, 23%, 0.2);
-    --shadow-button: 0 4px 16px -4px hsla(200, 100%, 31%, 0.35);
+    --shadow-card: 0 1px 2px hsla(222, 18%, 11%, 0.04);
+    --shadow-card-hover: 0 1px 2px hsla(222, 18%, 11%, 0.06);
+    --shadow-button: none;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -54,6 +54,10 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* VORQARD brand teal (text-safe shade) and its soft tint */
+    --vorqard: 175 84% 26%;
+    --vorqard-soft: 168 55% 95%;
 
     /* Bright cyan from the logo — decorative only (fails contrast as text) */
     --water: 197 83% 54%;
@@ -127,7 +131,8 @@
   h4,
   h5,
   h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-medium;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -137,7 +142,12 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-32;
+  }
+
+  /* Small uppercase label above section titles */
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground;
   }
 
   .gradient-text {
