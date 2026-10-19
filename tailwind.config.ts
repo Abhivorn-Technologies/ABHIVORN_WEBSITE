@@ -1,8 +1,10 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
+import typography from "@tailwindcss/typography";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {
@@ -14,7 +16,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -33,6 +35,10 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+        },
+        vorqard: {
+          DEFAULT: "hsl(var(--vorqard))",
+          soft: "hsl(var(--vorqard-soft))",
         },
         water: {
           DEFAULT: "hsl(var(--water))",
@@ -110,12 +116,11 @@ export default {
         "float": "float 3s ease-in-out infinite",
       },
       boxShadow: {
-        'card': '0 4px 24px -4px hsla(207, 100%, 22%, 0.1)',
-        'card-hover': '0 12px 40px -8px hsla(207, 100%, 22%, 0.2)',
-        'button': '0 4px 16px -4px hsla(213, 100%, 50%, 0.4)',
+        'card': '0 1px 2px hsla(222, 18%, 11%, 0.04)',
+        'card-hover': '0 1px 2px hsla(222, 18%, 11%, 0.06)',
+        'button': '0 4px 16px -4px hsla(200, 100%, 31%, 0.35)',
       },
     },
   },
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate, typography],
 } satisfies Config;
