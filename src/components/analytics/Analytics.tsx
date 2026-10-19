@@ -20,21 +20,22 @@ const subscribe = (cb: () => void) => {
 const readConsent = (): ConsentValue | "unset" => getConsent() ?? "unset";
 const serverConsent = (): "pending" => "pending";
 
-// Google Tag Manager container. The ID is public (it ships in every page that uses GTM).
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-PSX78PTV";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
 
-const loadedTrackers = () => Boolean(window.gtag || window.clarity || window.google_tag_manager);
+// A visitor who accepted and now declines gets a reload, so consent starts again from "denied".
+const loadedTrackers = () =>
+  Boolean(window.gtag || window.clarity || window.dataLayer?.some((e) => (e as { event?: string })?.event === "consent_granted"));
 
 /**
  * Visitor analytics.
  * - Vercel Web Analytics (visitors, pages, referrers, countries, devices) and Speed Insights
  *   (real-user loading experience) are cookieless, so they always run.
- * - Google Tag Manager, Google Analytics 4, Google Ads and Microsoft Clarity (heatmaps + session recordings)
- *   can set cookies, so they load only after the visitor clicks "Accept" on the consent banner.
- *   Tags added inside GTM inherit that rule because the whole container waits for consent.
+ * - Google Tag Manager is loaded in the root layout with Consent Mode v2 defaulting to "denied"; this component
+ *   sends the consent "update" when the visitor clicks Accept, so Google tags inside GTM only set cookies then.
+ * - Google Analytics 4 / Google Ads set directly by ID, and Microsoft Clarity (heatmaps + session recordings),
+ *   load only after the visitor clicks "Accept" on the consent banner.
  */
 export default function Analytics() {
   const pathname = usePathname();
@@ -50,8 +51,26 @@ export default function Analytics() {
     if (consent !== "granted" || pathname === firstPath.current) return;
     firstPath.current = "";
     if (GA_ID && window.gtag) window.gtag("event", "page_view", { page_path: pathname, page_location: window.location.href });
-    if (GTM_ID) (window.dataLayer ||= []).push({ event: "virtual_page_view", page_path: pathname, page_location: window.location.href });
   }, [pathname, consent]);
+
+  // GTM: page views on client-side navigation (Consent Mode decides what Google tags may store)
+  const firstGtmPath = useRef(pathname);
+  useEffect(() => {
+    if (pathname === firstGtmPath.current) return;
+    firstGtmPath.current = "";
+    (window.dataLayer ||= []).push({ event: "virtual_page_view", page_path: pathname, page_location: window.location.href });
+  }, [pathname]);
+
+  // GTM Consent Mode: tell Google tags once the visitor accepts
+  useEffect(() => {
+    if (consent !== "granted") return;
+    const dl = (window.dataLayer ||= []);
+    (function gtag(..._args: unknown[]) {
+      // eslint-disable-next-line prefer-rest-params
+      dl.push(arguments);
+    })("consent", "update", { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "granted" });
+    dl.push({ event: "consent_granted" });
+  }, [consent]);
 
   const googleIds = [GA_ID, ADS_ID].filter(Boolean) as string[];
   const granted = consent === "granted";
@@ -60,16 +79,6 @@ export default function Analytics() {
     <>
       <VercelAnalytics />
       <SpeedInsights />
-
-      {granted && GTM_ID && (
-        <Script id="gtm-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-(function(){function c(){window.dataLayer.push(arguments);}c('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});})();
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');`}
-        </Script>
-      )}
 
       {granted && googleIds.length > 0 && (
         <>

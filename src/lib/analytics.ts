@@ -13,7 +13,9 @@ declare global {
   }
 }
 
-export const CONSENT_KEY = "abhivorn-consent";
+import { CONSENT_KEY } from "./consent";
+
+export { CONSENT_KEY };
 /** Fired on window whenever the stored cookie choice changes. */
 export const CONSENT_EVENT = "abhivorn-consent-change";
 export type ConsentValue = "granted" | "denied";
@@ -30,7 +32,8 @@ export function getConsent(): ConsentValue | null {
 /**
  * Send one event to every analytics tool that is switched on.
  * - Vercel Web Analytics: cookieless, always on
- * - Google Tag Manager (as a dataLayer event) / Google Analytics 4 / Google Ads: only after the visitor accepts cookies
+ * - Google Tag Manager: a dataLayer event (Consent Mode keeps Google tags cookieless until the visitor accepts)
+ * - Google Analytics 4 / Google Ads set directly by ID: only after the visitor accepts cookies
  * - Microsoft Clarity: tags the session so recordings can be filtered by event
  */
 export function trackEvent(name: string, params: Params = {}) {
@@ -49,8 +52,8 @@ export function trackEvent(name: string, params: Params = {}) {
     /* ignore */
   }
   try {
-    // Queued in the dataLayer even if GTM is still loading; GTM replays it once it starts.
-    if (getConsent() === "granted") (window.dataLayer ||= []).push({ event: name, ...clean });
+    // Google Tag Manager: queued even if GTM is still loading. Consent Mode decides what Google tags may store.
+    (window.dataLayer ||= []).push({ event: name, ...clean });
   } catch {
     /* ignore */
   }
