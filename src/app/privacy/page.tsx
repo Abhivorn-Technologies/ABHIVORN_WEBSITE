@@ -29,7 +29,7 @@ export default function PrivacyPage() {
         </li>
         <li>
           <strong>Usage data:</strong> we measure visits, pages viewed, device type, browser, approximate location (city/country) and page
-          loading performance. Basic visit counts use cookieless analytics. More detailed analytics (Google Analytics and Microsoft Clarity,
+          loading performance. Basic visit counts use cookieless analytics. More detailed analytics (Google Tag Manager, Google Analytics and Microsoft Clarity,
           which can record anonymised clicks and scrolling to help us improve the site) only run if you accept cookies.
         </li>
       </ul>
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
       <h2>Service providers</h2>
       <p>
         We use trusted providers to run this website: Vercel (hosting and cookieless analytics), EmailJS (delivering contact form messages to
-        our inbox), and, with your consent, Google Analytics and Microsoft Clarity. These providers process data on our behalf under their own
+        our inbox), and, with your consent, Google Tag Manager, Google Analytics and Microsoft Clarity. These providers process data on our behalf under their own
         security and privacy commitments.
       </p>
 

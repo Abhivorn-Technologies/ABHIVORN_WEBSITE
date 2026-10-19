@@ -9,6 +9,7 @@ declare global {
     gtag?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
     clarity?: (...args: unknown[]) => void;
+    google_tag_manager?: unknown;
   }
 }
 
@@ -29,7 +30,7 @@ export function getConsent(): ConsentValue | null {
 /**
  * Send one event to every analytics tool that is switched on.
  * - Vercel Web Analytics: cookieless, always on
- * - Google Analytics 4 / Google Ads: only after the visitor accepts cookies
+ * - Google Tag Manager (as a dataLayer event) / Google Analytics 4 / Google Ads: only after the visitor accepts cookies
  * - Microsoft Clarity: tags the session so recordings can be filtered by event
  */
 export function trackEvent(name: string, params: Params = {}) {
@@ -44,6 +45,12 @@ export function trackEvent(name: string, params: Params = {}) {
   }
   try {
     window.gtag?.("event", name, clean);
+  } catch {
+    /* ignore */
+  }
+  try {
+    // Queued in the dataLayer even if GTM is still loading; GTM replays it once it starts.
+    if (getConsent() === "granted") (window.dataLayer ||= []).push({ event: name, ...clean });
   } catch {
     /* ignore */
   }

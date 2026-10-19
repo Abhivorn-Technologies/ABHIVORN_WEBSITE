@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useSyncExternalStore } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
@@ -20,18 +20,21 @@ const subscribe = (cb: () => void) => {
 const readConsent = (): ConsentValue | "unset" => getConsent() ?? "unset";
 const serverConsent = (): "pending" => "pending";
 
+// Google Tag Manager container. The ID is public (it ships in every page that uses GTM).
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-PSX78PTV";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
 
-const loadedTrackers = () => Boolean(window.gtag || window.clarity);
+const loadedTrackers = () => Boolean(window.gtag || window.clarity || window.google_tag_manager);
 
 /**
  * Visitor analytics.
  * - Vercel Web Analytics (visitors, pages, referrers, countries, devices) and Speed Insights
  *   (real-user loading experience) are cookieless, so they always run.
- * - Google Analytics 4, Google Ads and Microsoft Clarity (heatmaps + session recordings) set cookies,
- *   so they load only after the visitor clicks "Accept" on the consent banner.
+ * - Google Tag Manager, Google Analytics 4, Google Ads and Microsoft Clarity (heatmaps + session recordings)
+ *   can set cookies, so they load only after the visitor clicks "Accept" on the consent banner.
+ *   Tags added inside GTM inherit that rule because the whole container waits for consent.
  */
 export default function Analytics() {
   const pathname = usePathname();
@@ -41,10 +44,13 @@ export default function Analytics() {
     captureAttribution();
   }, []);
 
-  // GA4 page views on client-side navigation
+  // Page views on client-side navigation (the first page view is sent by the tags themselves on load)
+  const firstPath = useRef(pathname);
   useEffect(() => {
-    if (consent !== "granted" || !GA_ID || !window.gtag) return;
-    window.gtag("event", "page_view", { page_path: pathname, page_location: window.location.href });
+    if (consent !== "granted" || pathname === firstPath.current) return;
+    firstPath.current = "";
+    if (GA_ID && window.gtag) window.gtag("event", "page_view", { page_path: pathname, page_location: window.location.href });
+    if (GTM_ID) (window.dataLayer ||= []).push({ event: "virtual_page_view", page_path: pathname, page_location: window.location.href });
   }, [pathname, consent]);
 
   const googleIds = [GA_ID, ADS_ID].filter(Boolean) as string[];
@@ -54,6 +60,16 @@ export default function Analytics() {
     <>
       <VercelAnalytics />
       <SpeedInsights />
+
+      {granted && GTM_ID && (
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+(function(){function c(){window.dataLayer.push(arguments);}c('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});})();
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
+      )}
 
       {granted && googleIds.length > 0 && (
         <>
