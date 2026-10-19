@@ -30,7 +30,7 @@ export default function PrivacyPage() {
         <li>
           <strong>Usage data:</strong> we measure visits, pages viewed, device type, browser, approximate location (city/country) and page
           loading performance. Basic visit counts use cookieless analytics. The Google tag and Google Tag Manager load on every page, but in
-          Google&rsquo;s consent mode the Google tags it manages set no cookies until you accept. More detailed analytics (Google Analytics and
+          Google&rsquo;s consent mode they set no cookies until you accept. More detailed analytics (Google Analytics and
           Microsoft Clarity, which can record anonymised clicks and scrolling to help us improve the site) only store data if you accept cookies.
         </li>
       </ul>
