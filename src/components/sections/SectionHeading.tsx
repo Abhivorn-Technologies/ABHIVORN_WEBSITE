@@ -20,7 +20,7 @@ export default function SectionHeading({
   return (
     <Reveal className={cn("mb-12 md:mb-16", align === "center" && "mx-auto max-w-2xl text-center", className)}>
       {eyebrow && (
-        <p className={cn("mb-3 text-sm font-semibold uppercase tracking-wider", invert ? "text-accent" : "text-accent")}>{eyebrow}</p>
+        <p className={cn("mb-3 text-sm font-semibold uppercase tracking-wider", invert ? "text-water" : "text-accent")}>{eyebrow}</p>
       )}
       <h2 className={cn("text-balance text-3xl font-bold sm:text-4xl", invert ? "text-primary-foreground" : "text-foreground")}>{title}</h2>
       {description && (

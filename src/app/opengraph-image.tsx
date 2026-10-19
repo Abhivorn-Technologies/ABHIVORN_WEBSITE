@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const alt = "Abhivorn Technologies — Custom software, web & mobile app development in Hyderabad";
@@ -5,7 +7,11 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /** Social share preview (WhatsApp, LinkedIn, X, Facebook) for every page that doesn't set its own image. */
-export default function OgImage() {
+export default async function OgImage() {
+  // Real logo mark, not a stand-in letter
+  const mark = await readFile(join(process.cwd(), "public/icon-512.png"));
+  const markSrc = `data:image/png;base64,${mark.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -16,7 +22,7 @@ export default function OgImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px 80px",
-          background: "linear-gradient(135deg, #00405c 0%, #00597f 45%, #00bfff 100%)",
+          background: "linear-gradient(135deg, #002a55 0%, #003a75 55%, #00699e 100%)",
           color: "white",
           fontFamily: "sans-serif",
         }}
@@ -24,19 +30,17 @@ export default function OgImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <div
             style={{
-              width: 64,
-              height: 64,
-              borderRadius: 16,
+              width: 76,
+              height: 76,
+              borderRadius: 18,
               background: "white",
-              color: "#00597f",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 40,
-              fontWeight: 800,
             }}
           >
-            A
+            {/* eslint-disable-next-line jsx-a11y/alt-text */}
+            <img src={markSrc} width={60} height={60} />
           </div>
           <div style={{ fontSize: 34, fontWeight: 700 }}>Abhivorn Technologies</div>
         </div>

@@ -10,7 +10,7 @@ export const metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Privacy Policy" updated="6 October 2026" path="/privacy">
+    <LegalPage title="Privacy Policy" updated="19 October 2026" path="/privacy">
       <p>
         {site.legalName} (&quot;Abhivorn&quot;, &quot;we&quot;, &quot;us&quot;) respects your privacy. This policy explains what personal data we
         collect when you use this website, why we collect it, and the choices you have. We process personal data in line with India&apos;s
@@ -45,7 +45,11 @@ export default function PrivacyPage() {
       <h2>Cookies and analytics</h2>
       <p>
         When you first visit, we ask whether you accept analytics cookies. If you decline, only cookieless measurement runs. You can change
-        your choice at any time by clearing this site&apos;s data in your browser, after which we will ask again.
+        your choice at any time with the &quot;Cookie settings&quot; link at the bottom of every page.
+      </p>
+      <p>
+        Your browser also stores a few small items that are not used for tracking: your cookie choice, the page you first landed on (attached
+        to your enquiry) and the time of your last form submission, which helps us block spam.
       </p>
 
       <h2>Service providers</h2>

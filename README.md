@@ -29,7 +29,17 @@ npm run dev                  # http://localhost:3000
 | Blog posts | `src/lib/blog.ts` |
 | Page layouts | `src/app/**/page.tsx` |
 
-The sitemap (`/sitemap.xml`), robots.txt, social share image and structured data are generated automatically from these files.
+The sitemap (`/sitemap.xml`), robots.txt, `/llms.txt` (a plain-text company summary for AI assistants), social share image, web manifest and structured data are generated automatically from these files.
+
+## Animations
+
+- `Reveal` / `Stagger` (`src/components/motion/Reveal.tsx`) fade content in once as it enters the screen.
+- `ScrollMe` (`src/components/motion/ScrollMe.tsx`) ties small movements to the scroll position, so they reverse when scrolling back up.
+- Everything is switched off for visitors whose device asks for reduced motion.
+
+## Contact form
+
+Validated in the browser with inline messages (`src/lib/validation.ts`). Spam protection: a hidden honeypot field, a minimum fill time and a one-minute resend cooldown. For extra protection, turn on reCAPTCHA and restrict allowed domains to abhivorn.com in the EmailJS dashboard.
 
 ## Environment variables
 

@@ -1,10 +1,12 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { Reveal } from "@/components/motion/Reveal";
 import JsonLd from "@/components/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+
+// Above-the-fold content animates with CSS, so it is visible without waiting for JavaScript (faster first paint).
+const rise = "animate-fade-in-up [animation-fill-mode:both]";
 
 type Props = {
   eyebrow?: string;
@@ -55,20 +57,20 @@ export default function PageHero({ eyebrow, title, description, children, breadc
         )}
         <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
           {eyebrow && (
-            <Reveal>
+            <div className={rise}>
               <span className="mb-5 inline-block rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-primary">{eyebrow}</span>
-            </Reveal>
+            </div>
           )}
           <h1 className="text-balance text-4xl font-bold leading-tight text-foreground sm:text-5xl">{title}</h1>
           {description && (
-            <Reveal delay={0.1}>
+            <div className={cn(rise, "[animation-delay:100ms]")}>
               <p className="mt-6 text-pretty text-lg text-muted-foreground">{description}</p>
-            </Reveal>
+            </div>
           )}
           {children && (
-            <Reveal delay={0.2}>
+            <div className={cn(rise, "[animation-delay:200ms]")}>
               <div className={cn("mt-8 flex flex-col gap-3 sm:flex-row", align === "center" && "sm:justify-center")}>{children}</div>
-            </Reveal>
+            </div>
           )}
         </div>
       </div>

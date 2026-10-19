@@ -10,10 +10,10 @@ import CtaBand from "@/components/sections/CtaBand";
 import JsonLd from "@/components/seo/JsonLd";
 import { SITE_URL } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
-import clinic from "@/assets/vorqard-clinic.png";
-import paperless from "@/assets/vorqard-paperless.png";
-import tracking from "@/assets/vorqard-tracking.png";
-import patient from "@/assets/vorqard-patient.png";
+import clinic from "@/assets/vorqard-clinic.jpg";
+import paperless from "@/assets/vorqard-paperless.jpg";
+import tracking from "@/assets/vorqard-tracking.jpg";
+import patient from "@/assets/vorqard-patient.jpg";
 
 export const metadata = pageMetadata({
   title: "VORQARD — Connected Healthcare Ecosystem for Patients & Doctors",

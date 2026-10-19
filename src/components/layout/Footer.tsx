@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import TrackedLink from "@/components/TrackedLink";
+import CookieSettingsButton from "@/components/analytics/CookieSettingsButton";
 import { offices, productLinks, serviceLinks, site } from "@/lib/site";
 import logo from "@/assets/logo.png";
 
@@ -110,13 +111,14 @@ export default function Footer() {
           <p className="text-center md:text-left">
             © {year} {site.legalName}. All rights reserved. Startup India certified.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link href="/privacy" className="transition-colors hover:text-primary-foreground">
               Privacy Policy
             </Link>
             <Link href="/terms" className="transition-colors hover:text-primary-foreground">
               Terms of Service
             </Link>
+            <CookieSettingsButton className="transition-colors hover:text-primary-foreground" />
           </div>
         </div>
       </div>

@@ -16,10 +16,10 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent/10 hover:text-accent",
         link: "text-primary underline-offset-4 hover:underline",
         // Custom Abhivorn variants
-        hero: "bg-accent text-accent-foreground shadow-[0_4px_16px_-4px_hsla(213,100%,50%,0.4)] hover:scale-105 hover:shadow-lg",
+        hero: "bg-accent text-accent-foreground shadow-[0_4px_16px_-4px_hsla(200,100%,31%,0.35)] hover:bg-primary hover:shadow-lg",
         heroOutline: "border-2 border-primary/20 bg-background text-primary hover:border-primary hover:bg-primary/5",
         nav: "text-foreground/80 hover:text-primary hover:bg-transparent font-medium",
-        cta: "bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-[0_4px_16px_-4px_hsla(213,100%,50%,0.4)] hover:scale-105",
+        cta: "bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-[0_4px_16px_-4px_hsla(200,100%,31%,0.35)] hover:opacity-95",
       },
       size: {
         default: "h-10 px-4 py-2",

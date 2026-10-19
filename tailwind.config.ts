@@ -112,9 +112,9 @@ export default {
         "float": "float 3s ease-in-out infinite",
       },
       boxShadow: {
-        'card': '0 4px 24px -4px hsla(207, 100%, 22%, 0.1)',
-        'card-hover': '0 12px 40px -8px hsla(207, 100%, 22%, 0.2)',
-        'button': '0 4px 16px -4px hsla(213, 100%, 50%, 0.4)',
+        'card': '0 4px 24px -4px hsla(210, 100%, 23%, 0.1)',
+        'card-hover': '0 12px 40px -8px hsla(210, 100%, 23%, 0.2)',
+        'button': '0 4px 16px -4px hsla(200, 100%, 31%, 0.35)',
       },
     },
   },

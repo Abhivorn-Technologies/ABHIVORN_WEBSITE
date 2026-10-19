@@ -5,10 +5,9 @@ import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { captureAttribution, getConsent, type ConsentValue } from "@/lib/analytics";
+import { CONSENT_EVENT, captureAttribution, getConsent, type ConsentValue } from "@/lib/analytics";
 import ConsentBanner from "./ConsentBanner";
 
-const CONSENT_EVENT = "abhivorn-consent-change";
 const subscribe = (cb: () => void) => {
   window.addEventListener(CONSENT_EVENT, cb);
   window.addEventListener("storage", cb);
@@ -24,6 +23,8 @@ const serverConsent = (): "pending" => "pending";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
+
+const loadedTrackers = () => Boolean(window.gtag || window.clarity);
 
 /**
  * Visitor analytics.
@@ -75,7 +76,15 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document
         </Script>
       )}
 
-      {consent === "unset" && <ConsentBanner onChoice={() => window.dispatchEvent(new Event(CONSENT_EVENT))} />}
+      {consent === "unset" && (
+        <ConsentBanner
+          onChoice={(v) => {
+            // Scripts that already loaded can't be unloaded, so a switch from Accept to Decline reloads the page without them.
+            if (v === "denied" && loadedTrackers()) window.location.reload();
+            else window.dispatchEvent(new Event(CONSENT_EVENT));
+          }}
+        />
+      )}
     </>
   );
 }

@@ -37,7 +37,7 @@ export default function ProjectsGrid() {
               <motion.span layoutId="project-filter" className="absolute inset-0 rounded-full bg-accent" transition={{ type: "spring", stiffness: 400, damping: 32 }} />
             )}
             <span className="relative">
-              {c} <span className="opacity-70">({counts[c]})</span>
+              {c} <span className="font-normal">({counts[c]})</span>
             </span>
           </button>
         ))}

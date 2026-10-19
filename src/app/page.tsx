@@ -6,6 +6,7 @@ import TrackedLink from "@/components/TrackedLink";
 import HeroVisual from "@/components/home/HeroVisual";
 import CountUp from "@/components/motion/CountUp";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { ScrollMe } from "@/components/motion/ScrollMe";
 import SectionHeading from "@/components/sections/SectionHeading";
 import ProjectCard from "@/components/sections/ProjectCard";
 import FaqSection from "@/components/sections/FaqSection";
@@ -191,7 +192,7 @@ export default function HomePage() {
             description="Running our own products keeps us sharp — the same team builds your project."
           />
           <div className="grid gap-6 lg:grid-cols-2">
-            <Reveal from="left">
+            <ScrollMe from={{ y: 48, opacity: 0.25 }}>
               <ProductTile
                 href="/products/vorqard"
                 logo={vorqardLogo}
@@ -199,8 +200,8 @@ export default function HomePage() {
                 tag="Healthcare · Live"
                 text="A connected healthcare ecosystem linking patients, doctors, hospitals, labs and pharmacies. Doctor and Patient apps are live on Google Play."
               />
-            </Reveal>
-            <Reveal from="right">
+            </ScrollMe>
+            <ScrollMe from={{ y: 80, opacity: 0.25 }}>
               <ProductTile
                 href="/products/vorn-hr"
                 logo={vornLogo}
@@ -208,7 +209,7 @@ export default function HomePage() {
                 tag="HR management"
                 text="Attendance, leave, payroll and employee self-service in one HRMS built for Indian businesses."
               />
-            </Reveal>
+            </ScrollMe>
           </div>
         </div>
       </section>

@@ -1,13 +1,12 @@
-import Image from "next/image";
 import { Award, Lightbulb, MapPin, Shield, Target } from "lucide-react";
 import CountUp from "@/components/motion/CountUp";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { ScrollMe } from "@/components/motion/ScrollMe";
 import PageHero from "@/components/sections/PageHero";
 import SectionHeading from "@/components/sections/SectionHeading";
 import CtaBand from "@/components/sections/CtaBand";
 import { offices, stats, team } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
-import aboutOffice from "@/assets/about-office.png";
 
 export const metadata = pageMetadata({
   title: "About Us — Software Company in Hyderabad",
@@ -46,7 +45,7 @@ export default function AboutPage() {
 
       <section className="section-padding">
         <div className="container-custom grid items-center gap-14 lg:grid-cols-2">
-          <Reveal from="left">
+          <div className="animate-fade-in-up [animation-fill-mode:both]">
             <h2 className="text-3xl font-bold text-foreground">Our story</h2>
             <div className="mt-6 space-y-4 text-lg text-muted-foreground">
               <p>
@@ -63,25 +62,30 @@ export default function AboutPage() {
                 operating real products.
               </p>
             </div>
-          </Reveal>
-          <Reveal from="right" className="relative">
-            <div className="relative aspect-square overflow-hidden rounded-3xl shadow-2xl">
-              <Image
-                src={aboutOffice}
-                alt="The Abhivorn Technologies office in Hyderabad"
-                fill
-                sizes="(min-width: 1024px) 560px, 100vw"
-                className="object-cover"
-                placeholder="blur"
-              />
-              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent p-8">
-                <div className="text-white">
-                  <div className="text-xl font-bold">Cyber Towers, HITEC City</div>
-                  <div className="text-sm opacity-80">Our head office in Hyderabad</div>
-                </div>
-              </div>
+          </div>
+          {/* Real office photos can go here once available — the previous AI-generated "office" image was removed so nothing on the page misrepresents the company. */}
+          <ScrollMe from={{ y: 48, scale: 0.97, opacity: 0.25 }}>
+            <div className="rounded-3xl bg-primary p-8 text-primary-foreground shadow-2xl sm:p-10">
+              <p className="text-sm font-semibold uppercase tracking-wider text-water">Head office</p>
+              <h2 className="mt-3 text-2xl font-bold sm:text-3xl">{offices[0].address}</h2>
+              <p className="mt-4 text-primary-foreground/80">
+                Branch offices: {offices
+                  .slice(1)
+                  .map((o) => o.name)
+                  .join(" and ")}
+                .
+              </p>
+              <a
+                href={offices[0].mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 font-semibold text-water underline-offset-4 hover:underline"
+              >
+                <MapPin className="h-5 w-5" aria-hidden /> Get directions
+                <span className="sr-only"> (opens Google Maps)</span>
+              </a>
             </div>
-          </Reveal>
+          </ScrollMe>
         </div>
       </section>
 

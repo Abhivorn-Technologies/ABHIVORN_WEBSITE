@@ -13,6 +13,8 @@ declare global {
 }
 
 export const CONSENT_KEY = "abhivorn-consent";
+/** Fired on window whenever the stored cookie choice changes. */
+export const CONSENT_EVENT = "abhivorn-consent-change";
 export type ConsentValue = "granted" | "denied";
 
 export function getConsent(): ConsentValue | null {
