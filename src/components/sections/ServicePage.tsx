@@ -89,7 +89,7 @@ export default function ServicePage({ service }: { service: Service }) {
                 </StaggerItem>
               ))}
             </Stagger>
-            <p className="mt-6 text-sm text-muted-foreground">Built with {service.tech.join(", ")}.</p>
+            <p className="mt-6 text-sm text-muted-foreground">We choose the technology to fit each project, not the other way round.</p>
             {service.product && (
               <Reveal className="mt-8 border-t border-border pt-6">
                 <p className="eyebrow">Our product</p>

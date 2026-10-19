@@ -20,7 +20,6 @@ export type Project = {
   solution?: string;
   highlights?: string[];
   results?: { metric: string; label: string }[];
-  tech?: string[];
   url?: string;
   featured?: boolean;
 };
@@ -58,7 +57,6 @@ export const projects: Project[] = [
       "QR-based patient identification and check-in",
       "Appointments, e-prescriptions and digital reports",
     ],
-    tech: ["React Native", "React", "Node.js", "PostgreSQL", "AWS"],
     url: "https://www.vorqard.com",
     featured: true,
   },
@@ -74,14 +72,13 @@ export const projects: Project[] = [
     challenge:
       "Thousands of seva bookings, donations and priest sankalpam lists had to be collected online from devotees in India and abroad, in three languages.",
     solution:
-      "A multilingual Next.js portal with a step-by-step seva booking flow, Razorpay and UPI payments, printable seva tickets and an admin command centre for the temple team.",
+      "A multilingual portal with a step-by-step seva booking flow, Razorpay and UPI payments, printable seva tickets and an admin command centre for the temple team.",
     highlights: [
       "Multilingual, with Telugu spiritual content",
       "Razorpay cards, net banking and UPI QR payments",
       "Admin centre with bookings, donations, gallery and live-stream control",
       "Priest Sankalpam register and CSV exports",
     ],
-    tech: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Razorpay", "Cloudinary"],
     url: "https://www.srikariatirudram.com/en",
     featured: true,
   },
@@ -100,7 +97,6 @@ export const projects: Project[] = [
       "Instant liquidity to cash over IMPS/RTGS",
       "Luxury Jewellery Cloud and gold gifting",
     ],
-    tech: ["Next.js"],
     url: "https://limovi.in/",
     featured: true,
   },
@@ -160,14 +156,13 @@ export const projects: Project[] = [
     challenge:
       "The project needed a launch website that felt as premium as the towers themselves and explained 7+ acres of amenities without overwhelming buyers.",
     solution:
-      "A 21-section Next.js landing page with an interactive master plan, tower and floor explorers, animated statistics and an enquiry form on every key screen.",
+      "A 21-section landing page with an interactive master plan, tower and floor explorers, animated statistics and an enquiry form on every key screen.",
     highlights: [
       "Interactive 5-tower master plan and lounge explorer",
       "Floor-by-floor clubhouse navigator",
       "Animated counters and parallax, reduced-motion friendly",
       "Lead capture for private viewings",
     ],
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     featured: true,
   },
   {
@@ -182,14 +177,13 @@ export const projects: Project[] = [
     challenge:
       "The store sold only offline and tracked stock and orders by hand, with no way for customers to browse or order online.",
     solution:
-      "A Next.js storefront with filters by type, brand and price, a quick address-card checkout with PIN code lookup, COD and online payments, and a secure admin console.",
+      "A storefront with filters by type, brand and price, a quick address-card checkout with PIN code lookup, COD and online payments, and a secure admin console.",
     highlights: [
       "Catalogue with search and filters by category, brand, price and gears",
       "Saved addresses, COD and online payments",
       "Live order tracking for customers",
       "Admin dashboard with revenue, orders and low-stock alerts",
     ],
-    tech: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
     featured: true,
   },
   {
@@ -204,13 +198,12 @@ export const projects: Project[] = [
     challenge:
       "The hospital needed a site that builds trust with patients researching sensitive procedures and makes booking a consultation effortless.",
     solution:
-      "A Next.js website with treatment pages, doctor profiles, appointment booking and floating call and WhatsApp actions, in a calm editorial design.",
+      "A website with treatment pages, doctor profiles, appointment booking and floating call and WhatsApp actions, in a calm editorial design.",
     highlights: [
       "Treatment pages for face, body, breast, hair and skin",
       "Appointment booking with floating call and WhatsApp actions",
       "Fast, mobile-first build with optimised images",
     ],
-    tech: ["Next.js", "React", "Tailwind CSS"],
     url: "https://thesculpt.co.in/",
   },
   {
@@ -225,13 +218,12 @@ export const projects: Project[] = [
     challenge:
       "A manufacturer with a long track record needed a website that reflected the quality of its machines and work to brand buyers.",
     solution:
-      "A fast React website with clear capability sections, machinery showcases and enquiry paths for packaging buyers.",
+      "A fast website with clear capability sections, machinery showcases and enquiry paths for packaging buyers.",
     highlights: [
       "Capability pages for printing, cartons, labels and finishing",
       "Brand-quality visual design",
       "SEO-ready metadata and fast loading",
     ],
-    tech: ["React", "TypeScript", "Vite"],
   },
   {
     slug: "lorven-golf",
@@ -244,13 +236,12 @@ export const projects: Project[] = [
       "Lorven Golf's e-commerce store for clubs, shoes, apparel, bags, balls and accessories from leading golf brands.",
     challenge: "The retailer needed a clean, fast store that works well on mobile for golfers browsing premium equipment.",
     solution:
-      "A Next.js storefront with six product categories, deals and new arrivals, customer accounts with order tracking, and secure online checkout.",
+      "A storefront with six product categories, deals and new arrivals, customer accounts with order tracking, and secure online checkout.",
     highlights: [
       "Shop by clubs, shoes, apparel, bags, balls and accessories",
       "Customer accounts with order tracking",
       "Secure online checkout with Razorpay",
     ],
-    tech: ["Next.js", "TypeScript", "MongoDB", "Razorpay"],
     url: "https://lorvengolf.com/",
   },
   {
@@ -265,13 +256,12 @@ export const projects: Project[] = [
     challenge:
       "Multiple coordinators entered donors at the same time, leading to duplicates and no single view of donations.",
     solution:
-      "A Next.js app with coordinator and admin roles, duplicate prevention at the database level, fast data entry and analytics dashboards.",
+      "A web app with coordinator and admin roles, duplicate prevention at the database level, fast data entry and analytics dashboards.",
     highlights: [
       "Coordinator and admin roles with isolated data",
       "Duplicate prevention on email and WhatsApp numbers",
       "7-day donation charts and admin data tables",
     ],
-    tech: ["Next.js", "MongoDB", "Auth.js", "shadcn/ui", "Zod"],
   },
   {
     slug: "costita",
@@ -291,7 +281,6 @@ export const projects: Project[] = [
       "Custom quote request form for bulk and custom orders",
       "Logistics, shipping and buyer-protection information",
     ],
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     url: "https://costita.com/",
   },
   {
@@ -310,7 +299,6 @@ export const projects: Project[] = [
       { metric: "100+", label: "Patients in month one" },
       { metric: "80%", label: "Less time spent booking" },
     ],
-    tech: ["React", "Django", "PostgreSQL", "AWS"],
   },
   {
     slug: "mortgage-document-extraction",
@@ -322,12 +310,11 @@ export const projects: Project[] = [
     summary: "Automated capture and validation of data from mortgage applications.",
     challenge: "Manual processing of mortgage documents was slow, error-prone and held up approvals.",
     solution: "An OCR pipeline that automatically extracts and validates key fields from mortgage applications.",
-    highlights: ["OCR and field validation", "Serverless processing on AWS", "Review queue for exceptions"],
+    highlights: ["OCR and field validation", "Automated cloud processing", "Review queue for exceptions"],
     results: [
       { metric: "98.5%", label: "Extraction accuracy" },
       { metric: "85%", label: "Less processing time" },
     ],
-    tech: ["Python", "OCR", "AWS Lambda", "PostgreSQL"],
   },
   {
     slug: "vorn-hr",
@@ -344,7 +331,6 @@ export const projects: Project[] = [
       "Attendance with biometric integration, and leave workflows",
       "Payroll, payslips and HR analytics",
     ],
-    tech: ["React", "Django", "PostgreSQL", "AWS"],
     url: "https://www.vornhr.com/",
   },
 ];

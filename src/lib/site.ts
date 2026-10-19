@@ -56,10 +56,10 @@ export const stats = [
 ] as const;
 
 export const team = [
-  { role: "MERN Stack Developers", count: 3 },
-  { role: "Python Developers", count: 3 },
+  { role: "Web Developers", count: 3 },
+  { role: "Backend & AI Developers", count: 3 },
   { role: "QA Engineers", count: 4 },
-  { role: "React Native Developers", count: 2 },
+  { role: "Mobile App Developers", count: 2 },
   { role: "DevOps Engineers", count: 2 },
   { role: "Project Manager", count: 1 },
 ] as const;
@@ -69,7 +69,7 @@ export type NavItem = { name: string; href: string; description?: string; childr
 export const serviceLinks: NavItem[] = [
   { name: "Web Development", href: "/web-development-company-hyderabad", description: "Fast, SEO-ready websites and web apps" },
   { name: "Custom Software", href: "/custom-software-development", description: "Business software built around your workflow" },
-  { name: "Mobile Apps", href: "/mobile-app-development", description: "iOS and Android apps with React Native" },
+  { name: "Mobile Apps", href: "/mobile-app-development", description: "iOS and Android apps" },
   { name: "HRMS Development", href: "/hrms-software-development", description: "HR, attendance and payroll systems" },
   { name: "Healthcare Software", href: "/healthcare-software-development", description: "Clinic, doctor and patient platforms" },
   { name: "AI Development", href: "/ai-development-company", description: "Automation, chatbots and document AI" },
@@ -88,20 +88,3 @@ export const mainNav: NavItem[] = [
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
 ];
-
-export const techStack = [
-  "React",
-  "Next.js",
-  "Node.js",
-  "Express",
-  "MongoDB",
-  "Python",
-  "Django",
-  "FastAPI",
-  "PostgreSQL",
-  "React Native",
-  "TypeScript",
-  "Tailwind CSS",
-  "AWS",
-  "Docker",
-] as const;

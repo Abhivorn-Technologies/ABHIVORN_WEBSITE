@@ -116,11 +116,6 @@ function ProjectDetail({ project: p }: { project: Project }) {
       )}
 
       <div className="mt-auto flex flex-wrap items-center gap-2 pt-6">
-        {p.tech?.map((t) => (
-          <span key={t} className="rounded-md bg-muted px-2 py-1 text-xs text-muted-foreground">
-            {t}
-          </span>
-        ))}
         {p.url && (
           <a
             href={p.url}

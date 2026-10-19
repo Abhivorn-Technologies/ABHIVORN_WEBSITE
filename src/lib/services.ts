@@ -22,7 +22,6 @@ export type Service = {
   intro: string;
   offerings: { title: string; description: string }[];
   whyUs: string[];
-  tech: string[];
   projectCategories: ProjectCategory[];
   product?: { name: string; href: string; blurb: string };
   faqs: { question: string; answer: string }[];
@@ -34,11 +33,11 @@ export const services: Service[] = [
     path: "/web-development-company-hyderabad",
     name: "Web Development",
     icon: Globe,
-    summary: "Fast, SEO-ready websites, e-commerce stores and web apps built with Next.js and React.",
+    summary: "Fast, SEO-ready websites, e-commerce stores and web applications, built to grow with your business.",
     metaTitle: "Web Development Company in Hyderabad — Websites, E-commerce & Web Apps",
     metaDescription:
-      "Web development company in Hyderabad building fast, SEO-friendly websites, e-commerce stores and web applications with Next.js and React. See our recent projects.",
-    keywords: ["web development company Hyderabad", "website development Hyderabad", "ecommerce website development", "Next.js development India"],
+      "Web development company in Hyderabad building fast, SEO-friendly websites, e-commerce stores and web applications. See our recent projects.",
+    keywords: ["web development company Hyderabad", "website development Hyderabad", "ecommerce website development", "website design company India"],
     h1: "Web Development Company in Hyderabad",
     intro:
       "Your website is often the first conversation with a customer. We build fast, mobile-first websites, online stores and web applications that rank well on Google, load instantly and turn visitors into enquiries.",
@@ -51,12 +50,11 @@ export const services: Service[] = [
       { title: "Multilingual sites", description: "English, Telugu and Hindi versions for audiences across India." },
     ],
     whyUs: [
-      "Built on Next.js for speed and search visibility",
+      "Built for speed and search visibility from day one",
       "Every page tested on phones, tablets and desktops before launch",
       "Analytics and lead tracking set up so you can see what's working",
       "Recent launches for real estate, healthcare, retail and community organisations",
     ],
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "PostgreSQL", "Razorpay"],
     projectCategories: ["Websites", "E-commerce", "Real Estate"],
     faqs: [
       {
@@ -96,16 +94,15 @@ export const services: Service[] = [
       { title: "ERP & CRM systems", description: "Inventory, orders, billing, sales pipelines and approvals in one system tailored to your business." },
       { title: "Workflow automation", description: "Replace spreadsheets and manual steps with automated approvals, alerts and scheduled jobs." },
       { title: "APIs & integrations", description: "Connect payment gateways, WhatsApp, SMS, accounting tools, biometrics and third-party systems." },
-      { title: "Cloud & DevOps", description: "Secure deployment on AWS or your cloud with CI/CD, backups and monitoring from our DevOps team." },
+      { title: "Cloud & DevOps", description: "Secure cloud deployment with CI/CD, backups and monitoring from our DevOps team." },
       { title: "Support & maintenance", description: "Bug-fix warranty after launch, then ongoing enhancements and support as your needs grow." },
     ],
     whyUs: [
-      "Dedicated MERN, Python, React Native, QA and DevOps specialists under one roof",
+      "Web, mobile, backend, QA and DevOps specialists under one roof",
       "Requirements documented and signed off before development starts",
       "QA sign-off is mandatory before anything goes live",
       "Milestone demos so you see progress, not just status reports",
     ],
-    tech: ["React", "Next.js", "Node.js", "Python", "Django", "FastAPI", "PostgreSQL", "MongoDB", "AWS", "Docker"],
     projectCategories: ["Enterprise", "Community", "Finance"],
     faqs: [
       {
@@ -133,16 +130,16 @@ export const services: Service[] = [
     path: "/mobile-app-development",
     name: "Mobile App Development",
     icon: Smartphone,
-    summary: "iOS and Android apps built with React Native — one codebase, native feel, faster launch.",
+    summary: "iOS and Android apps with a native feel, from idea and design to store launch.",
     metaTitle: "Mobile App Development Company in Hyderabad — iOS & Android",
     metaDescription:
-      "Mobile app development company in Hyderabad building iOS and Android apps with React Native. From idea and design to Play Store and App Store launch.",
-    keywords: ["mobile app development company Hyderabad", "React Native app development", "Android app development", "iOS app development India"],
+      "Mobile app development company in Hyderabad building iOS and Android apps. From idea and design to Play Store and App Store launch.",
+    keywords: ["mobile app development company Hyderabad", "cross-platform app development", "Android app development", "iOS app development India"],
     h1: "Mobile App Development Company in Hyderabad",
     intro:
-      "We design and build iOS and Android apps with React Native, so you launch on both stores from one codebase. Our team takes your app from idea to Play Store and App Store — and keeps it running after launch.",
+      "We design and build iOS and Android apps, so you can launch on both stores together. Our team takes your app from idea to Play Store and App Store — and keeps it running after launch.",
     offerings: [
-      { title: "Cross-platform apps", description: "One React Native codebase for iOS and Android with a native look and feel." },
+      { title: "Cross-platform apps", description: "One app for iOS and Android with a native look and feel." },
       { title: "UI/UX design", description: "Clickable prototypes before development so you can test the flow with real users." },
       { title: "Backend & APIs", description: "Secure APIs, admin dashboards, push notifications and real-time features." },
       { title: "Payments & integrations", description: "Razorpay, UPI, maps, OTP login, WhatsApp and third-party services." },
@@ -150,18 +147,17 @@ export const services: Service[] = [
       { title: "Maintenance & updates", description: "OS updates, bug fixes and new features after launch." },
     ],
     whyUs: [
-      "Dedicated React Native developers and QA engineers",
+      "Dedicated mobile developers and QA engineers",
       "Our own healthcare apps (VORQARD Doctor and Patient) are live on Google Play",
       "Testing on real devices across screen sizes before release",
       "Backend, web admin and app built by one team",
     ],
-    tech: ["React Native", "TypeScript", "Node.js", "Firebase", "PostgreSQL", "MongoDB", "AWS"],
     projectCategories: ["Healthcare", "E-commerce"],
     faqs: [
       {
         question: "Do you build native or cross-platform apps?",
         answer:
-          "We specialise in React Native, which gives you one codebase for both iOS and Android with near-native performance. It's faster to build and easier to maintain.",
+          "We build cross-platform apps: one app for both iOS and Android with a native look and feel. It's faster to build and easier to maintain than two separate apps.",
       },
       {
         question: "How long does it take to build an app?",
@@ -200,7 +196,6 @@ export const services: Service[] = [
       "Data migration and training included in setup",
       "Integrates with biometric devices and existing payroll tools",
     ],
-    tech: ["React", "Django", "PostgreSQL", "React Native", "AWS"],
     projectCategories: ["Enterprise"],
     product: { name: "VORN HR", href: "/products/vorn-hr", blurb: "Our ready-to-use HRMS for growing Indian teams." },
     faqs: [
@@ -246,7 +241,6 @@ export const services: Service[] = [
       "Experience with clinics, wellness centres and specialist practices",
       "Web, mobile and backend from one team",
     ],
-    tech: ["React Native", "React", "Next.js", "Node.js", "PostgreSQL", "AWS"],
     projectCategories: ["Healthcare"],
     product: { name: "VORQARD", href: "/products/vorqard", blurb: "Our connected healthcare ecosystem for patients, doctors and clinics." },
     faqs: [
@@ -277,7 +271,7 @@ export const services: Service[] = [
     keywords: ["AI development company Hyderabad", "AI chatbot development India", "OCR document extraction", "AI automation services"],
     h1: "AI Development Company in Hyderabad",
     intro:
-      "We use AI where it saves real time or money — reading documents, answering customer questions, routing work and spotting trends. Our Python team builds AI into your existing systems, not as a disconnected experiment.",
+      "We use AI where it saves real time or money — reading documents, answering customer questions, routing work and spotting trends. Our team builds AI into your existing systems, not as a disconnected experiment.",
     offerings: [
       { title: "AI chatbots & assistants", description: "Website and WhatsApp assistants trained on your products, policies and FAQs." },
       { title: "Document AI & OCR", description: "Extract and validate data from invoices, forms and applications automatically." },
@@ -288,11 +282,10 @@ export const services: Service[] = [
     ],
     whyUs: [
       "Delivered OCR extraction with 98.5% accuracy for a US mortgage processor",
-      "Python, data and DevOps engineers in-house",
+      "AI, data and DevOps engineers in-house",
       "We start with a small proof of value before scaling",
       "Your data stays protected and under your control",
     ],
-    tech: ["Python", "FastAPI", "Django", "OCR", "LLMs", "AWS Lambda", "PostgreSQL"],
     projectCategories: ["Finance", "Enterprise"],
     faqs: [
       {
