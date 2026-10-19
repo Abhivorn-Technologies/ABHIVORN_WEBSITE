@@ -13,7 +13,7 @@ export default function ProjectCard({ project, className }: { project: Project; 
       <p className="mt-1 text-sm text-muted-foreground">{project.client}</p>
       <p className="mt-4 leading-relaxed text-foreground/80">{project.headline}</p>
       <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 pt-6 text-sm text-muted-foreground">
-        <span>{project.tech.slice(0, 3).join(" · ")}</span>
+        {project.tech && <span>{project.tech.slice(0, 3).join(" · ")}</span>}
         {project.url && (
           <a
             href={project.url}

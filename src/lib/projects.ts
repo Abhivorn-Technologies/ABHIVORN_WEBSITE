@@ -1,4 +1,12 @@
-export type ProjectCategory = "Healthcare" | "E-commerce" | "Enterprise" | "Finance" | "Import & Export" | "Websites" | "Community";
+export type ProjectCategory =
+  | "Healthcare"
+  | "E-commerce"
+  | "Real Estate"
+  | "Enterprise"
+  | "Finance"
+  | "Import & Export"
+  | "Websites"
+  | "Community";
 
 export type Project = {
   slug: string;
@@ -8,11 +16,11 @@ export type Project = {
   status: "Live" | "In progress" | "Delivered";
   headline: string;
   summary: string;
-  challenge: string;
-  solution: string;
-  highlights: string[];
+  challenge?: string;
+  solution?: string;
+  highlights?: string[];
   results?: { metric: string; label: string }[];
-  tech: string[];
+  tech?: string[];
   url?: string;
   featured?: boolean;
 };
@@ -21,6 +29,7 @@ export const projectCategories: ("All" | ProjectCategory)[] = [
   "All",
   "Healthcare",
   "E-commerce",
+  "Real Estate",
   "Websites",
   "Enterprise",
   "Finance",
@@ -76,11 +85,48 @@ export const projects: Project[] = [
     url: "https://www.srikariatirudram.com/en",
     featured: true,
   },
+  // Added from the founder's project list. Fill in links, tech and case-study details when available.
+  {
+    slug: "limovi",
+    name: "Limovi",
+    client: "Limovi",
+    category: "Finance",
+    status: "Delivered",
+    headline: "A finance and gold plot platform",
+    summary: "A platform for Limovi covering its financial services and gold plot offerings.",
+  },
+  {
+    slug: "well-wisher",
+    name: "Well Wisher",
+    client: "Well Wisher",
+    category: "Healthcare",
+    status: "Delivered",
+    headline: "A healthcare platform",
+    summary: "A healthcare platform built for Well Wisher.",
+  },
+  {
+    slug: "scrollme",
+    name: "Scrollme",
+    client: "Scrollme",
+    category: "E-commerce",
+    status: "Delivered",
+    headline: "An e-commerce platform",
+    summary: "An e-commerce platform built for Scrollme.",
+  },
+  {
+    slug: "multinew-trends",
+    name: "Multinew Trends",
+    client: "Multinew Trends",
+    category: "E-commerce",
+    status: "Delivered",
+    headline: "An online store",
+    summary: "An e-commerce store built for Multinew Trends.",
+  },
   {
     slug: "cinq-by-raghava",
     name: "CINQ by RAGHAVA",
     client: "RAGHAVA, Financial District, Hyderabad",
-    category: "Websites",
+    category: "Real Estate",
     status: "Delivered",
     headline: "An ultra-luxury real estate launch site for a 61-floor, 5-tower project",
     summary:

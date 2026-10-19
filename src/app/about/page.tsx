@@ -1,11 +1,10 @@
 import { Award, Lightbulb, MapPin, Shield, Target } from "lucide-react";
-import CountUp from "@/components/motion/CountUp";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ScrollMe } from "@/components/motion/ScrollMe";
 import PageHero from "@/components/sections/PageHero";
 import SectionHeading from "@/components/sections/SectionHeading";
 import CtaBand from "@/components/sections/CtaBand";
-import { offices, stats, team } from "@/lib/site";
+import { offices, team } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -89,20 +88,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-muted/40">
-        <div className="container-custom py-12">
-          <Stagger className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-            {stats.map((s) => (
-              <StaggerItem key={s.label} className="text-center">
-                <CountUp value={s.value} suffix={s.suffix} className="block text-4xl font-semibold text-primary sm:text-5xl" />
-                <div className="mt-2 font-semibold text-foreground">{s.label}</div>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </section>
-
-      <section className="section-padding">
+      <section className="section-padding border-t border-border">
         <div className="container-custom">
           <SectionHeading
             eyebrow="Our team"

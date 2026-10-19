@@ -57,7 +57,7 @@ export const services: Service[] = [
       "Recent launches for real estate, healthcare, retail and community organisations",
     ],
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "PostgreSQL", "Razorpay"],
-    projectCategories: ["Websites", "E-commerce"],
+    projectCategories: ["Websites", "E-commerce", "Real Estate"],
     faqs: [
       {
         question: "How long does it take to build a website?",

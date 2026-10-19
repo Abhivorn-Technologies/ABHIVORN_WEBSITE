@@ -81,19 +81,23 @@ function ProjectDetail({ project: p }: { project: Project }) {
       <p className="text-sm text-muted-foreground">{p.client}</p>
       <p className="mt-3 text-lg font-medium text-foreground/90">{p.headline}</p>
 
-      <div className="mt-5 grid gap-4 sm:grid-cols-2">
-        <div>
-          <h3 className="eyebrow">Challenge</h3>
-          <p className="mt-1 text-sm text-muted-foreground">{p.challenge}</p>
+      {p.challenge && p.solution ? (
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          <div>
+            <h3 className="eyebrow">Challenge</h3>
+            <p className="mt-1 text-sm text-muted-foreground">{p.challenge}</p>
+          </div>
+          <div>
+            <h3 className="eyebrow">What we built</h3>
+            <p className="mt-1 text-sm text-muted-foreground">{p.solution}</p>
+          </div>
         </div>
-        <div>
-          <h3 className="eyebrow">What we built</h3>
-          <p className="mt-1 text-sm text-muted-foreground">{p.solution}</p>
-        </div>
-      </div>
+      ) : (
+        <p className="mt-3 text-sm text-muted-foreground">{p.summary}</p>
+      )}
 
       <ul className="mt-5 space-y-2">
-        {p.highlights.map((h) => (
+        {p.highlights?.map((h) => (
           <li key={h} className="flex gap-2 text-sm text-foreground/85">
             <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" aria-hidden /> {h}
           </li>
@@ -112,7 +116,7 @@ function ProjectDetail({ project: p }: { project: Project }) {
       )}
 
       <div className="mt-auto flex flex-wrap items-center gap-2 pt-6">
-        {p.tech.map((t) => (
+        {p.tech?.map((t) => (
           <span key={t} className="rounded-md bg-muted px-2 py-1 text-xs text-muted-foreground">
             {t}
           </span>

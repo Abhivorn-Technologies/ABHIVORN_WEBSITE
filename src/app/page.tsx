@@ -14,7 +14,7 @@ import { services } from "@/lib/services";
 import { featuredProjects } from "@/lib/projects";
 import { stats } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
-import vorqardLogo from "@/assets/VORQRD.png";
+import vorqardWordmark from "@/assets/vorqard-wordmark.png";
 
 export const metadata = pageMetadata({
   title: "Web Development & Custom Software Company in Hyderabad | Abhivorn",
@@ -106,9 +106,8 @@ export default function HomePage() {
           />
           <Stagger as="ul" className="grid border-t border-border sm:grid-cols-2 lg:grid-cols-3">
             {webService.offerings.map((o) => (
-              <StaggerItem as="li" key={o.title} className="border-b border-border py-8 sm:pr-10">
-                <h3 className="text-lg font-medium text-foreground">{o.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{o.description}</p>
+              <StaggerItem as="li" key={o.title} className="border-b border-border py-6 text-lg text-foreground sm:pr-10">
+                {o.title}
               </StaggerItem>
             ))}
           </Stagger>
@@ -128,10 +127,7 @@ export default function HomePage() {
         <div className="container-custom section-padding">
           <div className="grid items-start gap-14 lg:grid-cols-2 lg:gap-20">
             <Reveal>
-              <div className="flex items-center gap-3">
-                <Image src={vorqardLogo} alt="" className="h-10 w-auto" sizes="48px" />
-                <span className="text-lg font-medium text-foreground">VORQARD</span>
-              </div>
+              <Image src={vorqardWordmark} alt="Vorqard" className="h-10 w-auto sm:h-12" sizes="220px" />
               <h2 className="mt-8 text-balance text-4xl font-medium text-foreground sm:text-5xl">
                 One QR code for your entire medical history.
               </h2>

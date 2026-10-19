@@ -1,4 +1,5 @@
 import { ArrowRight, Building2, CalendarCheck, FileText, FlaskConical, Pill, QrCode, ShieldCheck, Smartphone, Stethoscope, UserRound } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import TrackedLink from "@/components/TrackedLink";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -10,6 +11,7 @@ import CtaBand from "@/components/sections/CtaBand";
 import JsonLd from "@/components/seo/JsonLd";
 import { SITE_URL } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
+import vorqardWordmark from "@/assets/vorqard-wordmark.png";
 
 export const metadata = pageMetadata({
   title: "VORQARD — Connected Healthcare Ecosystem for Patients & Doctors",
@@ -66,6 +68,7 @@ export default function VorqardPage() {
       />
       <PageHero
         align="left"
+        logo={<Image src={vorqardWordmark} alt="Vorqard" priority className="h-12 w-auto sm:h-14" sizes="250px" />}
         eyebrow="VORQARD · Healthcare"
         title={
           <>

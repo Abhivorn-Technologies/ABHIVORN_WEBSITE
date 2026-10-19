@@ -10,6 +10,8 @@ const rise = "animate-fade-in-up [animation-fill-mode:both]";
 
 type Props = {
   eyebrow?: string;
+  /** Optional brand mark shown above the eyebrow (e.g. a product logo). */
+  logo?: ReactNode;
   title: ReactNode;
   description?: ReactNode;
   children?: ReactNode;
@@ -19,7 +21,7 @@ type Props = {
 };
 
 /** Top-of-page hero used by inner pages, with breadcrumb (visible + structured data). */
-export default function PageHero({ eyebrow, title, description, children, breadcrumb, className, align = "center" }: Props) {
+export default function PageHero({ logo, eyebrow, title, description, children, breadcrumb, className, align = "center" }: Props) {
   return (
     <section className={cn("border-b border-border", className)}>
       <div className="container-custom py-16 md:py-28">
@@ -52,6 +54,7 @@ export default function PageHero({ eyebrow, title, description, children, breadc
           </>
         )}
         <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
+          {logo && <div className={cn(rise, "mb-8")}>{logo}</div>}
           {eyebrow && (
             <div className={rise}>
               <p className="eyebrow mb-6">{eyebrow}</p>

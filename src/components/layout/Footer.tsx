@@ -86,7 +86,7 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-sm text-muted-foreground md:flex-row">
           <p className="text-center md:text-left">
-            © {year} {site.legalName}
+            © {site.foundingYear}–{year} {site.legalName}
           </p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link href="/privacy" className="transition-colors hover:text-foreground">
