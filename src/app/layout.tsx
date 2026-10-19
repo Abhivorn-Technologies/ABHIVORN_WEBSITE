@@ -9,6 +9,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SITE_URL, site } from "@/lib/site";
 import { CONSENT_KEY } from "@/lib/consent";
+import { GTAG_IDS, GTM_ID } from "@/lib/tags";
 import "./globals.css";
 
 // Self-hosted Inter (variable weight) — no request to Google Fonts, faster first paint.
@@ -50,24 +51,24 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-// Google Tag Manager container. The ID is public (it ships in every page that uses GTM).
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-PSX78PTV";
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-IN" className={inter.variable}>
       <head>
         {/*
-          Google Tag Manager with Consent Mode v2. The container loads on every page so Google can detect it,
-          but consent defaults to "denied": Google tags set no cookies until the visitor clicks Accept,
+          Google tag (GA4 / Ads) and Google Tag Manager with Consent Mode v2. Both load on every page so Google can
+          detect them, but consent defaults to "denied": Google tags set no cookies until the visitor clicks Accept,
           and the Analytics component then sends a consent "update".
         */}
+        {GTAG_IDS.length > 0 && <script async src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_IDS[0]}`} />}
         <script
-          id="gtm"
+          id="google-tags"
           dangerouslySetInnerHTML={{
-            __html: `(function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-var c;try{c=localStorage.getItem('${CONSENT_KEY}')==='granted'?'granted':'denied';}catch(e){c='denied';}
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
+(function(){var c;try{c=localStorage.getItem('${CONSENT_KEY}')==='granted'?'granted':'denied';}catch(e){c='denied';}
 gtag('consent','default',{ad_storage:c,ad_user_data:c,ad_personalization:c,analytics_storage:c,wait_for_update:500});
+gtag('js',new Date());
+${GTAG_IDS.map((id) => `gtag('config','${id}');`).join("")}
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','${GTM_ID}');})();`,

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CONSENT_EVENT, captureAttribution, getConsent, type ConsentValue } from "@/lib/analytics";
+import { GA_ID } from "@/lib/tags";
 import ConsentBanner from "./ConsentBanner";
 
 const subscribe = (cb: () => void) => {
@@ -20,13 +21,11 @@ const subscribe = (cb: () => void) => {
 const readConsent = (): ConsentValue | "unset" => getConsent() ?? "unset";
 const serverConsent = (): "pending" => "pending";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
 
 // A visitor who accepted and now declines gets a reload, so consent starts again from "denied".
 const loadedTrackers = () =>
-  Boolean(window.gtag || window.clarity || window.dataLayer?.some((e) => (e as { event?: string })?.event === "consent_granted"));
+  Boolean(window.clarity || window.dataLayer?.some((e) => (e as { event?: string })?.event === "consent_granted"));
 
 /**
  * Visitor analytics.
@@ -34,8 +33,8 @@ const loadedTrackers = () =>
  *   (real-user loading experience) are cookieless, so they always run.
  * - Google Tag Manager is loaded in the root layout with Consent Mode v2 defaulting to "denied"; this component
  *   sends the consent "update" when the visitor clicks Accept, so Google tags inside GTM only set cookies then.
- * - Google Analytics 4 / Google Ads set directly by ID, and Microsoft Clarity (heatmaps + session recordings),
- *   load only after the visitor clicks "Accept" on the consent banner.
+ * - The Google tag (GA4 / Google Ads) is loaded the same way, under the same Consent Mode defaults.
+ * - Microsoft Clarity (heatmaps + session recordings) loads only after the visitor clicks "Accept".
  */
 export default function Analytics() {
   const pathname = usePathname();
@@ -48,10 +47,10 @@ export default function Analytics() {
   // Page views on client-side navigation (the first page view is sent by the tags themselves on load)
   const firstPath = useRef(pathname);
   useEffect(() => {
-    if (consent !== "granted" || pathname === firstPath.current) return;
+    if (pathname === firstPath.current) return;
     firstPath.current = "";
     if (GA_ID && window.gtag) window.gtag("event", "page_view", { page_path: pathname, page_location: window.location.href });
-  }, [pathname, consent]);
+  }, [pathname]);
 
   // GTM: page views on client-side navigation (Consent Mode decides what Google tags may store)
   const firstGtmPath = useRef(pathname);
@@ -72,26 +71,12 @@ export default function Analytics() {
     dl.push({ event: "consent_granted" });
   }, [consent]);
 
-  const googleIds = [GA_ID, ADS_ID].filter(Boolean) as string[];
   const granted = consent === "granted";
 
   return (
     <>
       <VercelAnalytics />
       <SpeedInsights />
-
-      {granted && googleIds.length > 0 && (
-        <>
-          <Script src={`https://www.googletagmanager.com/gtag/js?id=${googleIds[0]}`} strategy="afterInteractive" />
-          <Script id="gtag-init" strategy="afterInteractive">
-            {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-window.gtag = gtag;
-gtag('js', new Date());
-${googleIds.map((id) => `gtag('config', '${id}', { send_page_view: true });`).join("\n")}`}
-          </Script>
-        </>
-      )}
 
       {granted && CLARITY_ID && (
         <Script id="clarity-init" strategy="afterInteractive">
