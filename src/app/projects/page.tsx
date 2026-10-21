@@ -20,7 +20,7 @@ export default function ProjectsPage() {
             Real projects, <span className="text-muted-foreground">real businesses</span>
           </>
         }
-        description="A selection of the 50+ projects we've delivered — from healthcare platforms and online stores to event portals and enterprise systems."
+        description="A selection of the 100+ projects we've delivered — from healthcare platforms and online stores to event portals and enterprise systems."
         breadcrumb={[{ name: "Projects", path: "/projects" }]}
       />
       <section className="section-padding pt-6 md:pt-10">

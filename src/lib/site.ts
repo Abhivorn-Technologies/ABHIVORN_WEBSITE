@@ -49,7 +49,7 @@ export const offices: Office[] = [
 
 /** Company-level stats shown on the home and about pages. Keep these verifiable. */
 export const stats = [
-  { value: 50, suffix: "+", label: "Projects delivered", detail: "Web, mobile and enterprise platforms" },
+  { value: 100, suffix: "+", label: "Projects delivered", detail: "Web, mobile and enterprise platforms" },
   { value: 15, suffix: "", label: "Member delivery team", detail: "Developers, QA, DevOps and PM" },
   { value: 3, suffix: "", label: "Offices in Telangana", detail: "HITEC City, KPHB and Karimnagar" },
   { value: 2, suffix: "", label: "In-house products", detail: "VORN HR and VORQARD" },

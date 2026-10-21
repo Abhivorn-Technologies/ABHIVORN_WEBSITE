@@ -51,7 +51,7 @@ export default async function OgImage() {
           <div style={{ marginTop: 28, fontSize: 30, opacity: 0.9 }}>HRMS · Healthcare · AI · E-commerce</div>
         </div>
         <div style={{ display: "flex", gap: 40, fontSize: 26, opacity: 0.95 }}>
-          <span>50+ projects delivered</span>
+          <span>100+ projects delivered</span>
           <span>·</span>
           <span>Hyderabad, India</span>
           <span>·</span>
