@@ -10,7 +10,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "About Us — Software Company in Hyderabad",
   description:
-    "Abhivorn Technologies is a Startup India certified software company founded in 2025 in Hyderabad, with a 15-member team, 3 offices and 50+ projects delivered.",
+    "Abhivorn Technologies is a Startup India certified software company founded in 2025 in Hyderabad, with a 15-member team, 3 offices and 100+ projects delivered.",
   path: "/about",
 });
 
@@ -25,7 +25,7 @@ const journey = [
   { when: "2025", title: "Founded in Hyderabad", text: "Abhivorn Technologies Pvt Ltd is established at Cyber Towers, HITEC City, and certified under Startup India." },
   { when: "Products", title: "VORN HR goes live", text: "Our HR management product is deployed with its first enterprise client." },
   { when: "Growth", title: "Branches in KPHB and Karimnagar", text: "We expand to three offices across Telangana to serve more clients." },
-  { when: "Today", title: "50+ projects and VORQARD live", text: "VORQARD Doctor and Patient apps launch on Google Play, alongside 50+ client projects delivered." },
+  { when: "Today", title: "100+ projects and VORQARD live", text: "VORQARD Doctor and Patient apps launch on Google Play, alongside 100+ client projects delivered." },
 ];
 
 export default function AboutPage() {

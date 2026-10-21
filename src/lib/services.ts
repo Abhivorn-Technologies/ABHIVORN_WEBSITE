@@ -84,7 +84,7 @@ export const services: Service[] = [
     summary: "Business software built around how your team actually works — portals, dashboards, ERPs and internal tools.",
     metaTitle: "Custom Software Development Company in Hyderabad",
     metaDescription:
-      "Abhivorn builds custom business software in Hyderabad — portals, dashboards, ERP and CRM systems, integrations and internal tools. 50+ projects delivered.",
+      "Abhivorn builds custom business software in Hyderabad — portals, dashboards, ERP and CRM systems, integrations and internal tools. 100+ projects delivered.",
     keywords: ["custom software development company Hyderabad", "custom software India", "business software development", "ERP CRM development"],
     h1: "Custom Software Development Company in Hyderabad",
     intro:
