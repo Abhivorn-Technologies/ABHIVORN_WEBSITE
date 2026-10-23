@@ -10,9 +10,126 @@ export type BlogPost = {
   image: string;
   /** Paragraphs. Lines starting with "## " are section headings, "### " are sub-headings. */
   content: string[];
+  /** Search phrases the article targets (meta keywords and schema.org keywords). */
+  keywords?: string[];
+  /** Short answer-first summary shown at the top of the article, for readers and AI answer engines. */
+  takeaways?: string[];
+  /** Questions answered at the end of the article, also published as FAQPage structured data. */
+  faqs?: { question: string; answer: string }[];
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    "slug": "mobile-app-development-process-hyderabad",
+    "title": "Mobile App Development in Hyderabad: A Step-by-Step Guide for Businesses",
+    "excerpt": "How a business app goes from idea to the App Store and Play Store: the steps, what you need to prepare and how to keep the project on track.",
+    "description": "A step-by-step guide to mobile app development for Hyderabad businesses: discovery, design, development, testing, launch and what happens after release.",
+    "date": "2026-10-23",
+    "readTime": "7 min read",
+    "category": "Mobile Apps",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
+    "keywords": [
+      "mobile app development Hyderabad",
+      "app development company Hyderabad",
+      "iOS and Android app development",
+      "app development process"
+    ],
+    "takeaways": [
+      "A good app project runs in six stages: discovery, design, development, testing, launch and ongoing support.",
+      "Start with a focused first version that solves one problem well, then improve it using real user feedback.",
+      "Plan for app store review, analytics and updates from the start, not after launch."
+    ],
+    "content": [
+      "A mobile app can put your business on your customer's home screen, but only if it is planned well. Many app projects run late or over budget because the steps were never agreed at the start. This guide walks through how a business app is built, from the first idea to life after launch.",
+      "## Step 1: Discovery",
+      "Every successful app starts with clear answers to a few questions. Who will use the app? What problem does it solve for them? What should they be able to do in the first version? Discovery turns your idea into a written scope: the users, the core features, the screens and any systems the app must connect to, such as payments, maps or your existing software.",
+      "## Step 2: Design",
+      "Design starts with wireframes, simple layouts that show what goes on each screen and how users move between them. Once the flow feels right, the visual design adds your brand, colours and typography. Clickable prototypes let you test the app with real people before any development begins, which is the cheapest moment to change your mind.",
+      "## Step 3: Development",
+      "Development is usually split into short cycles. At the end of each cycle you see working features on a real phone and give feedback. This keeps surprises small and lets priorities change as you learn. The work covers the app itself, the admin panel your team will use, and the server that stores data and sends notifications.",
+      "## Step 4: Testing",
+      "Apps need to work on many phone models, screen sizes and network conditions. Testing checks that features behave correctly, that the app stays fast and stable, and that personal data is protected. Testing on low-end Android phones and slow connections matters in India, because many of your users will have them.",
+      "## Step 5: Launch",
+      "Publishing to the Apple App Store and Google Play Store involves developer accounts, store listings, screenshots, privacy details and a review by each store. Allow time for this, because a rejected submission can delay your launch. A good team prepares the listings in advance and knows the common reasons apps get rejected.",
+      "## Step 6: Support and improvement",
+      "Launch is the start, not the end. Phone operating systems update every year, users report issues and new ideas appear once people use the app. Plan for regular updates, monitoring and analytics so you can see which features people use and where they drop off.",
+      "## What you need to prepare",
+      "You will move faster if you have your goals written down, examples of apps you like, your brand assets, content such as product details or service lists, and one person on your side who can make decisions quickly.",
+      "## How Abhivorn can help",
+      "Abhivorn Technologies designs and builds iOS and Android apps for businesses from our Hyderabad team. We run every project through these stages, show working builds regularly and stay on after launch to support and improve the app.",
+      "## Final thoughts",
+      "Building an app is a series of clear steps, not a leap in the dark. Agree the scope, test designs early, build in short cycles and plan for life after launch, and your app will have a far better chance of success."
+    ],
+    "faqs": [
+      {
+        "question": "How long does it take to build a mobile app?",
+        "answer": "It depends on the number of features and integrations. A focused first version with a few core features takes far less time than a large app with many user types. Discovery and design give you a reliable timeline before development starts."
+      },
+      {
+        "question": "Should I build for iOS or Android first?",
+        "answer": "In India most smartphone users are on Android, so many businesses start there or build for both at once with a cross-platform approach. The right choice depends on who your customers are."
+      },
+      {
+        "question": "Do I need an admin panel for my app?",
+        "answer": "Usually yes. An admin panel lets your team manage users, content, orders or bookings without needing a developer for every change."
+      }
+    ]
+  },
+  {
+    "slug": "website-or-mobile-app-first",
+    "title": "Website or Mobile App: Which Should Your Business Build First?",
+    "excerpt": "Not sure whether to start with a website or a mobile app? A simple way to decide based on your customers, your goals and how often people will use it.",
+    "description": "Website or mobile app first? Compare reach, cost, speed to launch and repeat use to decide what your business should build first, with a simple checklist.",
+    "date": "2026-10-23",
+    "readTime": "5 min read",
+    "category": "Web Development",
+    "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=450&fit=crop",
+    "keywords": [
+      "website or mobile app",
+      "website vs app for business",
+      "should I build an app",
+      "web development Hyderabad"
+    ],
+    "takeaways": [
+      "Most businesses should start with a fast, mobile-friendly website, because it can be found on Google and works for every visitor without a download.",
+      "Build an app when customers will use it often, for example to book, order, track or log in regularly.",
+      "Many businesses end up with both: a website to win new customers and an app to keep them."
+    ],
+    "content": [
+      "It is one of the most common questions we hear from business owners: should we build a website or a mobile app first? Both can grow your business, but they do different jobs. Choosing the right one first saves time and money.",
+      "## What a website does best",
+      "A website is how new customers find you. It appears in Google searches, opens instantly from a link in an ad, an email or a message, and works on any phone or computer without a download. For most businesses, the website is where enquiries begin.",
+      "## What a mobile app does best",
+      "An app shines when people come back often. It can send push notifications, remember the user, work faster for repeat tasks and use phone features such as the camera, location and offline storage. Apps are ideal for bookings, ordering, tracking, loyalty and anything users do every week.",
+      "## How to decide",
+      "### Start with a website if",
+      "You need new customers to find you, you are running ads or SEO, most visitors will come once or twice before contacting you, or you want to launch quickly.",
+      "### Start with an app if",
+      "Your customers already know you and will use the service regularly, the experience depends on phone features like location or the camera, or you are building a product where the app is the business, such as a delivery or booking platform.",
+      "## The common path: website first, then an app",
+      "Many businesses launch a strong website to build their audience and test demand, then add an app for their most loyal customers once they understand what those customers use most. The same backend can often serve both, so the website work is not wasted.",
+      "## Questions to ask yourself",
+      "How will customers first hear about us? How often will a typical customer use this? Do we need phone features? What is our budget and launch date? Your answers usually make the choice clear.",
+      "## How Abhivorn can help",
+      "Abhivorn Technologies builds both websites and mobile apps from Hyderabad. We help you decide what to build first based on your customers and goals, and plan it so that a later app or website fits in smoothly.",
+      "## Final thoughts",
+      "There is no single right answer, but there is a right answer for your business. Start where your customers are, and grow from there."
+    ],
+    "faqs": [
+      {
+        "question": "Is a website or an app better for getting new customers?",
+        "answer": "A website. It can be found through Google search and opened from ads and links without a download, so it reaches far more first-time visitors."
+      },
+      {
+        "question": "Can one system power both my website and my app?",
+        "answer": "Yes. A shared backend can serve both, so customer accounts, products and orders stay in sync and the work is not repeated."
+      },
+      {
+        "question": "When is the right time to add an app?",
+        "answer": "When a meaningful number of customers use your service regularly and would benefit from faster access, notifications or phone features."
+      }
+    ]
+  },
   {
     "slug": "choose-website-development-company-hyderabad",
     "title": "How to Choose the Right Website Development Company in Hyderabad",
@@ -22,6 +139,31 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Web Development",
     "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=450&fit=crop",
+    "keywords": [
+      "website development company Hyderabad",
+      "web design company Hyderabad",
+      "how to choose a web developer",
+      "business website Hyderabad"
+    ],
+    "takeaways": [
+      "Check live sites the company has built, on your phone, before you hire.",
+      "Make sure your domain, hosting, code and content are registered in your company's name.",
+      "Look for speed, SEO, lead capture and tracking built in from launch, plus clear support afterwards."
+    ],
+    "faqs": [
+      {
+        "question": "What should I look for in a website development company in Hyderabad?",
+        "answer": "Live examples of their work, a clear written process, mobile-first design, SEO and speed built in, secure contact forms with tracking, full ownership of your site and support after launch."
+      },
+      {
+        "question": "Who should own my website's domain and code?",
+        "answer": "Your company. The domain, hosting account, code and content should be registered in your business name so you can move providers without losing your site."
+      },
+      {
+        "question": "Can any agency guarantee first-page Google rankings?",
+        "answer": "No. Nobody can guarantee rankings. A good agency builds the site so it is fast, well structured and easy for search engines to understand, which gives it the best chance to rank."
+      }
+    ],
     "content": [
       "Your website is often the first conversation a customer has with your business. In a city as competitive as Hyderabad, a slow, outdated or confusing site quietly sends enquiries to someone else. Choosing the right development partner is the difference between a site that just exists and one that brings in leads.",
       "## Start with what the website must achieve",
@@ -60,6 +202,31 @@ export const blogPosts: BlogPost[] = [
     "readTime": "7 min read",
     "category": "Healthcare",
     "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=450&fit=crop",
+    "keywords": [
+      "healthcare app development India",
+      "healthcare software Hyderabad",
+      "DPDP Act health data",
+      "ABDM integration"
+    ],
+    "takeaways": [
+      "Start with one clear problem, such as booking, teleconsultation or digital records.",
+      "Design the staff and doctor side with as much care as the patient app.",
+      "Plan for consent, encryption, access control and India's DPDP Act, 2023 from day one."
+    ],
+    "faqs": [
+      {
+        "question": "What features should a healthcare app in India have?",
+        "answer": "Common core features are appointment booking with reminders, teleconsultation, digital prescriptions and records, regional language support and a staff dashboard for schedules, patient history and billing."
+      },
+      {
+        "question": "Which data protection law applies to health apps in India?",
+        "answer": "The Digital Personal Data Protection Act, 2023 sets duties for organisations that handle personal data, including consent and security. Speak to a legal adviser about the obligations for your specific service."
+      },
+      {
+        "question": "What is ABDM?",
+        "answer": "The Ayushman Bharat Digital Mission is India's programme for a connected digital health ecosystem, including ABHA health IDs that let patients link and share their health records across providers."
+      }
+    ],
     "content": [
       "Patients in India now expect to book appointments, consult a doctor and see their reports from their phone. Clinics, hospitals and health startups that offer this well build trust and save their staff hours every day. Building a healthcare app is different from building an ordinary app, though, because it handles sensitive data and supports real medical decisions.",
       "## Start with one clear problem",
@@ -210,6 +377,20 @@ export const blogPosts: BlogPost[] = [
     ]
   }
 ];
+
+export const POSTS_PER_PAGE = 6;
+
+export const totalPages = Math.max(1, Math.ceil(blogPosts.length / POSTS_PER_PAGE));
+
+export function postsForPage(page: number) {
+  return blogPosts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
+}
+
+/** Same-category posts first, then the newest of the rest. */
+export function relatedPosts(post: BlogPost, count = 3) {
+  const others = blogPosts.filter((p) => p.slug !== post.slug);
+  return [...others.filter((p) => p.category === post.category), ...others.filter((p) => p.category !== post.category)].slice(0, count);
+}
 
 export function getPost(slug: string) {
   return blogPosts.find((p) => p.slug === slug);

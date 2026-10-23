@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/blog";
+import { blogPosts, totalPages } from "@/lib/blog";
 import { services } from "@/lib/services";
 import { SITE_URL } from "@/lib/site";
 
@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/about", 0.7),
     page("/contact", 0.8),
     page("/blog", 0.7, "weekly"),
+    ...Array.from({ length: totalPages - 1 }, (_, i) => page(`/blog/page/${i + 2}`, 0.4, "weekly")),
     ...blogPosts.map((p) => ({ url: `${SITE_URL}/blog/${p.slug}`, lastModified: new Date(p.date), changeFrequency: "yearly" as const, priority: 0.6 })),
     page("/privacy", 0.2, "yearly"),
     page("/terms", 0.2, "yearly"),
