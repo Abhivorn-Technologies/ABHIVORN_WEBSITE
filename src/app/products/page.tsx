@@ -10,9 +10,9 @@ import vornLogo from "@/assets/logo5.png";
 import vorqardLogo from "@/assets/VORQRD.png";
 
 export const metadata = pageMetadata({
-  title: "Our Products — VORQARD Healthcare & VORN HR",
+  title: "Our Products: VORQARD & VORN HR",
   description:
-    "Software products built and run by Abhivorn: VORQARD, a connected healthcare ecosystem with Doctor and Patient apps, and VORN HR, HR management for Indian businesses.",
+    "Products built and run by Abhivorn: VORQARD, a connected healthcare platform with Doctor and Patient apps, and VORN HR, HRMS for Indian businesses.",
   path: "/products",
 });
 

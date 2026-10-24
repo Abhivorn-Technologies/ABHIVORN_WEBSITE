@@ -20,6 +20,155 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "what-is-performance-marketing",
+    "title": "What Is Performance Marketing and How Does It Help Your Business?",
+    "excerpt": "Performance marketing means paying for results you can measure, such as leads and sales. Here is how it works, the numbers to watch and what you need before you spend.",
+    "description": "What is performance marketing? How pay-for-results ads on Google and Meta work, the metrics that matter (CPL, CPA, ROAS) and how they help a business grow.",
+    "date": "2026-10-24",
+    "readTime": "7 min read",
+    "category": "Digital Marketing",
+    "image": "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=450&fit=crop",
+    "keywords": [
+      "what is performance marketing",
+      "performance marketing for small business",
+      "Google Ads and Meta Ads for leads",
+      "cost per lead",
+      "ROAS"
+    ],
+    "takeaways": [
+      "Performance marketing is advertising where you pay for, and judge success by, measurable actions such as leads, calls, sign-ups or sales.",
+      "It helps because every rupee can be tracked, budgets can start small and grow with results, and you learn quickly what works.",
+      "Ads only bring people to you. A fast landing page or lead form, correct conversion tracking and quick follow-up decide whether those people become customers."
+    ],
+    "content": [
+      "Most business owners have spent money on advertising and wondered whether it worked. Performance marketing exists to answer that question. Instead of paying to be seen and hoping for the best, you pay for actions you can count, and you decide what to do next based on the numbers.",
+      "## What performance marketing means",
+      "Performance marketing is any form of online advertising where success is measured by a specific action: a lead form submitted, a phone call, an app install, a booking or a sale. The most common platforms are Google Ads (search, display, YouTube and Performance Max campaigns) and Meta Ads (Facebook and Instagram). Platforms such as LinkedIn and marketplace ads work the same way.",
+      "The key idea is that you choose the result you want before you spend, the platform shows your ad to people most likely to take that action, and you see exactly what each result cost.",
+      "## How it is different from traditional advertising",
+      "A newspaper ad or a hoarding is paid for upfront, and it is hard to know how many customers it brought in. Brand campaigns online can work the same way, focusing on reach and recall. Performance marketing turns this around: you can see the cost of every lead, switch off what does not work within days and put more money behind what does.",
+      "## The numbers that matter",
+      "### Cost per lead (CPL)",
+      "How much you pay, on average, for one enquiry. If you spend ₹1,000 and receive 5 leads, your cost per lead is ₹200.",
+      "### Cost per acquisition (CPA)",
+      "How much you pay for one paying customer. If 1 of those 5 leads becomes a client, your cost per acquisition is ₹1,000. This is the number that tells you whether the campaign is profitable.",
+      "### Conversion rate",
+      "The share of people who take the action after clicking your ad. A slow or confusing landing page lowers it, which makes every lead more expensive.",
+      "### Return on ad spend (ROAS)",
+      "Revenue earned for every rupee spent on ads. A ROAS of 5 means ₹5 of revenue for every ₹1 of ad spend. Online stores use it most, because sales values are tracked automatically.",
+      "## How performance marketing helps your business",
+      "### You only scale what works",
+      "You can start with a small daily budget, see which ads, audiences and offers bring the cheapest good leads, and increase spend only on those.",
+      "### Every rupee is accountable",
+      "Because each lead or sale is tracked, you can compare campaigns, channels and months fairly and stop guessing.",
+      "### You reach the right people",
+      "Search ads appear when someone is already looking for what you offer. Social ads can target by location, age and interests, so a Hyderabad business is not paying to reach people in other cities.",
+      "### You learn fast",
+      "Within days you can see which message, image or offer people respond to. Those lessons improve your website, your sales pitch and even your services.",
+      "## What you need before you spend",
+      "### A place for people to land",
+      "Ads send people somewhere: a landing page, your website or an in-app lead form. It must load quickly on mobile, explain your offer in a few seconds and make the next step obvious. A slow page wastes the money you paid for the click.",
+      "### Conversion tracking",
+      "Tracking tells the ad platform which clicks became leads, so it can find more people like them. Without it, the platform optimises for clicks instead of customers. Set up conversion events through tools like Google Tag Manager and test them before launch.",
+      "### A clear offer",
+      "\"Get a free quote in one business day\" gives people a reason to act now. \"We are the best\" does not.",
+      "### Fast follow-up",
+      "Leads go cold quickly. Call or message new leads within the hour if you can, and keep a simple sheet or CRM to record who was contacted and what happened.",
+      "## Common mistakes to avoid",
+      "Changing budgets and audiences every day, which stops the platform from learning. Judging a campaign on cost per lead alone, without checking how many leads became customers. Sending ad traffic to a generic home page instead of a focused landing page. Not tracking conversions at all.",
+      "## How Abhivorn can help",
+      "Performance campaigns depend on what happens after the click. Abhivorn Technologies builds fast, mobile-friendly landing pages and websites with lead forms, conversion tracking and Consent Mode set up correctly, so your ad budget turns into enquiries you can measure.",
+      "## Final thoughts",
+      "Performance marketing is not magic, but it is honest. It shows you what each lead and customer costs, rewards clear offers and fast pages, and lets you grow your budget only when the numbers make sense."
+    ],
+    "faqs": [
+      {
+        "question": "What is performance marketing in simple words?",
+        "answer": "It is online advertising where you pay for, and measure success by, specific results such as leads, calls or sales, instead of just views."
+      },
+      {
+        "question": "How much budget do I need to start performance marketing?",
+        "answer": "You can start small, with a modest daily budget for a week or two, to learn your cost per lead. Increase the budget only once you see leads turning into customers."
+      },
+      {
+        "question": "Is Google Ads or Meta Ads better for leads?",
+        "answer": "Google search ads reach people who are already searching for your service, so intent is high. Meta ads on Facebook and Instagram reach people by location and interests and can bring leads at a lower cost. Many businesses test both and keep what performs best."
+      },
+      {
+        "question": "Why are my ads getting clicks but no leads?",
+        "answer": "Usually the landing page is slow, unclear or hard to use on mobile, the offer is weak, or conversion tracking is missing, so the platform cannot learn who converts."
+      }
+    ]
+  },
+  {
+    "slug": "seo-geo-aeo-get-found-google-ai-search",
+    "title": "SEO, GEO and AEO: How to Get Your Business Found on Google and AI Search",
+    "excerpt": "People now find businesses through Google results, AI answers and chat assistants. Here is what SEO, GEO and AEO mean and the practical steps that help with all three.",
+    "description": "SEO, GEO and AEO explained for business owners: how to rank on Google, appear in AI answers and chatbots, with a simple checklist for your website in 2026.",
+    "date": "2026-10-24",
+    "readTime": "6 min read",
+    "category": "Digital Marketing",
+    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=450&fit=crop",
+    "keywords": [
+      "SEO GEO AEO",
+      "generative engine optimization",
+      "answer engine optimization",
+      "how to rank on Google",
+      "SEO for small business Hyderabad"
+    ],
+    "takeaways": [
+      "SEO helps your pages rank in Google results, AEO helps your content become the direct answer to a question, and GEO helps AI tools such as ChatGPT, Gemini and Google's AI Overviews mention and cite your business.",
+      "All three reward the same foundations: a fast, well-structured website, clear answers to real customer questions and consistent business information across the web.",
+      "Add structured data, FAQ sections and specific facts about your services and location, then keep publishing helpful content regularly."
+    ],
+    "content": [
+      "Search has changed. A customer looking for a service might type a query into Google, read an AI summary at the top of the page, or ask a chat assistant for a recommendation. To be found today, your website needs to work for all of these. That is where SEO, GEO and AEO come in.",
+      "## What SEO means",
+      "Search engine optimisation (SEO) is the work of helping your pages rank in Google and Bing results for the searches your customers make, such as \"web development company in Hyderabad\". It covers technical health (speed, mobile layout, indexing), content that matches what people search for, and trust signals such as links and reviews.",
+      "## What AEO means",
+      "Answer engine optimisation (AEO) focuses on becoming the direct answer to a question. Featured snippets, \"People also ask\" boxes and voice assistants pull short, clear answers from web pages. Pages that answer one question per section, in plain language, are more likely to be chosen.",
+      "## What GEO means",
+      "Generative engine optimisation (GEO) is about being mentioned and cited by AI tools that write answers, such as Google's AI Overviews, ChatGPT, Gemini, Perplexity and Copilot. These tools summarise information from many sources. They favour content that is specific, factual, well organised and consistent with what other sites say about you.",
+      "## The foundations that help all three",
+      "### A fast, well-built website",
+      "Pages should load quickly on mobile, use clear headings and be easy for search engines to crawl. Server-rendered pages, a sitemap and clean URLs make every page easier to index.",
+      "### Answer real customer questions",
+      "Write down the questions customers ask on calls: how much it costs, how long it takes, what the process is, what to prepare. Answer each one clearly on your website, near the top of the relevant page.",
+      "### Be specific",
+      "\"We build websites\" is vague. \"We build e-commerce websites with UPI and Razorpay checkout for businesses in Hyderabad\" gives search engines and AI tools something concrete to match and quote.",
+      "### Use structured data",
+      "Structured data (schema.org markup) tells machines what a page is about: your organisation, services, articles, FAQs and breadcrumbs. It helps search engines show richer results and helps AI tools understand your content correctly.",
+      "### Keep your business details consistent",
+      "Your name, address, services and contact details should match on your website, Google Business Profile, LinkedIn and directories. Consistency builds trust with both search engines and AI models.",
+      "### Publish regularly",
+      "Helpful articles, guides and project write-ups give search engines more pages to rank and AI tools more facts to draw on. One useful article a week beats ten thin ones.",
+      "## A quick checklist for your website",
+      "Each page has a unique title and meta description. Each service page opens with a one-sentence answer to what you do and where. FAQs are on key pages and marked up as FAQ structured data. Your sitemap is submitted in Google Search Console. Your Google Business Profile is complete with photos and recent posts. Pages load in under a few seconds on a mobile connection.",
+      "## How Abhivorn can help",
+      "Abhivorn Technologies builds websites with SEO foundations from day one: fast server-rendered pages, structured data, sitemaps, clear page titles and answer-first content. We also help you plan articles that answer the questions your customers are already asking.",
+      "## Final thoughts",
+      "SEO, GEO and AEO are not three separate jobs. They are three ways people now discover businesses, and they all reward the same thing: a fast website with clear, specific, trustworthy answers."
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between SEO, AEO and GEO?",
+        "answer": "SEO helps pages rank in search results, AEO helps your content become the direct answer to a question, and GEO helps AI tools such as ChatGPT and Google's AI Overviews mention and cite your business."
+      },
+      {
+        "question": "Do I need separate work for AI search?",
+        "answer": "Mostly no. The same foundations help: a fast website, clear answers, specific facts, structured data and consistent business details. AI tools add extra weight to content that is well organised and easy to quote."
+      },
+      {
+        "question": "How long does SEO take to show results?",
+        "answer": "Technical fixes can be picked up within weeks, while ranking for competitive searches usually takes several months of steady content and improvements."
+      },
+      {
+        "question": "Does structured data help my website rank?",
+        "answer": "It does not guarantee higher rankings, but it helps search engines understand your pages, can enable richer results such as FAQs and breadcrumbs, and makes your content easier for AI tools to interpret."
+      }
+    ]
+  },
+  {
     "slug": "mobile-app-development-process-hyderabad",
     "title": "Mobile App Development in Hyderabad: A Step-by-Step Guide for Businesses",
     "excerpt": "How a business app goes from idea to the App Store and Play Store: the steps, what you need to prepare and how to keep the project on track.",

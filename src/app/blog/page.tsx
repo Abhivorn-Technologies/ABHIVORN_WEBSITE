@@ -4,9 +4,9 @@ import CtaBand from "@/components/sections/CtaBand";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Blog — Web, App, Software, HRMS & Healthcare Insights",
+  title: "Blog: Web, App, Marketing & Software Guides",
   description:
-    "Practical guides from the Abhivorn team in Hyderabad on websites, mobile apps, custom software, HRMS for Indian businesses, healthcare technology and AI.",
+    "Practical guides from the Abhivorn team in Hyderabad on websites, apps, SEO and AI search, performance marketing, custom software, HRMS and healthcare.",
   path: "/blog",
 });
 

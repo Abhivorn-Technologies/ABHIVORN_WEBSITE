@@ -17,8 +17,8 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: Props) {
   const { page } = await params;
   return pageMetadata({
-    title: `Blog — Page ${page}`,
-    description: `More articles from the Abhivorn team on websites, mobile apps, custom software, HRMS, healthcare technology and AI (page ${page}).`,
+    title: `Blog: Page ${page}`,
+    description: `More articles from the Abhivorn team on websites, mobile apps, SEO, marketing, custom software, HRMS, healthcare and AI (page ${page}).`,
     path: `/blog/page/${page}`,
   });
 }

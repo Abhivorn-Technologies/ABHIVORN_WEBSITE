@@ -13,7 +13,7 @@ import { pageMetadata } from "@/lib/seo";
 import vornLogo from "@/assets/logo5.png";
 
 export const metadata = pageMetadata({
-  title: "VORN HR — HRMS Software for Indian Businesses",
+  title: "VORN HR: HRMS Software for Indian Businesses",
   description:
     "VORN HR is an HRMS for Indian businesses: biometric and geo-fenced attendance, leave, payroll with PF/ESI, performance and an employee self-service app.",
   path: "/products/vorn-hr",

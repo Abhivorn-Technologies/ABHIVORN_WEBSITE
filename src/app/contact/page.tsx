@@ -8,7 +8,7 @@ import { offices, site } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Contact Us — Get a Free Quote",
+  title: "Contact Us: Get a Free Project Quote",
   description:
     "Contact Abhivorn Technologies in Hyderabad for websites, apps, custom software, HRMS, healthcare and AI projects. Send your requirements for a free quote.",
   path: "/contact",

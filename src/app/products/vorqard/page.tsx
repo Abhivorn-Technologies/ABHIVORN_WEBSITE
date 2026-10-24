@@ -14,9 +14,9 @@ import { pageMetadata } from "@/lib/seo";
 import vorqardWordmark from "@/assets/vorqard-wordmark.png";
 
 export const metadata = pageMetadata({
-  title: "VORQARD — Connected Healthcare Ecosystem for Patients & Doctors",
+  title: "VORQARD: Connected Healthcare Platform",
   description:
-    "VORQARD connects patients, doctors, hospitals, labs and pharmacies with one patient identity — records, appointments, prescriptions and reports. Doctor and Patient apps on Google Play.",
+    "VORQARD connects patients, doctors, hospitals, labs and pharmacies with one patient ID for records, appointments, prescriptions and reports.",
   path: "/products/vorqard",
 });
 

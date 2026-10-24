@@ -17,9 +17,9 @@ import { pageMetadata } from "@/lib/seo";
 import vorqardWordmark from "@/assets/vorqard-wordmark.png";
 
 export const metadata = pageMetadata({
-  title: "Web Development & Custom Software Company in Hyderabad | Abhivorn",
+  title: "Web & App Development Company in Hyderabad | Abhivorn",
   description:
-    "Abhivorn Technologies builds websites, web applications, mobile apps and custom software in Hyderabad, and runs VORQARD, a connected healthcare platform.",
+    "Abhivorn Technologies is a Hyderabad company building websites, e-commerce stores, mobile apps and custom software for growing businesses. Get a free quote.",
   path: "/",
 });
 

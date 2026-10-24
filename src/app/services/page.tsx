@@ -10,9 +10,9 @@ import { services } from "@/lib/services";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Software Development Services — Web, Mobile, HRMS, Healthcare & AI",
+  title: "Web, App & Software Development Services",
   description:
-    "Explore Abhivorn's services: custom software, website and e-commerce development, iOS and Android apps, HRMS, healthcare software and AI automation in Hyderabad.",
+    "Websites, e-commerce, iOS and Android apps, custom software, HRMS, healthcare software and AI automation, built by Abhivorn in Hyderabad. Free quote.",
   path: "/services",
 });
 

@@ -8,7 +8,7 @@ import { offices, team } from "@/lib/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "About Us — Software Company in Hyderabad",
+  title: "About Abhivorn: Software Company in Hyderabad",
   description:
     "Abhivorn Technologies is a Startup India certified software company founded in 2025 in Hyderabad, with a 15-member team, 3 offices and 100+ projects delivered.",
   path: "/about",

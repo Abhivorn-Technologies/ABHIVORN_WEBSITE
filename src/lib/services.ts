@@ -34,9 +34,9 @@ export const services: Service[] = [
     name: "Web Development",
     icon: Globe,
     summary: "Fast, SEO-ready websites, e-commerce stores and web applications, built to grow with your business.",
-    metaTitle: "Web Development Company in Hyderabad — Websites, E-commerce & Web Apps",
+    metaTitle: "Web Development Company in Hyderabad",
     metaDescription:
-      "Web development company in Hyderabad building fast, SEO-friendly websites, e-commerce stores and web applications. See our recent projects.",
+      "Hyderabad web development company building fast, SEO-ready websites, e-commerce stores and web apps that turn visitors into enquiries. Get a free quote.",
     keywords: ["web development company Hyderabad", "website development Hyderabad", "ecommerce website development", "website design company India"],
     h1: "Web Development Company in Hyderabad",
     intro:
@@ -82,9 +82,9 @@ export const services: Service[] = [
     name: "Custom Software Development",
     icon: Code2,
     summary: "Business software built around how your team actually works — portals, dashboards, ERPs and internal tools.",
-    metaTitle: "Custom Software Development Company in Hyderabad",
+    metaTitle: "Custom Software Development in Hyderabad",
     metaDescription:
-      "Abhivorn builds custom business software in Hyderabad — portals, dashboards, ERP and CRM systems, integrations and internal tools. 100+ projects delivered.",
+      "Custom software built around how your business works: portals, dashboards, ERP, CRM, integrations and automation, from a Hyderabad team. Get a free quote.",
     keywords: ["custom software development company Hyderabad", "custom software India", "business software development", "ERP CRM development"],
     h1: "Custom Software Development Company in Hyderabad",
     intro:
@@ -131,9 +131,9 @@ export const services: Service[] = [
     name: "Mobile App Development",
     icon: Smartphone,
     summary: "iOS and Android apps with a native feel, from idea and design to store launch.",
-    metaTitle: "Mobile App Development Company in Hyderabad — iOS & Android",
+    metaTitle: "Mobile App Development in Hyderabad",
     metaDescription:
-      "Mobile app development company in Hyderabad building iOS and Android apps. From idea and design to Play Store and App Store launch.",
+      "iOS and Android app development in Hyderabad, from idea and design to Play Store and App Store launch, with support after release. Get a free quote.",
     keywords: ["mobile app development company Hyderabad", "cross-platform app development", "Android app development", "iOS app development India"],
     h1: "Mobile App Development Company in Hyderabad",
     intro:
@@ -175,9 +175,9 @@ export const services: Service[] = [
     name: "HRMS Development",
     icon: Users,
     summary: "HR, attendance, leave and payroll systems built for Indian compliance — ready-made or fully custom.",
-    metaTitle: "HRMS Software Development Company in Hyderabad",
+    metaTitle: "HRMS Software Development in Hyderabad",
     metaDescription:
-      "HRMS software for Indian businesses — attendance, leave, payroll with PF/ESI, employee self-service and HR analytics. VORN HR or a custom HRMS built by Abhivorn.",
+      "HRMS software for Indian businesses: attendance, leave, payroll with PF/ESI and employee self-service. Use VORN HR or get a custom HRMS built in Hyderabad.",
     keywords: ["HRMS software Hyderabad", "HRMS development company India", "payroll software India", "attendance management system"],
     h1: "HRMS Software Development Company in Hyderabad",
     intro:
@@ -220,9 +220,9 @@ export const services: Service[] = [
     name: "Healthcare Software",
     icon: HeartPulse,
     summary: "Clinic, doctor and patient platforms — appointments, digital records, prescriptions and apps.",
-    metaTitle: "Healthcare Software Development Company in Hyderabad",
+    metaTitle: "Healthcare Software Company in Hyderabad",
     metaDescription:
-      "Healthcare software development in Hyderabad — clinic management, patient apps, e-prescriptions and digital records. Builders of the VORQARD healthcare ecosystem.",
+      "Healthcare software development in Hyderabad: clinic management, patient apps, e-prescriptions and digital records, from the team behind VORQARD.",
     keywords: ["healthcare software development Hyderabad", "clinic management software India", "hospital management system", "patient app development"],
     h1: "Healthcare Software Development Company in Hyderabad",
     intro:
@@ -265,9 +265,9 @@ export const services: Service[] = [
     name: "AI Development",
     icon: Brain,
     summary: "Practical AI — chatbots, document extraction, automation and smart analytics for real business problems.",
-    metaTitle: "AI Development Company in Hyderabad — Chatbots, Automation & Document AI",
+    metaTitle: "AI Development Company in Hyderabad",
     metaDescription:
-      "AI development company in Hyderabad building chatbots, document extraction (OCR), workflow automation and predictive analytics that solve real business problems.",
+      "AI development in Hyderabad: chatbots, document extraction, workflow automation and predictive analytics that solve real business problems. Free consultation.",
     keywords: ["AI development company Hyderabad", "AI chatbot development India", "OCR document extraction", "AI automation services"],
     h1: "AI Development Company in Hyderabad",
     intro:
