@@ -9,6 +9,7 @@ import TrackedLink from "@/components/TrackedLink";
 import { Button } from "@/components/ui/button";
 import { blogPosts, formatDate, getPost, relatedPosts } from "@/lib/blog";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
+import { getServiceBySlug } from "@/lib/services";
 import { SITE_URL, site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -40,6 +41,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const related = relatedPosts(post);
+  const service = post.service ? getServiceBySlug(post.service) : undefined;
   const latest = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 5);
   const wordCount = post.content.join(" ").split(/\s+/).length;
 
@@ -60,6 +62,7 @@ export default async function BlogPostPage({ params }: Props) {
             keywords: post.keywords?.join(", "),
             wordCount,
             mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
+            ...(service ? { about: { "@type": "Service", name: service.name, url: `${SITE_URL}${service.path}` } } : {}),
             author: { "@type": "Organization", name: site.legalName, url: SITE_URL },
             publisher: { "@id": `${SITE_URL}/#organization` },
           },
@@ -118,6 +121,17 @@ export default async function BlogPostPage({ params }: Props) {
                 ),
               )}
             </div>
+
+            {service ? (
+              <aside aria-label="Related service" className="mt-12 rounded-lg border border-border p-6">
+                <p className="eyebrow">How we can help</p>
+                <p className="mt-2 text-lg font-medium text-foreground">{service.name}</p>
+                <p className="mt-1 text-muted-foreground">{service.summary}</p>
+                <Link href={service.path} className="mt-3 inline-flex items-center gap-1 font-medium text-foreground underline-offset-4 hover:underline">
+                  Explore our {service.name.toLowerCase()} services <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+              </aside>
+            ) : null}
 
             {post.faqs?.length ? (
               <section aria-labelledby="faq-heading" className="mt-12 border-t border-border pt-10">

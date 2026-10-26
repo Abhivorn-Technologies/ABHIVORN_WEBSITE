@@ -7,6 +7,8 @@ export type BlogPost = {
   date: string;
   readTime: string;
   category: string;
+  /** Slug of the service this article supports (from src/lib/services.ts), for two-way internal links. */
+  service?: string;
   image: string;
   /** Paragraphs. Lines starting with "## " are section headings, "### " are sub-headings. */
   content: string[];
@@ -19,6 +21,165 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    "slug": "payment-gateway-integration-website-india",
+    "title": "Payment Gateway Integration for Your Website in India: A Simple Guide",
+    "excerpt": "Want customers to pay on your website by UPI, card or net banking? Here is how a payment gateway works, what documents you need and how to add one safely.",
+    "description": "How to add a payment gateway to your website in India: how UPI and card payments work, KYC documents, fees, security and the steps to go live.",
+    "date": "2026-10-26",
+    "readTime": "7 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop",
+    "keywords": [
+      "payment gateway integration India",
+      "add payment gateway to website",
+      "UPI payment on website",
+      "online payment website for small business",
+      "payment gateway KYC documents"
+    ],
+    "takeaways": [
+      "A payment gateway is the service that lets your website accept UPI, cards, net banking and wallets, and sends the money to your bank account.",
+      "Before you can go live you need business KYC (PAN, bank account, business proof) and a website with clear pricing, contact, privacy, terms and refund pages.",
+      "Gateways usually charge a small percentage per successful transaction, so compare fees, settlement time and support before you choose.",
+      "Your website should never store card details. A good integration verifies every payment on the server before it confirms an order."
+    ],
+    "content": [
+      "More Indian customers now expect to pay online, in a few taps, with UPI or a card. If your website can only take enquiries, you may be losing orders to a competitor whose site lets people pay on the spot. A payment gateway closes that gap.",
+      "This guide explains, in plain language, what a payment gateway does, what you need before you start and how a safe integration works.",
+      "## What is a payment gateway?",
+      "A payment gateway is a licensed service that sits between your website and the banking system. When a customer clicks Pay, the gateway shows a secure payment screen, talks to the customer's bank or UPI app, and tells your website whether the payment succeeded. The money is then settled into your business bank account, usually within a few working days.",
+      "You do not need to deal with banks or card networks yourself. The gateway handles that, along with most of the security rules for card data.",
+      "## Payment methods your customers can use",
+      "Most Indian gateways support the methods your customers already use: UPI (scan a QR code or approve a request in their UPI app), debit and credit cards, net banking, and popular wallets. Many also offer EMI and pay-later options for larger purchases.",
+      "For most small businesses, UPI and cards cover the majority of payments. Turn on more options only when your customers ask for them.",
+      "## What you need before you apply",
+      "Gateways must verify every business they work with, so expect a short KYC process. Keep these ready:",
+      "Your business PAN (or your personal PAN if you are a sole proprietor), a current bank account in the business name, proof of business such as GST registration, Udyam registration or a shop licence, and the ID and address proof of the owner or directors.",
+      "Your website will be reviewed too. It should clearly show what you sell and at what price, plus a Contact page, Privacy Policy, Terms and Conditions, and a Refund and Cancellation policy. Missing policy pages are one of the most common reasons an application is delayed.",
+      "## How much does a payment gateway cost?",
+      "Most gateways charge a fee on each successful transaction, often a small percentage of the amount, with different rates for UPI, cards and international payments. Some charge setup or annual fees; many do not. Rates change, so always check the provider's current pricing page.",
+      "Look beyond the headline rate. Compare how quickly money reaches your bank, how refunds work, whether there is a dashboard your team can use, and how easy it is to reach support when a payment gets stuck.",
+      "## How the integration works",
+      "### 1. Create the order on your server",
+      "When a customer checks out, your website's server creates an order with the gateway for the exact amount. The amount should always come from your server, never from the customer's browser, so nobody can change the price.",
+      "### 2. Show the secure payment screen",
+      "The customer pays on the gateway's checkout, either in a pop-up or on a hosted page. Card numbers and UPI details go straight to the gateway, not to your website.",
+      "### 3. Verify the payment",
+      "After payment, the gateway sends your server a confirmation with a digital signature. Your server checks that signature and the amount before marking the order as paid. This step stops fake 'payment successful' messages.",
+      "### 4. Listen for webhooks",
+      "Sometimes a customer closes the browser before they return to your site. Webhooks are messages the gateway sends directly to your server so that orders still update correctly. A good integration handles them.",
+      "### 5. Test, then go live",
+      "Every gateway gives you a test mode. Try successful payments, failed payments, refunds and a closed browser in the middle of a payment before you switch to live keys.",
+      "## Security basics",
+      "Use HTTPS across the whole site. Never store card numbers, CVV or UPI PINs on your own servers. Keep your gateway secret keys on the server only, never in the website code that runs in the browser. Limit who in your team can issue refunds from the dashboard.",
+      "## Common mistakes to avoid",
+      "Trusting the browser to say a payment succeeded. Not handling payments that are still 'pending'. Forgetting refund and cancellation pages. Using live keys during testing. Sending no confirmation email or SMS, which leaves customers unsure whether they paid.",
+      "## Do you need a full e-commerce website?",
+      "Not always. If you sell a few services or take advance bookings, a simple 'Pay now' button or payment link on your existing site may be enough. If you sell many products with stock, delivery and discounts, a proper e-commerce website with a cart and order management makes more sense.",
+      "If you are not sure which you need, tell us what you sell and how customers buy today. We will suggest the simplest setup that works, and build it so payments are verified safely from day one."
+    ],
+    "faqs": [
+      {
+        "question": "Can I accept UPI payments on my website?",
+        "answer": "Yes. Most payment gateways in India support UPI, so customers can pay by scanning a QR code or approving a request in their UPI app. The money is settled to your business bank account."
+      },
+      {
+        "question": "What documents do I need for a payment gateway in India?",
+        "answer": "Usually your business PAN, a business bank account, proof of business such as GST or Udyam registration, and ID and address proof of the owner or directors. Your website also needs contact, privacy, terms and refund pages."
+      },
+      {
+        "question": "How long does payment gateway integration take?",
+        "answer": "The technical work for a simple checkout can be done in a few days. Approval of your KYC by the gateway can take longer, so apply early and have your documents and policy pages ready."
+      },
+      {
+        "question": "Is it safe to take payments on my website?",
+        "answer": "Yes, if it is built correctly. Card and UPI details are entered on the gateway's secure screen, your server verifies every payment before confirming an order, and the whole site runs on HTTPS."
+      }
+    ]
+  },
+  {
+    "slug": "ecommerce-website-features-small-business",
+    "title": "E-commerce Website for Small Business: The Features You Actually Need",
+    "excerpt": "Planning an online store? These are the features that help a small business sell from day one, and the ones that can safely wait until later.",
+    "description": "Planning an e-commerce website? The must-have features for a small business online store in India, what can wait, and how to plan your launch.",
+    "date": "2026-10-26",
+    "readTime": "8 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=450&fit=crop",
+    "keywords": [
+      "e-commerce website for small business",
+      "online store features",
+      "e-commerce website development Hyderabad",
+      "how to start an online store in India",
+      "e-commerce website checklist"
+    ],
+    "takeaways": [
+      "Start with what helps customers buy: clear product pages, fast mobile pages, simple checkout, UPI and card payments, and order updates.",
+      "Your team needs an easy admin panel for products, stock, orders and refunds, so the store can run without a developer.",
+      "Search visibility, trust pages and analytics should be built in from launch, not added later.",
+      "Loyalty programmes, multiple sellers and complex personalisation can wait until you have steady sales."
+    ],
+    "content": [
+      "An online store can open your business to customers far beyond your city. But many small businesses either launch with too little (a catalogue nobody can buy from) or spend months building features nobody uses.",
+      "Here is a practical list of what a small business e-commerce website needs at launch, and what can safely wait.",
+      "## Must-have features for customers",
+      "### Fast, mobile-first pages",
+      "Most shoppers in India browse on their phones, often on patchy connections. Pages should load quickly and be easy to use with one thumb. A slow store loses buyers before they see a single product.",
+      "### Clear product pages",
+      "Good photos from several angles, an honest description, price including tax, size or variant options, stock status and delivery time. Answer the questions a customer would ask in a physical shop.",
+      "### Search and simple categories",
+      "Let people find products by searching or by browsing a small number of clear categories. Filters for price, size or colour help once you have more than a few dozen products.",
+      "### A short, simple checkout",
+      "Ask only for what you need to deliver the order. Offer guest checkout, so people are not forced to create an account. Show the full cost, including delivery, before payment.",
+      "### UPI, cards and other payment options",
+      "UPI and cards cover most buyers. Add cash on delivery if your customers expect it, and consider pay-later or EMI for higher-priced items. Every payment should be verified on the server before the order is confirmed.",
+      "### Order confirmation and tracking",
+      "Send an email or SMS as soon as an order is placed, and again when it ships. A simple 'track my order' page reduces calls and messages to your team.",
+      "## Must-have features for your team",
+      "### An easy admin panel",
+      "You should be able to add products, change prices, update stock, view orders and issue refunds without calling a developer.",
+      "### Stock and order management",
+      "Stock should reduce automatically when an order is placed, so you never sell what you do not have. Orders should move through clear stages such as new, packed, shipped and delivered.",
+      "### Discounts and coupons",
+      "Basic coupon codes and sale prices help you run festive offers and win back customers.",
+      "### Shipping and GST-ready invoices",
+      "Set delivery charges by location or order value, and generate invoices with the correct tax details for every order.",
+      "## Features for trust and growth",
+      "### Trust pages",
+      "Contact details, About page, Privacy Policy, Terms, and a clear Returns and Refund policy. These reassure buyers and are also required by payment gateways.",
+      "### SEO built in",
+      "Each product and category page needs its own title, description and clean web address, along with structured data so search engines and AI assistants can understand your products. This is what brings free traffic over time.",
+      "### Analytics and ad tracking",
+      "Track visits, add-to-carts and purchases from day one, and connect your Google and Meta ads so you know which campaigns bring sales, not just clicks.",
+      "### Reviews",
+      "Genuine customer reviews on product pages are one of the strongest reasons people buy. Collect them after delivery and show them honestly.",
+      "## Features that can wait",
+      "Loyalty points, multiple sellers on one store, subscriptions, a separate mobile app and advanced personalisation are useful later, once you have steady orders and know what your customers want. Launching without them is usually the faster, cheaper choice.",
+      "## How to plan your launch",
+      "Start with your best-selling products rather than the full range. Write down how orders will be packed, shipped and returned before the site goes live. Test the whole journey yourself on a phone, including a refund. Then launch, watch the numbers and improve in small steps.",
+      "If you are planning an online store, tell us what you sell and how many products you have. We will help you decide what to build first and what can wait, so you can start selling sooner."
+    ],
+    "faqs": [
+      {
+        "question": "What features does a small business e-commerce website need?",
+        "answer": "At launch: fast mobile pages, clear product pages, search and categories, a short checkout, UPI and card payments, order notifications, an easy admin panel, stock management, trust pages and analytics."
+      },
+      {
+        "question": "Should I build a website or a mobile app for my online store?",
+        "answer": "Most small businesses should start with a fast, mobile-friendly website. It reaches every customer without a download. A mobile app makes sense later, when you have many repeat buyers."
+      },
+      {
+        "question": "Can I manage the online store myself after launch?",
+        "answer": "Yes. A good e-commerce website comes with an admin panel where you can add products, change prices, update stock, see orders and issue refunds without technical help."
+      },
+      {
+        "question": "How long does it take to build an e-commerce website?",
+        "answer": "It depends on the number of products, payment and delivery options, and custom features. A focused first version can launch much sooner than a full-featured store, which is why we recommend starting small."
+      }
+    ]
+  },
   {
     "slug": "what-is-performance-marketing",
     "title": "What Is Performance Marketing and How Does It Help Your Business?",
@@ -108,6 +269,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-10-24",
     "readTime": "6 min read",
     "category": "Digital Marketing",
+    "service": "web-development",
     "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=450&fit=crop",
     "keywords": [
       "SEO GEO AEO",
@@ -176,6 +338,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-10-23",
     "readTime": "7 min read",
     "category": "Mobile Apps",
+    "service": "mobile-app-development",
     "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
     "keywords": [
       "mobile app development Hyderabad",
@@ -232,6 +395,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-10-23",
     "readTime": "5 min read",
     "category": "Web Development",
+    "service": "web-development",
     "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=450&fit=crop",
     "keywords": [
       "website or mobile app",
@@ -287,6 +451,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-10-22",
     "readTime": "6 min read",
     "category": "Web Development",
+    "service": "web-development",
     "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=450&fit=crop",
     "keywords": [
       "website development company Hyderabad",
@@ -350,6 +515,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-10-22",
     "readTime": "7 min read",
     "category": "Healthcare",
+    "service": "healthcare-software-development",
     "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=450&fit=crop",
     "keywords": [
       "healthcare app development India",
@@ -411,6 +577,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-04-15",
     "readTime": "6 min read",
     "category": "HRMS",
+    "service": "hrms-software-development",
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
     "content": [
       "Managing a growing team is exciting, but running HR on spreadsheets quickly becomes chaotic. Attendance sheets, salary calculations, leave approvals and hiring all eat into time that should go into the business. That is why more Indian startups and established companies are moving to HRMS software built for the way Indian teams actually work.",
@@ -447,6 +614,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-04-15",
     "readTime": "6 min read",
     "category": "Custom Software",
+    "service": "custom-software-development",
     "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop",
     "content": [
       "In 2026, businesses across India are increasingly turning to custom software solutions to gain competitive advantage. While off-the-shelf software serves basic needs, custom development unlocks unique capabilities tailored to specific business requirements.",
@@ -479,6 +647,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-03-15",
     "readTime": "7 min read",
     "category": "Healthcare",
+    "service": "ai-development",
     "image": "https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&h=450&fit=crop",
     "content": [
       "Artificial Intelligence is transforming healthcare across India, from urban hospitals to rural clinics. Medical diagnostics, once dependent solely on human expertise, now benefits from AI-powered tools that improve accuracy and speed.",
@@ -504,6 +673,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-02-15",
     "readTime": "6 min read",
     "category": "AI",
+    "service": "ai-development",
     "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop",
     "content": [
       "Artificial Intelligence is no longer just a buzzword. In 2026, Indian businesses are leveraging AI to dramatically reduce costs and accelerate growth across every department.",
@@ -539,6 +709,11 @@ export function postsForPage(page: number) {
 export function relatedPosts(post: BlogPost, count = 3) {
   const others = blogPosts.filter((p) => p.slug !== post.slug);
   return [...others.filter((p) => p.category === post.category), ...others.filter((p) => p.category !== post.category)].slice(0, count);
+}
+
+/** Newest articles that support a given service page, for internal links from that page. */
+export function postsForService(serviceSlug: string, count = 3) {
+  return blogPosts.filter((p) => p.service === serviceSlug).slice(0, count);
 }
 
 export function getPost(slug: string) {

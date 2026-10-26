@@ -9,6 +9,7 @@ import ProjectCard from "./ProjectCard";
 import FaqSection from "./FaqSection";
 import CtaBand from "./CtaBand";
 import JsonLd from "@/components/seo/JsonLd";
+import { formatDate, postsForService } from "@/lib/blog";
 import { projects } from "@/lib/projects";
 import type { Service } from "@/lib/services";
 import { SITE_URL, site } from "@/lib/site";
@@ -30,6 +31,7 @@ export default function ServicePage({ service }: { service: Service }) {
     .filter((p) => service.projectCategories.includes(p.category))
     .sort((a, b) => Number(!!b.solution) - Number(!!a.solution))
     .slice(0, 4);
+  const guides = postsForService(service.slug);
 
   return (
     <>
@@ -112,6 +114,25 @@ export default function ServicePage({ service }: { service: Service }) {
               {related.map((p) => (
                 <StaggerItem key={p.slug}>
                   <ProjectCard project={p} />
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </div>
+        </section>
+      )}
+
+      {guides.length > 0 && (
+        <section className="section-padding border-t border-border">
+          <div className="container-custom">
+            <SectionHeading eyebrow="Guides" title={`Read before you start your ${service.name.toLowerCase()} project`} />
+            <Stagger as="ul" className="grid border-t border-border md:grid-cols-3">
+              {guides.map((p) => (
+                <StaggerItem as="li" key={p.slug} className="border-b border-border py-8 md:pr-10">
+                  <Link href={`/blog/${p.slug}`} className="group block">
+                    <span className="text-sm text-muted-foreground">{formatDate(p.date)}</span>
+                    <h3 className="mt-2 text-lg font-medium text-foreground group-hover:text-primary">{p.title}</h3>
+                    <p className="mt-2 line-clamp-3 leading-relaxed text-muted-foreground">{p.excerpt}</p>
+                  </Link>
                 </StaggerItem>
               ))}
             </Stagger>
