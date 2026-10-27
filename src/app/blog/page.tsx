@@ -1,7 +1,10 @@
 import BlogList from "@/components/blog/BlogList";
 import PageHero from "@/components/sections/PageHero";
 import CtaBand from "@/components/sections/CtaBand";
+import JsonLd from "@/components/seo/JsonLd";
+import { blogPosts } from "@/lib/blog";
 import { pageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Blog: Web, App, Marketing & Software Guides",
@@ -13,6 +16,23 @@ export const metadata = pageMetadata({
 export default function BlogPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "@id": `${SITE_URL}/blog#blog`,
+          name: "Abhivorn Technologies Blog",
+          url: `${SITE_URL}/blog`,
+          inLanguage: "en-IN",
+          publisher: { "@id": `${SITE_URL}/#organization` },
+          blogPost: blogPosts.slice(0, 10).map((p) => ({
+            "@type": "BlogPosting",
+            headline: p.title,
+            url: `${SITE_URL}/blog/${p.slug}`,
+            datePublished: p.date,
+          })),
+        }}
+      />
       <PageHero
         eyebrow="Blog"
         title={

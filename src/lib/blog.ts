@@ -22,6 +22,143 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "real-estate-property-listing-website-guide",
+    "title": "Real Estate Website Features: A Guide",
+    "excerpt": "Planning a property listing website for your agency or project? Here are the features buyers and tenants expect, what helps you get enquiries, and what can wait.",
+    "description": "Planning a real estate or property listing website in India? The features buyers expect, how to capture enquiries, SEO for locations, and what can wait.",
+    "date": "2026-10-27",
+    "readTime": "7 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=450&fit=crop",
+    "keywords": [
+      "real estate website development",
+      "property listing website",
+      "real estate website Hyderabad",
+      "property portal features",
+      "real estate lead generation website"
+    ],
+    "takeaways": [
+      "A good property website helps buyers filter by location, budget and type, see real photos and details, and contact you in one tap.",
+      "Every listing should have its own page with a clear title, price, location and description, so it can be found on Google and AI search.",
+      "Enquiry forms, site-visit booking and quick follow-up matter more than fancy design.",
+      "Your team needs an easy way to add, update and mark properties as sold or rented without a developer."
+    ],
+    "content": [
+      "Most property searches now start online. Buyers and tenants compare options on their phones long before they call an agent or visit a site. If your listings live only on WhatsApp groups and third-party portals, you are paying for leads that a website of your own could bring in directly.",
+      "This guide covers what a real estate or property listing website needs, whether you are an agency, a builder with a few projects, or a team planning a larger property portal.",
+      "## Who the website is for",
+      "Start by being clear about your business. An agency listing resale and rental homes needs strong search and many listings. A builder with two or three projects needs rich project pages with floor plans, amenities and progress updates. A portal where many owners or agents post listings also needs accounts, moderation and plans for paid listings. The features below apply to all three, with the portal needing the most.",
+      "## Features buyers and tenants expect",
+      "### Search and filters that match how people look",
+      "Let visitors filter by city and locality, budget, property type (flat, villa, plot, commercial), number of bedrooms, sale or rent, and ready-to-move or under construction. Show results quickly, with the most important details visible in the list.",
+      "### Detailed listing pages",
+      "Each property needs real photos, price, area, floor, facing, parking, amenities, and a clear description. Add a map with nearby schools, hospitals and transport, and show the approval status where it applies. Honest, complete details build trust and reduce wasted calls.",
+      "### Project pages for new developments",
+      "For new projects, include floor plans, a specification list, amenities, location advantages, construction updates and any registration details required in your state. A downloadable brochure is useful, but the key details should also be on the page itself so search engines can read them.",
+      "### Fast pages on mobile",
+      "Property sites are image-heavy. Images should be compressed and load as the visitor scrolls, so pages stay fast on mobile data. A slow listing page loses visitors before they see the price.",
+      "### Save and compare",
+      "Letting visitors shortlist properties and compare them side by side keeps them on your site instead of a portal.",
+      "## Features that turn visits into enquiries",
+      "Put a short enquiry form on every listing, asking only for name, contact and a preferred time. Offer site-visit booking with date and time choices. Send an instant confirmation to the visitor and an alert to your team, so you can call back while interest is high.",
+      "Track which listings and which ads bring enquiries. That tells you where to spend your marketing budget.",
+      "## Features for your team",
+      "An admin panel where your team can add a property, upload photos, change the price and mark it as sold or rented in a few minutes. Enquiries should be stored in one place, with the property they came from, so nobody is lost between calls and spreadsheets. For a portal, add approval of new listings before they go live.",
+      "## SEO for property websites",
+      "People search by place: '2 BHK flats for sale in Kondapur' or 'office space for rent in HITEC City'. Create a page for each locality and property type you serve, with genuine information about the area and your current listings there. Give every listing a unique title and description, and use structured data so search engines and AI assistants understand the price, location and type.",
+      "Remove or clearly mark sold listings rather than leaving them up as available. Out-of-date listings frustrate visitors and hurt trust.",
+      "## What can wait",
+      "Virtual tours, mortgage calculators, owner dashboards, paid listing plans and a separate mobile app are all valuable later. For most agencies and builders, a fast site with good listings, strong search and quick enquiry handling is the right first version.",
+      "If you are planning a property website, tell us whether you are an agency, a builder or a portal, and roughly how many listings you have. We will suggest a first version that gets you enquiries quickly and can grow from there."
+    ],
+    "faqs": [
+      {
+        "question": "What features should a real estate website have?",
+        "answer": "Search and filters by location, budget and property type, detailed listing pages with photos and a map, project pages for new developments, enquiry forms and site-visit booking on every listing, and an admin panel to manage properties and enquiries."
+      },
+      {
+        "question": "Can I manage property listings myself?",
+        "answer": "Yes. A good property website includes an admin panel where your team can add listings, upload photos, change prices and mark properties as sold or rented without technical help."
+      },
+      {
+        "question": "How do property websites rank on Google?",
+        "answer": "By having a useful page for each locality and property type, a unique title and description for every listing, fast mobile pages, structured data, and up-to-date listings that are removed or marked when sold."
+      },
+      {
+        "question": "Do I need my own website if I already list on property portals?",
+        "answer": "Portals are useful for reach, but leads there are shared with competitors and cost money. Your own website builds your brand, brings direct enquiries and lets you show every property exactly the way you want."
+      }
+    ]
+  },
+  {
+    "slug": "trading-software-development-india-guide",
+    "title": "Trading Software Development in India",
+    "excerpt": "Thinking of building trading or stock market software? Here is what to decide first, the common features, the rules to check and how to plan a safe first version.",
+    "description": "Planning trading or stock market software in India? Key features, broker and data connections, compliance to check, security and how to plan version one.",
+    "date": "2026-10-27",
+    "readTime": "8 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=450&fit=crop",
+    "keywords": [
+      "trading software development India",
+      "stock market software development",
+      "custom trading platform",
+      "trading app development Hyderabad",
+      "algo trading software"
+    ],
+    "takeaways": [
+      "Decide first what the software is for: tracking and analysis, placing orders through a broker, automated strategies, or teaching and advisory.",
+      "Most trading tools connect to a registered broker's official interface for orders and to a licensed data source for prices, rather than building these from scratch.",
+      "Trading is regulated in India, so check current SEBI and exchange rules for your use case with a qualified advisor before you build.",
+      "Security, accurate data and full audit logs matter more than flashy charts, because mistakes cost real money."
+    ],
+    "content": [
+      "Trading software covers a wide range of products, from a simple portfolio tracker to a platform that places orders automatically. Many founders and traders come to us with a clear idea of the screen they want, but less clarity on the decisions underneath it. Getting those decisions right early saves a lot of time and money.",
+      "This guide walks through what to plan before you build trading or stock market software in India.",
+      "## Step 1: Decide what kind of software you need",
+      "### Tracking and analysis tools",
+      "Portfolio trackers, watchlists, screeners, journals and reports that help a trader understand their positions and performance. These read data but do not place trades, so they are usually the simplest to start with.",
+      "### Order placement through a broker",
+      "Tools that let a user place, modify and track orders in their own broker account, for example a custom dashboard for a trading desk. These connect to a broker's official interface for developers and need careful handling of logins and permissions.",
+      "### Automated or rule-based strategies",
+      "Software that places orders automatically when conditions are met. This is the most sensitive category, because errors can trade real money in seconds, and it is subject to specific rules from regulators and brokers.",
+      "### Learning, advisory and community platforms",
+      "Platforms for courses, research, signals or communities. If the platform gives investment advice or research to others, there are registration and disclosure rules to consider.",
+      "## Step 2: Check the rules for your use case",
+      "Securities markets in India are regulated by SEBI, and exchanges and brokers have their own requirements, especially for automated trading and for anyone offering advice or research. Rules change over time, so speak to a qualified compliance professional and your broker about your exact plan before development starts. It is much easier to design for compliance from day one than to add it later.",
+      "## Step 3: Plan your data and broker connections",
+      "Live and historical prices come from exchanges through licensed data providers or through your broker. Check what data you are allowed to show, store and share with users, and the cost. For order placement, most brokers offer an official interface for developers; confirm its limits, its costs and what approvals it needs.",
+      "## Common features",
+      "Secure login with two-factor authentication. Watchlists and live prices. Charts with the indicators your users actually need. Order entry with clear confirmations. Positions, holdings and profit-and-loss views. Alerts by app notification, SMS or email. Reports and downloadable statements. An admin panel for managing users, plans and settings.",
+      "For automated strategies, add a way to test strategies on past data, limits on order size and daily loss, a single 'stop everything' switch, and detailed logs of every decision the system makes.",
+      "## Security and reliability",
+      "Store broker access securely and never in the app's code. Use encryption, role-based access for staff, and full audit logs. Plan what happens when the internet, the data feed or the broker connection drops in the middle of the trading day. Test carefully with small amounts or a test environment before real money is involved.",
+      "## Plan a focused first version",
+      "Start with the smallest useful product, such as a tracker and alerts, or a dashboard for one strategy, and use it yourself before opening it to others. Add automation and more users only when the basics are stable.",
+      "If you are planning trading software, tell us what you want it to do and who will use it. We will help you shape a first version that is useful, secure and ready to grow, and point out the questions to take to your compliance advisor."
+    ],
+    "faqs": [
+      {
+        "question": "Can I build my own trading software in India?",
+        "answer": "Yes. Many traders and companies build custom tools for tracking, analysis and order placement through their broker. Automated trading and advisory services have specific rules, so check current SEBI, exchange and broker requirements for your use case first."
+      },
+      {
+        "question": "How does trading software get live stock prices?",
+        "answer": "Usually through a licensed market data provider or the broker's official interface. Check what data you are allowed to display, store and share, and the cost, before you build."
+      },
+      {
+        "question": "Is algo trading allowed for individuals in India?",
+        "answer": "Automated trading is allowed within the framework set by SEBI, exchanges and brokers, and those rules have been updated in recent years. Confirm the current requirements with your broker and a compliance professional before building."
+      },
+      {
+        "question": "What should the first version of trading software include?",
+        "answer": "A focused set of features: secure login, the data or watchlists you need, the core screen for your use case, alerts and clear logs. Add automation, more users and advanced features once the basics are proven."
+      }
+    ]
+  },
+  {
     "slug": "payment-gateway-integration-website-india",
     "title": "Payment Gateway Integration for Your Website in India: A Simple Guide",
     "excerpt": "Want customers to pay on your website by UPI, card or net banking? Here is how a payment gateway works, what documents you need and how to add one safely.",
