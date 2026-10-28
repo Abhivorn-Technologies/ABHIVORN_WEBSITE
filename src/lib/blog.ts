@@ -22,6 +22,149 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "lab-pharmacy-software-guide-india",
+    "title": "Lab & Pharmacy Software: What to Look For",
+    "excerpt": "Running a diagnostic lab or pharmacy on paper, Excel and WhatsApp? Here is what good lab and pharmacy software should do, and how to choose one that fits a small business.",
+    "description": "A practical guide for diagnostic labs and pharmacies in India: which software features save time, how digital reports work, and how to choose the right system.",
+    "date": "2026-10-28",
+    "readTime": "6 min read",
+    "category": "Healthcare",
+    "service": "healthcare-software-development",
+    "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&h=450&fit=crop",
+    "keywords": [
+      "lab management software India",
+      "pharmacy billing software",
+      "digital lab reports",
+      "diagnostic lab software Hyderabad",
+      "pharmacy inventory software"
+    ],
+    "takeaways": [
+      "Good lab software registers patients quickly, tracks each sample, and sends reports to patients digitally instead of on paper.",
+      "Good pharmacy software handles billing, stock, expiry dates and low-stock alerts, and makes it easy to fill a doctor's prescription.",
+      "Choose software your staff can learn in a day, that works on the devices you already have, and that keeps patient data private.",
+      "Avoid systems that take a commission on every test or order, or lock your data in so you cannot export it."
+    ],
+    "content": [
+      "Many independent diagnostic labs and pharmacies still run on registers, spreadsheets and WhatsApp. It works when the business is small, but it gets harder as patients and orders grow: reports get lost, stock runs out without warning, and staff spend hours on work a simple system could do in minutes.",
+      "This guide explains what lab and pharmacy software should do, and how to choose one that suits a small or growing business in India.",
+      "## What lab software should do",
+      "### Fast patient registration",
+      "Registration should take seconds, not minutes. Look for a system that saves returning patients, so the front desk does not retype the same name, age and phone number every visit.",
+      "### Sample and test tracking",
+      "Each sample should be linked to the right patient and test from the moment it is collected. Staff should be able to see which samples are pending, in progress or ready, so nothing gets missed at the end of a busy day.",
+      "### Digital reports",
+      "Patients increasingly expect reports on their phone. The software should let you send reports digitally, keep a copy against the patient's record, and let the patient or their doctor open it again later. This also cuts printing costs and repeat visits just to collect a paper report.",
+      "### Billing and daily totals",
+      "Billing should be built in, with clear daily and monthly totals, so you know what came in without adding it up by hand.",
+      "## What pharmacy software should do",
+      "### Quick billing",
+      "Billing at the counter should be fast, with medicines found by name or barcode, and correct prices and taxes added automatically.",
+      "### Stock and expiry",
+      "The system should track stock as you sell, warn you before items run out, and flag medicines that are close to their expiry date. This alone can save a pharmacy a lot of money.",
+      "### Prescriptions",
+      "When doctors write digital prescriptions, the pharmacy should be able to receive and read them clearly, with no guessing at handwriting. A simple queue of prescriptions waiting to be filled helps the counter stay organised.",
+      "## How to choose the right system",
+      "### Easy for your staff",
+      "If the software needs weeks of training, it will not be used properly. Ask for a demo and see whether a new staff member could follow it in a day.",
+      "### Works on what you have",
+      "Check that it runs on the computers, tablets or phones you already use, and that it still works when the internet is slow.",
+      "### Privacy and data ownership",
+      "Patient reports and prescriptions are sensitive. Ask how data is stored and protected, who can see it, and whether you can export your own data if you ever switch systems.",
+      "### Clear pricing",
+      "Prefer a simple monthly plan over a commission on every test or order. Commissions grow as your business grows and can end up costing far more than a fixed fee.",
+      "## Off-the-shelf or custom?",
+      "Most small labs and pharmacies are best served by a ready platform that already does these things well. Custom software makes sense for larger chains, or for businesses with unusual workflows or integrations with existing machines and systems.",
+      "Our own product, VORQARD, connects patients, doctors, labs and pharmacies through a single patient QR identity, with digital reports, prescriptions, billing and stock in one place and no commission on tests or orders. If you need something built around your own workflow instead, our healthcare software team can help."
+    ],
+    "faqs": [
+      {
+        "question": "Do small labs really need software?",
+        "answer": "Yes, once you handle more than a few patients a day. Software reduces lost reports, billing mistakes and time spent on paperwork, and lets you send reports to patients digitally."
+      },
+      {
+        "question": "Can lab reports be sent to patients on their phone?",
+        "answer": "Yes. Good lab software sends reports digitally and keeps them linked to the patient's record, so the patient or their doctor can open them again later."
+      },
+      {
+        "question": "What is the most useful feature in pharmacy software?",
+        "answer": "Stock and expiry tracking. Knowing what is running low and what is about to expire prevents lost sales and wasted medicines."
+      },
+      {
+        "question": "Should I pay a commission per test or order?",
+        "answer": "It is usually better to choose a fixed monthly plan. Commissions grow with your business and can cost much more over time."
+      }
+    ]
+  },
+  {
+    "slug": "mobile-app-cost-factors-india",
+    "title": "What Affects Mobile App Cost in India",
+    "excerpt": "Wondering why app quotes vary so much? Here are the factors that decide what a mobile app costs to build in India, and how to keep your first version affordable.",
+    "description": "Why mobile app quotes in India vary so much: features, platforms, design, backend, integrations and support, plus how to plan an affordable first version.",
+    "date": "2026-10-28",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
+    "keywords": [
+      "mobile app development cost India",
+      "app development cost Hyderabad",
+      "how much does an app cost",
+      "Android and iOS app cost",
+      "MVP app development"
+    ],
+    "takeaways": [
+      "App cost depends mostly on the number and complexity of features, not on the idea itself.",
+      "Building for Android and iOS, custom design, an admin panel, payments and integrations all add to the effort.",
+      "Starting with a focused first version (an MVP) is the most reliable way to control cost and launch sooner.",
+      "Compare quotes by what is included, such as design, testing, launch and support, not just the total."
+    ],
+    "content": [
+      "One of the first questions people ask about a new app is how much it will cost. The honest answer is that it depends on what the app needs to do. Two apps that sound similar can differ a lot in effort once you list every screen and feature.",
+      "This guide explains the factors that decide the cost of a mobile app in India, so you can understand quotes and plan your budget.",
+      "## The main cost factors",
+      "### Features and complexity",
+      "This is the biggest factor. A simple app with login, a few content screens and a contact form takes far less work than one with live tracking, chat, video, bookings or payments. Every feature needs design, development and testing.",
+      "### Android, iOS or both",
+      "Launching on both platforms reaches more people but adds effort for building, testing and publishing. Many businesses start with the platform most of their customers use, or build for both at once if their audience is split.",
+      "### Design",
+      "A clean design based on standard patterns costs less than a fully custom look with animations. Good design still matters, because it decides whether people keep using the app.",
+      "### Backend and admin panel",
+      "Most apps need a server to store data, user accounts and content, plus an admin panel where your team manages orders, users or listings. This part is often underestimated in early budgets.",
+      "### Payments and integrations",
+      "Payment gateways, SMS and email, maps, delivery partners, or connections to your existing software all add work, and some third-party services have their own fees.",
+      "### Testing, launch and support",
+      "Testing on different phones, publishing on the Play Store and App Store, and fixing issues after launch take real time. Ongoing updates and hosting are a recurring cost to plan for.",
+      "## How to keep your first version affordable",
+      "### Start with an MVP",
+      "List every feature you want, then pick the few that deliver the core value. Launch those first, learn from real users, and add the rest in later updates. This lowers risk as well as cost.",
+      "### Write down what you need",
+      "A short document listing the users, the main screens and the must-have features helps every company quote accurately and makes quotes easier to compare.",
+      "### Compare like with like",
+      "When comparing quotes, check what each includes: design, admin panel, testing, store publishing, and support after launch. A lower quote that leaves these out often costs more in the end.",
+      "### Consider a website first",
+      "For some businesses, a fast mobile-friendly website meets early needs at lower cost, with an app added later. Our guide on whether to build a website or an app first covers how to decide.",
+      "If you share your app idea with our mobile app team, we can help you plan a focused first version and give you a clear quote."
+    ],
+    "faqs": [
+      {
+        "question": "Why do app quotes vary so much?",
+        "answer": "Because companies may assume different features, design levels, platforms and support. Comparing quotes based on the same written list of features makes them much more consistent."
+      },
+      {
+        "question": "Is it cheaper to build for Android only?",
+        "answer": "Building for one platform first usually costs less and lets you launch sooner. You can add the other platform once the app proves itself."
+      },
+      {
+        "question": "What is an MVP?",
+        "answer": "An MVP, or minimum viable product, is the first version of an app with only the core features needed to be useful. It helps you launch faster and spend less before you know what users want."
+      },
+      {
+        "question": "Are there costs after the app is launched?",
+        "answer": "Yes. Plan for hosting, store accounts, third-party services, bug fixes and regular updates as the phone operating systems change."
+      }
+    ]
+  },
+  {
     "slug": "real-estate-property-listing-website-guide",
     "title": "Real Estate Website Features: A Guide",
     "excerpt": "Planning a property listing website for your agency or project? Here are the features buyers and tenants expect, what helps you get enquiries, and what can wait.",
