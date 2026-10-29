@@ -10,6 +10,7 @@ import SectionHeading from "@/components/sections/SectionHeading";
 import ProjectCard from "@/components/sections/ProjectCard";
 import FaqSection from "@/components/sections/FaqSection";
 import CtaBand from "@/components/sections/CtaBand";
+import AnniversarySection from "@/components/anniversary/AnniversarySection";
 import { services } from "@/lib/services";
 import { featuredProjects } from "@/lib/projects";
 import { stats } from "@/lib/site";
@@ -95,6 +96,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <AnniversarySection />
 
       {/* Web services — the lead offer */}
       <section className="section-padding">

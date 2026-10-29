@@ -311,3 +311,20 @@ html.lenis body {
     scroll-behavior: auto !important;
   }
 }
+
+/* ---- First anniversary (gold on navy) ---- */
+:root {
+  --gold: 42 72% 52%;
+}
+.gold-text {
+  background: linear-gradient(135deg, #8a6114 0%, #d4a537 22%, #f7e08a 42%, #c8922a 60%, #f3d27a 80%, #9a6c18 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.anniversary-navy {
+  background: linear-gradient(135deg, #07152b 0%, #0b2347 55%, #0a1a36 100%);
+}
+.gold-glow {
+  filter: drop-shadow(0 6px 18px rgba(212, 165, 55, 0.35));
+}

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import AnniversaryBar from "@/components/anniversary/AnniversaryBar";
 import SmoothScroll from "@/components/motion/SmoothScroll";
 import Analytics from "@/components/analytics/Analytics";
 import JsonLd from "@/components/seo/JsonLd";
@@ -80,6 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://ww
         <SmoothScroll />
         <Header />
         <main id="main" className="flex-1 pt-16 md:pt-20">
+          <AnniversaryBar />
           {children}
         </main>
         <Footer />
