@@ -22,6 +22,149 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "website-maintenance-guide-small-business",
+    "title": "Website Maintenance: What It Covers",
+    "excerpt": "A website is not finished on launch day. Here is what website maintenance actually includes, how often each task should happen, and what to ask before you sign a maintenance plan.",
+    "description": "What website maintenance includes for small businesses in India: security updates, backups, speed, content and SEO checks, and what to ask a partner.",
+    "date": "2026-10-29",
+    "readTime": "6 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=450&fit=crop",
+    "keywords": [
+      "website maintenance services Hyderabad",
+      "website maintenance checklist",
+      "website security updates",
+      "website backup",
+      "small business website support India"
+    ],
+    "takeaways": [
+      "Website maintenance means keeping your site secure, backed up, fast and up to date after it goes live.",
+      "The most important tasks are security updates, regular backups you can actually restore, uptime checks and fixing broken forms.",
+      "Content and SEO need attention too: old offers, prices and contact details hurt trust and search rankings.",
+      "Before signing a maintenance plan, ask exactly what is included, how fast issues are fixed, and who owns your site and data."
+    ],
+    "content": [
+      "Many business owners treat a website like a printed brochure: once it is made, it is done. In reality a website is closer to a shop. It needs regular care, or it slowly becomes slower, less secure and out of date, and customers notice.",
+      "This guide explains what website maintenance covers, how often each task should happen, and how to choose a maintenance plan that fits a small or growing business in India.",
+      "## What website maintenance includes",
+      "### Security updates",
+      "Every website runs on software, and that software gets security fixes over time. If updates are skipped, known weaknesses stay open and attackers look for exactly those. Updates should be applied regularly and tested, so a fix does not break a page.",
+      "### Backups you can restore",
+      "A backup is only useful if it works. Your site and its data should be backed up automatically, stored somewhere separate from the website itself, and tested from time to time by actually restoring it. Ask how many past copies are kept and how quickly the site can be brought back.",
+      "### Uptime and error monitoring",
+      "If your website goes down at night, you may only hear about it when a customer complains. Monitoring checks the site around the clock and alerts someone when it stops responding or shows errors.",
+      "### Forms and lead capture",
+      "Contact and enquiry forms are often the most valuable part of a business website, and they break quietly. A small change in email settings or a third-party service can stop enquiries from arriving. Forms should be tested regularly by sending a real enquiry.",
+      "### Speed",
+      "Pages get slower as images, scripts and plugins are added. A slow site loses visitors and ranks lower on Google. Maintenance should include checking page speed on mobile and fixing what slows it down, such as oversized images.",
+      "## Content and SEO upkeep",
+      "Out-of-date content does real damage. An old offer, a wrong address, a discontinued service or last year's date in the footer all make visitors doubt whether the business is still active.",
+      "Good maintenance includes a regular content review: update services and contact details, remove expired offers, fix broken links, and add fresh content such as blog articles or project updates. Search engines and AI assistants both favour sites that are accurate and kept current.",
+      "## How often should each task happen?",
+      "As a simple guide for a typical business website: check that forms work and the site is online every week, apply tested updates and review backups every month, and review content, speed and search performance every quarter. Busy online stores and sites that take payments need closer attention than a simple company website.",
+      "## What to ask before signing a maintenance plan",
+      "Ask exactly which tasks are included and how often, so there are no surprises. Ask how quickly they respond when the site is down or broken, and whether small content changes are included or charged separately.",
+      "Most importantly, ask who owns the website, the domain and the hosting account. These should be in your business's name, with access you can use, so you are never locked in to one provider.",
+      "## Do it yourself or hire someone?",
+      "If your site is small and someone on your team is comfortable with technology, they can handle content updates and basic checks. Security updates, backups, speed work and fixing errors are usually better handled by a team that does this every day, because mistakes there can take the whole site down.",
+      "If you would like help keeping your website secure and up to date, our web development team can review your current site and suggest a maintenance plan that fits it."
+    ],
+    "faqs": [
+      {
+        "question": "What does website maintenance include?",
+        "answer": "Website maintenance usually includes security updates, regular backups, uptime monitoring, testing contact forms, keeping pages fast, fixing broken links and updating content such as services, offers and contact details."
+      },
+      {
+        "question": "How often should a website be maintained?",
+        "answer": "Check that the site is online and forms work every week, apply tested updates and review backups every month, and review content, speed and search performance every quarter. Online stores need closer attention."
+      },
+      {
+        "question": "Is website maintenance really necessary for a small business?",
+        "answer": "Yes. Without updates a site becomes less secure and slower, forms can stop sending enquiries without anyone noticing, and outdated content makes customers doubt the business."
+      },
+      {
+        "question": "Who should own my website and domain?",
+        "answer": "Your business should own the domain, hosting account and website files, with login access you can use, even if a partner maintains the site for you."
+      }
+    ]
+  },
+  {
+    "slug": "ai-chatbot-for-business-website-guide",
+    "title": "AI Chatbots for Business Websites",
+    "excerpt": "AI chatbots can answer customer questions day and night and capture leads while you sleep. Here is what they do well, where they fall short, and how to add one to your website the right way.",
+    "description": "How AI chatbots help Indian businesses answer customer questions and capture leads, what they can and cannot do, and how to plan one for your website.",
+    "date": "2026-10-29",
+    "readTime": "6 min read",
+    "category": "AI",
+    "service": "ai-development",
+    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=450&fit=crop",
+    "keywords": [
+      "AI chatbot for website",
+      "AI chatbot development India",
+      "customer support chatbot",
+      "lead generation chatbot",
+      "AI development company Hyderabad"
+    ],
+    "takeaways": [
+      "An AI chatbot answers common customer questions instantly, at any hour, using your own business information.",
+      "It works best for repeated questions, collecting enquiry details and guiding visitors to the right page or service.",
+      "It should hand over to a human for complex, sensitive or high-value conversations, and never make up answers.",
+      "Start small with your most common questions, check the conversations regularly, and improve the answers over time."
+    ],
+    "content": [
+      "Customers expect quick answers. When someone visits your website at 11 pm with a question about your services, they often leave if nobody replies. An AI chatbot can answer them straight away, collect their details, and pass a warm lead to your team in the morning.",
+      "This guide explains what AI chatbots can do for a business website, where they fall short, and how to plan one that actually helps your customers.",
+      "## What an AI chatbot is",
+      "An AI chatbot is a chat window on your website that understands questions written in everyday language and replies in a natural way. Unlike older chatbots that only followed fixed menus, a modern AI chatbot can handle the same question asked in many different ways.",
+      "The key is that it should answer from your own information: your services, policies, timings, locations and frequently asked questions. A chatbot that answers from general knowledge instead of your business facts can give wrong answers.",
+      "## What AI chatbots do well",
+      "### Answering repeated questions",
+      "Most businesses get the same questions again and again: what services you offer, your timings, how to book, what documents are needed, delivery areas. A chatbot can answer these instantly and consistently, so your team spends less time on routine replies.",
+      "### Capturing leads",
+      "A chatbot can ask a few simple questions, such as what the visitor needs, their timeline and how to contact them, and send the details to your team or your lead sheet. Visitors who would never fill in a long form will often answer a short conversation.",
+      "### Guiding visitors",
+      "It can point people to the right service page, product or article, which helps visitors find what they came for instead of leaving.",
+      "### Working round the clock",
+      "A chatbot does not take holidays. Enquiries that arrive at night or on weekends still get an immediate reply.",
+      "## Where chatbots fall short",
+      "AI chatbots are not a replacement for people. They struggle with complex problems, complaints, negotiations and anything that needs judgement. They should never guess an answer about prices, medical advice, legal matters or account details.",
+      "A good chatbot knows its limits: when it is unsure or the topic is sensitive, it should say so and offer to connect the visitor with a person.",
+      "## How to plan a chatbot for your website",
+      "### Start with your top questions",
+      "List the 20 to 30 questions your team answers most often, with clear answers. This becomes the chatbot's knowledge base and covers most real conversations.",
+      "### Decide what happens to leads",
+      "Choose where enquiries should go, such as email, your CRM or a spreadsheet, and who follows up. A chatbot that collects leads nobody calls back wastes the opportunity.",
+      "### Set clear limits",
+      "Decide which topics the chatbot must hand over to a human, and make sure it never shares private information or makes promises your team cannot keep.",
+      "### Review and improve",
+      "Read the conversations every week at first. You will quickly see which questions it answers well, which it gets wrong, and what customers ask that you never expected. Update the answers and it gets better over time.",
+      "## Privacy matters",
+      "Chat conversations can include names, phone numbers and other personal details. Tell visitors how their information will be used, store it securely, and collect only what you need.",
+      "## Is an AI chatbot right for your business?",
+      "A chatbot is worth it when your website gets steady traffic and your team answers many similar questions. If you get only a few enquiries a week, a simple contact form and a quick human reply may be enough for now.",
+      "If you are thinking about adding an AI chatbot to your website, our AI development team can help you plan what it should answer, how leads reach your team, and where a human should take over."
+    ],
+    "faqs": [
+      {
+        "question": "What can an AI chatbot do on a business website?",
+        "answer": "It can answer common customer questions instantly, collect enquiry details as leads, guide visitors to the right page or service, and reply at any hour, using your own business information."
+      },
+      {
+        "question": "Can an AI chatbot replace my customer support team?",
+        "answer": "No. It handles routine questions well, but complex issues, complaints and sensitive topics should be handed to a person. The best setup combines the chatbot with your team."
+      },
+      {
+        "question": "How does a chatbot know about my business?",
+        "answer": "It is set up with your own information, such as services, policies, timings and frequently asked questions, so it answers from your facts instead of guessing."
+      },
+      {
+        "question": "Is it safe to collect customer details through a chatbot?",
+        "answer": "It can be, if you tell visitors how their information will be used, store it securely, collect only what you need, and make sure the chatbot never shares private data."
+      }
+    ]
+  },
+  {
     "slug": "lab-pharmacy-software-guide-india",
     "title": "Lab & Pharmacy Software: What to Look For",
     "excerpt": "Running a diagnostic lab or pharmacy on paper, Excel and WhatsApp? Here is what good lab and pharmacy software should do, and how to choose one that fits a small business.",

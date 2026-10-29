@@ -96,7 +96,7 @@ export default async function BlogPostPage({ params }: Props) {
             </header>
 
             <Reveal className="relative mt-8 aspect-video overflow-hidden rounded-lg border border-border">
-              <Image src={post.image} alt="" fill priority sizes="(min-width: 1280px) 860px, (min-width: 1024px) 65vw, 100vw" className="object-cover" />
+              <Image src={post.image} alt={post.title} fill priority sizes="(min-width: 1280px) 860px, (min-width: 1024px) 65vw, 100vw" className="object-cover" />
             </Reveal>
 
             {post.takeaways?.length ? (
