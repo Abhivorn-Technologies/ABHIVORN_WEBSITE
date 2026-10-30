@@ -31,7 +31,7 @@ export function GET() {
     ...projects.map((p) => `- ${p.name}: ${p.summary.replace(/\s+/g, " ").trim()}`),
     "",
     "## Articles",
-    ...blogPosts.map((p) => `- [${p.title}](${url(`/blog/${p.slug}`)}): ${p.excerpt}`),
+    ...blogPosts.map((p) => `- [${p.title}](${url(`/blog/${p.slug}`)}) (${p.date}): ${p.excerpt}`),
     "",
     "## Key pages",
     `- [About](${url("/about")})`,

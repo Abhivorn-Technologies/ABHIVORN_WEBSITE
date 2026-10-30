@@ -22,6 +22,142 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "website-redesign-signs-business-india",
+    "title": "Website Redesign: Signs You Need One",
+    "excerpt": "An old website quietly costs you enquiries. Here are the clear signs it is time for a redesign, what a redesign should change, and how to do it without losing your Google rankings.",
+    "description": "Signs your business website needs a redesign, what to change, and how to redesign without losing Google rankings or enquiries. A guide for Indian businesses.",
+    "date": "2026-10-30",
+    "readTime": "6 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&h=450&fit=crop",
+    "keywords": [
+      "website redesign Hyderabad",
+      "website redesign services India",
+      "signs you need a new website",
+      "redesign website without losing SEO",
+      "business website revamp"
+    ],
+    "takeaways": [
+      "Redesign when your site is hard to use on a phone, slow, out of date, or simply not bringing in enquiries.",
+      "A good redesign is about results: clearer services, faster pages and an easy way to contact you, not just a new look.",
+      "Keep your existing page addresses or redirect them properly, or you can lose the Google rankings you already have.",
+      "Measure enquiries and traffic before and after, so you know whether the redesign actually worked."
+    ],
+    "content": [
+      "Most business websites are built once and then left alone for years. Meanwhile customers move to phones, competitors improve their sites, and search engines raise the bar. The website still works, but it quietly turns away people who would have become customers.",
+      "This guide covers the signs that your website needs a redesign, what a redesign should actually change, and how to do it safely so you keep the search traffic you already have.",
+      "## Signs your website needs a redesign",
+      "### It is hard to use on a phone",
+      "Most people in India browse on their phones. Open your website on a phone and try to find your services and contact you. If you have to zoom, pinch or hunt for buttons, many visitors will simply leave.",
+      "### It is slow to load",
+      "If a page takes several seconds to appear, visitors go back to Google and pick the next result. Slow sites also rank lower. Heavy images, old code and too many add-ons are the usual causes.",
+      "### The content is out of date",
+      "Old services, past offers, wrong addresses or an old year in the footer make people wonder if the business is still active. If updating content is so painful that nobody does it, that is a sign too.",
+      "### It does not bring enquiries",
+      "A website's job is to turn visitors into calls, form fills and orders. If people visit but almost nobody contacts you, the problem is often unclear messaging, a buried contact form or no clear next step.",
+      "### It no longer matches your business",
+      "Businesses change. You may have added services, moved into new cities or started working with bigger clients. If your website still describes the business you were years ago, it is selling the wrong thing.",
+      "## What a redesign should change",
+      "A redesign is not only a new colour scheme. Start with what visitors need: a clear headline that says what you do and for whom, simple pages for each service, proof such as past work, and an obvious way to get in touch on every page.",
+      "Then fix the foundations: fast loading on mobile, readable text, accessible design, secure hosting and basic search engine setup such as page titles, descriptions and structured data. Make it easy for your team to update content so the site stays fresh.",
+      "## How to redesign without losing Google rankings",
+      "Your existing pages may already rank on Google. If their addresses change and nothing points the old address to the new one, that ranking can disappear. List every important page before the redesign, keep the same addresses where you can, and set up permanent redirects where you cannot.",
+      "Keep the content that already performs well, update it rather than deleting it, and check the new site for broken links before launch. After launch, submit the new sitemap in Google Search Console and watch for errors over the following weeks.",
+      "## Measure before and after",
+      "Note your monthly visitors, enquiries and top pages before the redesign. Compare the same numbers a few weeks after launch. This tells you whether the new site is doing its job and where to improve next.",
+      "## Redesign or rebuild?",
+      "If the problems are mostly visual or content related, a redesign of the existing site may be enough. If the site is very slow, hard to update or insecure underneath, building it fresh is often quicker and cheaper over time. A good web partner should look at your current site and tell you honestly which one you need.",
+      "If your website is showing these signs, our web development team can review it and suggest whether a redesign or a fresh build makes more sense."
+    ],
+    "faqs": [
+      {
+        "question": "How do I know if my website needs a redesign?",
+        "answer": "Common signs are that the site is hard to use on a phone, slow to load, out of date, does not bring enquiries, or no longer reflects the services your business offers today."
+      },
+      {
+        "question": "Will a website redesign affect my Google rankings?",
+        "answer": "It can if page addresses change without redirects or good content is removed. Keep the same addresses where possible, set up permanent redirects for the rest, and check for broken links before launch."
+      },
+      {
+        "question": "Should I redesign or rebuild my website?",
+        "answer": "Redesign when the problems are mainly the look and content. Rebuild when the site is very slow, insecure or hard to update underneath, since fixing those issues piece by piece often costs more."
+      },
+      {
+        "question": "How do I measure whether a redesign worked?",
+        "answer": "Record monthly visitors, enquiries and top pages before the redesign, then compare the same numbers a few weeks after launch."
+      }
+    ]
+  },
+  {
+    "slug": "clinic-appointment-booking-software-india",
+    "title": "Clinic Appointment Booking Software Guide",
+    "excerpt": "Phone calls and paper registers make clinic bookings slow and error-prone. Here is what online appointment booking software should do, which features matter, and how to choose one for your clinic.",
+    "description": "What clinic appointment booking software does, the features that matter, patient data privacy, and how to choose or build one for your clinic in India.",
+    "date": "2026-10-30",
+    "readTime": "6 min read",
+    "category": "Healthcare",
+    "service": "healthcare-software-development",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=450&fit=crop",
+    "keywords": [
+      "clinic appointment booking software India",
+      "doctor appointment booking system Hyderabad",
+      "online appointment scheduling for clinics",
+      "clinic management software",
+      "healthcare software development Hyderabad"
+    ],
+    "takeaways": [
+      "Online booking lets patients pick a slot themselves, which cuts phone calls, queues and double bookings.",
+      "The must-have features are real-time slots per doctor, reminders, easy rescheduling and a simple front-desk view.",
+      "Patient details are sensitive, so access control, secure storage and clear consent matter as much as features.",
+      "Choose ready-made software for standard needs, and custom software when your workflow or integrations are unusual."
+    ],
+    "content": [
+      "In many clinics, booking an appointment still means calling the reception, waiting on hold and hoping the slot is written down correctly. On busy days the phone never stops, patients wait longer than they should, and no-shows leave doctors with empty slots.",
+      "Appointment booking software moves this online. This guide explains what it should do, the features that matter most, how to handle patient data responsibly, and how to choose the right option for your clinic.",
+      "## What appointment booking software does",
+      "At its simplest, it shows patients the available slots for each doctor and lets them book one, from your website, a link you share, or an app. The front desk sees every booking in one calendar, and doctors see their day at a glance.",
+      "Good systems also handle walk-ins alongside online bookings, so the schedule always reflects what is really happening in the clinic.",
+      "## Features that matter",
+      "### Real-time slots per doctor",
+      "Each doctor should have their own working hours, slot length, breaks and leave. When a slot is booked it should disappear immediately, so two patients never get the same time.",
+      "### Reminders",
+      "Automatic reminders by SMS or email before the appointment are one of the simplest ways to reduce no-shows. Patients should be able to confirm, cancel or reschedule from the reminder.",
+      "### Easy rescheduling and cancellation",
+      "When rescheduling is easy, patients free up slots instead of simply not turning up. That slot can then be offered to someone else.",
+      "### A simple front-desk view",
+      "Reception staff need to see today's queue, mark arrivals, add walk-ins and move appointments in a few taps. If the system is harder than the paper register, staff will stop using it.",
+      "### Reports",
+      "Basic reports on bookings, no-shows and busy hours help you plan doctor schedules and staffing.",
+      "## Patient data and privacy",
+      "Names, phone numbers, symptoms and visit history are sensitive information. Only the right staff should see them, data should be stored securely and backed up, and patients should know how their details will be used. India's Digital Personal Data Protection Act makes consent and careful handling of personal data a legal responsibility, not just good practice.",
+      "## Ready-made or custom software?",
+      "Ready-made clinic software is a good fit when your clinic works in a standard way and you want to start quickly. Check that it supports your number of doctors and branches, works well on a phone, and lets you export your data if you ever move.",
+      "Custom software makes sense when you have several branches with different rules, need it to connect with your billing, lab or pharmacy systems, or want booking built into your own website and app under your brand.",
+      "## Questions to ask before you choose",
+      "Ask how patients will book, how reminders are sent and what they cost, how walk-ins are handled, who can see patient data, where it is stored, and whether you can export it. Ask for a short trial with your own front-desk staff before you commit.",
+      "If you are planning online booking for your clinic or hospital, our healthcare software team can help you choose the right setup or build one that fits the way your clinic works."
+    ],
+    "faqs": [
+      {
+        "question": "What is clinic appointment booking software?",
+        "answer": "It is software that shows each doctor's available slots and lets patients book online, while the clinic manages all bookings, walk-ins and reminders from one calendar."
+      },
+      {
+        "question": "How does online booking reduce no-shows?",
+        "answer": "Automatic reminders before the visit, plus easy rescheduling and cancellation, mean patients either turn up or free the slot instead of simply missing it."
+      },
+      {
+        "question": "Is patient data safe in booking software?",
+        "answer": "It should be. Look for access limited to the right staff, secure storage, backups and clear consent, in line with India's Digital Personal Data Protection Act."
+      },
+      {
+        "question": "Should a clinic use ready-made or custom booking software?",
+        "answer": "Ready-made software suits clinics with standard workflows. Custom software suits clinics with several branches, special rules, or a need to connect booking with billing, lab or pharmacy systems."
+      }
+    ]
+  },
+  {
     "slug": "website-maintenance-guide-small-business",
     "title": "Website Maintenance: What It Covers",
     "excerpt": "A website is not finished on launch day. Here is what website maintenance actually includes, how often each task should happen, and what to ask before you sign a maintenance plan.",
