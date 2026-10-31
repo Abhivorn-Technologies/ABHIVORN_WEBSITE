@@ -22,6 +22,138 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "payroll-attendance-software-small-business-india",
+    "title": "Payroll and Attendance Software Guide",
+    "excerpt": "Spreadsheets and manual registers make payroll slow and error-prone as your team grows. Here is what payroll and attendance software should do for an Indian business, and how to choose one.",
+    "description": "What payroll and attendance software does for Indian businesses: salary runs, leave, statutory deductions, payslips, and how to choose or build one.",
+    "date": "2026-10-31",
+    "readTime": "6 min read",
+    "category": "HRMS",
+    "service": "hrms-software-development",
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=450&fit=crop",
+    "keywords": [
+      "payroll software India",
+      "attendance management system Hyderabad",
+      "payroll and attendance software for small business",
+      "HRMS software development Hyderabad",
+      "leave management software"
+    ],
+    "takeaways": [
+      "Payroll and attendance software turns attendance, leave and salary rules into accurate monthly salary runs and payslips.",
+      "The core features are reliable attendance capture, leave rules, statutory deductions, payslips and simple reports.",
+      "Salary and employee data is sensitive, so role-based access, secure storage and audit trails matter.",
+      "Ready-made tools suit standard needs; custom software suits shift work, multiple branches or unusual pay rules."
+    ],
+    "content": [
+      "In many small and growing businesses, payroll still runs on a spreadsheet. Someone collects attendance from a register or a punch machine, checks leave on paper, works out deductions and types up payslips. It works with ten people. With fifty, it takes days every month and small mistakes become common.",
+      "Payroll and attendance software brings this into one system. This guide explains what it should do, which features matter for Indian businesses, and how to choose between ready-made and custom software.",
+      "## What payroll and attendance software does",
+      "It records when people work, applies your leave and holiday rules, and calculates each person's salary for the month, including allowances, deductions and overtime. At the end it produces payslips and reports, so salaries can be paid and records kept without retyping numbers.",
+      "Because attendance, leave and pay live in the same place, a change in one updates the others. An approved leave request, for example, flows straight into that month's salary.",
+      "## Features that matter",
+      "### Reliable attendance capture",
+      "Attendance can come from biometric devices, a mobile app with location check-in for field staff, or a simple web check-in for office teams. Whatever the method, it should handle late marks, half days, shifts and missed punches with a clear correction process.",
+      "### Leave and holiday rules",
+      "Each business has its own leave types, yearly balances, carry-forward rules and holiday calendar, sometimes different for each branch. Employees should be able to apply for leave and see their balance, and managers should approve it in a few taps.",
+      "### Salary structure and statutory deductions",
+      "The system should hold each employee's salary structure and apply deductions such as provident fund, ESI, professional tax and income tax where they apply. Rules change from time to time, so it should be easy to update them without rebuilding the system. Your accountant or payroll advisor should confirm the rules for your business.",
+      "### Payslips and reports",
+      "Employees should get clear payslips, ideally through a self-service portal or app. Owners and accounts teams need monthly salary registers, department-wise costs and exportable data for filing and bookkeeping.",
+      "## Keeping salary data safe",
+      "Salary, bank details and personal records are some of the most sensitive data a business holds. Only the right people should see them, every change should be logged, and data should be stored securely and backed up. India's Digital Personal Data Protection Act makes careful handling of employee personal data a legal responsibility.",
+      "## Ready-made or custom software?",
+      "Ready-made payroll tools are a good fit when your business works in a standard way: fixed office hours, simple leave rules and one location. Check that they support Indian statutory deductions, work well on phones and let you export your data.",
+      "Custom software makes sense when you have rotating shifts, field teams, several branches with different rules, piece-rate or incentive pay, or when payroll needs to connect with your own billing, project or accounting systems.",
+      "## Questions to ask before you choose",
+      "Ask how attendance is captured and corrected, how leave and holiday rules are set up, how statutory rules are updated, who can see salary data, and whether you can export everything. Run one month of payroll on the new system alongside your current method before switching fully.",
+      "If you are planning to move payroll and attendance off spreadsheets, our HRMS team can help you choose the right setup or build one around the way your business pays its people."
+    ],
+    "faqs": [
+      {
+        "question": "What is payroll and attendance software?",
+        "answer": "It is software that records employee attendance and leave, applies your salary and deduction rules, and produces monthly salary calculations, payslips and reports from one system."
+      },
+      {
+        "question": "Does payroll software handle PF, ESI and professional tax?",
+        "answer": "Good payroll software for India can apply deductions such as provident fund, ESI, professional tax and income tax where they apply. Confirm the exact rules for your business with your accountant."
+      },
+      {
+        "question": "How is attendance captured in payroll software?",
+        "answer": "Common methods are biometric devices, a mobile app with location check-in for field staff, and web check-in for office teams, with a correction process for missed punches."
+      },
+      {
+        "question": "When should a business choose custom payroll software?",
+        "answer": "Choose custom software when you have shifts, field teams, several branches with different rules, incentive pay, or need payroll to connect with your own business systems."
+      }
+    ]
+  },
+  {
+    "slug": "custom-crm-small-business-india-guide",
+    "title": "Custom CRM for Small Business: A Guide",
+    "excerpt": "Leads in notebooks, chats and spreadsheets slip through the cracks. Here is what a CRM does, which features a small business actually needs, and when a custom CRM is worth building.",
+    "description": "What a CRM does for small businesses in India, the features that matter for tracking leads and follow-ups, and when to build a custom CRM.",
+    "date": "2026-10-31",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop",
+    "keywords": [
+      "custom CRM development Hyderabad",
+      "CRM for small business India",
+      "lead management software",
+      "sales follow-up software",
+      "custom software development Hyderabad"
+    ],
+    "takeaways": [
+      "A CRM keeps every lead, customer and follow-up in one place, so no enquiry is forgotten.",
+      "The features that matter most are lead capture from all sources, follow-up reminders, a clear sales pipeline and simple reports.",
+      "Start with your real sales process, then choose a tool that fits it, not the other way round.",
+      "Build a custom CRM when your process, integrations or reporting needs do not fit ready-made tools."
+    ],
+    "content": [
+      "Most small businesses get enquiries from many places: the website, ads, phone calls, walk-ins, referrals and social media. When those leads live in notebooks, chat messages and personal spreadsheets, follow-ups get missed and nobody knows which enquiries turned into sales.",
+      "A CRM, short for customer relationship management, fixes this by keeping every lead and customer in one place. This guide explains what a CRM does, which features matter for a small business, and when building a custom CRM makes sense.",
+      "## What a CRM does",
+      "A CRM records every lead with their details, where they came from and what they asked for. Each lead moves through stages such as new, contacted, quote sent and won or lost. Your team logs calls and notes against the lead, sets the next follow-up, and the CRM reminds them when it is due.",
+      "Over time it becomes a history of every customer, so anyone on the team can pick up a conversation without starting from scratch.",
+      "## Features a small business actually needs",
+      "### Lead capture from every source",
+      "Leads from your website forms, ad lead forms and other channels should land in the CRM automatically, tagged with their source. Typing leads in by hand is where many get lost.",
+      "### Follow-up reminders",
+      "Most sales are lost through slow or forgotten follow-up, not a bad pitch. The CRM should show each person their follow-ups for the day and flag leads nobody has contacted.",
+      "### A clear pipeline",
+      "A simple board or list that shows how many leads sit at each stage helps owners see where deals get stuck and which team member needs help.",
+      "### Quotes and customer history",
+      "Being able to create a quote from the lead, and see past orders and conversations, saves time and makes your team look organised to the customer.",
+      "### Simple reports",
+      "Owners need a few clear numbers: new leads by source, conversion rate, follow-ups pending and revenue won. These tell you which marketing is working and where to spend next.",
+      "## Start with your sales process",
+      "Before choosing any CRM, write down how a lead moves through your business today: who receives it, how fast they call, what information they collect, when a quote goes out and how a sale is closed. The right CRM supports this process. A tool that forces your team to work differently usually ends up unused.",
+      "## Ready-made or custom CRM?",
+      "Ready-made CRMs are a good start when your sales process is simple and standard. Check their cost as your team grows, whether they work well on phones, and whether you can export your data.",
+      "A custom CRM is worth building when your process has steps ready-made tools cannot model, when it needs to connect closely with your own billing, inventory or service systems, when you want reports in your own format, or when per-user fees would become expensive as your team grows.",
+      "If enquiries are slipping through the cracks in your business, our custom software team can map your sales process and help you choose or build a CRM that fits it."
+    ],
+    "faqs": [
+      {
+        "question": "What is a CRM in simple words?",
+        "answer": "A CRM is software that keeps all your leads and customers in one place, tracks every conversation and follow-up, and shows where each potential sale stands."
+      },
+      {
+        "question": "Does a small business need a CRM?",
+        "answer": "If you get enquiries from several channels or more than one person handles sales, a CRM helps make sure every lead gets followed up and shows which marketing brings customers."
+      },
+      {
+        "question": "Can a CRM capture leads from my website and ads automatically?",
+        "answer": "Yes. A well set up CRM can pull in leads from website forms and ad lead forms automatically and tag each one with its source."
+      },
+      {
+        "question": "When should I build a custom CRM?",
+        "answer": "Build a custom CRM when your sales process, integrations or reporting needs do not fit ready-made tools, or when per-user fees become costly as your team grows."
+      }
+    ]
+  },
+  {
     "slug": "website-redesign-signs-business-india",
     "title": "Website Redesign: Signs You Need One",
     "excerpt": "An old website quietly costs you enquiries. Here are the clear signs it is time for a redesign, what a redesign should change, and how to do it without losing your Google rankings.",
@@ -1267,7 +1399,9 @@ export function postsForPage(page: number) {
 /** Same-category posts first, then the newest of the rest. */
 export function relatedPosts(post: BlogPost, count = 3) {
   const others = blogPosts.filter((p) => p.slug !== post.slug);
-  return [...others.filter((p) => p.category === post.category), ...others.filter((p) => p.category !== post.category)].slice(0, count);
+  // Same service first, then same category, then everything else, so related links stay on topic.
+  const rank = (p: BlogPost) => (post.service && p.service === post.service ? 0 : p.category === post.category ? 1 : 2);
+  return [...others].sort((a, b) => rank(a) - rank(b)).slice(0, count);
 }
 
 /** Newest articles that support a given service page, for internal links from that page. */
