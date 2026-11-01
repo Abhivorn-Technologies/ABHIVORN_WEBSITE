@@ -29,6 +29,8 @@ export default function BlogPage() {
             "@type": "BlogPosting",
             headline: p.title,
             url: `${SITE_URL}/blog/${p.slug}`,
+            description: p.description,
+            image: p.image,
             datePublished: p.date,
           })),
         }}

@@ -22,6 +22,137 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "app-launch-checklist-play-store-app-store-india",
+    "title": "App Launch Checklist for Play Store and App Store",
+    "excerpt": "What to prepare before you submit your app to Google Play and the Apple App Store, so the launch is not held up by rejections or last-minute gaps.",
+    "description": "A practical checklist for launching a mobile app on Google Play and the App Store in India: accounts, store listing, privacy, testing and the first week.",
+    "date": "2026-11-01",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=450&fit=crop",
+    "keywords": [
+      "app launch checklist",
+      "publish app on Play Store India",
+      "App Store submission checklist",
+      "mobile app launch Hyderabad",
+      "app store rejection reasons"
+    ],
+    "takeaways": [
+      "Create the Google Play and Apple developer accounts early, in the company's name, because verification can take days.",
+      "Most store rejections come from missing privacy details, broken login for reviewers, or features that do not work as described.",
+      "Prepare the store listing (name, screenshots, description, privacy policy link) before the build is final, not after.",
+      "Test on real, low-cost Android phones and on slow networks, since that is how many Indian users will use the app.",
+      "Plan the first week after launch: crash monitoring, review replies and a quick fix release."
+    ],
+    "content": [
+      "Launching an app is not just uploading a file. Google Play and the Apple App Store both review apps before they go live, and a missing detail can delay a launch by days. This checklist covers what to have ready so your app goes live on the date you planned.",
+      "## 1. Set up the developer accounts early",
+      "You need a Google Play Console account and an Apple Developer Program account. Register both in your company's name rather than a developer's personal account, so you keep ownership of the app and its reviews.",
+      "Account verification, especially for organisations, can take several days and may ask for business documents. Start this in the first weeks of the project, not the week of launch.",
+      "## 2. Get the store listing ready",
+      "Each store needs an app name, short and long description, screenshots for the required screen sizes, an app icon and a category. Write the description for your users first: what the app does, who it is for and the main things they can do.",
+      "### Privacy policy and data declarations",
+      "Both stores require a privacy policy URL and a declaration of what data the app collects and why. Google Play calls this the Data safety section; Apple calls it App Privacy. These answers must match what the app actually does, including any analytics or payment tools inside it.",
+      "## 3. Make the app easy to review",
+      "Reviewers must be able to use the app. If it needs a login, give them a working test account with sample data. If a feature depends on location, OTP or a payment, explain in the review notes how they can test it.",
+      "Common reasons for rejection include crashes, placeholder content, broken links, login that does not work, and asking for permissions the app does not clearly need.",
+      "## 4. Test the way your users will use it",
+      "Test on real devices, not only emulators. In India that means including budget Android phones with less memory, older Android versions you plan to support, and slow or patchy mobile data.",
+      "Check the basics on every build: install, sign up, login, the main flows, notifications, payments if any, and what happens when the network drops.",
+      "## 5. Plan the release",
+      "Use staged or phased rollouts where available, so a small share of users get the update first. Keep a version number plan and release notes ready for each update.",
+      "## 6. The first week after launch",
+      "Watch crash reports and store reviews daily. Reply to reviews, fix the top issues and ship a small update quickly. Early ratings shape how many people install the app later.",
+      "## How Abhivorn helps",
+      "We build Android and iOS apps and handle store submission with you, from listing content and privacy declarations to reviewer notes and the first post-launch update. Tell us where your app is today and we will tell you what is left before it can go live."
+    ],
+    "faqs": [
+      {
+        "question": "How long does app store review take?",
+        "answer": "It varies. Many apps are reviewed within a few days, but a first submission or a rejection and resubmission can take longer, so plan some buffer before your launch date."
+      },
+      {
+        "question": "Should the developer account be in my name or the agency's?",
+        "answer": "In your company's name. That way you own the app listing, its reviews and its users, and you can change development partners later without moving the app."
+      },
+      {
+        "question": "Why do apps get rejected?",
+        "answer": "Common reasons are crashes, a login reviewers cannot use, placeholder content, privacy details that do not match the app, and permissions the app does not clearly need."
+      },
+      {
+        "question": "Do I need a privacy policy for a simple app?",
+        "answer": "Yes. Both Google Play and the App Store require a privacy policy link and a declaration of the data your app collects, even for simple apps."
+      }
+    ]
+  },
+  {
+    "slug": "ai-document-processing-business-india",
+    "title": "AI Document Processing for Business: A Guide",
+    "excerpt": "How AI can read invoices, forms, IDs and reports for your team, where it saves real time, and how to start without replacing your existing systems.",
+    "description": "How AI document processing works for Indian businesses: reading invoices, forms and reports, where it saves time, accuracy checks and how to start small.",
+    "date": "2026-11-01",
+    "readTime": "6 min read",
+    "category": "AI",
+    "service": "ai-development",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=450&fit=crop",
+    "keywords": [
+      "AI document processing",
+      "invoice data extraction India",
+      "OCR software for business",
+      "AI automation Hyderabad",
+      "intelligent document processing"
+    ],
+    "takeaways": [
+      "AI document processing reads scanned or photographed documents and turns them into structured data your software can use.",
+      "It works best on high-volume, repetitive documents such as invoices, purchase orders, forms, KYC documents and lab reports.",
+      "Keep a person in the loop for low-confidence results, at least at the start, so errors are caught before they reach your accounts or records.",
+      "Start with one document type and connect the output to the system you already use, such as your accounting, CRM or ERP.",
+      "Treat documents as sensitive data: control who can see them and how long they are stored."
+    ],
+    "content": [
+      "Many teams still type data from paper and PDFs into software by hand: invoices into accounting, application forms into a CRM, reports into a patient or customer record. AI document processing does that reading for them, so people check the result instead of typing it.",
+      "## What AI document processing is",
+      "It combines text recognition (OCR), which reads printed or handwritten text from an image or PDF, with AI models that understand what each piece of text means. Instead of a block of text, you get fields such as invoice number, date, GST number, line items and total.",
+      "Modern models handle different layouts from different vendors without a separate template for each, and can read documents with a mix of English and regional languages.",
+      "## Where it saves the most time",
+      "### Invoices and bills",
+      "Extract vendor, amounts, tax and line items, then send them to your accounting software for approval.",
+      "### Forms and applications",
+      "Turn filled forms, photos of forms, and onboarding documents into records in your CRM or HR system.",
+      "### KYC and ID documents",
+      "Read names, numbers and dates from ID documents to speed up onboarding, with the right consent and storage controls.",
+      "### Reports and certificates",
+      "Pull key values from lab reports, inspection reports or certificates into a searchable system.",
+      "## Accuracy and checks",
+      "No system is perfect on every document, especially poor photos or handwriting. A good setup gives a confidence score for each field and sends low-confidence ones to a person to confirm. Over time you can see which documents need review and which pass cleanly.",
+      "## Privacy and security",
+      "Documents often contain personal and financial data. Decide who can view them, encrypt them in storage, keep them only as long as you need, and check where any AI service you use processes the data.",
+      "## How to start",
+      "Pick one document type with high volume and clear fields. Collect a sample set of real documents, measure how long the manual work takes today, and run a pilot. Connect the output to the system your team already uses, so nobody has to copy data a second time.",
+      "## How Abhivorn helps",
+      "We build AI document processing into custom software and existing workflows: extraction, review screens for your team, and integration with your accounting, CRM or ERP. Share a few sample documents and the system they need to reach, and we will suggest a practical first step."
+    ],
+    "faqs": [
+      {
+        "question": "Is AI document processing the same as OCR?",
+        "answer": "OCR reads the text. AI document processing goes further and understands which text is the invoice number, the date or the total, and returns structured fields your software can use."
+      },
+      {
+        "question": "Can it read handwritten or regional-language documents?",
+        "answer": "Often yes, but accuracy depends on the quality of the scan or photo and the handwriting. A pilot on your own documents is the best way to see how well it works for you."
+      },
+      {
+        "question": "Do we need to replace our accounting or CRM software?",
+        "answer": "No. The extracted data can be sent into the software you already use, so the change for your team is mostly that they review instead of type."
+      },
+      {
+        "question": "How do we keep documents secure?",
+        "answer": "Limit who can access them, encrypt stored files, set a retention period, and confirm where any AI service processes the data before you send documents to it."
+      }
+    ]
+  },
+  {
     "slug": "payroll-attendance-software-small-business-india",
     "title": "Payroll and Attendance Software Guide",
     "excerpt": "Spreadsheets and manual registers make payroll slow and error-prone as your team grows. Here is what payroll and attendance software should do for an Indian business, and how to choose one.",
