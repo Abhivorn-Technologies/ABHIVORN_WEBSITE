@@ -22,6 +22,136 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "google-business-profile-guide-hyderabad",
+    "title": "Google Business Profile Guide for Local Businesses",
+    "excerpt": "How to set up and keep your Google Business Profile working for you, so nearby customers find you on Google Search and Maps.",
+    "description": "A practical Google Business Profile guide for Hyderabad and Indian businesses: setup, categories, photos, reviews, posts and linking it to your website.",
+    "date": "2026-11-02",
+    "readTime": "6 min read",
+    "category": "Digital Marketing",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&h=450&fit=crop",
+    "keywords": [
+      "Google Business Profile guide",
+      "Google My Business Hyderabad",
+      "local SEO Hyderabad",
+      "rank on Google Maps",
+      "local business listing India"
+    ],
+    "takeaways": [
+      "A Google Business Profile is free and is often the first thing people see when they search for a local business or service near them.",
+      "Choose the most accurate primary category, since it strongly affects which searches your profile appears in.",
+      "Keep your name, address and contact details exactly the same on your profile, your website and directories.",
+      "Add real photos, post updates regularly and reply to every review, positive or negative.",
+      "Link the profile to a fast website page that matches what the profile promises."
+    ],
+    "content": [
+      "When someone in Hyderabad searches for a clinic, a shop or a service \"near me\", Google usually shows a map with a few local businesses before any website. Those listings come from Google Business Profile. If your profile is missing, incomplete or out of date, nearby customers may never reach you.",
+      "## What a Google Business Profile is",
+      "It is a free listing that shows your business on Google Search and Google Maps: your name, category, location or service area, hours, photos, reviews and a link to your website. You manage it from your Google account.",
+      "## Setting it up properly",
+      "### Claim and verify",
+      "Search for your business on Google Maps first. If a listing already exists, claim it instead of creating a duplicate. Google will ask you to verify that you run the business, for example by video, phone or a postcard, depending on what it offers you.",
+      "### Pick the right categories",
+      "Choose one primary category that describes your main business as precisely as possible, then add a few secondary categories for other services you genuinely offer. Do not add categories just to appear in more searches.",
+      "### Location or service area",
+      "If customers visit you, show your address. If you travel to customers, set a service area instead and hide the address.",
+      "## Keep the details consistent",
+      "Your business name, address and contact details should match exactly across your profile, your website, social pages and directories. Small differences, such as a different spelling or an old address, confuse both customers and search engines.",
+      "## Photos, posts and products",
+      "Add clear photos of your storefront, workspace, team and work. Use posts to share offers, updates and events. If you sell products or services, list them with short descriptions so people can see what you do without leaving Google.",
+      "## Reviews",
+      "Ask happy customers to leave a review, and make it easy with a direct review link. Reply to every review politely, including negative ones. Never buy reviews or post fake ones; it breaks Google's rules and can get the profile suspended.",
+      "## Connect it to your website",
+      "Link to the website page that best matches your profile, often a location or service page. That page should load fast on mobile, show the same contact details and explain clearly what you offer in that area.",
+      "## How Abhivorn helps",
+      "We build fast, search-friendly websites and location or service pages that work together with your Google Business Profile, and we can review your current profile and site for gaps. Get in touch with your business name and area to start."
+    ],
+    "faqs": [
+      {
+        "question": "Is Google Business Profile free?",
+        "answer": "Yes. Creating and managing a Google Business Profile is free. You only pay if you choose to run Google Ads."
+      },
+      {
+        "question": "Can I have a profile without a shop address?",
+        "answer": "Yes. Service-area businesses that visit customers can hide their address and set the areas they serve instead."
+      },
+      {
+        "question": "How do I get more reviews?",
+        "answer": "Ask satisfied customers directly, share your review link after a job is done, and reply to every review. Do not offer payment or rewards for reviews."
+      },
+      {
+        "question": "Do I still need a website if I have a Google Business Profile?",
+        "answer": "Yes. The profile helps people find you; the website gives them the detail and trust they need to contact you, and it helps your profile rank too."
+      }
+    ]
+  },
+  {
+    "slug": "employee-onboarding-software-india-guide",
+    "title": "Employee Onboarding Software: A Practical Guide",
+    "excerpt": "What employee onboarding software does, the features that matter for Indian companies, and how to choose between an off-the-shelf tool and a custom HRMS module.",
+    "description": "A guide to employee onboarding software for Indian businesses: digital documents, checklists, approvals, first-week tasks and how it fits with your HRMS.",
+    "date": "2026-11-02",
+    "readTime": "6 min read",
+    "category": "HRMS",
+    "service": "hrms-software-development",
+    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=450&fit=crop",
+    "keywords": [
+      "employee onboarding software",
+      "onboarding software India",
+      "HRMS onboarding module",
+      "digital employee onboarding",
+      "HR software Hyderabad"
+    ],
+    "takeaways": [
+      "Onboarding software replaces paper forms, scattered emails and spreadsheets with one guided flow for each new hire.",
+      "The core features are digital document collection, task checklists for HR, IT and managers, approvals, and a first-week plan for the employee.",
+      "It should feed employee data straight into payroll, attendance and leave, so nobody re-enters it.",
+      "Treat ID, bank and address documents as sensitive data with strict access control.",
+      "Choose a custom module when your process, approvals or integrations do not fit a standard tool."
+    ],
+    "content": [
+      "A new employee's first days often involve printed forms, repeated requests for the same documents, and a laptop or email account that is not ready on day one. Employee onboarding software turns that into one checklist that HR, IT, the manager and the new hire can all follow.",
+      "## What onboarding software does",
+      "It guides each new hire from offer acceptance to their first weeks at work. The employee fills in details and uploads documents online, and each team gets the tasks it needs to finish before and after the joining date.",
+      "## Features that matter",
+      "### Digital documents and e-forms",
+      "Collect personal details, education and experience records, ID and address proof and bank details online, with clear lists of what is required for each role.",
+      "### Checklists by team",
+      "Create task lists for HR (records, policies), IT (laptop, email, access), admin (ID card, seat) and the manager (introductions, first assignments), with due dates and reminders.",
+      "### Approvals and verification",
+      "Let HR verify documents and managers approve steps inside the system, with a record of who did what and when.",
+      "### First-week plan for the employee",
+      "Show the new hire a simple plan: who to meet, which policies to read, which training to complete and who to ask for help.",
+      "## Connect it to the rest of your HRMS",
+      "Once onboarding is complete, the same data should flow into employee records, payroll, attendance and leave. If onboarding sits in a separate tool, HR ends up typing the same details twice and errors creep in.",
+      "## Privacy and security",
+      "Onboarding collects some of the most sensitive data a company holds. Limit access by role, encrypt stored documents, keep an access log and decide how long you will retain documents for people who do not join.",
+      "## Off-the-shelf or custom",
+      "Ready-made tools work well for standard processes. A custom onboarding module makes sense when you have several locations or entities, role-specific steps, multi-level approvals, or need it to connect with an existing payroll or internal system.",
+      "## How Abhivorn helps",
+      "We build HRMS software with onboarding, employee records, attendance, leave and payroll working together. Tell us how onboarding works in your company today and we will suggest where software can remove the most manual work."
+    ],
+    "faqs": [
+      {
+        "question": "What is employee onboarding software?",
+        "answer": "It is software that guides new hires and your internal teams through every joining step, from collecting documents to setting up accounts and first-week tasks, in one place."
+      },
+      {
+        "question": "Can onboarding start before the joining date?",
+        "answer": "Yes. Pre-boarding lets new hires submit details and documents after accepting the offer, so HR and IT can prepare before day one."
+      },
+      {
+        "question": "Does it replace our HRMS?",
+        "answer": "No. Onboarding is usually one module of an HRMS. It works best when it passes employee data directly into records, payroll, attendance and leave."
+      },
+      {
+        "question": "How do we keep employee documents safe?",
+        "answer": "Give access only to the people who need it, encrypt stored files, keep a log of who viewed them and set a clear retention period."
+      }
+    ]
+  },
+  {
     "slug": "app-launch-checklist-play-store-app-store-india",
     "title": "App Launch Checklist for Play Store and App Store",
     "excerpt": "What to prepare before you submit your app to Google Play and the Apple App Store, so the launch is not held up by rejections or last-minute gaps.",
