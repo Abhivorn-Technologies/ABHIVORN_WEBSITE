@@ -22,6 +22,136 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "inventory-management-software-small-business-india",
+    "title": "Inventory Management Software for Small Business",
+    "excerpt": "How inventory software helps shops, distributors and small manufacturers track stock, avoid shortages and stop losing money to dead stock.",
+    "description": "A guide to inventory management software for small businesses in India: stock tracking, reorder alerts, GST billing, multiple locations and custom options.",
+    "date": "2026-11-03",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=450&fit=crop",
+    "keywords": [
+      "inventory management software India",
+      "stock management software small business",
+      "inventory software Hyderabad",
+      "custom inventory software",
+      "GST billing and inventory"
+    ],
+    "takeaways": [
+      "Inventory software keeps a live count of what you have, where it is and what needs reordering.",
+      "The basics are item records, stock in and out, reorder alerts, and reports on fast and slow movers.",
+      "For Indian businesses, it should work with GST invoices and the accounting tool you already use.",
+      "Barcode scanning and mobile access reduce counting errors and save staff time.",
+      "Choose custom software when you have several locations, batches or expiry dates, or workflows a standard tool cannot handle."
+    ],
+    "content": [
+      "Many small businesses still track stock in notebooks or spreadsheets. It works until it does not: an item runs out during a busy week, money sits in stock that never moves, or the count in the books does not match the shelf. Inventory management software fixes this by keeping one accurate, live record of your stock.",
+      "## What inventory software does",
+      "It records every item you buy, store and sell, updates stock automatically when you make a purchase or a sale, and tells you what is running low. Owners and managers can see stock levels from anywhere instead of calling the shop or warehouse.",
+      "## Core features to look for",
+      "### Item and stock records",
+      "Each item has a code, name, unit, price and current quantity, with optional details such as size, colour, batch or expiry date.",
+      "### Stock in, stock out and transfers",
+      "Purchases, sales, returns and transfers between locations update stock automatically, with a history of every movement.",
+      "### Reorder alerts",
+      "Set a minimum level for each item and get alerts before it runs out, so you can reorder in time.",
+      "### Reports",
+      "See fast-moving and slow-moving items, stock value, and items that have not sold for a long time, so you buy smarter.",
+      "## Work with billing and GST",
+      "Inventory should connect to your billing, so every invoice reduces stock, and to your accounting tool, so purchases and sales are recorded once. For Indian businesses, invoices need the right GST details for each item.",
+      "## Barcodes and mobile",
+      "Barcode labels and scanning make stock counts and billing faster and reduce mistakes. A mobile app or mobile-friendly screen lets staff check or update stock on the floor or in the warehouse.",
+      "## Off-the-shelf or custom",
+      "Standard inventory tools suit simple shops. Custom software makes sense when you run several branches or warehouses, track batches and expiry dates, manufacture or assemble products, or need inventory to connect with your website, app or existing systems.",
+      "## How Abhivorn helps",
+      "We build custom inventory and billing software that fits how your business actually works, and connect it to the tools you already use. Tell us what you stock, how many locations you have and what problem hurts most today, and we will suggest where to start."
+    ],
+    "faqs": [
+      {
+        "question": "What is inventory management software?",
+        "answer": "It is software that tracks the items you buy, store and sell, updates stock automatically with each purchase and sale, and alerts you when items run low."
+      },
+      {
+        "question": "Can it handle multiple shops or warehouses?",
+        "answer": "Yes. Good inventory software tracks stock separately for each location and records transfers between them."
+      },
+      {
+        "question": "Does it work with GST billing?",
+        "answer": "It should. Connecting inventory with billing means each GST invoice reduces stock automatically, and purchases and sales are recorded once."
+      },
+      {
+        "question": "When should we choose custom inventory software?",
+        "answer": "When you have several locations, batches or expiry dates, manufacturing steps, or need it to connect with your website, app or other systems in a way standard tools do not support."
+      }
+    ]
+  },
+  {
+    "slug": "own-ecommerce-website-vs-marketplace-india",
+    "title": "Own E-commerce Website or Marketplace: Which First?",
+    "excerpt": "Should you sell on Amazon and Flipkart, build your own online store, or do both? A plain comparison for Indian sellers.",
+    "description": "Own e-commerce website vs marketplaces like Amazon and Flipkart: control, fees, customer data, marketing effort and how Indian sellers can use both.",
+    "date": "2026-11-03",
+    "readTime": "6 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop",
+    "keywords": [
+      "own ecommerce website vs marketplace",
+      "sell online India",
+      "ecommerce website Hyderabad",
+      "Amazon Flipkart vs own website",
+      "D2C website India"
+    ],
+    "takeaways": [
+      "Marketplaces bring ready traffic and trust, but you pay commissions and follow their rules.",
+      "Your own website gives you control of pricing, branding and customer relationships, but you must bring the traffic.",
+      "Customer data is the biggest difference: on your own site, the customer relationship is yours.",
+      "Many sellers start or stay on marketplaces for reach and build their own site for repeat customers and margins.",
+      "Your own store needs a fast mobile site, reliable payments, clear delivery and returns, and steady marketing."
+    ],
+    "content": [
+      "If you want to sell online in India, you have two main routes: list on marketplaces such as Amazon, Flipkart or Meesho, or run your own e-commerce website. Each has clear strengths. The right choice depends on your products, margins and how much effort you can put into marketing.",
+      "## Selling on marketplaces",
+      "Marketplaces already have millions of shoppers who trust them. You can list products and start getting orders without building traffic yourself, and they often handle payments and delivery.",
+      "The trade-offs are commissions and fees on each sale, strong price competition next to similar products, strict rules on listings and returns, and limited access to your customers. The marketplace owns the customer relationship, not you.",
+      "## Running your own website",
+      "Your own store lets you set your prices, present your brand the way you want, and offer bundles, subscriptions or custom orders. Most importantly, you get your customers' details, with their consent, so you can bring them back with offers and updates.",
+      "The trade-off is that nobody comes by default. You need to drive visitors through search, social media, ads and word of mouth, and you handle payments, delivery partners and customer support.",
+      "## Comparing the two",
+      "### Traffic",
+      "Marketplaces bring buyers to you. Your own site needs marketing to bring buyers in.",
+      "### Margins",
+      "Marketplace fees reduce what you keep from each sale. Your own site avoids those fees but adds marketing and running costs.",
+      "### Brand and customer data",
+      "On a marketplace you are one seller among many. On your own site, your brand and your customer list are yours to build on.",
+      "## Doing both",
+      "Many Indian sellers use marketplaces for reach and new customers, and their own website for repeat buyers, better margins and products they do not want to list elsewhere. Keeping stock in sync across channels matters when you do both.",
+      "## What your own store needs",
+      "A fast, mobile-friendly site; clear product pages with good photos; trusted payment options including UPI; clear delivery, returns and refund policies; and a plan for search and social marketing.",
+      "## How Abhivorn helps",
+      "We build e-commerce websites with payments, delivery integrations and search-friendly product pages, and can help you plan how your store and marketplace listings work together. Share what you sell and where you sell it today to start."
+    ],
+    "faqs": [
+      {
+        "question": "Should a new seller start on a marketplace or their own website?",
+        "answer": "Many start on marketplaces for ready buyers and add their own website as they build a brand and repeat customers. If you already have an audience, your own site can come first."
+      },
+      {
+        "question": "Is my own website cheaper than a marketplace?",
+        "answer": "You avoid marketplace commissions, but you take on marketing, payment and running costs. Which is cheaper depends on your order volume and how you bring in customers."
+      },
+      {
+        "question": "Can I sell on both at the same time?",
+        "answer": "Yes. Many sellers do. Keep stock in sync across channels so you do not sell items you no longer have."
+      },
+      {
+        "question": "What payment options should my store offer?",
+        "answer": "For Indian customers, offer UPI, cards and net banking through a trusted payment gateway, and consider cash on delivery if it suits your products."
+      }
+    ]
+  },
+  {
     "slug": "google-business-profile-guide-hyderabad",
     "title": "Google Business Profile Guide for Local Businesses",
     "excerpt": "How to set up and keep your Google Business Profile working for you, so nearby customers find you on Google Search and Maps.",
