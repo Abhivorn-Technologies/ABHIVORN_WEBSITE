@@ -22,6 +22,139 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "restaurant-online-ordering-website-app-india",
+    "title": "Restaurant Online Ordering Website and App Guide",
+    "excerpt": "How a restaurant's own ordering website or app works, what features it needs, and when it makes sense next to food delivery platforms.",
+    "description": "A guide for restaurants in Hyderabad and India on building your own online ordering website or app: menus, payments, delivery, loyalty and costs to plan for.",
+    "date": "2026-11-04",
+    "readTime": "6 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=450&fit=crop",
+    "keywords": [
+      "restaurant online ordering website India",
+      "food ordering app development Hyderabad",
+      "restaurant website with online ordering",
+      "own food delivery app for restaurant",
+      "cloud kitchen ordering website"
+    ],
+    "takeaways": [
+      "Your own ordering website or app lets regular customers order from you directly, alongside delivery platforms.",
+      "The essentials are a live menu, simple checkout, online payments, order tracking and a kitchen order screen.",
+      "Direct orders give you the customer's contact details, so you can run offers and loyalty programs yourself.",
+      "Start with a mobile-friendly ordering website; add an app when you have enough repeat customers.",
+      "Plan delivery early: your own riders, a third-party delivery partner, or pickup only."
+    ],
+    "content": [
+      "Most restaurants and cloud kitchens in India take a large share of orders through food delivery platforms. Those platforms bring new customers, but every order carries a commission, and the customer relationship belongs to the platform. Your own ordering website or app gives repeat customers a direct way to order from you.",
+      "## What a restaurant ordering system includes",
+      "A customer opens your website or app, browses the menu, adds items, chooses delivery or pickup, pays online or on delivery, and gets updates as the order is prepared. On your side, the order appears on a kitchen screen or printer, and staff update its status.",
+      "## Features that matter most",
+      "### Live menu",
+      "Categories, photos, prices, add-ons and the ability to mark items out of stock instantly, so customers never order what you cannot make.",
+      "### Fast checkout and payments",
+      "Guest checkout or quick sign-in with a one-time password, saved addresses, and UPI, card and cash-on-delivery options.",
+      "### Order management",
+      "A dashboard or kitchen display that shows new orders, preparation time and delivery status, with alerts so no order is missed.",
+      "### Offers and loyalty",
+      "Coupon codes, first-order discounts and reward points help bring customers back to order directly.",
+      "## Delivery options",
+      "You can deliver with your own riders, connect to a third-party delivery partner for each order, or offer pickup only. Decide this early because it shapes the delivery area, charges and tracking features you need.",
+      "## Website first or app first",
+      "A mobile-friendly ordering website is the quickest start: customers can order from a link on your Google Business Profile, Instagram or a QR code on your packaging. A mobile app makes sense once you have many repeat customers who order often and would use push notifications.",
+      "## Getting customers to order direct",
+      "Put the ordering link on your Google profile, social pages and menus, include a small card or QR code in every delivery bag, and give direct customers a reason to return, such as a loyalty reward.",
+      "## How Abhivorn helps",
+      "We design and build ordering websites and apps for restaurants, cafes and cloud kitchens, with payments, order management and delivery set up to match how you run your kitchen. Share your menu size, locations and delivery plan, and we will suggest the right starting point."
+    ],
+    "faqs": [
+      {
+        "question": "Why build our own ordering website if we are already on delivery apps?",
+        "answer": "Delivery apps bring new customers, while your own website or app lets regular customers order from you directly, so you keep the customer relationship and can run your own offers."
+      },
+      {
+        "question": "Should a restaurant start with a website or an app?",
+        "answer": "Most should start with a mobile-friendly ordering website, which is quicker to launch and easy to share. Add an app when you have enough repeat customers who order often."
+      },
+      {
+        "question": "How do we handle delivery with our own ordering system?",
+        "answer": "You can use your own riders, connect a third-party delivery partner, or offer pickup only. The system can show delivery areas, charges and order status for whichever option you choose."
+      },
+      {
+        "question": "Can customers pay online?",
+        "answer": "Yes. An ordering system can accept UPI, cards and wallets through a payment gateway, and you can also offer cash on delivery."
+      }
+    ]
+  },
+  {
+    "slug": "website-speed-core-web-vitals-guide",
+    "title": "Website Speed and Core Web Vitals: A Business Guide",
+    "excerpt": "Why a slow website costs you customers and search rankings, what Core Web Vitals measure, and the practical fixes that make the biggest difference.",
+    "description": "A plain guide to website speed and Core Web Vitals for Indian businesses: what LCP, INP and CLS mean, how to test your site and the fixes that help most.",
+    "date": "2026-11-04",
+    "readTime": "6 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=450&fit=crop",
+    "keywords": [
+      "website speed optimization India",
+      "Core Web Vitals explained",
+      "slow website fix Hyderabad",
+      "improve website loading speed",
+      "page speed SEO"
+    ],
+    "takeaways": [
+      "Visitors leave slow websites, and Google uses page experience signals, including Core Web Vitals, in its rankings.",
+      "Core Web Vitals measure loading (LCP), responsiveness (INP) and visual stability (CLS).",
+      "Test your site with Google PageSpeed Insights and the Core Web Vitals report in Search Console.",
+      "The biggest wins usually come from smaller images, fewer heavy scripts and good hosting.",
+      "Most visitors in India browse on mobile, so test and fix the mobile version first."
+    ],
+    "content": [
+      "When a page takes too long to load, many visitors simply go back and pick another result. Speed also affects search: Google looks at page experience, including Core Web Vitals, when ranking pages. A faster website keeps more visitors and turns more of them into enquiries.",
+      "## What Core Web Vitals measure",
+      "### Largest Contentful Paint (LCP)",
+      "How long it takes for the main content, usually the big image or heading at the top, to appear. Google's guidance is 2.5 seconds or less.",
+      "### Interaction to Next Paint (INP)",
+      "How quickly the page responds when someone taps a button or opens a menu. Google's guidance is 200 milliseconds or less.",
+      "### Cumulative Layout Shift (CLS)",
+      "How much the page jumps around while loading, for example when an image or banner pushes text down. Google's guidance is a score of 0.1 or less.",
+      "## How to test your website",
+      "Enter your page address in Google PageSpeed Insights to see scores for mobile and desktop, with a list of issues. If your site is connected to Google Search Console, its Core Web Vitals report shows which pages real visitors find slow.",
+      "## Fixes that make the biggest difference",
+      "### Optimise images",
+      "Large photos are the most common cause of slow pages. Resize them to the size they are shown, use modern formats, and load images further down the page only when needed.",
+      "### Cut heavy scripts and plugins",
+      "Every chat widget, tracking tag, slider and plugin adds weight. Remove what you do not use and load the rest after the main content.",
+      "### Reserve space for images and ads",
+      "Setting the size of images, videos and banners in advance stops the page from jumping as it loads.",
+      "### Use good hosting and caching",
+      "Fast servers close to your visitors, caching and a content delivery network reduce waiting time, especially on mobile networks.",
+      "## Mobile first",
+      "Most visitors in India browse on phones, often on mobile data. Always check the mobile scores first and test on a mid-range phone, not just a fast office computer.",
+      "## How Abhivorn helps",
+      "We build fast, mobile-first websites and can review an existing site, explain what is slowing it down and fix it. Send us your website address and we will tell you where the biggest gains are."
+    ],
+    "faqs": [
+      {
+        "question": "Does website speed affect Google rankings?",
+        "answer": "Yes. Google uses page experience signals, including Core Web Vitals, as part of its ranking systems. Relevant, helpful content still matters most, but speed can make the difference between similar pages."
+      },
+      {
+        "question": "What are good Core Web Vitals scores?",
+        "answer": "Google's guidance is LCP of 2.5 seconds or less, INP of 200 milliseconds or less, and CLS of 0.1 or less."
+      },
+      {
+        "question": "How can I check my website's speed?",
+        "answer": "Use Google PageSpeed Insights for any page, and the Core Web Vitals report in Google Search Console for data from real visitors."
+      },
+      {
+        "question": "What usually makes a website slow?",
+        "answer": "The most common causes are large images, too many scripts and plugins, slow hosting, and no caching."
+      }
+    ]
+  },
+  {
     "slug": "inventory-management-software-small-business-india",
     "title": "Inventory Management Software for Small Business",
     "excerpt": "How inventory software helps shops, distributors and small manufacturers track stock, avoid shortages and stop losing money to dead stock.",
