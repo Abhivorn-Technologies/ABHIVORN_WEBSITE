@@ -22,6 +22,132 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "elearning-platform-app-development-india",
+    "title": "E-Learning Platform and App Development Guide",
+    "excerpt": "What an online learning platform needs, from courses and quizzes to subscriptions and an admin panel, and how to plan the build.",
+    "description": "A guide for coaching centres, trainers and edtech startups in Hyderabad and India on building an e-learning website or app: courses, quizzes, payments and admin.",
+    "date": "2026-11-05",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=450&fit=crop",
+    "keywords": [
+      "e-learning app development India",
+      "online learning platform development Hyderabad",
+      "LMS development company India",
+      "coaching institute app development",
+      "online course website with quizzes"
+    ],
+    "takeaways": [
+      "An e-learning platform has three parts: the learner app or website, the content and course setup, and an admin panel to run it all.",
+      "Core features are course and video management, study material, quizzes with results, and learner progress tracking.",
+      "Decide early how you will earn: one-time course fees, subscriptions, or free content with paid upgrades.",
+      "Protect paid content with secure logins, role-based access and controls on video sharing.",
+      "Launch with the features learners use every day, then add leaderboards, live classes and analytics."
+    ],
+    "content": [
+      "Coaching institutes, trainers and education startups across India are moving their courses online so students can learn on their phones at any time. A well-built e-learning platform lets you sell courses, track every learner's progress and grow beyond one classroom.",
+      "## The three parts of an e-learning platform",
+      "Learners use a mobile app or website to watch lessons, read material and take quizzes. Instructors or content teams upload and organise courses. Administrators manage learners, subscriptions, payments and reports from an admin panel.",
+      "## Features learners expect",
+      "### Courses and video lessons",
+      "Courses organised by subject and chapter, with videos that play smoothly on mobile data and remember where the learner stopped.",
+      "### Study material",
+      "Notes, PDFs and reference material attached to each chapter, available inside the app.",
+      "### Quizzes and results",
+      "Practice tests and quizzes with instant scores, answer explanations and a history of attempts, so learners can see where they need more work.",
+      "### Progress and motivation",
+      "A progress view for each course, reminders to keep learning, and optional leaderboards that reward regular practice.",
+      "## What the admin panel needs",
+      "A dashboard showing active and inactive learners, subscriptions and course activity; tools to add subjects, courses, videos, material and questions; learner management; and announcements or notifications to reach everyone at once.",
+      "## Choosing how you earn",
+      "Some platforms charge per course, some sell monthly or yearly subscriptions, and some offer free lessons with a paid plan for full access. The model you choose decides how payments, access periods and renewals work, so settle it before design starts.",
+      "## Protecting paid content",
+      "Use secure sign-in, role-based access so learners only see what they paid for, session limits to discourage shared accounts, and controls that make it harder to download or share videos.",
+      "## Plan the build in phases",
+      "Start with sign-in, courses, videos, material, quizzes and payments. Once learners are using it, add leaderboards, detailed analytics, live classes and more ways to engage.",
+      "## How Abhivorn helps",
+      "We design and build e-learning apps, websites and admin panels for institutes and education businesses, planned around how you teach and how you want to earn. Share your subjects, audience and course format, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Do we need both an app and a website for online courses?",
+        "answer": "Many learners in India study on their phones, so a mobile app is often the main channel. A website helps with sign-ups, course pages and search visibility. Many platforms start with one and add the other."
+      },
+      {
+        "question": "Can learners take quizzes and see their results?",
+        "answer": "Yes. Quizzes can show instant scores, explanations and a history of attempts, and admins can see results across all learners."
+      },
+      {
+        "question": "How do we stop people from sharing paid courses?",
+        "answer": "Secure logins, role-based access, limits on active sessions and video protection make sharing much harder. No method is perfect, but these steps protect most paid content."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Sign-in, courses, video lessons, study material, quizzes and payments. Leaderboards, detailed analytics and live classes can follow once learners are active."
+      }
+    ]
+  },
+  {
+    "slug": "facebook-instagram-lead-ads-local-business",
+    "title": "Facebook and Instagram Lead Ads for Local Business",
+    "excerpt": "How lead ads on Facebook and Instagram work, how to set up the form, and how to follow up quickly so enquiries turn into customers.",
+    "description": "A practical guide for Hyderabad and Indian businesses on Facebook and Instagram lead ads: targeting, form questions, lead quality and fast follow-up.",
+    "date": "2026-11-05",
+    "readTime": "6 min read",
+    "category": "Digital Marketing",
+    "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&h=450&fit=crop",
+    "keywords": [
+      "Facebook lead ads for local business",
+      "Instagram lead generation Hyderabad",
+      "Meta lead form ads India",
+      "how to get leads from Facebook ads",
+      "lead ads follow up tips"
+    ],
+    "takeaways": [
+      "Lead ads show a short form inside Facebook or Instagram, so people can enquire without leaving the app.",
+      "Ask a few qualifying questions, such as budget or timeline, to separate serious enquiries from casual ones.",
+      "Target the area you actually serve and write the ad for one clear offer.",
+      "Send every new lead to a sheet or CRM automatically and call back as quickly as you can.",
+      "Judge results by qualified leads and customers won, not by the number of form fills."
+    ],
+    "content": [
+      "Lead ads are one of the simplest ways for a local business to collect enquiries online. Someone sees your ad on Facebook or Instagram, taps a button, and a short form opens with their name and contact details already filled in. They submit it in seconds, and you get a lead to follow up.",
+      "## When lead ads work well",
+      "They suit businesses where a conversation comes before a sale: services, clinics, labs, real estate, education, software and home services. If people usually call or message before they buy from you, lead ads can bring those enquiries in.",
+      "## Setting up the form",
+      "Keep the form short. Name, phone and email are filled in automatically, so add only two or three questions that help you qualify the lead, such as what they need, their budget range and when they want to start. A higher-intent form, which asks people to review their details before submitting, can reduce casual sign-ups.",
+      "## Targeting and the ad itself",
+      "Show the ad in the area you can actually serve, choose an audience that matches your customers, and build the ad around one clear offer, such as a free consultation or trial. Use a simple image or short video that shows what you do, and say plainly what happens after someone submits the form.",
+      "## Follow up fast",
+      "Leads go cold quickly. Connect your lead form to a Google Sheet or CRM so every enquiry is saved automatically, set up an instant alert to your phone, and call or message each lead as soon as possible. A quick, helpful first call is often what turns a form fill into a customer.",
+      "## Measuring what matters",
+      "The cost per lead tells only part of the story. Track how many leads were genuine, how many became meetings or trials, and how many became paying customers. Use that to adjust your targeting, questions and offer.",
+      "## Common mistakes",
+      "Asking too many questions, targeting too wide an area, running the same ad for too long, and leaving leads untouched for days are the most common reasons lead ads disappoint.",
+      "## How Abhivorn helps",
+      "We plan and run lead campaigns, set up forms that qualify enquiries, and connect leads to sheets, CRMs and instant alerts so your team can follow up quickly. Tell us your service area and ideal customer, and we will suggest a campaign to start with."
+    ],
+    "faqs": [
+      {
+        "question": "Do we need a website to run lead ads?",
+        "answer": "No. The form opens inside Facebook or Instagram, so a website is not required, though linking to one helps people learn more about you."
+      },
+      {
+        "question": "Why are some lead ad enquiries low quality?",
+        "answer": "Because the form is quick to submit, some people sign up casually. Qualifying questions, a higher-intent form and clear ad wording help improve lead quality."
+      },
+      {
+        "question": "How do we get leads into a sheet or CRM?",
+        "answer": "Lead forms can be connected to Google Sheets or a CRM through integrations, so each new lead is saved automatically and your team can be alerted at once."
+      },
+      {
+        "question": "How quickly should we contact a new lead?",
+        "answer": "As soon as possible. People enquire with several businesses, and the one that responds first with a helpful answer often wins the customer."
+      }
+    ]
+  },
+  {
     "slug": "restaurant-online-ordering-website-app-india",
     "title": "Restaurant Online Ordering Website and App Guide",
     "excerpt": "How a restaurant's own ordering website or app works, what features it needs, and when it makes sense next to food delivery platforms.",
