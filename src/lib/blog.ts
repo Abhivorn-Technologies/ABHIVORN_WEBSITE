@@ -22,6 +22,129 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "job-portal-website-app-development-india",
+    "title": "Job Portal Website and App Development Guide",
+    "excerpt": "What a job portal needs for job seekers, employers and admins, where AI can help, and how to plan the first version.",
+    "description": "A guide for founders and staffing firms in Hyderabad and India on building a job portal website or app: seeker and employer flows, AI matching and admin.",
+    "date": "2026-11-06",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=450&fit=crop",
+    "keywords": [
+      "job portal development India",
+      "job portal app development Hyderabad",
+      "recruitment platform development company",
+      "AI job matching platform",
+      "build a job board website"
+    ],
+    "takeaways": [
+      "A job portal serves three groups: job seekers, employers or HR teams, and the admins who run the platform.",
+      "Map the full journey for each group, from sign-up to hire, before deciding on screens and features.",
+      "AI can help seekers find better-matched jobs and help HR screen and shortlist applications faster.",
+      "Employer verification and moderation keep fake jobs and spam off the platform.",
+      "Launch with the core hiring flow first, then add premium plans, analytics and community features."
+    ],
+    "content": [
+      "A job portal connects people looking for work with companies that are hiring. Whether you are a staffing firm, a niche recruitment business or a startup building a hiring platform, the product works only when both sides find it easy to use.",
+      "## The three users of a job portal",
+      "Job seekers create profiles, search for jobs and apply. Employers and HR teams post jobs, review applicants and hire. Admins verify companies, moderate content, manage plans and watch how the platform is used.",
+      "## The job seeker journey",
+      "A seeker signs up, builds a profile with education, skills and experience, and uploads or creates a resume. They search and filter jobs, save the ones they like, apply, and then track each application as it moves from applied to shortlisted, interview and offer. Notifications keep them informed at every step.",
+      "## The employer and HR journey",
+      "An employer registers the company and gets verified, then posts jobs with the role, skills, experience, salary range and location. Applications arrive in one place, where HR can screen, shortlist, schedule interviews, record feedback and make an offer. When the role is filled, the job is closed and the hiring data stays available for reports.",
+      "## Where AI helps",
+      "### For job seekers",
+      "AI can suggest jobs that match a seeker's profile, score a resume and suggest improvements, point out skills that are missing for roles they want, and offer interview practice.",
+      "### For HR teams",
+      "AI can draft job descriptions from a few inputs, screen and rank resumes against the job, summarise each candidate, and suggest interview questions for the role. HR still makes the final decision, but spends far less time on the first pass.",
+      "## Trust and quality",
+      "Verify employers before their jobs go live, let users report suspicious posts, and give admins tools to review and remove them. Protect seeker data with secure sign-in and clear control over who can see their resume and contact details.",
+      "## Plan the build in phases",
+      "Start with sign-up, profiles, job posting, search, applications and status tracking, plus an admin panel. Once people are using it, add AI matching, paid plans for employers, analytics and community features.",
+      "## How Abhivorn helps",
+      "We design and build job portals, recruitment apps and admin panels, including AI features for matching and screening. Share who your seekers and employers are and how you plan to earn, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Should a job portal start as a website or an app?",
+        "answer": "Many job seekers in India search on their phones, so a mobile app or a mobile-friendly site is essential. Employers often prefer a desktop dashboard. Many portals launch a responsive website first and add apps once usage grows."
+      },
+      {
+        "question": "How does AI job matching work?",
+        "answer": "It compares a seeker's skills, experience and preferences with each job's requirements and ranks the closest matches. The same idea helps HR rank applicants for a role."
+      },
+      {
+        "question": "How do we stop fake job posts?",
+        "answer": "Verify employers before they can post, review new posts, let users report suspicious jobs, and give admins tools to remove them quickly."
+      },
+      {
+        "question": "How can a job portal make money?",
+        "answer": "Common models are paid job posts, subscription plans for employers, paid resume database access and premium features for seekers. Choose the model before design starts, as it shapes the plans and payment flow."
+      }
+    ]
+  },
+  {
+    "slug": "hyperlocal-delivery-app-development-india",
+    "title": "Hyperlocal Delivery App Development Guide",
+    "excerpt": "How hyperlocal delivery apps work, the customer, store, delivery and admin apps you need, and how to launch in one area first.",
+    "description": "A guide for retailers and startups in Hyderabad and India on building a hyperlocal delivery app: customer, store and delivery apps, orders, payments and admin.",
+    "date": "2026-11-06",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&h=450&fit=crop",
+    "keywords": [
+      "hyperlocal delivery app development India",
+      "grocery delivery app development Hyderabad",
+      "multi-vendor delivery app",
+      "local store delivery app",
+      "on-demand delivery app development company"
+    ],
+    "takeaways": [
+      "A hyperlocal platform usually needs four parts: a customer app, a store or vendor app, a delivery partner app and an admin panel.",
+      "Delivery zones, store timings and live order tracking are what make hyperlocal different from regular e-commerce.",
+      "Decide early whether you run a single store, a chain or a multi-vendor marketplace.",
+      "Plan payments, cash on delivery and payouts to stores and delivery partners from the start.",
+      "Launch in one area, fix the operations, then expand zone by zone."
+    ],
+    "content": [
+      "Hyperlocal delivery apps let customers order from stores near them and get the order within hours, or even minutes. Groceries, medicines, food, flowers and daily needs are common categories, and local businesses across India are building their own apps to serve nearby customers directly.",
+      "## The four parts of a hyperlocal platform",
+      "The customer app is where people browse, order, pay and track deliveries. The store app lets each shop manage products, stock and incoming orders. The delivery partner app shows assigned orders, pickup and drop locations and earnings. The admin panel ties it all together with zones, stores, partners, payments and reports.",
+      "## Features customers expect",
+      "Location-based store and product listing, search and categories, a simple cart and checkout, multiple payment options including cash on delivery, live order tracking, order history and quick reorder, and notifications at each stage.",
+      "## What stores and delivery partners need",
+      "Stores need to accept or reject orders, mark items out of stock, update prices and set opening hours. Delivery partners need clear order assignment, navigation to pickup and drop points, proof of delivery and a view of their earnings.",
+      "## Zones, timings and delivery charges",
+      "Define the areas you serve, the delivery time you promise in each, and how delivery charges and minimum order values work. These rules decide what each customer sees, so get them right before launch.",
+      "## Single store or marketplace",
+      "A single store or chain controls its own catalogue and stock. A multi-vendor marketplace onboards many stores, takes a commission and handles payouts. The second is more complex, so be clear which one you are building.",
+      "## Launch small, then grow",
+      "Start in one area with a few stores and a small delivery team. Watch order times, cancellations and customer feedback, fix the operations, then expand to the next zone.",
+      "## How Abhivorn helps",
+      "We build hyperlocal and multi-vendor delivery platforms, including customer, store and delivery apps and the admin panel. Tell us your category, your launch area and whether you run one store or many, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "How many apps does a hyperlocal delivery platform need?",
+        "answer": "Usually a customer app, a store or vendor app, a delivery partner app and a web admin panel. Small single-store setups sometimes manage orders and deliveries from the admin panel instead of separate apps."
+      },
+      {
+        "question": "Can customers pay cash on delivery?",
+        "answer": "Yes. Most hyperlocal apps in India offer online payment and cash on delivery, with the delivery partner app recording cash collected."
+      },
+      {
+        "question": "How is live order tracking done?",
+        "answer": "The delivery partner app shares its location while an order is out for delivery, and the customer app shows it on a map with order status updates."
+      },
+      {
+        "question": "Should we build a multi-vendor marketplace from day one?",
+        "answer": "Only if your business model depends on it. Many businesses start with one store or a small group, prove the operations, then add more vendors."
+      }
+    ]
+  },
+  {
     "slug": "elearning-platform-app-development-india",
     "title": "E-Learning Platform and App Development Guide",
     "excerpt": "What an online learning platform needs, from courses and quizzes to subscriptions and an admin panel, and how to plan the build.",
