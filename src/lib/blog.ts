@@ -22,6 +22,131 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "astrology-app-development-india-guide",
+    "title": "Astrology App Development Guide for India",
+    "excerpt": "What an astrology app needs, from birth charts and daily horoscopes to astrologer consultations, payments and an admin panel.",
+    "description": "A guide for astrologers and startups in Hyderabad and India on building an astrology app: kundli, horoscopes, live consultations, wallet payments and admin.",
+    "date": "2026-11-07",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "https://images.unsplash.com/photo-1532968961962-8a0cb3a2d4f5?w=800&h=450&fit=crop",
+    "keywords": [
+      "astrology app development India",
+      "astrology app development company Hyderabad",
+      "kundli app development",
+      "astrologer consultation app",
+      "horoscope app with chat and call"
+    ],
+    "takeaways": [
+      "An astrology app usually has three sides: the user app, the astrologer app or panel, and an admin panel.",
+      "Core features are birth chart or kundli generation, daily horoscopes, matchmaking and paid consultations.",
+      "Most consultation apps charge per minute through a prepaid wallet, so plan the wallet and payouts early.",
+      "Support the languages your users speak, and keep birth details and chats private.",
+      "Launch with charts, horoscopes and consultations, then add reports, remedies and a store."
+    ],
+    "content": [
+      "Astrology apps are popular across India because people want quick answers about career, marriage, health and finance from their phone. An app lets astrologers reach users across the country and lets businesses offer consultations, reports and products in one place.",
+      "## The three sides of an astrology app",
+      "Users sign up, enter their birth details, read horoscopes and book consultations. Astrologers set their availability and rates, answer chats and calls, and track earnings. Admins approve astrologers, manage content, payments, payouts and support.",
+      "## Features users expect",
+      "### Birth chart and kundli",
+      "Users enter date, time and place of birth to get a birth chart with planetary positions and a readable summary.",
+      "### Horoscopes and panchang",
+      "Daily, weekly and yearly horoscopes by sign, plus daily panchang and auspicious timings, give users a reason to open the app every day.",
+      "### Matchmaking",
+      "Kundli matching for marriage, with a clear score and explanation, is one of the most used features in India.",
+      "### Consultations",
+      "Chat, voice call or video call with an astrologer, with a list of astrologers showing language, experience, rating and rate per minute.",
+      "## Wallet and payments",
+      "Most consultation apps use a prepaid wallet. Users add money, the session is charged per minute from the wallet, and the astrologer's share is paid out on a schedule. Add first-session offers, refunds for dropped sessions and clear transaction history.",
+      "## Languages and privacy",
+      "Offer the app and astrologers in the languages your users speak. Treat birth details and chat history as private data, with secure sign-in and limited access for staff.",
+      "## Plan the build in phases",
+      "Start with sign-up, birth chart, horoscopes, astrologer listing, chat and call consultations, the wallet and an admin panel. Then add paid reports, remedies, a product store for gemstones and puja items, and live sessions.",
+      "## How Abhivorn helps",
+      "We design and build astrology apps, astrologer panels and admin dashboards, including wallets and consultation flows. Share your audience, languages and how you plan to earn, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can an astrology app generate kundli automatically?",
+        "answer": "Yes. With the user's date, time and place of birth, the app can calculate planetary positions and show a birth chart and summary."
+      },
+      {
+        "question": "How do astrology apps charge for consultations?",
+        "answer": "Most use a prepaid wallet with a per-minute rate for chat or calls. The app deducts the amount during the session and pays the astrologer their share."
+      },
+      {
+        "question": "Do we need a separate app for astrologers?",
+        "answer": "Astrologers need their own app or panel to go online, accept sessions, chat or call users and see earnings. It can be a separate app or a role inside the same app."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Sign-up, birth chart, horoscopes, astrologer listing, chat and call consultations, the wallet and an admin panel. Reports, remedies and a store can follow."
+      }
+    ]
+  },
+  {
+    "slug": "domain-dns-setup-business-website-guide",
+    "title": "Domain and DNS Setup for a Business Website",
+    "excerpt": "A plain guide to connecting your domain to your website, setting up business email records and avoiding common DNS mistakes.",
+    "description": "A simple guide for Hyderabad and Indian businesses on domains and DNS: pointing a domain to a website, SSL, business email records and avoiding downtime.",
+    "date": "2026-11-07",
+    "readTime": "5 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=450&fit=crop",
+    "keywords": [
+      "domain and DNS setup for website",
+      "connect domain to website India",
+      "DNS records explained for business",
+      "business email DNS setup",
+      "website domain setup Hyderabad"
+    ],
+    "takeaways": [
+      "Your domain is your address; DNS records tell the internet where your website and email live.",
+      "A and CNAME records point the domain to your website; MX records route your email.",
+      "SPF, DKIM and DMARC records help your emails, including website form emails, reach the inbox.",
+      "Register the domain in the business's own account and keep the login safe.",
+      "Plan DNS changes carefully, as changes can take time to spread and mistakes can take the site or email offline."
+    ],
+    "content": [
+      "When a business launches or moves a website, one of the last steps is connecting the domain. It sounds technical, but the basics are simple, and getting them right avoids a site that does not open or emails that never arrive.",
+      "## Domain and DNS in plain words",
+      "The domain is the name people type, such as yourbusiness.com. DNS is the set of records that tells browsers and email servers where to go for that name. You buy the domain from a registrar, and the DNS records are managed either at the registrar or at a DNS provider.",
+      "## Pointing the domain to your website",
+      "Your hosting provider will give you the records to add. Usually an A record points the main domain to a server address, and a CNAME record points the www version to the host. Add both so the site opens with and without www, and redirect one to the other.",
+      "## SSL for a secure site",
+      "Once the domain points to the website, set up an SSL certificate so the site opens with https and shows the secure padlock. Most hosts can issue and renew one automatically after the DNS is correct.",
+      "## Business email records",
+      "MX records tell the internet where your email is hosted. SPF, DKIM and DMARC records prove that emails sent from your domain are genuine. Without them, emails from your website's contact form or your team can land in spam or not arrive at all.",
+      "## Common mistakes",
+      "Deleting existing email records while changing website records, leaving the old host's records in place, registering the domain in a freelancer's personal account, and letting the domain expire are the most common causes of downtime.",
+      "## Plan the change",
+      "Note down the current records before changing anything, make changes at a quiet time, and check the site and email afterwards. DNS changes can take a few minutes to several hours to reach everyone.",
+      "## How Abhivorn helps",
+      "We set up domains, DNS, SSL and email records as part of website launches and moves, and fix issues like form emails not arriving. Share your domain and where your site and email are hosted, and we will help you get it right."
+    ],
+    "faqs": [
+      {
+        "question": "How long do DNS changes take to work?",
+        "answer": "Often a few minutes, but some changes can take several hours to reach everyone, depending on the record settings and internet providers."
+      },
+      {
+        "question": "Why are emails from my website contact form not arriving?",
+        "answer": "Common causes are missing SPF or DKIM records, a wrong recipient address, or an email service setting that has changed. Checking the DNS records and the form's email settings usually finds the problem."
+      },
+      {
+        "question": "Should I use www or the plain domain?",
+        "answer": "Either works. Pick one as the main address and redirect the other to it, so search engines and visitors always land on the same version."
+      },
+      {
+        "question": "Who should own the domain account?",
+        "answer": "The business itself. Register the domain in the company's own account, keep the login secure and turn on auto-renew so it never expires by accident."
+      }
+    ]
+  },
+  {
     "slug": "job-portal-website-app-development-india",
     "title": "Job Portal Website and App Development Guide",
     "excerpt": "What a job portal needs for job seekers, employers and admins, where AI can help, and how to plan the first version.",
