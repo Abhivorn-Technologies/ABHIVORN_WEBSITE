@@ -22,6 +22,133 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "school-management-software-india-guide",
+    "title": "School Management Software Guide for India",
+    "excerpt": "What school management software should cover, from admissions and fees to attendance, exams and parent communication, and how to plan it.",
+    "description": "A guide for schools and education groups in Hyderabad and India on school management software: admissions, fees, attendance, exams, parent app and admin.",
+    "date": "2026-11-08",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=450&fit=crop",
+    "keywords": [
+      "school management software India",
+      "school ERP development Hyderabad",
+      "school fee management software",
+      "student attendance app for schools",
+      "parent app for schools"
+    ],
+    "takeaways": [
+      "School software serves four groups: management and office staff, teachers, parents and students.",
+      "Admissions, fees, attendance, timetables, exams and report cards are the core modules.",
+      "A parent app for notices, attendance, fees and results cuts calls and paperwork for the office.",
+      "Role-based access keeps student and fee data visible only to the right staff.",
+      "Start with the modules that cause the most daily work, then add transport, library and more."
+    ],
+    "content": [
+      "Most schools still run admissions, fees and attendance on registers, spreadsheets and phone calls. School management software brings this work into one system, so staff spend less time on paperwork and parents get answers without calling the office.",
+      "## Who uses the system",
+      "Management and office staff handle admissions, fees, staff records and reports. Teachers mark attendance, enter marks and share homework. Parents check attendance, fees, notices and results. Older students can see timetables, homework and their own results.",
+      "## Core modules",
+      "### Admissions and student records",
+      "Capture enquiries and applications, track each one to admission, and keep a single record per student with class, section, documents and contact details.",
+      "### Fees",
+      "Set fee structures by class, record payments, send reminders, issue receipts and see pending dues at a glance. Online fee payment makes collection easier for parents and the accounts team.",
+      "### Attendance and timetable",
+      "Teachers mark attendance from a phone or tablet, and parents are notified when a child is absent. Timetables for classes and teachers live in the same place.",
+      "### Exams and report cards",
+      "Define exams and grading, let teachers enter marks, and generate report cards in the school's format without retyping.",
+      "## Parent communication",
+      "A parent app or portal brings notices, circulars, homework, attendance, fee dues and results together. Parents get updates on time, and the office handles fewer calls and visits.",
+      "## Data and access",
+      "Student, parent and fee data is sensitive. Give each role access only to what it needs, keep a record of changes, and back up data regularly.",
+      "## Plan the build in phases",
+      "Start with the modules that take the most staff time today, usually admissions, fees and attendance, plus the parent app. Then add exams, transport, library, hostel and payroll as needed.",
+      "## How Abhivorn helps",
+      "We build school and institute management software, parent apps and admin dashboards to fit how each school works. Share your current process and the problems you want to solve first, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Should a school buy ready-made software or build its own?",
+        "answer": "Ready-made software suits schools that can follow its process. Custom software suits schools or groups with their own fee rules, report formats or multiple branches that off-the-shelf products do not handle well."
+      },
+      {
+        "question": "Can parents pay school fees online through the app?",
+        "answer": "Yes. A payment gateway can be connected so parents pay from the app or portal, and the payment is recorded against the student automatically."
+      },
+      {
+        "question": "Can one system manage multiple school branches?",
+        "answer": "Yes. The software can keep each branch's data separate while giving management a combined view of admissions, fees and attendance."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Usually admissions, student records, fees, attendance and a parent app. Exams, transport, library and other modules can follow."
+      }
+    ]
+  },
+  {
+    "slug": "landing-page-google-ads-leads-guide",
+    "title": "Landing Pages That Turn Ad Clicks into Leads",
+    "excerpt": "How to build a landing page for Google and Meta ads that matches the ad, loads fast, and turns more clicks into enquiries.",
+    "description": "A guide for Hyderabad and Indian businesses on ad landing pages: matching the ad, one clear offer, short forms, fast loading and conversion tracking.",
+    "date": "2026-11-08",
+    "readTime": "5 min read",
+    "category": "Digital Marketing",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&h=450&fit=crop",
+    "keywords": [
+      "landing page for Google Ads",
+      "landing page design Hyderabad",
+      "lead generation landing page India",
+      "improve ad conversion rate",
+      "landing page vs homepage for ads"
+    ],
+    "takeaways": [
+      "Send ad traffic to a page built for that ad, not to your homepage.",
+      "The headline should repeat what the ad promised, so visitors know they are in the right place.",
+      "Keep one offer and one action per page, with a short form.",
+      "Fast loading on mobile matters, because most ad clicks come from phones.",
+      "Track form submissions as conversions so the ad platform can learn which clicks bring leads."
+    ],
+    "content": [
+      "Many businesses pay for ad clicks and then send people to their homepage, where they have to find what they came for. A landing page is a single page built for one ad or campaign, with one goal: getting the visitor to enquire.",
+      "## Why not the homepage",
+      "A homepage speaks to everyone and links everywhere. A visitor from an ad has one question in mind. A focused page answers that question and asks for one action, so fewer people leave without enquiring.",
+      "## Match the ad",
+      "If the ad says website development for clinics, the page headline should say the same. Use the same words, offer and tone, so the visitor knows they clicked the right link.",
+      "## One offer, one action",
+      "State what you offer, who it is for and what happens next. Remove the main menu and unrelated links. Use one clear button, such as Get a free quote, repeated down the page.",
+      "## Keep the form short",
+      "Ask only for what you need to follow up, usually name, phone or email, and one or two questions about the requirement. Every extra field means fewer enquiries.",
+      "## Build trust on the page",
+      "Show real work, a short explanation of how you work, and answers to common questions. Use only genuine examples and reviews.",
+      "## Fast on mobile",
+      "Most ad clicks come from phones. Compress images, keep the page light and test it on a normal mobile connection. A slow page wastes the click you paid for.",
+      "## Track conversions",
+      "Set up conversion tracking so each form submission is reported to Google Ads or Meta. This shows which ads and keywords bring leads and lets the platform optimise for them.",
+      "## How Abhivorn helps",
+      "We design and build landing pages for ad campaigns, including lead forms and conversion tracking. Share your ad, your offer and who you want to reach, and we will suggest a page that fits."
+    ],
+    "faqs": [
+      {
+        "question": "Do I need a separate landing page for each ad?",
+        "answer": "Not for every ad, but each service or offer you advertise should have its own page, so the headline and content match what the visitor clicked."
+      },
+      {
+        "question": "Should a landing page have the website menu?",
+        "answer": "Usually not. Removing the menu and other links keeps visitors focused on the one action you want them to take."
+      },
+      {
+        "question": "How many form fields should a lead form have?",
+        "answer": "As few as you need to follow up. Name, a contact detail and one or two questions about the requirement are enough for most businesses."
+      },
+      {
+        "question": "How do I know if my landing page is working?",
+        "answer": "Track form submissions as conversions in your ad platform and analytics, then compare the conversion rate across pages, ads and keywords."
+      }
+    ]
+  },
+  {
     "slug": "astrology-app-development-india-guide",
     "title": "Astrology App Development Guide for India",
     "excerpt": "What an astrology app needs, from birth charts and daily horoscopes to astrologer consultations, payments and an admin panel.",
