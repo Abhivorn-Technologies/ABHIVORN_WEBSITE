@@ -22,6 +22,136 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "telemedicine-app-development-india-guide",
+    "title": "Telemedicine App Development Guide for India",
+    "excerpt": "What a telemedicine app needs, from video consultations and e-prescriptions to payments, records and a doctor panel.",
+    "description": "A guide for clinics, hospitals and health startups in Hyderabad and India on building a telemedicine app: video consults, prescriptions, payments and records.",
+    "date": "2026-11-09",
+    "readTime": "6 min read",
+    "category": "Healthcare",
+    "service": "healthcare-software-development",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=450&fit=crop",
+    "keywords": [
+      "telemedicine app development India",
+      "online doctor consultation app Hyderabad",
+      "video consultation app for clinics",
+      "e-prescription software India",
+      "telehealth platform development"
+    ],
+    "takeaways": [
+      "A telemedicine platform usually has a patient app, a doctor app or panel, and an admin panel.",
+      "Core features are doctor search, booking, video or audio consultation, e-prescriptions and payments.",
+      "Follow India's Telemedicine Practice Guidelines and keep patient data private and secure.",
+      "Connect consultations to records, lab tests and pharmacy orders so care continues after the call.",
+      "Start with booking, consults, prescriptions and payments, then add follow-ups and integrations."
+    ],
+    "content": [
+      "Telemedicine lets patients consult a doctor from home by video, audio or chat. For clinics and hospitals it reduces waiting room crowds and reaches patients in other towns. For health startups it can be a full online care service.",
+      "## The three sides of a telemedicine platform",
+      "Patients sign up, find a doctor, book a slot, pay and join the consultation. Doctors set their availability, see the day's appointments, consult, write prescriptions and review patient history. Admins manage doctors, specialities, fees, payments, refunds and reports.",
+      "## Core features",
+      "### Doctor search and booking",
+      "Patients search by speciality, language, fee and availability, then book an open slot. Reminders before the appointment reduce no-shows.",
+      "### Video, audio and chat consultations",
+      "A stable call that works on mobile data is the heart of the app. Chat and file sharing let patients send reports and photos before or during the consult.",
+      "### E-prescriptions",
+      "Doctors write a prescription in the app, and the patient receives it as a clear digital document they can show at any pharmacy or keep for records.",
+      "### Payments and refunds",
+      "Patients pay online when booking. Plan clear rules for cancellations, doctor no-shows and refunds from the start.",
+      "## Rules and privacy",
+      "Doctors in India must follow the Telemedicine Practice Guidelines, including patient identification, consent and record keeping. Health data is sensitive, so use secure sign-in, encrypted storage and strict access for staff.",
+      "## Continuity of care",
+      "The best platforms connect the consultation to what comes next: patient history, lab test booking, pharmacy orders and follow-up appointments. This keeps patients with you instead of starting again elsewhere.",
+      "## Plan the build in phases",
+      "Start with doctor listing, booking, video consults, prescriptions, payments and an admin panel. Then add follow-ups, health records, lab and pharmacy integrations and subscription plans.",
+      "## How Abhivorn helps",
+      "We build healthcare software, including telemedicine apps, doctor panels and admin dashboards, and we also build VORQARD for labs and pharmacies. Share how your clinic or service works today, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Is telemedicine allowed in India?",
+        "answer": "Yes. Registered medical practitioners can consult online under the Telemedicine Practice Guidelines, which cover consent, patient identification, prescriptions and record keeping."
+      },
+      {
+        "question": "Do we need separate apps for patients and doctors?",
+        "answer": "Usually yes, or at least separate roles. Patients need a simple booking and consult app, while doctors need a panel for schedules, consults, prescriptions and history."
+      },
+      {
+        "question": "Can a clinic use telemedicine alongside in-person visits?",
+        "answer": "Yes. Many clinics offer both, with one booking system for in-clinic and online slots and one record for each patient."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Doctor listing, booking, video or audio consultation, e-prescriptions, online payment and an admin panel. Records, lab and pharmacy features can follow."
+      }
+    ]
+  },
+  {
+    "slug": "fleet-transport-management-software-india",
+    "title": "Fleet and Transport Management Software Guide",
+    "excerpt": "How fleet and transport management software helps Indian businesses track vehicles, trips, drivers, fuel and costs in one place.",
+    "description": "A guide for transport and logistics businesses in Hyderabad and India on fleet management software: trips, GPS tracking, drivers, fuel, maintenance and billing.",
+    "date": "2026-11-09",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&h=450&fit=crop",
+    "keywords": [
+      "fleet management software India",
+      "transport management software Hyderabad",
+      "logistics software development company",
+      "vehicle tracking and trip management",
+      "driver app for transport business"
+    ],
+    "takeaways": [
+      "Fleet software brings vehicles, trips, drivers, fuel, maintenance and billing into one system.",
+      "A driver app makes trip updates, proof of delivery and expenses accurate and on time.",
+      "GPS tracking shows where each vehicle is and helps answer customer questions quickly.",
+      "Maintenance reminders and document expiry alerts prevent breakdowns and penalties.",
+      "Start with trips, drivers and vehicles, then add tracking, fuel analysis and customer portals."
+    ],
+    "content": [
+      "Many transport and logistics businesses in India still manage trips on phone calls, registers and spreadsheets. As the fleet grows, it becomes hard to know where each vehicle is, what each trip earned and where money is leaking. Fleet management software fixes this by putting every vehicle and trip in one place.",
+      "## Who uses the system",
+      "Owners and managers see the full fleet, trips, costs and profit. Dispatchers plan and assign trips. Drivers use an app to update trip status and log expenses. Accounts staff handle billing, advances and payments.",
+      "## Core features",
+      "### Trip planning and dispatch",
+      "Create trips with pickup, drop, load and customer details, assign a vehicle and driver, and track each trip from start to delivery.",
+      "### Vehicle tracking",
+      "GPS tracking shows live location and route history, so you can answer customers quickly and spot delays or unplanned stops.",
+      "### Driver app",
+      "Drivers see assigned trips, update status, upload proof of delivery and record expenses like tolls and fuel, with photos of bills.",
+      "### Fuel and expenses",
+      "Record fuel and trip expenses against each vehicle and trip, and compare them with distance travelled to spot unusual costs.",
+      "### Maintenance and documents",
+      "Schedule servicing, record repairs and get alerts before insurance, permits, fitness certificates and pollution certificates expire.",
+      "### Billing",
+      "Generate invoices per trip or per customer, track payments due and see profit for each trip, vehicle and customer.",
+      "## Plan the build in phases",
+      "Start with vehicles, drivers, trips, the driver app and billing. Then add GPS tracking, fuel analysis, maintenance planning and a customer portal for shipment tracking.",
+      "## How Abhivorn helps",
+      "We build custom software for transport and logistics businesses, including trip management, driver apps and reporting dashboards. Share how you run trips today and where you lose time or money, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Does fleet management software need GPS devices?",
+        "answer": "Not always. Basic tracking can come from the driver's phone during a trip, while dedicated GPS devices give continuous tracking even when the driver app is closed."
+      },
+      {
+        "question": "Can the software work for owned and hired vehicles?",
+        "answer": "Yes. It can record trips on both owned and market vehicles, with separate costs and payments for hired trucks."
+      },
+      {
+        "question": "Can drivers use the app if they are not comfortable with English?",
+        "answer": "The driver app can be built in local languages with simple screens, large buttons and photo uploads to keep it easy to use."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Vehicles, drivers, trip creation and tracking, a driver app for status and expenses, and trip billing. Tracking devices, fuel analysis and customer portals can follow."
+      }
+    ]
+  },
+  {
     "slug": "school-management-software-india-guide",
     "title": "School Management Software Guide for India",
     "excerpt": "What school management software should cover, from admissions and fees to attendance, exams and parent communication, and how to plan it.",
