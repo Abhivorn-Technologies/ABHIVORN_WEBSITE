@@ -22,6 +22,134 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "gym-fitness-app-development-india-guide",
+    "title": "Gym and Fitness App Development Guide for India",
+    "excerpt": "What a gym or fitness studio app needs, from memberships and renewals to class booking, attendance, trainers and payments.",
+    "description": "A guide for gyms, fitness studios and trainers in Hyderabad and India on building a fitness app: memberships, class booking, attendance and payments.",
+    "date": "2026-11-10",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=450&fit=crop",
+    "keywords": [
+      "gym app development India",
+      "fitness app development Hyderabad",
+      "gym management software",
+      "fitness studio class booking app",
+      "gym membership management app"
+    ],
+    "takeaways": [
+      "A gym app usually has a member app, a trainer view and an admin panel for the owner and front desk.",
+      "Memberships, renewals, attendance and payments are the core features that save daily work.",
+      "Class and slot booking helps studios manage batch sizes and reduce crowding.",
+      "Renewal reminders and follow-ups for expiring members protect recurring income.",
+      "Start with memberships, payments, attendance and booking, then add workout plans and diet tracking."
+    ],
+    "content": [
+      "Many gyms and fitness studios still track memberships in registers and spreadsheets and chase renewals by phone. A gym app puts members, payments, attendance and classes in one place, so the owner knows who is active, who is due and how the business is doing.",
+      "## Who uses the app",
+      "Members buy or renew plans, book classes, check in and see their progress. Trainers see their assigned members and sessions and share workout plans. Owners and front desk staff manage plans, payments, staff, attendance and reports.",
+      "## Core features",
+      "### Memberships and renewals",
+      "Set up plans by duration, branch and access, such as monthly, quarterly, yearly or personal training packages. Members see their plan and expiry date, and the system sends reminders before it ends.",
+      "### Online payments",
+      "Members pay for new plans and renewals in the app. Each payment is recorded against the member with a receipt, so the front desk does not need to reconcile cash and transfers by hand.",
+      "### Attendance and check-in",
+      "Members check in by scanning a code at the entrance or by front desk entry. Owners see daily footfall, peak hours and members who have stopped coming.",
+      "### Class and slot booking",
+      "Studios running yoga, Zumba, CrossFit or batch sessions can open slots with a limit on numbers. Members book, cancel and join waitlists without calling.",
+      "### Trainers and personal training",
+      "Assign members to trainers, track personal training sessions used and remaining, and let trainers share workout plans in the app.",
+      "## Keeping members coming back",
+      "Most gyms lose income when members quietly stop coming and do not renew. Lists of inactive and expiring members, with reminders and offers, help the team follow up in time.",
+      "## Plan the build in phases",
+      "Start with memberships, payments, attendance, class booking and the admin panel. Then add workout and diet plans, progress tracking, multiple branches and referral offers.",
+      "## How Abhivorn helps",
+      "We build mobile apps and admin panels for gyms, fitness studios and trainers, shaped around how each business runs. Share your plans, branches and the work that takes your team the most time today, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Should a gym use ready-made software or build its own app?",
+        "answer": "Ready-made software suits gyms that can follow its process. A custom app suits gyms and studios that want their own brand, special plans, multiple branches or features that ready-made tools do not offer."
+      },
+      {
+        "question": "Can one app handle multiple gym branches?",
+        "answer": "Yes. Each branch can have its own plans, staff and attendance, while the owner sees a combined view of members, income and footfall."
+      },
+      {
+        "question": "Can members pay for renewals inside the app?",
+        "answer": "Yes. A payment gateway can be connected so members pay for new plans and renewals in the app, with the payment recorded against their membership automatically."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Membership plans, online payments, renewal reminders, attendance, class booking and an admin panel. Workout plans, diet tracking and referrals can follow."
+      }
+    ]
+  },
+  {
+    "slug": "hotel-resort-direct-booking-website-india",
+    "title": "Hotel and Resort Direct Booking Website Guide",
+    "excerpt": "How a direct booking website helps hotels, resorts and homestays in India take more bookings without depending only on travel portals.",
+    "description": "A guide for hotels, resorts and homestays in Hyderabad and India on direct booking websites: room availability, online payment, offers and local SEO.",
+    "date": "2026-11-10",
+    "readTime": "5 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=450&fit=crop",
+    "keywords": [
+      "hotel booking website development India",
+      "resort website design Hyderabad",
+      "direct booking engine for hotels",
+      "homestay booking website",
+      "hotel website with online payment"
+    ],
+    "takeaways": [
+      "A direct booking website lets guests book with you instead of only through travel portals that take a commission.",
+      "Live room availability, clear prices and online payment are the core of a booking website.",
+      "Good photos, room details and policies answer guest questions before they book.",
+      "Keep availability in sync with the portals you also sell on to avoid double bookings.",
+      "Local SEO and a Google Business Profile help travellers find and book you directly."
+    ],
+    "content": [
+      "Many hotels, resorts and homestays rely on travel portals for most bookings and pay a commission on each one. A direct booking website gives guests a way to book with you directly, so you keep more of each booking and own the relationship with the guest.",
+      "## What a booking website needs",
+      "### Room types and availability",
+      "Show each room type with photos, size, beds, amenities and the number of guests allowed. Guests pick dates and see only rooms that are actually available.",
+      "### Clear prices and offers",
+      "Show the full price for the dates selected, including taxes, and any packages such as breakfast included or weekend stays. Direct-booking offers give guests a reason to book with you rather than a portal.",
+      "### Online payment",
+      "Guests pay in full or pay an advance online, and receive a confirmation by email or SMS straight away.",
+      "### Policies",
+      "State check-in and check-out times, cancellation and refund rules, ID requirements and house rules clearly before payment.",
+      "## Avoiding double bookings",
+      "If you also sell rooms on travel portals, room availability must stay in sync. A channel manager or a direct integration updates every channel when a room is booked anywhere.",
+      "## Admin panel for the property",
+      "Staff manage rooms, prices by season, blocked dates, bookings, payments and guest details in one place, and see daily arrivals and departures.",
+      "## Getting found",
+      "Use a fast, mobile-friendly site with a page for each room type, location details and nearby attractions. Keep your Google Business Profile complete, with photos and a link to your booking page, so travellers searching nearby can book directly.",
+      "## How Abhivorn helps",
+      "We design and build websites with online booking and payment for hotels, resorts and homestays, along with the admin panel your staff use every day. Tell us about your property, rooms and where your bookings come from today, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Do I still need travel portals if I have my own booking website?",
+        "answer": "Most properties use both. Portals bring new guests, while your own website lets repeat guests and people who find you directly book without a commission."
+      },
+      {
+        "question": "How do I stop double bookings between my website and portals?",
+        "answer": "Keep availability in one place and sync it to every channel, either through a channel manager or a direct integration, so a booking anywhere updates all of them."
+      },
+      {
+        "question": "Can guests pay only an advance online?",
+        "answer": "Yes. The website can take a full payment or a fixed advance at booking, with the balance paid at check-in, based on your policy."
+      },
+      {
+        "question": "Is a booking website useful for a small homestay?",
+        "answer": "Yes. Even a few rooms benefit from a simple site with photos, availability and online payment, which makes it easy for guests to book directly."
+      }
+    ]
+  },
+  {
     "slug": "telemedicine-app-development-india-guide",
     "title": "Telemedicine App Development Guide for India",
     "excerpt": "What a telemedicine app needs, from video consultations and e-prescriptions to payments, records and a doctor panel.",
