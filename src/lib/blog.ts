@@ -22,6 +22,130 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "salon-spa-booking-app-development-india",
+    "title": "Salon and Spa Booking App Development Guide",
+    "excerpt": "What a salon or spa booking app needs, from online appointments and stylist schedules to packages, payments and repeat visits.",
+    "description": "A guide for salons, spas and beauty studios in Hyderabad and India on booking apps: appointments, staff schedules, packages, payments and reminders.",
+    "date": "2026-11-11",
+    "readTime": "5 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&h=450&fit=crop",
+    "keywords": [
+      "salon booking app development India",
+      "spa appointment app Hyderabad",
+      "beauty salon management software",
+      "online appointment booking for salons",
+      "salon app with online payment"
+    ],
+    "takeaways": [
+      "A salon app lets customers book a service, stylist and time slot without calling.",
+      "Staff schedules and service durations keep bookings realistic and avoid double booking.",
+      "Packages, memberships and online payments help with advance income and repeat visits.",
+      "Reminders before the appointment reduce no-shows and empty slots.",
+      "Start with booking, staff schedules, payments and an admin panel, then add loyalty and offers."
+    ],
+    "content": [
+      "Many salons and spas still take bookings by phone and keep the day's schedule in a notebook. That leads to double bookings, long waits and missed calls. A booking app lets customers pick a service, a stylist and a time themselves, and gives the owner a clear view of the day.",
+      "## Who uses the app",
+      "Customers browse services, book, pay and see their history. Stylists and therapists see their own appointments for the day. Owners and front desk staff manage services, prices, staff, bookings, walk-ins and reports.",
+      "## Core features",
+      "### Services and prices",
+      "List each service with its duration and price, grouped by category such as hair, skin, nails or spa. Customers can book several services in one visit.",
+      "### Staff schedules and slot booking",
+      "Each staff member has working hours, breaks and days off. The app shows only slots where the chosen stylist is free for the full service duration.",
+      "### Payments, packages and memberships",
+      "Customers pay online or at the counter. Prepaid packages and memberships can be sold in the app, with the remaining sessions tracked automatically.",
+      "### Reminders and rebooking",
+      "Reminders before the appointment cut no-shows. After the visit, a prompt to rebook at the right interval brings customers back.",
+      "## Multiple branches",
+      "Chains can run several branches in one system, with each branch's staff, services and prices, and a combined view of bookings and income for the owner.",
+      "## Plan the build in phases",
+      "Start with services, booking, staff schedules, payments and an admin panel. Then add packages, memberships, loyalty points, offers and product sales.",
+      "## How Abhivorn helps",
+      "We build booking apps and admin panels for salons, spas and beauty studios, shaped around how each business runs. Share your services, branches and how you take bookings today, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can walk-in customers be handled along with app bookings?",
+        "answer": "Yes. Front desk staff can add walk-ins into the same schedule, so stylists and the owner see app bookings and walk-ins together."
+      },
+      {
+        "question": "Can customers choose a specific stylist?",
+        "answer": "Yes. Customers can pick a stylist or choose any available one, and the app shows only slots when that person is free."
+      },
+      {
+        "question": "Does a small single-branch salon need an app?",
+        "answer": "A simple booking website or app helps even a small salon reduce missed calls and no-shows. The first version can stay small and grow later."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Services and prices, slot booking with staff schedules, online payment, reminders and an admin panel. Packages, loyalty and offers can follow."
+      }
+    ]
+  },
+  {
+    "slug": "travel-agency-tour-booking-website-india",
+    "title": "Travel Agency and Tour Booking Website Guide",
+    "excerpt": "How travel agencies and tour operators in India can use a website to show packages, take enquiries and accept bookings online.",
+    "description": "A guide for travel agencies and tour operators in Hyderabad and India on booking websites: tour packages, itineraries, enquiries, payments and SEO.",
+    "date": "2026-11-11",
+    "readTime": "5 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=450&fit=crop",
+    "keywords": [
+      "travel agency website development India",
+      "tour package booking website Hyderabad",
+      "tour operator website design",
+      "travel booking website with payment",
+      "holiday package website for agencies"
+    ],
+    "takeaways": [
+      "A travel website should show each package clearly, with itinerary, inclusions, dates and price.",
+      "Simple enquiry and booking forms capture leads that would otherwise be lost on calls.",
+      "Online advance payments make it easier to confirm group and fixed-departure tours.",
+      "An admin panel lets your team update packages, dates and seats without a developer.",
+      "Destination pages and package pages help travellers find you on Google."
+    ],
+    "content": [
+      "Many travel agencies share packages as images and PDFs on social media and handle every question by phone. A website with clear package pages, enquiry forms and online booking gives travellers the details they need and lets your team focus on serious enquiries.",
+      "## What a travel website needs",
+      "### Package pages",
+      "Each package should show the destination, duration, day-wise itinerary, hotels, inclusions, exclusions, dates and starting price. Good photos and a clear itinerary answer most questions before anyone calls.",
+      "### Search and filters",
+      "Let visitors filter by destination, duration, budget, month and trip type, such as family, honeymoon, pilgrimage or group tours.",
+      "### Enquiries and custom trips",
+      "Not every traveller books a fixed package. A short enquiry form for custom trips captures the destination, dates, number of travellers and budget so your team can follow up with a quote.",
+      "### Online booking and advance payment",
+      "For fixed-departure and group tours, show seats left and let travellers pay an advance online to confirm. They receive a confirmation and the balance due date straight away.",
+      "## Admin panel",
+      "Your team adds and edits packages, departure dates, seats and prices, sees bookings and payments, and tracks enquiries until they convert.",
+      "## Getting found",
+      "Create a page for each destination and each package, with useful details and FAQs. Keep your Google Business Profile up to date and link to your packages, so people searching for tours from your city can find you.",
+      "## How Abhivorn helps",
+      "We design and build travel and tour websites with package pages, enquiry forms, online booking and the admin panel your team uses every day. Tell us the kind of trips you run and how bookings come in today, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can travellers book and pay for tour packages online?",
+        "answer": "Yes. The website can take a full payment or an advance for a package or departure date, with the confirmation sent automatically."
+      },
+      {
+        "question": "How do we handle custom trip requests on the website?",
+        "answer": "Use a short enquiry form that captures destination, dates, travellers and budget. Your team then sends a quote and can convert it into a booking."
+      },
+      {
+        "question": "Can our team update packages without a developer?",
+        "answer": "Yes. An admin panel lets your team add packages, change itineraries, dates, seats and prices, and mark tours as sold out."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Package pages with itineraries, search and filters, enquiry forms, online advance payment for fixed departures and an admin panel."
+      }
+    ]
+  },
+  {
     "slug": "gym-fitness-app-development-india-guide",
     "title": "Gym and Fitness App Development Guide for India",
     "excerpt": "What a gym or fitness studio app needs, from memberships and renewals to class booking, attendance, trainers and payments.",
