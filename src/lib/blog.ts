@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "7 min read",
     "category": "Custom Software",
     "service": "custom-software-development",
-    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=450&fit=crop",
+    "image": "/blog-covers/app-api-security-checklist-business-india.jpg",
     "keywords": [
       "app security checklist India",
       "API security testing for business apps",
@@ -98,7 +98,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Mobile Apps",
     "service": "mobile-app-development",
-    "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=450&fit=crop",
+    "image": "/blog-covers/home-services-booking-app-development-india.jpg",
     "keywords": [
       "home services app development India",
       "cleaning service booking app Hyderabad",
@@ -163,7 +163,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "5 min read",
     "category": "Mobile Apps",
     "service": "mobile-app-development",
-    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&h=450&fit=crop",
+    "image": "/blog-covers/salon-spa-booking-app-development-india.jpg",
     "keywords": [
       "salon booking app development India",
       "spa appointment app Hyderabad",
@@ -226,7 +226,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "5 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=450&fit=crop",
+    "image": "/blog-covers/travel-agency-tour-booking-website-india.jpg",
     "keywords": [
       "travel agency website development India",
       "tour package booking website Hyderabad",
@@ -287,7 +287,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Mobile Apps",
     "service": "mobile-app-development",
-    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=450&fit=crop",
+    "image": "/blog-covers/gym-fitness-app-development-india-guide.jpg",
     "keywords": [
       "gym app development India",
       "fitness app development Hyderabad",
@@ -352,7 +352,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "5 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=450&fit=crop",
+    "image": "/blog-covers/hotel-resort-direct-booking-website-india.jpg",
     "keywords": [
       "hotel booking website development India",
       "resort website design Hyderabad",
@@ -415,7 +415,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Healthcare",
     "service": "healthcare-software-development",
-    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=450&fit=crop",
+    "image": "/blog-covers/telemedicine-app-development-india-guide.jpg",
     "keywords": [
       "telemedicine app development India",
       "online doctor consultation app Hyderabad",
@@ -480,7 +480,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Custom Software",
     "service": "custom-software-development",
-    "image": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&h=450&fit=crop",
+    "image": "/blog-covers/fleet-transport-management-software-india.jpg",
     "keywords": [
       "fleet management software India",
       "transport management software Hyderabad",
@@ -545,7 +545,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Custom Software",
     "service": "custom-software-development",
-    "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=450&fit=crop",
+    "image": "/blog-covers/school-management-software-india-guide.jpg",
     "keywords": [
       "school management software India",
       "school ERP development Hyderabad",
@@ -610,7 +610,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "5 min read",
     "category": "Digital Marketing",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&h=450&fit=crop",
+    "image": "/blog-covers/landing-page-google-ads-leads-guide.jpg",
     "keywords": [
       "landing page for Google Ads",
       "landing page design Hyderabad",
