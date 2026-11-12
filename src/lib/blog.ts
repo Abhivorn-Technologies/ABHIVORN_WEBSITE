@@ -672,7 +672,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Mobile Apps",
     "service": "mobile-app-development",
-    "image": "https://images.unsplash.com/photo-1532968961962-8a0cb3a2d4f5?w=800&h=450&fit=crop",
+    "image": "/blog-covers/astrology-app-development-india-guide.jpg",
     "keywords": [
       "astrology app development India",
       "astrology app development company Hyderabad",
@@ -737,7 +737,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "5 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=450&fit=crop",
+    "image": "/blog-covers/domain-dns-setup-business-website-guide.jpg",
     "keywords": [
       "domain and DNS setup for website",
       "connect domain to website India",
@@ -797,7 +797,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Custom Software",
     "service": "custom-software-development",
-    "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=450&fit=crop",
+    "image": "/blog-covers/job-portal-website-app-development-india.jpg",
     "keywords": [
       "job portal development India",
       "job portal app development Hyderabad",
@@ -860,7 +860,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Mobile Apps",
     "service": "mobile-app-development",
-    "image": "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&h=450&fit=crop",
+    "image": "/blog-covers/hyperlocal-delivery-app-development-india.jpg",
     "keywords": [
       "hyperlocal delivery app development India",
       "grocery delivery app development Hyderabad",
@@ -920,7 +920,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Custom Software",
     "service": "custom-software-development",
-    "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=450&fit=crop",
+    "image": "/blog-covers/elearning-platform-app-development-india.jpg",
     "keywords": [
       "e-learning app development India",
       "online learning platform development Hyderabad",
@@ -986,7 +986,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-11-05",
     "readTime": "6 min read",
     "category": "Digital Marketing",
-    "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&h=450&fit=crop",
+    "image": "/blog-covers/facebook-instagram-lead-ads-local-business.jpg",
     "keywords": [
       "Facebook lead ads for local business",
       "Instagram lead generation Hyderabad",
@@ -1046,7 +1046,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=450&fit=crop",
+    "image": "/blog-covers/restaurant-online-ordering-website-app-india.jpg",
     "keywords": [
       "restaurant online ordering website India",
       "food ordering app development Hyderabad",
@@ -1111,7 +1111,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=450&fit=crop",
+    "image": "/blog-covers/website-speed-core-web-vitals-guide.jpg",
     "keywords": [
       "website speed optimization India",
       "Core Web Vitals explained",
@@ -1179,7 +1179,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Custom Software",
     "service": "custom-software-development",
-    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=450&fit=crop",
+    "image": "/blog-covers/inventory-management-software-small-business-india.jpg",
     "keywords": [
       "inventory management software India",
       "stock management software small business",
@@ -1244,7 +1244,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop",
+    "image": "/blog-covers/own-ecommerce-website-vs-marketplace-india.jpg",
     "keywords": [
       "own ecommerce website vs marketplace",
       "sell online India",
@@ -1309,7 +1309,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Digital Marketing",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&h=450&fit=crop",
+    "image": "/blog-covers/google-business-profile-guide-hyderabad.jpg",
     "keywords": [
       "Google Business Profile guide",
       "Google My Business Hyderabad",
@@ -1374,7 +1374,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "HRMS",
     "service": "hrms-software-development",
-    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=450&fit=crop",
+    "image": "/blog-covers/employee-onboarding-software-india-guide.jpg",
     "keywords": [
       "employee onboarding software",
       "onboarding software India",
@@ -1439,7 +1439,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Mobile Apps",
     "service": "mobile-app-development",
-    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=450&fit=crop",
+    "image": "/blog-covers/app-launch-checklist-play-store-app-store-india.jpg",
     "keywords": [
       "app launch checklist",
       "publish app on Play Store India",
@@ -1504,7 +1504,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "AI",
     "service": "ai-development",
-    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=450&fit=crop",
+    "image": "/blog-covers/ai-document-processing-business-india.jpg",
     "keywords": [
       "AI document processing",
       "invoice data extraction India",
@@ -1570,7 +1570,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "HRMS",
     "service": "hrms-software-development",
-    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=450&fit=crop",
+    "image": "/blog-covers/payroll-attendance-software-small-business-india.jpg",
     "keywords": [
       "payroll software India",
       "attendance management system Hyderabad",
@@ -1636,7 +1636,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Custom Software",
     "service": "custom-software-development",
-    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop",
+    "image": "/blog-covers/custom-crm-small-business-india-guide.jpg",
     "keywords": [
       "custom CRM development Hyderabad",
       "CRM for small business India",
@@ -1702,7 +1702,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&h=450&fit=crop",
+    "image": "/blog-covers/website-redesign-signs-business-india.jpg",
     "keywords": [
       "website redesign Hyderabad",
       "website redesign services India",
@@ -1770,7 +1770,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Healthcare",
     "service": "healthcare-software-development",
-    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=450&fit=crop",
+    "image": "/blog-covers/clinic-appointment-booking-software-india.jpg",
     "keywords": [
       "clinic appointment booking software India",
       "doctor appointment booking system Hyderabad",
@@ -1838,7 +1838,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=450&fit=crop",
+    "image": "/blog-covers/website-maintenance-guide-small-business.jpg",
     "keywords": [
       "website maintenance services Hyderabad",
       "website maintenance checklist",
@@ -1906,7 +1906,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "AI",
     "service": "ai-development",
-    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=450&fit=crop",
+    "image": "/blog-covers/ai-chatbot-for-business-website-guide.jpg",
     "keywords": [
       "AI chatbot for website",
       "AI chatbot development India",
@@ -1981,7 +1981,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Healthcare",
     "service": "healthcare-software-development",
-    "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&h=450&fit=crop",
+    "image": "/blog-covers/lab-pharmacy-software-guide-india.jpg",
     "keywords": [
       "lab management software India",
       "pharmacy billing software",
@@ -2055,7 +2055,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Mobile Apps",
     "service": "mobile-app-development",
-    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
+    "image": "/blog-covers/mobile-app-cost-factors-india.jpg",
     "keywords": [
       "mobile app development cost India",
       "app development cost Hyderabad",
@@ -2124,7 +2124,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "7 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=450&fit=crop",
+    "image": "/blog-covers/real-estate-property-listing-website-guide.jpg",
     "keywords": [
       "real estate website development",
       "property listing website",
@@ -2194,7 +2194,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "8 min read",
     "category": "Custom Software",
     "service": "custom-software-development",
-    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=450&fit=crop",
+    "image": "/blog-covers/trading-software-development-india-guide.jpg",
     "keywords": [
       "trading software development India",
       "stock market software development",
@@ -2261,7 +2261,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "7 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop",
+    "image": "/blog-covers/payment-gateway-integration-website-india.jpg",
     "keywords": [
       "payment gateway integration India",
       "add payment gateway to website",
@@ -2338,7 +2338,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "8 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=450&fit=crop",
+    "image": "/blog-covers/ecommerce-website-features-small-business.jpg",
     "keywords": [
       "e-commerce website for small business",
       "online store features",
@@ -2419,7 +2419,7 @@ export const blogPosts: BlogPost[] = [
     "date": "2026-10-24",
     "readTime": "7 min read",
     "category": "Digital Marketing",
-    "image": "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=450&fit=crop",
+    "image": "/blog-covers/what-is-performance-marketing.jpg",
     "keywords": [
       "what is performance marketing",
       "performance marketing for small business",
@@ -2501,7 +2501,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Digital Marketing",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=450&fit=crop",
+    "image": "/blog-covers/seo-geo-aeo-get-found-google-ai-search.jpg",
     "keywords": [
       "SEO GEO AEO",
       "generative engine optimization",
@@ -2570,7 +2570,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "7 min read",
     "category": "Mobile Apps",
     "service": "mobile-app-development",
-    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop",
+    "image": "/blog-covers/mobile-app-development-process-hyderabad.jpg",
     "keywords": [
       "mobile app development Hyderabad",
       "app development company Hyderabad",
@@ -2627,7 +2627,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "5 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=450&fit=crop",
+    "image": "/blog-covers/website-or-mobile-app-first.jpg",
     "keywords": [
       "website or mobile app",
       "website vs app for business",
@@ -2683,7 +2683,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Web Development",
     "service": "web-development",
-    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=450&fit=crop",
+    "image": "/blog-covers/choose-website-development-company-hyderabad.jpg",
     "keywords": [
       "website development company Hyderabad",
       "web design company Hyderabad",
@@ -2747,7 +2747,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "7 min read",
     "category": "Healthcare",
     "service": "healthcare-software-development",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=450&fit=crop",
+    "image": "/blog-covers/healthcare-app-development-india-guide.jpg",
     "keywords": [
       "healthcare app development India",
       "healthcare software Hyderabad",
@@ -2809,7 +2809,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "HRMS",
     "service": "hrms-software-development",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
+    "image": "/blog-covers/startups-hrms-2026.jpg",
     "content": [
       "Managing a growing team is exciting, but running HR on spreadsheets quickly becomes chaotic. Attendance sheets, salary calculations, leave approvals and hiring all eat into time that should go into the business. That is why more Indian startups and established companies are moving to HRMS software built for the way Indian teams actually work.",
       "## What is HRMS software?",
@@ -2846,7 +2846,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "Custom Software",
     "service": "custom-software-development",
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop",
+    "image": "/blog-covers/custom-software-benefits-2026.jpg",
     "content": [
       "In 2026, businesses across India are increasingly turning to custom software solutions to gain competitive advantage. While off-the-shelf software serves basic needs, custom development unlocks unique capabilities tailored to specific business requirements.",
       "## What is Custom Software Development?",
@@ -2879,7 +2879,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "7 min read",
     "category": "Healthcare",
     "service": "ai-development",
-    "image": "https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&h=450&fit=crop",
+    "image": "/blog-covers/ai-healthcare-diagnostics.jpg",
     "content": [
       "Artificial Intelligence is transforming healthcare across India, from urban hospitals to rural clinics. Medical diagnostics, once dependent solely on human expertise, now benefits from AI-powered tools that improve accuracy and speed.",
       "## What is AI in Healthcare?",
@@ -2905,7 +2905,7 @@ export const blogPosts: BlogPost[] = [
     "readTime": "6 min read",
     "category": "AI",
     "service": "ai-development",
-    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=450&fit=crop",
+    "image": "/blog-covers/ai-solutions-business-growth.jpg",
     "content": [
       "Artificial Intelligence is no longer just a buzzword. In 2026, Indian businesses are leveraging AI to dramatically reduce costs and accelerate growth across every department.",
       "## How AI Reduces Costs",

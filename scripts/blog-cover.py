@@ -19,8 +19,11 @@ for s in slugs:
     ov=ov.filter(ImageFilter.GaussianBlur(2)); im.paste(ov,(0,0),ov); d=ImageDraw.Draw(im)
     f=ImageFont.truetype(FM,34); tw=d.textlength(cat.upper(),font=f)
     d.rounded_rectangle((110,150,110+tw+56,150+68),radius=34,fill=ac); d.text((138,163),cat.upper(),font=f,fill=(255,255,255))
-    ft=ImageFont.truetype(FB,84); lines=textwrap.wrap(title,22); y=290
-    for ln in lines[:4]: d.text((110,y),ln,font=ft,fill=(15,23,42)); y+=104
+    size,wrap,lh=84,22,104
+    if len(textwrap.wrap(title,22))>3: size,wrap,lh=68,27,84
+    ft=ImageFont.truetype(FB,size); lines=textwrap.wrap(title,wrap); y=290
+    while max(d.textlength(l,font=ft) for l in lines)>940: size-=4; lh=int(size*1.24); ft=ImageFont.truetype(FB,size)
+    for ln in lines[:5]: d.text((110,y),ln,font=ft,fill=(15,23,42)); y+=lh
     d.rectangle((110,y+30,230,y+38),fill=ac)
     d.text((110,H-120),"Abhivorn Technologies",font=ImageFont.truetype(FM,36),fill=(71,85,105))
     im.save(f"public/blog-covers/{s}.jpg",quality=86,optimize=True,progressive=True)
