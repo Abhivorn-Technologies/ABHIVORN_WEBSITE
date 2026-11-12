@@ -22,6 +22,139 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "app-api-security-checklist-business-india",
+    "title": "App and API Security Checklist for Businesses",
+    "excerpt": "The security checks every business app should pass before launch, from data access between customers to login, roles, uploads and backups.",
+    "description": "A practical security checklist for business apps and APIs in India: data isolation, roles, login, uploads, secrets, headers, backups and testing.",
+    "date": "2026-11-12",
+    "readTime": "7 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=450&fit=crop",
+    "keywords": [
+      "app security checklist India",
+      "API security testing for business apps",
+      "secure software development Hyderabad",
+      "OWASP API security top 10",
+      "protect customer data in apps"
+    ],
+    "takeaways": [
+      "Anyone can see which APIs an app calls, so protection must come from checks on the server, not from hiding endpoints.",
+      "The most damaging bugs let one customer see another customer's data by changing an ID.",
+      "Every API should check login, record ownership and the user's role on the server.",
+      "Login, OTP and password reset need rate limits and expiry to stop guessing attacks.",
+      "Test before every release with two test accounts and each role, and get an outside test at regular intervals."
+    ],
+    "content": [
+      "Most data leaks in business apps do not come from advanced hacking. They come from simple gaps: an API that returns another customer's records when an ID is changed, a staff account that can call admin functions, or a login page that allows unlimited guesses. This checklist covers the checks every business app should pass before launch and before each release.",
+      "## Why hiding APIs does not protect you",
+      "A web or mobile app talks to its server through APIs, and anyone can see those calls in their browser or with simple tools. Security researchers and attackers start there. The protection has to be on the server: every request must be checked, whatever the app's screens show or hide.",
+      "## 1. Keep each customer's data separate",
+      "If your app serves many businesses, such as labs, schools or stores, each one must only ever see its own records. Take the customer or tenant from the login session, never from a value the app sends, and check ownership on every read, update and delete. Test it by logging in as one customer and changing a record ID to another customer's. The answer must be refused.",
+      "## 2. Check roles on the server",
+      "Hiding a button is not access control. If a staff user calls an admin, billing or delete API directly, the server must refuse it. Also make sure users cannot change their own role or account through a profile update.",
+      "## 3. Secure login and sessions",
+      "Store passwords only as strong hashes. Rate limit login, OTP and password reset, and slow down or lock accounts after repeated failures. OTPs should expire quickly and work once. Sessions should expire, and logging out or changing a password should end old sessions. Offer two-factor login for admin users.",
+      "## 4. Validate input and limit output",
+      "Validate every input on the server and use parameterised database queries. Return only the fields each screen needs, and never send password hashes or other customers' details. Error messages should not show internal details.",
+      "## 5. Handle files carefully",
+      "Check uploaded files by type and size, store them privately, and serve them through links that expire and check who is asking.",
+      "## 6. Keep secrets and debug tools out of reach",
+      "API keys and passwords belong in server settings, not in app code or the code repository. Turn off debug modes, test routes and public admin panels in production, and do not publish source map files.",
+      "## 7. Use HTTPS and security headers",
+      "Serve everything over HTTPS with HSTS, and add standard security headers that protect against clickjacking and content sniffing. Limit cross-origin access to your own domains.",
+      "## 8. Logs, backups and sensitive data",
+      "Keep an audit log of who viewed or changed important records, take regular encrypted backups and test restoring them. For health, finance or personal data, encrypt data at rest and follow India's data protection rules on consent and deletion.",
+      "## How to test",
+      "Before every release, test with at least two customer accounts and each user role, trying to reach data and functions that should be refused. Use automated API security scanners as well as manual checks, keep dependency alerts switched on, and get an outside penetration test at regular intervals. A responsible disclosure email lets researchers report problems to you privately.",
+      "## How Abhivorn helps",
+      "We build custom software and apps with these checks designed in from the start, and we can review an existing app's APIs against this list. Share what your app does and who uses it, and we will suggest where to begin."
+    ],
+    "faqs": [
+      {
+        "question": "What is the most common security bug in business apps?",
+        "answer": "Broken object-level authorisation: an API returns or changes a record without checking that it belongs to the logged-in user, so changing an ID exposes someone else's data."
+      },
+      {
+        "question": "Is HTTPS enough to keep an app secure?",
+        "answer": "No. HTTPS protects data while it travels, but it does not stop a logged-in user from requesting data they should not see. Server-side access checks are still needed."
+      },
+      {
+        "question": "How often should an app be security tested?",
+        "answer": "Run automated and manual checks before every release, keep dependency alerts on all the time, and get an outside penetration test at regular intervals or after major changes."
+      },
+      {
+        "question": "What should we do if someone reports a security bug?",
+        "answer": "Thank them, confirm the issue, fix it quickly, and check whether any data was accessed. A published security contact email makes it easy for researchers to report privately."
+      }
+    ]
+  },
+  {
+    "slug": "home-services-booking-app-development-india",
+    "title": "Home Services Booking App Development Guide",
+    "excerpt": "How to plan a home services app for cleaning, repairs, appliance service or beauty at home, with customer, partner and admin apps.",
+    "description": "A guide for home services businesses in Hyderabad and India on booking apps: service catalogue, slots, partner app, payments, ratings and admin.",
+    "date": "2026-11-12",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=450&fit=crop",
+    "keywords": [
+      "home services app development India",
+      "cleaning service booking app Hyderabad",
+      "repair and maintenance booking app",
+      "service partner app development",
+      "on-demand services app"
+    ],
+    "takeaways": [
+      "A home services platform has a customer app, a service partner app and an admin panel.",
+      "Clear service menus, prices and time slots make booking simple for customers.",
+      "Assigning jobs by area, skill and availability keeps partners busy and customers on time.",
+      "Online payments, ratings and job photos build trust and reduce disputes.",
+      "Start with one city and a few services, then add more categories and areas."
+    ],
+    "content": [
+      "Home services such as cleaning, pest control, appliance repair, plumbing, electrical work and beauty at home are often booked by phone calls and messages. A booking app turns this into a clear flow: the customer picks a service and a slot, a trained partner is assigned, and the job is tracked until payment.",
+      "## The three parts of the platform",
+      "Customers browse services, book a slot, pay and rate the job. Service partners receive jobs, navigate to the address, update job status and record extra work or parts. Admins manage services, prices, areas, partners, bookings, payments, complaints and reports.",
+      "## Core features",
+      "### Service catalogue and prices",
+      "List each service with what is included, duration and price, with add-ons such as extra rooms or parts. Clear inclusions reduce arguments at the doorstep.",
+      "### Slots and service areas",
+      "Customers choose a date and time slot. The app shows only slots where a partner with the right skill is free in that area.",
+      "### Job assignment",
+      "Jobs can be assigned automatically by area, skill and workload, or manually by the operations team, with partners accepting or declining.",
+      "### Partner app",
+      "Partners see their jobs for the day, the address and customer notes, start and finish jobs, upload before and after photos, and see their earnings.",
+      "### Payments and invoices",
+      "Customers pay online before or after the job, or in cash where you allow it. Each job gets an invoice, and partner payouts are calculated from completed jobs.",
+      "### Ratings, complaints and warranty",
+      "Customers rate each job, raise complaints and request revisits within a warranty period. Ratings help you coach partners and protect quality.",
+      "## Plan the build in phases",
+      "Start with one city, a small set of services, booking, partner app, payments and an admin panel. Then add subscriptions such as monthly cleaning, more categories, referral offers and partner training records.",
+      "## How Abhivorn helps",
+      "We build customer apps, partner apps and admin panels for service businesses. Share the services you offer, the areas you cover and how you assign jobs today, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Do customers and service partners need separate apps?",
+        "answer": "Usually yes. Customers need a simple booking app, while partners need a work app for jobs, navigation, status updates and earnings. Both connect to one admin panel."
+      },
+      {
+        "question": "Can jobs be assigned to partners automatically?",
+        "answer": "Yes. The system can assign jobs by service area, skill and availability, and the operations team can still reassign jobs manually when needed."
+      },
+      {
+        "question": "Can the app handle extra work found at the customer's home?",
+        "answer": "Yes. Partners can add extra items or parts to the job, the customer approves them in the app, and the final invoice updates automatically."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "A service catalogue with prices, slot booking, a partner app, job tracking, online payments, ratings and an admin panel for one city."
+      }
+    ]
+  },
+  {
     "slug": "salon-spa-booking-app-development-india",
     "title": "Salon and Spa Booking App Development Guide",
     "excerpt": "What a salon or spa booking app needs, from online appointments and stylist schedules to packages, payments and repeat visits.",
