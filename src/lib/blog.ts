@@ -22,6 +22,140 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "ai-voice-agent-business-calls-india",
+    "title": "AI Voice Agents for Business Calls: A Guide",
+    "excerpt": "How AI voice agents can answer calls, qualify enquiries, book appointments and send reminders, and what to plan before using one.",
+    "description": "A guide for businesses in Hyderabad and India on AI voice agents: answering calls, lead qualification, bookings, reminders, languages and privacy.",
+    "date": "2026-11-13",
+    "readTime": "6 min read",
+    "category": "AI",
+    "service": "ai-development",
+    "image": "/blog-covers/ai-voice-agent-business-calls-india.jpg",
+    "keywords": [
+      "AI voice agent for business India",
+      "AI calling assistant Hyderabad",
+      "automated appointment booking calls",
+      "AI phone answering for clinics",
+      "voice AI lead qualification"
+    ],
+    "takeaways": [
+      "An AI voice agent answers or makes calls, understands what the caller says and replies in natural speech.",
+      "Good first uses are answering common questions, qualifying enquiries, booking appointments and sending reminders.",
+      "The agent should connect to your booking system or CRM so it can act, not just talk.",
+      "Always offer a quick handover to a person for complex or sensitive calls.",
+      "Tell callers they are speaking with an automated assistant and handle call recordings carefully."
+    ],
+    "content": [
+      "Many businesses miss calls after hours, during busy periods or when staff are with customers. An AI voice agent can pick up those calls, answer common questions, capture the caller's details and book or confirm appointments, then pass anything complex to your team.",
+      "## What an AI voice agent does",
+      "It listens to the caller, turns speech into text, works out what the caller wants, and replies with a natural voice. Connected to your systems, it can check availability, create a booking, look up an order status or log a new enquiry.",
+      "## Useful first tasks",
+      "### Answering common questions",
+      "Timings, location, services, documents needed and basic pricing rules you have approved. These are the calls that take staff time but follow the same pattern.",
+      "### Qualifying enquiries",
+      "The agent asks a few set questions, such as what the caller needs, their budget range and when they want to start, and records the answers in your CRM so your team calls back the right people first.",
+      "### Bookings and reminders",
+      "Callers can book, move or cancel appointments. Outbound reminder calls before appointments help reduce no-shows for clinics, labs, salons and service businesses.",
+      "### Follow-ups and feedback",
+      "Short follow-up calls after a visit or delivery can collect feedback and flag unhappy customers for a call from your team.",
+      "## Languages and accents",
+      "Indian callers often mix languages. Test the agent with real callers in the languages your customers use, such as English, Hindi and Telugu, and keep the script simple and clear.",
+      "## Handover to a person",
+      "Some calls need a human: complaints, medical questions, payment disputes or anything the agent is not sure about. Make transfer to staff, or a callback request, quick and easy.",
+      "## Privacy and trust",
+      "Tell callers they are speaking with an automated assistant, ask for consent before recording where needed, store recordings and transcripts securely, and limit who can access them.",
+      "## Plan the rollout",
+      "Start with one call type, such as booking or after-hours enquiries, review real conversations every week, improve the answers, and only then add more tasks.",
+      "## How Abhivorn helps",
+      "We build AI solutions that connect to your booking system, CRM or software, including voice and chat assistants. Share which calls take most of your team's time, and we will suggest a practical first use."
+    ],
+    "faqs": [
+      {
+        "question": "Can an AI voice agent replace our front desk staff?",
+        "answer": "It works best alongside them. The agent handles repetitive calls and after-hours enquiries, while staff handle complex, sensitive or high-value conversations."
+      },
+      {
+        "question": "Can the AI voice agent speak Indian languages?",
+        "answer": "Many voice systems support Indian languages and mixed-language speech. Test with your real callers before launch, because accuracy varies by language and accent."
+      },
+      {
+        "question": "Can it book appointments directly into our system?",
+        "answer": "Yes, if it is connected to your booking software or calendar. It can check open slots, create the booking and send a confirmation."
+      },
+      {
+        "question": "What should we start with?",
+        "answer": "One call type with a clear script, such as after-hours enquiries or appointment booking, plus easy handover to staff. Expand once it works well."
+      }
+    ]
+  },
+  {
+    "slug": "construction-project-management-software-india",
+    "title": "Construction Project Management Software Guide",
+    "excerpt": "How builders and contractors in India can track sites, labour, materials, budgets and progress in one system instead of registers and calls.",
+    "description": "A guide for builders and contractors in Hyderabad and India on construction project software: sites, labour, materials, budgets, progress and approvals.",
+    "date": "2026-11-13",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/construction-project-management-software-india.jpg",
+    "keywords": [
+      "construction project management software India",
+      "builder software Hyderabad",
+      "site management app for contractors",
+      "construction material tracking software",
+      "labour attendance app for construction"
+    ],
+    "takeaways": [
+      "Construction software brings sites, labour, materials, budgets and progress into one system.",
+      "A site app lets supervisors record attendance, material use and photos from the site every day.",
+      "Comparing planned and actual cost for each site shows overruns early.",
+      "Purchase requests and approvals keep material buying under control.",
+      "Start with one or two sites and the daily site report, then add billing and customer updates."
+    ],
+    "content": [
+      "Builders and contractors often run several sites at once, with daily updates arriving by phone, photos and paper registers. By the time costs are added up, overruns are hard to fix. Construction project software puts every site's progress, labour, materials and money in one place.",
+      "## Who uses the system",
+      "Owners and project managers see all sites, progress and costs. Site supervisors record daily work, attendance and material use from a phone. Purchase and stores teams handle requests, orders and stock. Accounts manage contractor bills and payments.",
+      "## Core features",
+      "### Projects, stages and schedule",
+      "Break each project into stages such as foundation, structure, finishing and handover, with planned dates, and track actual progress against the plan.",
+      "### Daily site reports",
+      "Supervisors submit a short report each day with work done, labour count, materials used, issues and photos, so the office sees every site without visiting.",
+      "### Labour and attendance",
+      "Record attendance for workers and subcontractor teams, with wages or rates, so labour cost per site is always up to date.",
+      "### Materials and stores",
+      "Raise material requests from site, approve them, create purchase orders, record deliveries and track stock at each site to reduce waste and theft.",
+      "### Budget and cost tracking",
+      "Set a budget for each project and stage, and compare it with actual spending on labour, materials and contractors to catch overruns early.",
+      "### Contractor bills and approvals",
+      "Record work orders for subcontractors, measure completed work, and approve bills before payment.",
+      "## Customer updates",
+      "For housing projects, a simple customer portal can share construction progress photos, payment schedules and documents, reducing calls to the office.",
+      "## Plan the build in phases",
+      "Start with projects, daily site reports, labour attendance and material requests for one or two sites. Then add budgets, purchase orders, contractor billing and customer updates.",
+      "## How Abhivorn helps",
+      "We build custom software and site apps for builders and contractors, shaped around how your projects run. Share how you track sites today and where you lose time or money, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can site supervisors use the app without good internet?",
+        "answer": "Yes. The site app can save reports, attendance and photos offline and upload them when the phone is back on the network."
+      },
+      {
+        "question": "Can one system handle several sites and projects?",
+        "answer": "Yes. Each site has its own team, stock, budget and reports, while owners see a combined view of progress and cost across all projects."
+      },
+      {
+        "question": "Can the software track subcontractor work and bills?",
+        "answer": "Yes. You can record work orders, measure completed work and approve subcontractor bills against what was agreed before paying."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Projects and stages, daily site reports with photos, labour attendance, material requests and approvals. Budgets, purchase orders and customer updates can follow."
+      }
+    ]
+  },
+  {
     "slug": "app-api-security-checklist-business-india",
     "title": "App and API Security Checklist for Businesses",
     "excerpt": "The security checks every business app should pass before launch, from data access between customers to login, roles, uploads and backups.",
