@@ -22,6 +22,138 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "manufacturing-production-management-software-india",
+    "title": "Manufacturing Production Software: A Guide",
+    "excerpt": "How small and mid-size manufacturers in India can track orders, raw materials, production, quality and dispatch in one system.",
+    "description": "A guide for manufacturers in Hyderabad and India on production software: orders, raw materials, job cards, quality checks, dispatch and reports.",
+    "date": "2026-11-14",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/manufacturing-production-management-software-india.jpg",
+    "keywords": [
+      "manufacturing software India",
+      "production management software Hyderabad",
+      "small factory ERP software",
+      "raw material inventory tracking",
+      "job card and work order software"
+    ],
+    "takeaways": [
+      "Production software links customer orders, raw materials, shop floor work, quality checks and dispatch.",
+      "Bills of materials show exactly what each order needs, so purchase can plan ahead.",
+      "Job cards and daily production entries show real progress against the plan.",
+      "Quality checks at each stage catch rejections before goods are dispatched.",
+      "Start with orders, stock and production entries, then add costing, quality and maintenance."
+    ],
+    "content": [
+      "Many small and mid-size factories run on spreadsheets, registers and phone calls. Owners often find out about a material shortage or a delayed order only when the customer calls. Production management software puts orders, materials, shop floor progress and dispatch in one place.",
+      "## Who uses the system",
+      "Owners and plant managers see orders, production status and costs. Purchase and stores teams manage raw materials and suppliers. Supervisors record daily production on the shop floor. Quality and dispatch teams record checks, packing and deliveries.",
+      "## Core features",
+      "### Sales orders and planning",
+      "Record each customer order with items, quantities and delivery dates. Plan which orders run on which machines or lines, and see what is due this week.",
+      "### Bill of materials",
+      "Each product has a list of raw materials and quantities. When an order comes in, the system works out what materials are needed and what must be bought.",
+      "### Raw material and stock",
+      "Track receipts, issues to production, stock at each store and reorder levels, so production does not stop for a missing item.",
+      "### Job cards and production entries",
+      "Supervisors open a job card for each order or batch, record output, scrap and machine time each shift, and close it when the work is done.",
+      "### Quality checks",
+      "Record checks for incoming materials, in-process stages and finished goods, with pass, rework or reject results and reasons.",
+      "### Dispatch and invoicing",
+      "Pack finished goods against orders, create delivery challans and invoices, and track what is pending delivery.",
+      "## Reports that help",
+      "Order status, material shortages, production versus plan, scrap and rejection rates, and the cost of each order help owners act early instead of reacting to complaints.",
+      "## Plan the build in phases",
+      "Start with sales orders, bills of materials, stock and daily production entries. Then add quality checks, costing, machine maintenance schedules and a customer portal for order status.",
+      "## How Abhivorn helps",
+      "We build custom software for manufacturers, shaped around how your factory actually runs. Share what you make, how orders flow today and where delays happen, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Is production software only for large factories?",
+        "answer": "No. Small and mid-size units gain a lot from a simple system for orders, stock and daily production, because a few delays or shortages can hurt them more."
+      },
+      {
+        "question": "Can supervisors enter production data from the shop floor?",
+        "answer": "Yes. A simple mobile or tablet screen lets supervisors record output, scrap and machine time each shift without paper registers."
+      },
+      {
+        "question": "Can the software work out what raw materials to buy?",
+        "answer": "Yes. Using the bill of materials for each product and current stock, it can show what is short for upcoming orders so purchase can order in time."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Sales orders, bills of materials, raw material stock, job cards with daily production entries and basic reports. Quality, costing and maintenance can follow."
+      }
+    ]
+  },
+  {
+    "slug": "jewellery-store-website-ecommerce-india",
+    "title": "Jewellery Store Website and Online Catalogue Guide",
+    "excerpt": "How jewellery stores in India can use a website to show collections, take enquiries and appointments, and sell selected items online.",
+    "description": "A guide for jewellery stores in Hyderabad and India on websites: online catalogues, live gold rates, enquiries, store visits, online sales and trust.",
+    "date": "2026-11-14",
+    "readTime": "5 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "/blog-covers/jewellery-store-website-ecommerce-india.jpg",
+    "keywords": [
+      "jewellery website development India",
+      "jewellery store website Hyderabad",
+      "online jewellery catalogue",
+      "gold jewellery ecommerce website",
+      "jewellery shop online booking"
+    ],
+    "takeaways": [
+      "Most jewellery buyers research online before visiting a store, so a clear catalogue matters.",
+      "Show weight, purity, making charges and certification details so buyers can trust the listing.",
+      "Prices can be calculated from the day's gold rate set by your team.",
+      "Enquiry and store visit booking work well for high-value and custom pieces.",
+      "An admin panel lets staff add designs and update rates without a developer."
+    ],
+    "content": [
+      "Jewellery buyers often browse designs on their phone before they visit a store. A website with a clear catalogue, honest product details and an easy way to enquire or book a visit helps them choose your store, and some items can be sold online too.",
+      "## What a jewellery website needs",
+      "### Collections and catalogue",
+      "Group designs by type, such as necklaces, earrings, rings and bangles, and by occasion or collection. Clear photos from several angles, with zoom, matter more than anything else.",
+      "### Product details buyers look for",
+      "Show metal and purity, gross and net weight, stone details, making charges and hallmark or certificate information. Clear details build trust and reduce back-and-forth questions.",
+      "### Price based on the day's rate",
+      "For gold and silver items, the price can be worked out from the rate your team updates each day, plus making charges and tax, so listed prices stay current.",
+      "### Enquiries and store visits",
+      "Many buyers want to see a piece before paying. Let them send an enquiry, ask for a video call, or book a time to visit a branch with the items they liked.",
+      "### Selling online",
+      "Lighter and fixed-price items such as silver, daily wear and gift pieces can be sold online with secure payments, insured shipping and clear return rules.",
+      "## Custom orders and schemes",
+      "Customers can share a design idea or a photo for a custom piece. If you run savings or gold schemes, customers can see their account and instalments online.",
+      "## Admin panel",
+      "Staff add designs, update the daily rate, manage stock by branch, and follow up on enquiries and bookings from one place.",
+      "## Getting found",
+      "Create pages for each collection and occasion, keep your Google Business Profile updated for each branch, and add useful guides, such as how to check purity, that buyers search for.",
+      "## How Abhivorn helps",
+      "We design and build websites and online stores for retail businesses, including catalogues, enquiries and admin panels. Tell us about your collections, branches and how customers reach you today, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can the website show prices based on today's gold rate?",
+        "answer": "Yes. Your team updates the rate in the admin panel, and the website calculates prices from weight, purity, making charges and tax."
+      },
+      {
+        "question": "Should a jewellery store sell everything online?",
+        "answer": "Not always. Many stores sell lighter, fixed-price items online and use enquiries or store visit booking for high-value and custom pieces."
+      },
+      {
+        "question": "How do we build trust with online jewellery buyers?",
+        "answer": "Show clear photos, weight, purity, hallmark or certificate details, making charges, and clear return and shipping policies."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "A catalogue with collections and product details, daily rate updates, enquiry and store visit booking, and an admin panel. Online payments can follow."
+      }
+    ]
+  },
+  {
     "slug": "ai-voice-agent-business-calls-india",
     "title": "AI Voice Agents for Business Calls: A Guide",
     "excerpt": "How AI voice agents can answer calls, qualify enquiries, book appointments and send reminders, and what to plan before using one.",
