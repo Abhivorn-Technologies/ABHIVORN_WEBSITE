@@ -22,6 +22,140 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "performance-appraisal-software-india-guide",
+    "title": "Performance Appraisal Software: A Guide",
+    "excerpt": "How growing companies in India can run goals, reviews and feedback in one system instead of spreadsheets and email.",
+    "description": "A guide for companies in Hyderabad and India on performance appraisal software: goals, KPIs, self and manager reviews, feedback, ratings and reports.",
+    "date": "2026-11-15",
+    "readTime": "6 min read",
+    "category": "HRMS",
+    "service": "hrms-software-development",
+    "image": "/blog-covers/performance-appraisal-software-india-guide.jpg",
+    "keywords": [
+      "performance appraisal software India",
+      "employee performance management system Hyderabad",
+      "KPI and goal tracking software",
+      "360 degree feedback software",
+      "HRMS performance review module"
+    ],
+    "takeaways": [
+      "Appraisal software keeps goals, reviews, feedback and ratings for every employee in one place.",
+      "Clear goals or KPIs set at the start of the cycle make reviews fairer and faster.",
+      "Self review, manager review and optional peer feedback give a fuller picture.",
+      "Regular check-ins during the year avoid surprises at appraisal time.",
+      "Linking reviews to the HRMS keeps employee data, roles and pay changes in sync."
+    ],
+    "content": [
+      "In many growing companies, appraisals run on spreadsheets and email once a year. Goals are forgotten, managers rush reviews, and employees feel the process is unfair. Performance appraisal software gives everyone a clear process: set goals, track progress, review, and agree next steps.",
+      "## Who uses the system",
+      "Employees set and update their goals and complete self reviews. Managers review their team, give feedback and propose ratings. HR sets up review cycles, forms and timelines, and tracks completion. Leadership sees ratings and trends across teams.",
+      "## Core features",
+      "### Goals and KPIs",
+      "Set goals or KPIs for each employee at the start of the cycle, with weightage and target dates. Company or team goals can cascade down so everyone sees how their work connects.",
+      "### Check-ins during the year",
+      "Short monthly or quarterly check-ins let employees update progress and managers give feedback early, so the final review holds no surprises.",
+      "### Self and manager reviews",
+      "Employees rate themselves against each goal and add comments. Managers then add their own ratings and feedback, and both can see the comparison.",
+      "### Peer and 360 degree feedback",
+      "For roles where it helps, collect feedback from peers, team members or other departments, with options to keep responses anonymous.",
+      "### Calibration and approvals",
+      "HR and senior managers can compare ratings across teams, adjust where needed, and approve final ratings before they are shared.",
+      "### Development plans",
+      "Record training needs, skills to build and next-cycle goals, so the review leads to action instead of only a score.",
+      "## Reports that help",
+      "Cycle completion status, rating distribution by team, goal achievement and pending reviews help HR keep the process on track and fair.",
+      "## Plan the build in phases",
+      "Start with goals, self and manager reviews, and completion tracking for one review cycle. Then add check-ins, peer feedback, calibration and links to pay and promotion decisions.",
+      "## How Abhivorn helps",
+      "We build HRMS software, including performance and appraisal modules shaped around how your company reviews people. Share your current review process and team structure, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can the appraisal process be customised for different departments?",
+        "answer": "Yes. Each department or role can have its own goals, review forms, rating scales and timelines, while HR manages all cycles from one place."
+      },
+      {
+        "question": "Do we need 360 degree feedback from the start?",
+        "answer": "Not always. Many companies start with goals, self review and manager review, then add peer or 360 degree feedback once the basic process works well."
+      },
+      {
+        "question": "Can appraisal results connect to salary revisions?",
+        "answer": "Yes. Final ratings can feed into increment and promotion workflows in the HRMS, with approvals before any pay change is applied."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Review cycles, goals or KPIs, self and manager reviews, completion tracking and basic reports. Check-ins, peer feedback and calibration can follow."
+      }
+    ]
+  },
+  {
+    "slug": "apartment-society-management-app-india",
+    "title": "Apartment Society Management App Guide",
+    "excerpt": "How apartment associations and gated communities in India can handle maintenance bills, complaints, visitors and notices in one app.",
+    "description": "A guide for apartment associations in Hyderabad and India on society apps: maintenance billing, complaints, visitor entry, amenities and notices.",
+    "date": "2026-11-15",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "/blog-covers/apartment-society-management-app-india.jpg",
+    "keywords": [
+      "apartment society management app India",
+      "gated community app Hyderabad",
+      "society maintenance billing software",
+      "visitor management app for apartments",
+      "residents association app development"
+    ],
+    "takeaways": [
+      "A society app brings residents, the managing committee, security and staff onto one system.",
+      "Online maintenance bills and payments make collections and accounts easier to track.",
+      "Complaint tickets with status updates replace scattered calls and group messages.",
+      "Visitor and delivery entry at the gate improves security and keeps a clear record.",
+      "Start with billing, complaints, notices and visitor entry, then add amenities and accounts."
+    ],
+    "content": [
+      "Apartment associations and gated communities often manage everything through group chats, notice boards and paper registers. Maintenance dues are hard to track, complaints get lost, and security relies on handwritten visitor books. A society management app puts these tasks in one place for residents, the committee and staff.",
+      "## Who uses the app",
+      "Residents pay dues, raise complaints, approve visitors and book amenities. The managing committee sends notices, tracks collections and expenses, and follows up on complaints. Security guards record visitors and deliveries at the gate. Facility staff see and close assigned work.",
+      "## Core features",
+      "### Maintenance billing and payments",
+      "Create monthly or quarterly maintenance bills for each flat, send reminders, accept online payments and issue receipts. The committee sees who has paid and what is pending.",
+      "### Complaints and service requests",
+      "Residents raise a complaint, such as a plumbing leak or a lift issue, with photos. The committee assigns it to staff or a vendor, and the resident sees updates until it is closed.",
+      "### Visitor and delivery management",
+      "Guards record visitors at the gate, and residents approve entry from their phone. Regular visitors such as maids and drivers can have pre-approved passes, and every entry is logged.",
+      "### Notices, polls and meetings",
+      "Send notices and circulars to all residents or one block, run quick polls, and share meeting minutes so information is not lost in group chats.",
+      "### Amenity booking",
+      "Residents book the clubhouse, party hall or courts for a time slot, with rules and charges set by the committee.",
+      "### Accounts and vendors",
+      "Record expenses, vendor payments and contracts, and share simple income and expense reports with residents for transparency.",
+      "## Privacy and security",
+      "Residents' phone numbers and flat details should be visible only to the people who need them, with roles for residents, committee members and guards.",
+      "## Plan the build in phases",
+      "Start with maintenance billing, payments, complaints, notices and visitor entry. Then add amenity booking, polls, accounts and multi-community support for facility management companies.",
+      "## How Abhivorn helps",
+      "We build mobile apps and admin panels for communities and facility management companies. Share how your community runs today and what takes the most time, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can residents pay maintenance online through the app?",
+        "answer": "Yes. The app can generate bills for each flat, send reminders and accept online payments, with receipts and a clear record of pending dues."
+      },
+      {
+        "question": "How does visitor approval work at the gate?",
+        "answer": "The guard enters the visitor's details at the gate, the resident gets a request on their phone and approves or rejects it, and the entry is logged."
+      },
+      {
+        "question": "Can one app manage several apartment communities?",
+        "answer": "Yes. Facility management companies can run many communities in one system, with each community's residents, staff and accounts kept separate."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Maintenance billing with online payments, complaints, notices and visitor entry. Amenity booking, polls and accounts can follow."
+      }
+    ]
+  },
+  {
     "slug": "manufacturing-production-management-software-india",
     "title": "Manufacturing Production Software: A Guide",
     "excerpt": "How small and mid-size manufacturers in India can track orders, raw materials, production, quality and dispatch in one system.",
