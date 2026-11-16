@@ -22,6 +22,138 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "hospital-management-system-guide-india",
+    "title": "Hospital Management System: A Practical Guide",
+    "excerpt": "What a hospital management system covers, from registration and OPD to wards, pharmacy, lab, billing and reports, and how to roll it out.",
+    "description": "A guide for hospitals and nursing homes in Hyderabad and India on hospital management systems: OPD, IPD, wards, lab, pharmacy, billing and records.",
+    "date": "2026-11-16",
+    "readTime": "7 min read",
+    "category": "Healthcare",
+    "service": "healthcare-software-development",
+    "image": "/blog-covers/hospital-management-system-guide-india.jpg",
+    "keywords": [
+      "hospital management system India",
+      "hospital software Hyderabad",
+      "HMS for nursing homes",
+      "OPD and IPD management software",
+      "hospital billing and EMR software"
+    ],
+    "takeaways": [
+      "A hospital management system links registration, doctors, wards, lab, pharmacy and billing around one patient record.",
+      "OPD and IPD need different flows: quick visits on one side, admissions, beds and daily charges on the other.",
+      "Billing that pulls charges from every department reduces missed charges and disputes at discharge.",
+      "Role-based access and audit logs protect patient data and show who changed what.",
+      "Roll out department by department, starting with registration, OPD and billing."
+    ],
+    "content": [
+      "Many small and mid-size hospitals and nursing homes still run on separate registers, spreadsheets and standalone billing software. Patient details are entered again at each counter, charges are missed at discharge, and reports take days to prepare. A hospital management system puts every department around one patient record.",
+      "## Who uses the system",
+      "Front desk staff register patients and book appointments. Doctors see their queue, write notes and orders. Nurses manage ward tasks and medication. Lab, radiology and pharmacy teams handle their orders. Billing and insurance staff create bills and claims. Management sees occupancy, income and department reports.",
+      "## Core modules",
+      "### Registration and appointments",
+      "Each patient gets one ID that follows them across visits and departments. Appointments can be booked at the desk, by phone or online, with doctor schedules and token queues.",
+      "### OPD",
+      "Doctors see vitals, history and past reports, record notes and diagnoses, and send prescriptions and test orders directly to pharmacy and lab.",
+      "### IPD, wards and beds",
+      "Admit patients, assign beds, record daily notes, nursing tasks and medication, handle transfers between wards, and prepare discharge summaries.",
+      "### Lab and radiology",
+      "Orders arrive from doctors, samples are tracked, results are entered or uploaded, and reports reach the doctor and patient without paper.",
+      "### Pharmacy and stores",
+      "Dispense against prescriptions, track batches and expiry dates, and manage purchases and stock for the pharmacy and hospital stores.",
+      "### Billing and insurance",
+      "Charges from consultations, tests, procedures, beds and medicines flow into one bill. Advances, packages, discounts and insurance or TPA claims are tracked until the bill is settled.",
+      "## Data protection",
+      "Each user should see only what their role needs. Keep audit logs of who viewed or changed records, take regular encrypted backups, and handle patient consent and data as India's data protection rules require.",
+      "## Plan the rollout",
+      "Start with registration, OPD, pharmacy and billing, since these touch the most patients. Then add IPD and wards, lab and radiology, insurance claims, and a patient app for reports and appointments. Train each department before it goes live.",
+      "## How Abhivorn helps",
+      "We build healthcare software shaped around how each hospital works, from small nursing homes to multi-specialty hospitals. Share your departments, bed count and current systems, and we will suggest a practical first phase."
+    ],
+    "faqs": [
+      {
+        "question": "Is a hospital management system suitable for a small nursing home?",
+        "answer": "Yes. A smaller setup with registration, OPD, a few beds, pharmacy and billing works well, and more modules can be added as the hospital grows."
+      },
+      {
+        "question": "Can the system handle insurance and TPA billing?",
+        "answer": "Yes. It can record the patient's insurance details, track pre-authorisation, separate patient and insurer amounts, and follow claims until they are settled."
+      },
+      {
+        "question": "Can we move our old patient records into the new system?",
+        "answer": "Usually yes. Patient details and key history can be imported from existing software or spreadsheets after cleaning, and older paper records can be scanned and attached."
+      },
+      {
+        "question": "What should be done first?",
+        "answer": "Start with registration, OPD, pharmacy and billing, then add IPD, lab, radiology and insurance in phases, with staff training before each module goes live."
+      }
+    ]
+  },
+  {
+    "slug": "email-marketing-small-business-india-guide",
+    "title": "Email Marketing for Small Businesses in India",
+    "excerpt": "How small businesses can use email to follow up on leads, bring customers back and share offers, without spamming anyone.",
+    "description": "A guide for small businesses in Hyderabad and India on email marketing: building a list, welcome emails, follow-ups, newsletters and measuring results.",
+    "date": "2026-11-16",
+    "readTime": "5 min read",
+    "category": "Digital Marketing",
+    "service": "web-development",
+    "image": "/blog-covers/email-marketing-small-business-india-guide.jpg",
+    "keywords": [
+      "email marketing for small business India",
+      "email marketing Hyderabad",
+      "lead follow-up emails",
+      "newsletter for small business",
+      "email automation for customers"
+    ],
+    "takeaways": [
+      "Email reaches people who already know you, so it works best for follow-ups and repeat customers.",
+      "Build your list from website forms, purchases and enquiries, with clear consent.",
+      "Automated welcome and follow-up emails do steady work without extra effort each day.",
+      "Short, useful emails with one clear action get better results than long promotions.",
+      "Track opens, clicks and enquiries, and remove people who never engage."
+    ],
+    "content": [
+      "Many small businesses collect leads and customers' email addresses but rarely use them. Email is one of the simplest ways to follow up on enquiries, remind customers about you and share useful updates, because it reaches people who already showed interest.",
+      "## Where email helps most",
+      "### Following up on leads",
+      "When someone fills a form on your website or an ad, a quick confirmation email followed by one or two helpful follow-ups keeps your business in mind while they decide.",
+      "### Bringing customers back",
+      "Reminders for renewals, service due dates, reorders or seasonal needs bring past customers back without paying for new ads.",
+      "### Sharing updates and offers",
+      "A simple monthly newsletter with a new service, a useful tip or a genuine offer keeps your audience warm.",
+      "## Building your list the right way",
+      "Add email fields to your website enquiry forms, checkout and landing pages. Ask for permission clearly, explain what people will receive, and never buy email lists. Every email should have an easy unsubscribe link.",
+      "## Emails to set up first",
+      "Start with a welcome or thank-you email for new enquiries, a follow-up sequence of two or three emails for leads who have not replied, and a thank-you and review request after a purchase or project.",
+      "## Writing emails people read",
+      "Use a clear subject line, keep the message short, focus on one topic and end with one clear action, such as booking a call or viewing a page. Send from a real name and a domain email address so people trust it.",
+      "## Avoiding the spam folder",
+      "Send from your own domain with proper email authentication set up, keep your list clean, avoid misleading subject lines, and do not send too often.",
+      "## Measuring results",
+      "Track opens, clicks, replies and enquiries from each email. Test different subject lines, and remove contacts who have not engaged for a long time.",
+      "## How Abhivorn helps",
+      "We build websites and landing pages with lead forms that connect to your CRM and email tools, and we set up automated follow-ups. Tell us how leads reach you today, and we will suggest a simple setup to start."
+    ],
+    "faqs": [
+      {
+        "question": "Does email marketing still work for small businesses in India?",
+        "answer": "Yes, especially for following up on enquiries and bringing back past customers, because it reaches people who already know your business."
+      },
+      {
+        "question": "Can we buy an email list to get started faster?",
+        "answer": "No. Bought lists lead to spam complaints, poor delivery and possible legal issues. Build your own list from enquiries, customers and website sign-ups."
+      },
+      {
+        "question": "How often should a small business send emails?",
+        "answer": "Automated follow-ups go out when someone enquires. For newsletters, once or twice a month is enough for most small businesses, as long as each email is useful."
+      },
+      {
+        "question": "What should we set up first?",
+        "answer": "A thank-you email for new enquiries, a short follow-up sequence for leads, and a review request after each purchase or project. Add a newsletter later."
+      }
+    ]
+  },
+  {
     "slug": "performance-appraisal-software-india-guide",
     "title": "Performance Appraisal Software: A Guide",
     "excerpt": "How growing companies in India can run goals, reviews and feedback in one system instead of spreadsheets and email.",
