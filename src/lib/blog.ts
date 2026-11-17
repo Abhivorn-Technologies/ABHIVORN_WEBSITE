@@ -22,6 +22,138 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "retail-pos-billing-software-india-guide",
+    "title": "Retail POS and Billing Software: A Guide",
+    "excerpt": "What retail shops in India need from POS and billing software, from fast checkout and GST invoices to stock, offers and multi-store reports.",
+    "description": "A guide for retail shops in Hyderabad and India on POS and billing software: fast checkout, GST invoices, stock, customers, offers and store reports.",
+    "date": "2026-11-17",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/retail-pos-billing-software-india-guide.jpg",
+    "keywords": [
+      "retail POS software India",
+      "billing software for shops Hyderabad",
+      "GST billing and inventory software",
+      "multi-store POS system",
+      "custom point of sale software"
+    ],
+    "takeaways": [
+      "A POS system handles checkout, GST invoices, payments, stock and customer records together.",
+      "Fast barcode billing and clear payment options keep queues short at busy hours.",
+      "Stock updates on every sale, so reorders and stock counts are easier.",
+      "Customer records and simple loyalty points help bring shoppers back.",
+      "Ready-made POS suits many shops; custom software helps when your workflow is unusual or you run several stores."
+    ],
+    "content": [
+      "Billing is the busiest moment in any retail shop. A slow or confusing billing counter means queues, mistakes and lost sales. Good POS and billing software makes checkout quick, keeps stock accurate and gives the owner a clear view of sales.",
+      "## What a retail POS should do",
+      "### Fast checkout",
+      "Scan barcodes or search items by name, apply discounts, and take cash, card or UPI payments. Bills should print or go to the customer digitally in seconds.",
+      "### GST invoices",
+      "Each bill should carry the correct tax rates, HSN codes and business details, with returns and credit notes handled properly so GST filing is simpler.",
+      "### Stock and purchases",
+      "Every sale reduces stock automatically. Record purchases from suppliers, see low-stock alerts, and run stock counts to find shortages.",
+      "### Customers and loyalty",
+      "Save customer details at billing, see their purchase history, and run simple loyalty points or offers to bring them back.",
+      "### Offers and pricing",
+      "Set up discounts, combo offers and festival prices in advance, so staff do not calculate them by hand at the counter.",
+      "### Reports",
+      "Daily sales, payment mode totals, best and slow-moving items, and staff-wise sales help owners decide what to stock and when.",
+      "## Running more than one store",
+      "With several branches, one system can show stock and sales for each store, move stock between branches and give the owner a combined view from anywhere.",
+      "## Ready-made or custom?",
+      "Many small shops do well with ready-made POS software. Custom software makes sense when you have an unusual workflow, such as made-to-order items, weighing scales, rentals or wholesale and retail together, or when you want POS linked to your own online store or app.",
+      "## Plan the build in phases",
+      "Start with billing, GST invoices, stock and daily reports for one store. Then add customer loyalty, offers, multi-store stock, purchase orders and links to your website or delivery orders.",
+      "## How Abhivorn helps",
+      "We build custom billing, inventory and POS software for retail businesses whose needs go beyond standard tools. Share how your stores bill and manage stock today, and we will suggest whether a custom build is worth it and what the first version should include."
+    ],
+    "faqs": [
+      {
+        "question": "Can POS software generate GST-compliant invoices?",
+        "answer": "Yes. Bills can include GST rates, HSN codes and your business details, and returns can be handled with credit notes for correct records."
+      },
+      {
+        "question": "Does billing work if the internet goes down?",
+        "answer": "A well-built POS can keep billing offline and sync sales and stock when the connection comes back, so the counter never stops."
+      },
+      {
+        "question": "Can one POS system manage several stores?",
+        "answer": "Yes. Each store keeps its own stock and sales, and the owner sees combined reports and can transfer stock between branches."
+      },
+      {
+        "question": "When should a shop choose custom POS software?",
+        "answer": "When the workflow does not fit standard tools, such as made-to-order items, wholesale and retail together, or close links to your own online store or app."
+      }
+    ]
+  },
+  {
+    "slug": "car-bike-rental-booking-app-india-guide",
+    "title": "Car and Bike Rental Booking App Guide",
+    "excerpt": "How rental businesses in India can take bookings, verify customers, manage vehicles and collect payments through an app and admin panel.",
+    "description": "A guide for car and bike rental businesses in Hyderabad and India on booking apps: availability, KYC, deposits, pickup checks, payments and fleet.",
+    "date": "2026-11-17",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "/blog-covers/car-bike-rental-booking-app-india-guide.jpg",
+    "keywords": [
+      "car rental app development India",
+      "bike rental booking app Hyderabad",
+      "self drive rental software",
+      "vehicle rental management system",
+      "rental booking app with KYC"
+    ],
+    "takeaways": [
+      "A rental platform needs a customer app, an admin panel and often a simple staff app for pickups and returns.",
+      "Live availability by location and dates prevents double bookings.",
+      "Online KYC and deposits protect the business before a vehicle leaves.",
+      "Photo checks at pickup and return reduce disputes about damage and fuel.",
+      "Start with booking, KYC, payments and fleet management, then add pricing rules and subscriptions."
+    ],
+    "content": [
+      "Self-drive car and bike rentals are often booked through calls and messages, with paper forms for documents and handwritten notes on vehicle condition. A rental app lets customers see what is available, book and pay, and gives the business a clear record of every trip.",
+      "## The parts of the platform",
+      "Customers browse vehicles, book, upload documents and pay. Staff hand over and receive vehicles, record checks and collect any extra charges. Admins manage vehicles, prices, locations, bookings, deposits and reports.",
+      "## Core features",
+      "### Availability and booking",
+      "Customers choose a pickup location, dates and times, and see only vehicles that are free for that period. Bookings block the vehicle so it cannot be double booked.",
+      "### KYC and documents",
+      "Customers upload their driving licence and ID proof before pickup. Staff verify them in the admin panel, and documents are stored securely with limited access.",
+      "### Pricing, deposits and payments",
+      "Set hourly, daily and weekly prices, weekend rates and kilometre limits. Collect the rental amount and a refundable deposit online, and refund the deposit after a clean return.",
+      "### Pickup and return checks",
+      "Staff record odometer readings, fuel level and photos of the vehicle at pickup and return. Both sides can see the record, which reduces disputes about damage or fuel.",
+      "### Extensions and extra charges",
+      "Customers can request to extend a booking from the app. Late returns, extra kilometres, fuel or damage charges are added to the final bill with clear details.",
+      "### Fleet management",
+      "Track each vehicle's bookings, service due dates, insurance and permit expiry, and mark vehicles unavailable while they are being serviced.",
+      "## Plan the build in phases",
+      "Start with vehicle listing, booking, KYC, online payment with deposit, pickup and return checks and an admin panel. Then add dynamic pricing, monthly subscriptions, multiple cities and GPS tracking integration.",
+      "## How Abhivorn helps",
+      "We build booking apps and admin panels for rental and mobility businesses. Share your fleet size, locations and how you take bookings today, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "How do we verify customers before handing over a vehicle?",
+        "answer": "Customers upload their driving licence and ID in the app, and your team verifies them before pickup. Documents are stored securely with limited access."
+      },
+      {
+        "question": "Can the app collect a security deposit?",
+        "answer": "Yes. The deposit is collected online with the booking and refunded after the vehicle is returned and checked, minus any agreed charges."
+      },
+      {
+        "question": "How can we avoid damage disputes?",
+        "answer": "Record photos, odometer reading and fuel level at pickup and return in the app, so both the customer and your team see the same record."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Vehicle listing, date-based booking, KYC upload, online payment with deposit, pickup and return checks and an admin panel for fleet and bookings."
+      }
+    ]
+  },
+  {
     "slug": "hospital-management-system-guide-india",
     "title": "Hospital Management System: A Practical Guide",
     "excerpt": "What a hospital management system covers, from registration and OPD to wards, pharmacy, lab, billing and reports, and how to roll it out.",
