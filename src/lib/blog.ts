@@ -22,6 +22,131 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "ai-lead-scoring-sales-follow-up-india",
+    "title": "AI Lead Scoring for Sales Teams: A Guide",
+    "excerpt": "How AI can rank enquiries by how likely they are to buy, so sales teams in India call the right leads first and follow up on time.",
+    "description": "A guide for businesses in Hyderabad and India on AI lead scoring: ranking enquiries, using CRM data, follow-up reminders, fairness and getting started.",
+    "date": "2026-11-18",
+    "readTime": "6 min read",
+    "category": "AI",
+    "service": "ai-development",
+    "image": "/blog-covers/ai-lead-scoring-sales-follow-up-india.jpg",
+    "keywords": [
+      "AI lead scoring India",
+      "lead prioritisation for sales teams",
+      "CRM lead scoring Hyderabad",
+      "predictive lead scoring software",
+      "AI sales follow-up automation"
+    ],
+    "takeaways": [
+      "Lead scoring ranks enquiries so your team spends time on the people most likely to buy.",
+      "Simple rules based on budget, timeline and need are a good first step before AI.",
+      "AI scoring learns from your own past leads and which ones became customers.",
+      "Scores work best inside your CRM, with reminders and next steps for each lead.",
+      "Review scores with your sales team regularly and keep a person in charge of decisions."
+    ],
+    "content": [
+      "When leads come in from ads, website forms and referrals, sales teams often call them in the order they arrived. Serious buyers wait while the team chases enquiries that were never likely to convert. Lead scoring ranks each lead so the team knows who to call first.",
+      "## What lead scoring does",
+      "Each new lead gets a score or a label, such as high, medium or low, based on what you know about them: what they need, their budget, how soon they want to start, where they came from and how they have engaged with you.",
+      "## Start with simple rules",
+      "Before AI, many businesses get value from clear rules. For example, a lead with a budget above a set amount who wants to start within a month is high priority. Rules are easy to understand and a good way to agree on what a good lead looks like.",
+      "## How AI improves on rules",
+      "AI lead scoring looks at your past leads and which ones became customers, and learns patterns that rules may miss, such as combinations of service, location, source and response time. It can also read free-text answers, like a description of the project, and pick out signs of a serious enquiry.",
+      "## What data you need",
+      "You need a record of past leads with their details and the outcome, such as won, lost or no response. The more consistent your CRM data is, the better the scores. If your data is thin, start with rules and collect outcomes for a few months.",
+      "## Put scores to work",
+      "Show the score in your CRM next to each lead, sort the call list by score, and set reminders so high-priority leads are contacted quickly. Low-priority leads can get automated follow-up emails instead of calls.",
+      "## Keep it fair and reviewed",
+      "Scores are suggestions, not decisions. Review them with your sales team, check that good leads are not being missed, and avoid using personal details that should not affect how someone is treated.",
+      "## How Abhivorn helps",
+      "We build AI solutions and custom CRMs that score and route leads using your own data. Share where your leads come from and how your team follows up today, and we will suggest whether to start with rules or AI scoring."
+    ],
+    "faqs": [
+      {
+        "question": "Do we need a lot of data for AI lead scoring?",
+        "answer": "AI scoring works best with a good history of past leads and their outcomes. With little data, start with simple rules and collect outcomes until there is enough to learn from."
+      },
+      {
+        "question": "Can lead scoring work with leads from Facebook and Google ads?",
+        "answer": "Yes. Leads from ad forms, website forms and other sources can flow into your CRM, where each one is scored as it arrives."
+      },
+      {
+        "question": "Will AI decide which leads to ignore?",
+        "answer": "It should not. Scores help the team decide who to contact first, while every lead still gets a follow-up, even if it is an automated email."
+      },
+      {
+        "question": "What is the first step?",
+        "answer": "Agree on what a good lead looks like, set up rule-based scoring in your CRM, and record the outcome of every lead so AI scoring can be added later."
+      }
+    ]
+  },
+  {
+    "slug": "ngo-donation-website-india-guide",
+    "title": "NGO and Charity Website with Online Donations",
+    "excerpt": "What an NGO or charity website needs to explain its work, build trust with donors, accept online donations and share receipts and updates.",
+    "description": "A guide for NGOs and charities in Hyderabad and India on websites: telling your story, online donations, receipts, volunteers, transparency and updates.",
+    "date": "2026-11-18",
+    "readTime": "5 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "/blog-covers/ngo-donation-website-india-guide.jpg",
+    "keywords": [
+      "NGO website development India",
+      "charity donation website Hyderabad",
+      "online donation page for NGOs",
+      "trust website design",
+      "volunteer registration website"
+    ],
+    "takeaways": [
+      "An NGO website should explain clearly what you do, who you help and how donations are used.",
+      "A simple donation page with secure online payment makes giving easy.",
+      "Automatic receipts with the details donors need for tax benefits save your team time.",
+      "Regular updates, photos and reports build trust and repeat donations.",
+      "Volunteer sign-up and event pages help people get involved beyond donating."
+    ],
+    "content": [
+      "Many NGOs and charities do important work but have a website that is hard to find, out of date or missing a simple way to donate. Donors want to understand your work, trust that their money is used well, and give in a few clicks.",
+      "## What the website needs",
+      "### Your story and impact",
+      "Explain your mission, the people or causes you serve, where you work and what you have done, in plain language with real photos. Avoid vague claims and share specific programmes and outcomes you can stand behind.",
+      "### Online donations",
+      "A short donation page with suggested amounts, one-time and monthly options, and secure payment by UPI, cards and net banking. Donors should be able to choose a cause or programme where that applies.",
+      "### Receipts and tax details",
+      "Send a receipt automatically after each donation with the details donors need, including tax exemption information where your organisation is registered for it.",
+      "### Transparency",
+      "Share registration details, annual reports, financial summaries and how funds are used. Trust is the main reason people give again.",
+      "### Volunteers and events",
+      "Let people sign up as volunteers, choose their interests and availability, and register for events or drives.",
+      "### Updates and stories",
+      "Post regular updates, stories and photos from your work, and send them to donors by email so they see the difference they made.",
+      "## Admin panel",
+      "Your team should be able to update pages, programmes and events, see donations and donor details, resend receipts and export reports without a developer.",
+      "## Privacy",
+      "Donor and beneficiary details are personal data. Keep them secure, collect only what you need, and get consent before sharing stories or photos of the people you help.",
+      "## How Abhivorn helps",
+      "We design and build websites with secure donation pages, receipts and simple admin panels. Tell us about your organisation and how donations come in today, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can donors give monthly through the website?",
+        "answer": "Yes. The donation page can offer recurring monthly donations as well as one-time gifts, through payment options that support recurring payments."
+      },
+      {
+        "question": "Can the website send donation receipts automatically?",
+        "answer": "Yes. Each donor receives a receipt by email right after paying, with your organisation's details and tax exemption information where applicable."
+      },
+      {
+        "question": "How can an NGO website build donor trust?",
+        "answer": "Show registration details, annual reports, how funds are used, real photos and regular updates from your work, and keep the information current."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Clear pages about your work and impact, a secure donation page with automatic receipts, a transparency section, volunteer sign-up and an admin panel."
+      }
+    ]
+  },
+  {
     "slug": "retail-pos-billing-software-india-guide",
     "title": "Retail POS and Billing Software: A Guide",
     "excerpt": "What retail shops in India need from POS and billing software, from fast checkout and GST invoices to stock, offers and multi-store reports.",
