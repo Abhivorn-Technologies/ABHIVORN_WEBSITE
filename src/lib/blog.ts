@@ -22,6 +22,130 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "multi-vendor-marketplace-website-india-guide",
+    "title": "Multi-Vendor Marketplace Website: A Guide",
+    "excerpt": "What it takes to build a multi-vendor marketplace in India, where many sellers list products and you run the platform, orders and payouts.",
+    "description": "A guide for founders in Hyderabad and India on building a multi-vendor marketplace website: seller onboarding, commissions, payouts, orders and launch.",
+    "date": "2026-11-19",
+    "readTime": "6 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "/blog-covers/multi-vendor-marketplace-website-india-guide.jpg",
+    "keywords": [
+      "multi-vendor marketplace website India",
+      "marketplace development Hyderabad",
+      "build a marketplace like an online mall",
+      "seller commission and payout platform",
+      "multi-vendor ecommerce website cost factors"
+    ],
+    "takeaways": [
+      "A marketplace lets many sellers list and sell on one platform that you run.",
+      "Seller onboarding, catalogue approval and clear commission rules are the core of the business.",
+      "Payments need split settlements or scheduled payouts to each seller, with records for tax.",
+      "Order, return and dispute handling must be agreed between you, sellers and buyers before launch.",
+      "Start with one category and a small group of sellers, then grow once the process works."
+    ],
+    "content": [
+      "A multi-vendor marketplace is a website or app where many independent sellers list their products or services, buyers shop in one place, and you earn from commissions, listing fees or subscriptions. It is a different business from a single-brand online store, because you manage sellers as well as customers.",
+      "## How a marketplace differs from an online store",
+      "In a normal online store you own the products, stock and pricing. In a marketplace, sellers control their own listings, stock and prices, and the platform handles discovery, checkout, payments and rules. That means extra panels, permissions and money flows that a single store does not need.",
+      "## Seller onboarding and approval",
+      "Sellers need a simple sign-up with business details, bank details for payouts and any tax registration you require. Most marketplaces review sellers before they go live and check new listings so the catalogue stays clean and trustworthy.",
+      "## The seller panel",
+      "Each seller needs their own dashboard to add products, update stock and prices, see orders, print invoices and labels, handle returns and track their earnings. A clear, mobile-friendly seller panel reduces support calls and keeps sellers active.",
+      "## Commissions, payments and payouts",
+      "Decide how you earn: a percentage commission per sale, a fixed fee, a monthly plan, or a mix. Payments can be collected by the platform and paid out to sellers on a schedule, or split at checkout using a payment gateway that supports marketplaces. Keep a clear ledger of every order, fee and payout, and check GST and other tax obligations with your accountant.",
+      "## Orders, delivery and returns",
+      "Agree who ships each order, the seller or a common logistics partner, and how tracking reaches the buyer. Set return and refund rules that apply to every seller, and build a simple way to raise and resolve disputes.",
+      "## Trust and quality",
+      "Buyer reviews, seller ratings, verified badges and quick support help buyers trust sellers they have never heard of. Remove poor sellers and fake listings quickly, because one bad experience can hurt the whole platform.",
+      "## Start small",
+      "Launch in one category or one city with a group of sellers you can support closely. Learn what sellers and buyers need, fix the process, and then add categories and features.",
+      "## How Abhivorn helps",
+      "We design and build marketplace websites and apps with seller panels, admin controls, payments and payouts set up for your business model. Share your category, how you plan to earn and how delivery will work, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "How is a marketplace different from selling on Amazon or Flipkart?",
+        "answer": "Selling on those platforms makes you one seller among many. Building your own marketplace makes you the platform owner, with your own sellers, rules and commission model."
+      },
+      {
+        "question": "How do sellers get paid?",
+        "answer": "Usually the platform collects the payment and pays sellers on a schedule after deducting its commission, or a marketplace-ready payment gateway splits the amount at checkout."
+      },
+      {
+        "question": "Do we need a mobile app for a marketplace?",
+        "answer": "Not always at the start. A fast mobile-friendly website with a seller panel is often enough to launch, and apps can follow once buyers and sellers are active."
+      },
+      {
+        "question": "What should be in the first version?",
+        "answer": "Seller sign-up and approval, product listings, search, checkout, order tracking, payouts and an admin panel. Extras like ads for sellers or loyalty programmes can come later."
+      }
+    ]
+  },
+  {
+    "slug": "field-sales-team-tracking-app-india-guide",
+    "title": "Field Sales Team App: Visits, Orders & Tracking",
+    "excerpt": "How a field sales app helps businesses in India plan visits, take orders on the spot, log attendance and see what the team did each day.",
+    "description": "A guide for businesses in Hyderabad and India on field sales apps: visit planning, check-ins, order taking, attendance, offline use, reports and privacy.",
+    "date": "2026-11-19",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "/blog-covers/field-sales-team-tracking-app-india-guide.jpg",
+    "keywords": [
+      "field sales app India",
+      "sales team tracking app Hyderabad",
+      "field force management software",
+      "order taking app for distributors",
+      "salesman visit tracking app"
+    ],
+    "takeaways": [
+      "A field sales app replaces phone calls, paper order books and spreadsheets with one daily record.",
+      "Visit plans, check-ins and on-the-spot orders are the core features most teams need.",
+      "Offline use matters, because field staff often work where the network is weak.",
+      "Managers get daily reports on visits, orders and collections without chasing the team.",
+      "Track location only during working hours and tell staff clearly what is recorded."
+    ],
+    "content": [
+      "Businesses with sales staff on the road, such as distributors, FMCG brands, pharma companies and building material suppliers, often rely on calls and paper notes to know what the team did. A field sales app gives managers a clear daily picture and helps staff spend more time selling.",
+      "## Plan visits and routes",
+      "Managers can assign shops, dealers or clients to each person, set visit plans for the day or week, and see which visits were completed or missed. Staff see their list on the phone with addresses and directions.",
+      "## Check-ins and attendance",
+      "Staff mark attendance at the start of the day and check in at each visit, with time and location recorded. Photos of the shop shelf or display can be added as proof of work and for merchandising checks.",
+      "## Take orders on the spot",
+      "Sales staff can pick products from the catalogue, see current prices and schemes, and place orders during the visit. Orders go straight to the office or distributor, which reduces errors from handwritten notes and phone calls.",
+      "## Collections and expenses",
+      "The app can record payments collected, outstanding balances for each customer and daily expenses such as travel, with bills attached. This makes reconciliation faster at the end of the day.",
+      "## Works offline",
+      "Network coverage is patchy in many areas, so the app should save visits and orders on the phone and sync when the connection returns. This is one of the most important features for real field use.",
+      "## Reports for managers",
+      "A web dashboard shows visits, orders, collections and attendance by person, area and date. Managers can spot who needs support and which areas are growing, without asking for reports on calls.",
+      "## Privacy and trust",
+      "Record location only during working hours or at check-ins, explain to staff what is tracked and why, and keep the data secure. Teams accept tracking more easily when it is fair and clearly helps them, for example with faster expense approvals.",
+      "## How Abhivorn helps",
+      "We build field sales apps and manager dashboards that fit how your team sells, and can connect them to your billing, CRM or HRMS. Share your team size, what they do on a visit and what reports you need, and we will suggest a first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can the app work without internet?",
+        "answer": "Yes. A good field app saves visits, orders and photos on the phone and syncs them automatically when the network is available."
+      },
+      {
+        "question": "Is it legal to track employees' location?",
+        "answer": "Location tracking for work is common, but it should be limited to working hours, explained to staff and handled securely. Take advice on consent and data protection for your situation."
+      },
+      {
+        "question": "Can it connect to our billing or accounting software?",
+        "answer": "Often yes. Orders, customers and products can sync with your existing billing or ERP system, depending on what integration it supports."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Attendance, visit plans, check-ins, order taking, offline sync and a basic manager dashboard. Collections, expenses and incentives can be added next."
+      }
+    ]
+  },
+  {
     "slug": "ai-lead-scoring-sales-follow-up-india",
     "title": "AI Lead Scoring for Sales Teams: A Guide",
     "excerpt": "How AI can rank enquiries by how likely they are to buy, so sales teams in India call the right leads first and follow up on time.",
