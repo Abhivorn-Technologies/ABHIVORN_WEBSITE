@@ -22,6 +22,128 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "applicant-tracking-system-small-business-india",
+    "title": "Applicant Tracking System for Growing Teams",
+    "excerpt": "How an applicant tracking system helps businesses in India collect applications, screen candidates and run interviews without losing anyone in email.",
+    "description": "A guide for HR teams in Hyderabad and India on applicant tracking systems: job posts, screening, interviews, offers, candidate data and when to build one.",
+    "date": "2026-11-20",
+    "readTime": "6 min read",
+    "category": "HRMS",
+    "service": "hrms-software-development",
+    "image": "/blog-covers/applicant-tracking-system-small-business-india.jpg",
+    "keywords": [
+      "applicant tracking system India",
+      "recruitment software Hyderabad",
+      "ATS for small business",
+      "hiring workflow software",
+      "candidate management system"
+    ],
+    "takeaways": [
+      "An applicant tracking system keeps every application, resume and interview note in one place.",
+      "Clear hiring stages make it easy to see where each candidate is and who acts next.",
+      "Interview scheduling and feedback forms save hours of email and phone follow-up.",
+      "Candidate data is personal data, so limit access and delete what you no longer need.",
+      "An ATS works best when it connects to onboarding in your HRMS once someone is hired."
+    ],
+    "content": [
+      "When a business hires regularly, applications arrive by email, job sites, referrals and walk-ins. Resumes get lost, candidates wait for replies and managers cannot see who is in which round. An applicant tracking system, or ATS, puts the whole hiring process in one place.",
+      "## What an ATS does",
+      "An ATS collects applications for each open role, stores resumes and contact details, and moves candidates through stages such as applied, screened, interview, offer and hired. Everyone involved sees the same up-to-date picture.",
+      "## Job posts and applications",
+      "You create a job once with its description and requirements, publish it on a careers page on your website, and share the link on job sites and social media. Applications from every source land in the same list, so nothing sits unread in an inbox.",
+      "## Screening and shortlisting",
+      "Recruiters can filter candidates by experience, location, skills or answers to screening questions, add notes and tags, and shortlist with one click. Simple rules can flag applications that clearly do not meet must-have requirements.",
+      "## Interviews and feedback",
+      "The system can schedule interviews with panel members, send reminders to candidates and collect structured feedback from each interviewer. Hiring decisions are faster when feedback is in one place instead of scattered across messages.",
+      "## Offers and onboarding",
+      "Once a candidate is selected, the ATS can generate an offer letter from a template, track acceptance and pass the new employee's details to onboarding in your HRMS, so HR does not type the same information twice.",
+      "## Candidate privacy",
+      "Resumes and contact details are personal data. Give access only to people involved in hiring, keep a record of consent where needed, and remove old candidate data on a fixed schedule.",
+      "## Ready-made or custom",
+      "Ready-made ATS tools suit many teams. A custom system makes sense when hiring is high volume, steps are specific to your industry, or you want hiring and HR data in one connected platform.",
+      "## How Abhivorn helps",
+      "We build HRMS and recruitment modules with careers pages, hiring stages, interview scheduling and onboarding in one place. Share how you hire today and how many roles you fill each month, and we will suggest a practical first version."
+    ],
+    "faqs": [
+      {
+        "question": "Do small businesses need an applicant tracking system?",
+        "answer": "If you hire only occasionally, a spreadsheet may be enough. Once you hire regularly or for several roles at once, an ATS saves time and keeps candidates from being missed."
+      },
+      {
+        "question": "Can an ATS collect applications from job sites?",
+        "answer": "Yes. Candidates can apply through a careers page link shared on job sites and social media, and some job sites can send applications directly, depending on what they support."
+      },
+      {
+        "question": "Can AI screen resumes?",
+        "answer": "AI can help sort and summarise resumes, but people should make the hiring decisions and review the results so good candidates are not filtered out unfairly."
+      },
+      {
+        "question": "Can the ATS connect to our HRMS?",
+        "answer": "Yes. A connected system passes the new hire's details into onboarding and employee records, so HR does not enter the same data twice."
+      }
+    ]
+  },
+  {
+    "slug": "b2b-customer-portal-dealer-ordering-india",
+    "title": "B2B Customer Portal for Dealers and Distributors",
+    "excerpt": "How a B2B portal lets dealers and business customers in India place orders, check prices, download invoices and track deliveries on their own.",
+    "description": "A guide for manufacturers and distributors in Hyderabad and India on B2B customer portals: dealer pricing, ordering, credit limits, invoices and tracking.",
+    "date": "2026-11-20",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/b2b-customer-portal-dealer-ordering-india.jpg",
+    "keywords": [
+      "B2B customer portal India",
+      "dealer ordering portal Hyderabad",
+      "distributor management software",
+      "B2B ecommerce for manufacturers",
+      "dealer portal development"
+    ],
+    "takeaways": [
+      "A B2B portal lets dealers and business customers order and check details without calling your team.",
+      "Each customer can see their own prices, schemes, credit limit and outstanding balance.",
+      "Repeat orders, invoices and delivery tracking are the features customers use most.",
+      "The portal should connect with your billing or ERP so stock and accounts stay in sync.",
+      "Start with ordering and invoices for a group of active dealers, then add more features."
+    ],
+    "content": [
+      "Manufacturers, wholesalers and distributors often take orders from dealers by phone, email and messages, then re-enter them into billing. Customers call to ask about prices, stock, payments and dispatch. A B2B customer portal gives each business customer a secure login to do these things on their own.",
+      "## How it differs from a consumer store",
+      "B2B buying works differently from retail. Prices vary by customer or dealer tier, orders are larger and often repeated, payment is usually on credit, and invoices must carry business tax details. A B2B portal is built around these rules.",
+      "## Customer-specific pricing and schemes",
+      "Each dealer sees the products they are allowed to buy, at their own price list, with any current schemes or discounts. This removes confusion and the back-and-forth of sending price lists.",
+      "## Fast ordering",
+      "Business customers want speed. Quick order forms, reordering from past orders, minimum order quantities and bulk upload of order lines make the portal faster than a phone call.",
+      "## Credit, invoices and payments",
+      "Customers can see their credit limit, outstanding amount and due dates, download invoices and statements, and pay online if you offer it. Your accounts team spends less time answering balance queries.",
+      "## Order and delivery tracking",
+      "Show the status of every order from confirmed to dispatched to delivered, with transport details where available. Fewer follow-up calls means your sales team can focus on selling.",
+      "## Connect to billing or ERP",
+      "Orders from the portal should flow into your billing or ERP system, and stock, prices and balances should come back from it. Agree which system is the source of truth for each piece of data before you build.",
+      "## How Abhivorn helps",
+      "We build custom B2B portals and dealer apps that fit your pricing rules and connect to the systems you already use. Share how many dealers you serve and how orders reach you today, and we will suggest where to start."
+    ],
+    "faqs": [
+      {
+        "question": "Is a B2B portal the same as an online store?",
+        "answer": "No. A B2B portal is for logged-in business customers with their own prices, credit terms and invoices, while an online store is open to the public at fixed prices."
+      },
+      {
+        "question": "Can dealers order from their phones?",
+        "answer": "Yes. A mobile-friendly portal works on phones, and a dedicated app can be added if dealers order frequently."
+      },
+      {
+        "question": "Will it work with our existing billing software?",
+        "answer": "Often yes, depending on whether your billing or ERP software allows data to be exchanged. We check this early and plan the integration around it."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Dealer login, customer-specific prices, ordering and reordering, order status, invoices and outstanding balance. Schemes, online payment and analytics can follow."
+      }
+    ]
+  },
+  {
     "slug": "multi-vendor-marketplace-website-india-guide",
     "title": "Multi-Vendor Marketplace Website: A Guide",
     "excerpt": "What it takes to build a multi-vendor marketplace in India, where many sellers list products and you run the platform, orders and payouts.",
