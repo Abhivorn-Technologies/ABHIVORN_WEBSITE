@@ -22,6 +22,130 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "multilingual-website-telugu-hindi-business-india",
+    "title": "Website in Telugu, Hindi and English",
+    "excerpt": "How a website in Telugu, Hindi and English helps businesses in India reach more customers, and what to plan so each language works well.",
+    "description": "A guide for businesses in Hyderabad and India on multilingual websites: choosing languages, translation, language switching, SEO and keeping content updated.",
+    "date": "2026-11-21",
+    "readTime": "6 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "/blog-covers/multilingual-website-telugu-hindi-business-india.jpg",
+    "keywords": [
+      "multilingual website India",
+      "Telugu website development Hyderabad",
+      "Hindi and English website",
+      "regional language website for business",
+      "multi-language website SEO"
+    ],
+    "takeaways": [
+      "A website in your customers' own language can make it easier for them to understand and trust you.",
+      "Choose languages based on who your customers are, not on how many languages you can add.",
+      "Use human-reviewed translation for key pages, not machine translation alone.",
+      "Each language needs its own page addresses and search settings so Google shows the right version.",
+      "Plan who will update each language, or the versions will drift apart over time."
+    ],
+    "content": [
+      "Many customers in Telangana, Andhra Pradesh and across India are more comfortable reading in Telugu, Hindi or another regional language than in English. A multilingual website shows the same business in more than one language, so more people can understand your services and contact you.",
+      "## Who benefits most",
+      "Businesses that serve local families and small traders, such as clinics, schools, real estate, retail, agriculture suppliers and service providers, often see the most value. If your customers ask questions on calls in Telugu or Hindi, your website should probably speak their language too.",
+      "## Choosing languages",
+      "Start with the languages your customers actually use. For many Hyderabad businesses that means English plus Telugu, and sometimes Hindi or Urdu. Adding fewer languages done well is better than many languages done poorly.",
+      "## Translation quality",
+      "Machine translation is a useful first draft, but it often gets tone, local terms and service names wrong. Have a fluent person review key pages such as the home page, services, pricing information and contact forms before they go live.",
+      "## Language switching",
+      "Put a clear language switch in the header, remember the visitor's choice, and keep them on the same page when they switch. Fonts must display Telugu, Hindi and other scripts clearly on phones, and layouts should allow for words that are longer or shorter than in English.",
+      "## Search visibility",
+      "Each language version should have its own page address, translated titles and descriptions, and tags that tell search engines which language each page is in. This helps people searching in Telugu or Hindi find the right page instead of the English one.",
+      "## Forms and follow-up",
+      "If a customer fills a form in Telugu, make sure your team can read and reply in that language. Tag each enquiry with the language it came from so the right person follows up.",
+      "## Keeping it updated",
+      "Decide who updates each language and how quickly. A content system that shows which pages are missing translations helps keep every version complete.",
+      "## How Abhivorn helps",
+      "We build fast, mobile-friendly websites with clean language switching, search settings for each language and an easy way to update content. Tell us which languages your customers use and which pages matter most, and we will suggest a practical setup."
+    ],
+    "faqs": [
+      {
+        "question": "Should my business website be in Telugu?",
+        "answer": "If many of your customers prefer Telugu, yes. Start with your most important pages in Telugu and English, and expand if enquiries grow."
+      },
+      {
+        "question": "Can I just use automatic translation?",
+        "answer": "Automatic translation is a reasonable starting point, but important pages should be reviewed by a fluent speaker so the meaning and tone are right."
+      },
+      {
+        "question": "Will a multilingual website help SEO?",
+        "answer": "It can, because people search in their own language. Each language needs its own pages and correct language tags so search engines show the right version."
+      },
+      {
+        "question": "Can I add a new language later?",
+        "answer": "Yes, if the website is built with multiple languages in mind from the start. Adding a language to a site that was not planned for it takes more work."
+      }
+    ]
+  },
+  {
+    "slug": "event-management-ticket-booking-platform-india",
+    "title": "Event & Ticket Booking Platform: A Guide",
+    "excerpt": "What an event and ticket booking platform needs in India, from event pages and seat selection to payments, QR tickets and entry check-in.",
+    "description": "A guide for organisers and venues in Hyderabad and India on event and ticket booking platforms: listings, seats, payments, QR entry and reports.",
+    "date": "2026-11-21",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/event-management-ticket-booking-platform-india.jpg",
+    "keywords": [
+      "event ticket booking platform India",
+      "event management software Hyderabad",
+      "online ticketing website development",
+      "QR code ticket check-in app",
+      "venue booking system"
+    ],
+    "takeaways": [
+      "Your own booking platform lets you sell tickets under your brand and keep customer data.",
+      "Clear event pages, ticket types and a quick checkout are what turn visitors into bookings.",
+      "QR code tickets and a check-in app make entry faster and reduce fake tickets.",
+      "Organisers need live sales, attendance and payout reports in one dashboard.",
+      "Plan refunds, cancellations and peak traffic before the first big event."
+    ],
+    "content": [
+      "Event organisers, venues, clubs, training companies and colleges often sell tickets through third-party sites, forms or manual bank transfers. A dedicated event and ticket booking platform lets you list events, sell tickets online, manage entry and see sales in one place.",
+      "## When your own platform makes sense",
+      "Third-party ticketing sites are easy to start with. Your own platform makes sense when you run events regularly, want your own brand and pricing, need to keep customer details for future events, or have special rules such as memberships, group bookings or seat maps.",
+      "## Event pages and ticket types",
+      "Each event needs a clear page with date, time, venue, map, schedule and ticket types such as early bird, regular, VIP or group. Limits on each ticket type and automatic sold-out messages prevent overbooking.",
+      "## Seats and slots",
+      "For theatres, halls and stadiums, buyers can pick seats on a seat map. For workshops, sports turfs and tours, they pick a time slot instead. Seats or slots should be held for a few minutes during checkout so two people cannot buy the same one.",
+      "## Payments and checkout",
+      "A short checkout with UPI, cards and net banking through a payment gateway helps more people complete their booking. Coupon codes, GST invoices and booking confirmations by email and SMS are standard.",
+      "## QR tickets and check-in",
+      "Each ticket gets a unique QR code. At the venue, staff scan it with a check-in app that marks it used, works with weak internet and shows the count of guests who have arrived. This speeds up entry and blocks copied tickets.",
+      "## Organiser dashboard",
+      "Organisers need live views of tickets sold, revenue, check-ins and attendee lists, with exports. If the platform hosts many organisers, it also needs commission rules and payouts for each one.",
+      "## Refunds and busy launches",
+      "Set clear cancellation and refund rules before selling. Popular events can bring a rush of buyers in a few minutes, so the platform should be tested for heavy traffic before a big launch.",
+      "## How Abhivorn helps",
+      "We build event websites, booking platforms and check-in apps that fit how you run events. Share the kinds of events you host, how you sell tickets today and how many attendees you expect, and we will suggest a first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can I sell tickets on my own website instead of a ticketing site?",
+        "answer": "Yes. With a booking platform on your website you set your own prices and branding, and you keep the customer details for future events."
+      },
+      {
+        "question": "How do QR code tickets work?",
+        "answer": "Each ticket carries a unique code. Staff scan it at entry with a check-in app, which marks it as used so the same ticket cannot be used twice."
+      },
+      {
+        "question": "Can the platform handle seat selection?",
+        "answer": "Yes. Venues with fixed seating can show a seat map, and seats are held briefly during checkout so they are not double booked."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Event pages, ticket types, online payment, email confirmations, QR tickets, a check-in app and a basic organiser dashboard. Seat maps and multi-organiser payouts can follow."
+      }
+    ]
+  },
+  {
     "slug": "applicant-tracking-system-small-business-india",
     "title": "Applicant Tracking System for Growing Teams",
     "excerpt": "How an applicant tracking system helps businesses in India collect applications, screen candidates and run interviews without losing anyone in email.",
