@@ -22,6 +22,130 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "customer-loyalty-rewards-app-india",
+    "title": "Customer Loyalty & Rewards App: A Guide",
+    "excerpt": "How a loyalty and rewards app helps retail shops, restaurants and service businesses in India bring customers back and see who buys again.",
+    "description": "A guide for businesses in Hyderabad and India on loyalty and rewards apps: points, offers, referrals, billing integration and measuring repeat customers.",
+    "date": "2026-11-22",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "/blog-covers/customer-loyalty-rewards-app-india.jpg",
+    "keywords": [
+      "customer loyalty app India",
+      "rewards program app Hyderabad",
+      "loyalty points system for retail",
+      "restaurant loyalty app development",
+      "referral rewards app"
+    ],
+    "takeaways": [
+      "A loyalty app gives customers a simple reason to come back and buy from you again.",
+      "Keep the rules easy: how points are earned, what they are worth and when they expire.",
+      "Connecting the app to billing means points are added automatically at checkout.",
+      "Referral rewards turn happy customers into a source of new ones.",
+      "Track repeat visits and redemptions to see whether the programme is worth its cost."
+    ],
+    "content": [
+      "Winning a new customer usually costs more than keeping an existing one. A loyalty and rewards app gives regular customers points, offers and perks, so they have a reason to choose you again instead of a competitor down the road.",
+      "## Who it suits",
+      "Loyalty programmes work well for businesses with repeat purchases: supermarkets, cafes and restaurants, salons, pharmacies, clothing stores, fuel stations and service centres. If customers visit often, rewards can nudge them to visit a little more.",
+      "## Points, tiers and offers",
+      "The simplest model gives points for every purchase that can be redeemed later. Tiers such as silver and gold reward the best customers with extra benefits. Birthday offers, double-points days and member-only deals keep the programme interesting.",
+      "## Joining should take seconds",
+      "Customers should be able to join with a mobile number and a one-time password at the counter or in the app. Asking for too many details at sign-up loses people.",
+      "## Connect to billing",
+      "When the loyalty system connects to your billing or point-of-sale software, points are added and redeemed automatically at checkout. Staff do not have to enter anything twice, and customers see their balance update straight away.",
+      "## Referrals and reviews",
+      "Give customers a referral code that rewards both them and the friend they invite. You can also invite members to leave a review after a visit, without offering rewards for positive reviews only.",
+      "## Notifications without spam",
+      "Push notifications and SMS can remind customers about expiring points or a new offer. Send fewer, relevant messages so people do not turn notifications off.",
+      "## Measure what matters",
+      "Track how many members return, how often they buy, how many points are redeemed and what the programme costs. These numbers show whether the rewards are working or need adjusting.",
+      "## How Abhivorn helps",
+      "We build loyalty and rewards apps, admin panels and billing integrations that fit how your business sells. Share how customers buy from you today and what you would like them to do more often, and we will suggest a simple first version."
+    ],
+    "faqs": [
+      {
+        "question": "Do customers need to download an app to join?",
+        "answer": "Not always. Many programmes let customers join with just a mobile number at the counter, with an app or web page for those who want to check points and offers."
+      },
+      {
+        "question": "Can loyalty points connect to my billing software?",
+        "answer": "Often yes, depending on whether your billing software allows integration. Connected systems add and redeem points automatically at checkout."
+      },
+      {
+        "question": "Should points expire?",
+        "answer": "An expiry date encourages customers to come back and keeps the cost of unused points under control. Make the rule clear and remind customers before points expire."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Mobile number sign-up, earning and redeeming points, a balance screen, basic offers and an admin panel with reports. Tiers, referrals and campaigns can follow."
+      }
+    ]
+  },
+  {
+    "slug": "helpdesk-ticketing-system-customer-support-india",
+    "title": "Helpdesk Ticketing System: A Guide",
+    "excerpt": "How a helpdesk ticketing system helps businesses in India track customer complaints and requests, assign them to the right person and close them on time.",
+    "description": "A guide for businesses in Hyderabad and India on helpdesk ticketing systems: ticket channels, assignment, response times, self-service and support reports.",
+    "date": "2026-11-22",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/helpdesk-ticketing-system-customer-support-india.jpg",
+    "keywords": [
+      "helpdesk software India",
+      "ticketing system Hyderabad",
+      "customer support software",
+      "complaint management system",
+      "service request tracking software"
+    ],
+    "takeaways": [
+      "A ticketing system turns every customer request into a tracked item with an owner and a status.",
+      "Requests from email, web forms and chat land in one queue instead of scattered inboxes.",
+      "Response-time targets and reminders stop tickets from being forgotten.",
+      "A help centre with answers to common questions reduces repeat tickets.",
+      "Reports show where complaints come from, so you can fix the root cause."
+    ],
+    "content": [
+      "As a business grows, customer complaints, service requests and questions arrive by email, phone, website forms and social media. Without a system, some get answered twice, some never, and nobody knows how long customers are waiting. A helpdesk ticketing system gives every request a number, an owner and a status until it is resolved.",
+      "## One queue for every channel",
+      "Emails to your support address, website contact forms and in-app requests can all create tickets automatically. Phone calls can be logged as tickets by staff. The team works from one list instead of several inboxes.",
+      "## Assign to the right person",
+      "Rules can route tickets by product, location, issue type or customer group, or share them evenly across the team. Each ticket shows who owns it, so nothing falls between desks.",
+      "## Response and resolution times",
+      "Set targets for how quickly tickets should get a first reply and be resolved, with reminders and escalation to a manager when a ticket is close to missing its target.",
+      "## Keep customers informed",
+      "Customers receive a ticket number and updates by email or SMS when the status changes. A simple portal lets them check progress without calling.",
+      "## Self-service help centre",
+      "Publishing answers to common questions on your website helps customers solve simple issues themselves. Over time, this reduces the number of repeat tickets your team handles.",
+      "## Reports that lead to fixes",
+      "Reports on ticket volume, categories, response times and repeat issues show what customers struggle with most. That insight helps you fix products, processes or documentation, not just answer tickets faster.",
+      "## Ready-made or custom",
+      "Ready-made helpdesk tools suit many teams. A custom system makes sense when support is tied closely to your own orders, service visits, warranties or field teams, and you want it all connected.",
+      "## How Abhivorn helps",
+      "We build helpdesk and service request systems that connect to your website, apps and internal software. Tell us how customers contact you today and how many requests you handle, and we will suggest a practical setup."
+    ],
+    "faqs": [
+      {
+        "question": "What is a ticketing system?",
+        "answer": "It is software that records each customer request as a ticket with a number, owner and status, so the team can track it until it is resolved."
+      },
+      {
+        "question": "Can tickets be created from emails automatically?",
+        "answer": "Yes. Emails to a support address can become tickets automatically, and replies are kept in the same ticket thread."
+      },
+      {
+        "question": "Can AI help with support tickets?",
+        "answer": "AI can suggest categories, draft replies and point customers to help articles, but people should review important responses and handle complex cases."
+      },
+      {
+        "question": "What should the first version include?",
+        "answer": "Ticket creation from email and web forms, assignment, statuses, customer notifications, response-time reminders and basic reports. A help centre and customer portal can follow."
+      }
+    ]
+  },
+  {
     "slug": "multilingual-website-telugu-hindi-business-india",
     "title": "Website in Telugu, Hindi and English",
     "excerpt": "How a website in Telugu, Hindi and English helps businesses in India reach more customers, and what to plan so each language works well.",
