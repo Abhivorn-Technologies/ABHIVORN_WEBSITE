@@ -22,6 +22,132 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "website-accessibility-guide-business-india",
+    "title": "Website Accessibility Guide for Businesses",
+    "excerpt": "How to make your business website easy to use for everyone, including people with low vision, older visitors and keyboard users, and why it helps your leads.",
+    "description": "A plain guide to website accessibility for businesses in Hyderabad and India: readable text, contrast, alt text, keyboard use, forms and simple checks.",
+    "date": "2026-11-23",
+    "readTime": "6 min read",
+    "category": "Web Development",
+    "service": "web-development",
+    "image": "/blog-covers/website-accessibility-guide-business-india.jpg",
+    "keywords": [
+      "website accessibility India",
+      "accessible website design Hyderabad",
+      "web accessibility checklist for business",
+      "alt text and colour contrast",
+      "accessible contact forms"
+    ],
+    "takeaways": [
+      "An accessible website is one that everyone can read, navigate and use, whatever their eyesight, age or device.",
+      "Readable text, strong colour contrast and clear headings help every visitor, not only people with disabilities.",
+      "Images need short descriptions, and every action should work with a keyboard as well as a mouse or finger.",
+      "Forms should have clear labels and helpful error messages so fewer leads give up halfway.",
+      "Simple checks done regularly catch most problems before customers notice them."
+    ],
+    "content": [
+      "Website accessibility means building your site so that everyone can use it, including people with low vision, colour blindness, hearing loss, limited hand movement or older visitors using a small phone. In practice, an accessible site is simply a clearer site, and clearer sites tend to turn more visitors into enquiries.",
+      "## Why it matters for a business",
+      "Every visitor who cannot read your prices, tap your button or fill in your form is a lost lead. Many of your customers may be parents, senior citizens or busy people on older phones in bright sunlight. Making the site easy for them makes it easier for everyone. Search engines and AI assistants also read your pages more reliably when the structure is clean.",
+      "## Readable text and strong contrast",
+      "Use a comfortable text size, plenty of line spacing and dark text on a light background. Light grey text on white may look stylish but is hard to read for many people. Avoid putting important words inside images, because they cannot be enlarged, translated or read aloud.",
+      "## Clear headings and structure",
+      "Each page should have one main heading and logical sub-headings below it. Screen readers, which read pages aloud for blind users, let people jump between headings, so a clear outline helps them find what they need quickly. It also helps sighted visitors who skim.",
+      "## Describe your images",
+      "Give meaningful images a short text description, called alt text, such as 'Team member explaining a dashboard to a client'. Purely decorative images can be left without a description so they are skipped.",
+      "## Keyboard and touch friendly",
+      "Every menu, button and form should work using only the keyboard, with a visible highlight showing where you are on the page. On phones, buttons should be large enough to tap without hitting the wrong one.",
+      "## Forms that do not lose leads",
+      "Each field needs a visible label, not just placeholder text that disappears as you type. Error messages should say exactly what is wrong and how to fix it, next to the field. Do not rely on colour alone, such as a red border, to show a problem.",
+      "## Video and audio",
+      "Add captions to videos so people can follow them without sound, which also helps the many visitors who watch on mute.",
+      "## Simple checks you can do",
+      "Try using your site with only the keyboard. Zoom the page to 200 percent and see whether anything breaks. View it on an older phone outdoors. Free browser tools can also flag missing alt text and low contrast. Repeat these checks whenever you add new pages.",
+      "## How Abhivorn helps",
+      "We design and build business websites with readable layouts, clear structure and forms that are easy to complete, and we can review your current site for accessibility gaps. Share your website address and we will suggest the most useful fixes first."
+    ],
+    "faqs": [
+      {
+        "question": "Is website accessibility only for people with disabilities?",
+        "answer": "No. Clear text, good contrast, simple navigation and easy forms help every visitor, including older users and people on small phones or slow connections."
+      },
+      {
+        "question": "Does accessibility make a website look plain?",
+        "answer": "No. An accessible site can still look modern and on-brand. It mainly means choosing readable colours and sizes and building elements properly."
+      },
+      {
+        "question": "Can an existing website be made accessible?",
+        "answer": "Usually yes. Many improvements, such as alt text, contrast, labels and headings, can be made without a full redesign."
+      },
+      {
+        "question": "Does accessibility help SEO?",
+        "answer": "It often does. Clear headings, descriptive images and clean structure make it easier for search engines and AI assistants to understand your pages."
+      }
+    ]
+  },
+  {
+    "slug": "visitor-management-system-office-india",
+    "title": "Visitor Management System: An Office Guide",
+    "excerpt": "How a digital visitor management system replaces the paper register at offices, factories, hospitals and gated sites, with faster check-in and better records.",
+    "description": "A guide for offices, factories and campuses in Hyderabad and India on visitor management systems: pre-registration, check-in, host alerts, passes and reports.",
+    "date": "2026-11-23",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/visitor-management-system-office-india.jpg",
+    "keywords": [
+      "visitor management system India",
+      "visitor management software Hyderabad",
+      "digital visitor register",
+      "office reception check-in app",
+      "factory gate pass software"
+    ],
+    "takeaways": [
+      "A visitor management system replaces the paper register with quick digital check-in and searchable records.",
+      "Pre-registration lets hosts invite guests in advance so they spend less time at the gate.",
+      "Hosts get an instant alert when their visitor arrives, so nobody waits unnoticed at reception.",
+      "Printed or digital passes show who is allowed where and until when.",
+      "Clear reports and data rules help with security reviews and protect visitors' personal details."
+    ],
+    "content": [
+      "A visitor management system is software that records who enters your premises, whom they are meeting and when they leave. It replaces the handwritten register at the gate or reception with a fast digital check-in and records you can actually search later.",
+      "## Who needs one",
+      "It suits corporate offices, co-working spaces, factories and warehouses, hospitals, schools and colleges, and any site where security staff need to know who is inside. Businesses with many vendors, interview candidates or delivery staff gain the most.",
+      "## Pre-registration",
+      "Employees can invite a guest in advance by entering their name, mobile number and visit time. The visitor receives a confirmation, and check-in at the gate takes a few seconds instead of a queue at the register.",
+      "## Check-in at the gate or reception",
+      "Walk-in visitors can be registered by the guard on a tablet or phone, or check themselves in at a reception kiosk. The system can capture a photo and verify the mobile number with a one-time password.",
+      "## Host alerts",
+      "As soon as a visitor checks in, the employee they are meeting gets a notification by app, SMS or email. They can approve the visit, ask the visitor to wait or send someone to receive them.",
+      "## Passes and access",
+      "The system can print a badge or send a digital pass showing the visitor's name, host, allowed areas and validity time. For factories and warehouses, separate passes for vendors, contractors and vehicles keep gate records organised.",
+      "## Check-out and who is inside",
+      "Recording check-out tells security exactly who is still on the premises at any moment, which matters during an emergency evacuation.",
+      "## Reports and data protection",
+      "Managers can see visits by date, department or host and export them when needed. Because visitor details are personal data, access should be limited to the right staff, and old records should be deleted on a clear schedule.",
+      "## How Abhivorn helps",
+      "We build custom visitor management systems with gate apps, host alerts, passes and admin reports that fit how your site actually works. Tell us how visitors are handled today and we will suggest a simple first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can a visitor management system work on a phone or tablet?",
+        "answer": "Yes. Guards and receptionists can register visitors on a phone or tablet, and visitors can check themselves in at a kiosk if you prefer."
+      },
+      {
+        "question": "Can it handle vendors, contractors and vehicles?",
+        "answer": "Yes. Separate visitor types can have their own fields, passes and approval steps, including vehicle numbers for gate entry."
+      },
+      {
+        "question": "Can it work for multiple branches or gates?",
+        "answer": "Yes. One system can cover several gates or locations, with each site seeing its own visitors and managers seeing everything."
+      },
+      {
+        "question": "How is visitor data kept safe?",
+        "answer": "Access is limited by role, data is stored securely and old records are removed after a set period, so only the right people can see visitor details."
+      }
+    ]
+  },
+  {
     "slug": "customer-loyalty-rewards-app-india",
     "title": "Customer Loyalty & Rewards App: A Guide",
     "excerpt": "How a loyalty and rewards app helps retail shops, restaurants and service businesses in India bring customers back and see who buys again.",
