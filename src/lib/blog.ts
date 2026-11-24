@@ -22,6 +22,124 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "google-ads-vs-meta-ads-small-business-india",
+    "title": "Google Ads vs Meta Ads for Small Businesses",
+    "excerpt": "When to advertise on Google search and when to use Facebook and Instagram ads, and how a small business in India can test both without wasting budget.",
+    "description": "Google Ads or Meta Ads? A plain guide for small businesses in Hyderabad and India on intent, targeting, lead quality, budgets and how to test both.",
+    "date": "2026-11-24",
+    "readTime": "6 min read",
+    "category": "Digital Marketing",
+    "service": "web-development",
+    "image": "/blog-covers/google-ads-vs-meta-ads-small-business-india.jpg",
+    "keywords": [
+      "Google Ads vs Facebook Ads India",
+      "Meta ads for small business Hyderabad",
+      "Google search ads for local business",
+      "Instagram ads lead generation",
+      "best ads platform for small business India"
+    ],
+    "takeaways": [
+      "Google Ads reach people who are already searching for what you sell, so intent is usually high.",
+      "Meta Ads on Facebook and Instagram reach people by interest and location before they start searching.",
+      "Search ads suit urgent or specific needs; Meta ads suit visual products, offers and building awareness.",
+      "Lead quality depends on your form, landing page and follow-up as much as on the platform.",
+      "Start small on one platform, track cost per real enquiry, then expand to what works."
+    ],
+    "content": [
+      "Google Ads show your business to people who are actively searching for something, such as 'website development company in Hyderabad'. Meta Ads show your business on Facebook and Instagram to people who match an audience you choose, even if they are not searching yet. Neither is better for every business; the right choice depends on how your customers buy.",
+      "## When Google Ads work best",
+      "Search ads suit needs people look for on their own: a clinic nearby, a repair service, a software company, a course. Because the person is already searching, they are often closer to making a decision. Clear keywords, a relevant ad and a matching landing page matter more than a big budget.",
+      "## When Meta Ads work best",
+      "Facebook and Instagram ads suit products and services that are easy to show in a picture or short video, new offers, events and local awareness. You can target by area, age and interests and collect enquiries through an instant form without the person leaving the app.",
+      "## Lead quality and follow-up",
+      "Instant forms on Meta make it easy to submit details, which can bring more enquiries but also more casual ones. Adding one or two qualifying questions, such as budget or timeline, helps. On both platforms, calling or messaging new leads quickly makes a big difference to how many turn into customers.",
+      "## Landing pages and tracking",
+      "For Google Ads, send people to a focused page that answers their search and has one clear form. On both platforms, set up conversion tracking so you can see which ads bring real enquiries, not just clicks.",
+      "## How to test without wasting money",
+      "Pick one service and one area. Run a small daily budget on one platform for a couple of weeks, then compare the cost per genuine enquiry. Keep what works, pause what does not and only then try the second platform.",
+      "## How Abhivorn helps",
+      "We build fast landing pages, lead forms with tracking and simple systems to follow up enquiries, so your ad spend turns into conversations. Tell us what you sell and where your customers are, and we will suggest where to start."
+    ],
+    "faqs": [
+      {
+        "question": "Which is cheaper, Google Ads or Meta Ads?",
+        "answer": "It depends on your industry, area and competition. The useful comparison is cost per genuine enquiry or sale, not cost per click, so test both with small budgets."
+      },
+      {
+        "question": "Do I need a website to run ads?",
+        "answer": "Meta Ads can collect leads with an instant form inside the app. Google search ads usually need a landing page, and a focused page improves results on both platforms."
+      },
+      {
+        "question": "How long should I run a test campaign?",
+        "answer": "Give a campaign enough time and budget to collect meaningful data, often a couple of weeks, before judging it. Avoid changing everything after a day or two."
+      },
+      {
+        "question": "Should I run both platforms together?",
+        "answer": "Many businesses do once each is working on its own. Starting with one keeps the budget focused and makes results easier to read."
+      }
+    ]
+  },
+  {
+    "slug": "laundry-dry-cleaning-app-development-india",
+    "title": "Laundry & Dry Cleaning App: A Business Guide",
+    "excerpt": "How a pickup and delivery app helps laundry and dry cleaning businesses in India take orders online, schedule pickups, track garments and get paid.",
+    "description": "A guide for laundry and dry cleaning businesses in Hyderabad and India on apps: online orders, pickup slots, garment tracking, payments and delivery staff.",
+    "date": "2026-11-24",
+    "readTime": "6 min read",
+    "category": "Mobile Apps",
+    "service": "mobile-app-development",
+    "image": "/blog-covers/laundry-dry-cleaning-app-development-india.jpg",
+    "keywords": [
+      "laundry app development India",
+      "dry cleaning app Hyderabad",
+      "laundry pickup and delivery app",
+      "laundry management software",
+      "on-demand laundry app features"
+    ],
+    "takeaways": [
+      "A laundry app lets customers book pickups, choose services and pay without calling the shop.",
+      "Pickup and delivery slots help you plan routes and staff for the day.",
+      "Tagging and tracking each order reduces lost or mixed-up garments.",
+      "A simple admin panel shows orders, pending deliveries and payments in one place.",
+      "Start with your own branded app for regular customers before adding more locations."
+    ],
+    "content": [
+      "A laundry and dry cleaning app lets customers schedule a pickup, choose services such as wash and fold, ironing or dry cleaning, track their order and pay online. For the business, it replaces phone bookings and paper slips with a clear list of orders, routes and payments.",
+      "## Who it suits",
+      "It suits laundry and dry cleaning shops, chains with several outlets, and businesses serving apartments, hostels, hotels or offices. If many customers already ask for pickup and delivery, an app makes that service easier to run and grow.",
+      "## Booking and pickup slots",
+      "Customers pick a service, an address and a pickup time slot. Limiting the number of bookings per slot means your delivery staff are not overloaded, and customers know exactly when to expect them.",
+      "## Pricing and orders",
+      "Show clear prices per item or per kilogram for each service. After pickup, staff can confirm the actual items, and the customer sees the final bill in the app before processing begins.",
+      "## Tagging and tracking",
+      "Each order can be given a tag or barcode so garments are tracked through washing, ironing and packing. Customers see status updates such as picked up, in process and out for delivery, which cuts down on calls asking where their clothes are.",
+      "## Delivery staff app",
+      "A simple app for pickup and delivery staff shows their route for the day, customer addresses, items to collect and payments to receive. Proof of delivery and cash collection can be recorded on the spot.",
+      "## Payments and repeat customers",
+      "Online payment, wallet balances and monthly plans make it easy for regular customers to keep using your service. Order history and reminders bring them back.",
+      "## How Abhivorn helps",
+      "We build customer apps, delivery staff apps and admin panels for service businesses, shaped around how your shop actually works. Share how you take orders today and we will suggest a simple first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can a laundry app work for a single shop?",
+        "answer": "Yes. A single shop can use an app for bookings, pickups and payments, and add more outlets later if the business grows."
+      },
+      {
+        "question": "Can customers pay cash on delivery?",
+        "answer": "Yes. You can offer online payment and cash on delivery, with delivery staff recording cash collected in their app."
+      },
+      {
+        "question": "How do I avoid mixing up garments?",
+        "answer": "Tagging each order at pickup and updating its status at each step makes it easy to see where every item is."
+      },
+      {
+        "question": "Do I need both an app and a website?",
+        "answer": "Not always. Many businesses start with an app or a simple booking website and add the other once customers ask for it."
+      }
+    ]
+  },
+  {
     "slug": "website-accessibility-guide-business-india",
     "title": "Website Accessibility Guide for Businesses",
     "excerpt": "How to make your business website easy to use for everyone, including people with low vision, older visitors and keyboard users, and why it helps your leads.",
