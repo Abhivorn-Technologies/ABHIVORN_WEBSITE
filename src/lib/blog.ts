@@ -22,6 +22,126 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "ai-product-recommendations-ecommerce-india",
+    "title": "AI Product Recommendations for E-commerce",
+    "excerpt": "How AI product recommendations help Indian online stores show the right items to each shopper, raise order value and bring customers back.",
+    "description": "A plain guide for online stores in Hyderabad and India on AI product recommendations: what they are, where to show them, data needed and how to start.",
+    "date": "2026-11-25",
+    "readTime": "6 min read",
+    "category": "AI",
+    "service": "ai-development",
+    "image": "/blog-covers/ai-product-recommendations-ecommerce-india.jpg",
+    "keywords": [
+      "AI product recommendations India",
+      "ecommerce recommendation engine Hyderabad",
+      "personalised shopping website",
+      "frequently bought together feature",
+      "AI for online store"
+    ],
+    "takeaways": [
+      "AI recommendations suggest products to each shopper based on what they and similar shoppers viewed and bought.",
+      "The most useful places are the product page, the cart, the home page and follow-up emails.",
+      "You need clean product data and some order history; a small catalogue can start with simple rules.",
+      "Measure clicks on recommendations, add-to-cart rate and average order value before and after.",
+      "Start with one or two placements, check the suggestions make sense, then expand."
+    ],
+    "content": [
+      "AI product recommendations are suggestions such as 'You may also like' or 'Frequently bought together' that an online store shows to each shopper. Instead of showing everyone the same bestsellers, the store uses browsing and order history to pick items that this person is more likely to want.",
+      "## Why it matters for an online store",
+      "Shoppers often leave when they cannot quickly find something relevant. Good suggestions help them discover more of your catalogue, add a matching item to the cart and come back later. For the business, that can mean higher order values and more repeat purchases without extra ad spend.",
+      "## Common types of recommendations",
+      "Similar products show items like the one being viewed, such as other kurtas in the same style. Frequently bought together suggests items that are often ordered as a set, such as a phone cover with a screen guard. Recently viewed and personalised picks help returning visitors continue where they left off.",
+      "## Where to show them",
+      "The product page and cart are usually the most useful places, because the shopper is already interested. The home page can show personalised picks for logged-in or returning visitors. Order confirmation and follow-up emails can suggest refills or related items.",
+      "## What data you need",
+      "You need a well-organised catalogue with clear categories, tags, prices and stock status, plus some history of views and orders. If you are just starting, simple rules such as same category and price range work well until enough data builds up for the AI to learn from.",
+      "## Keep suggestions sensible",
+      "Do not recommend items that are out of stock, far outside the shopper's price range or unrelated. Review the suggestions regularly, especially after adding new products, and let your team pin or exclude items when needed.",
+      "## Privacy and trust",
+      "Use shopping data only to improve the shopper's experience, explain it in your privacy policy and follow India's data protection rules. Avoid suggestions that feel too personal or reveal sensitive purchases.",
+      "## How Abhivorn helps",
+      "We build e-commerce websites and add AI features such as recommendations, smart search and personalised emails, starting with the placements that matter most for your store. Share your store link and catalogue size, and we will suggest a simple first step."
+    ],
+    "faqs": [
+      {
+        "question": "Do I need a large store to use AI recommendations?",
+        "answer": "No. Smaller stores can start with simple rule-based suggestions and move to AI as order and browsing data grows."
+      },
+      {
+        "question": "Can recommendations be added to my existing website?",
+        "answer": "Usually yes. Recommendations can often be added to an existing store without rebuilding it, depending on how the site and product data are set up."
+      },
+      {
+        "question": "How do I know if recommendations are working?",
+        "answer": "Track clicks on recommended items, add-to-cart rate and average order value, and compare them with the period before you added recommendations."
+      },
+      {
+        "question": "Will recommendations show out-of-stock items?",
+        "answer": "They should not. A good setup checks stock and price before showing a suggestion and lets your team exclude items."
+      }
+    ]
+  },
+  {
+    "slug": "billing-invoicing-software-small-business-india",
+    "title": "Billing & Invoicing Software: A Guide",
+    "excerpt": "How billing and invoicing software helps small businesses in India create GST-ready invoices, track payments and follow up on dues without spreadsheets.",
+    "description": "A guide for small businesses in Hyderabad and India on billing and invoicing software: GST invoices, quotes, payment tracking, reminders and reports.",
+    "date": "2026-11-25",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/billing-invoicing-software-small-business-india.jpg",
+    "keywords": [
+      "billing software small business India",
+      "invoicing software Hyderabad",
+      "GST invoice software",
+      "payment tracking and reminders",
+      "custom billing software"
+    ],
+    "takeaways": [
+      "Billing software replaces manual invoices and spreadsheets with consistent, numbered invoices in a few clicks.",
+      "Quotes can be turned into invoices, and invoices can carry your tax details in the format your accountant needs.",
+      "Payment tracking shows who has paid, who owes and how overdue each invoice is.",
+      "Automatic reminders and online payment links help you get paid faster.",
+      "Choose ready-made software for simple needs and custom software when your billing rules are unusual."
+    ],
+    "content": [
+      "Billing and invoicing software lets a business create invoices, send them to customers, record payments and see outstanding dues in one place. It replaces handwritten bills, Word templates and spreadsheets that are slow to update and easy to get wrong.",
+      "## Who it suits",
+      "It suits service businesses, agencies, distributors, clinics, training institutes, contractors and any business that sends regular invoices. If your team spends time each month chasing payments or matching bank entries to bills, it is worth considering.",
+      "## Quotes and invoices",
+      "Create a quote, get it approved and convert it into an invoice without retyping. Invoices get automatic numbers, your business and tax details, line items and totals, so every bill looks consistent. Your accountant can confirm the exact tax fields your business needs.",
+      "## Recurring billing",
+      "For retainers, subscriptions, rent or annual maintenance contracts, recurring invoices can be generated on a schedule so you never forget to bill a customer.",
+      "## Payments and reminders",
+      "Record full and part payments against each invoice and see what is pending. Invoices can include an online payment link, and polite reminders can be sent by email or SMS before and after the due date.",
+      "## Reports for owners and accountants",
+      "See sales by month, customer or service, outstanding amounts by age and collections for any period. Exports in formats your accountant uses save time at filing and year-end.",
+      "## Ready-made or custom",
+      "Ready-made billing apps work well for standard invoicing. Custom software makes sense when billing depends on your own rules, such as usage, projects, dealer pricing or multiple branches, or when it must connect to your CRM, inventory or customer portal.",
+      "## How Abhivorn helps",
+      "We build custom billing, invoicing and payment tracking systems that fit how your business charges customers, and connect them to the tools you already use. Tell us how you bill today and we will suggest the simplest path."
+    ],
+    "faqs": [
+      {
+        "question": "Can billing software create GST invoices?",
+        "answer": "Yes. Invoices can include your GSTIN, tax rates and the fields your accountant needs. Confirm the exact format for your business with your accountant."
+      },
+      {
+        "question": "Can customers pay directly from the invoice?",
+        "answer": "Yes. An online payment link can be added to each invoice, and the payment can be recorded against it automatically."
+      },
+      {
+        "question": "Can it send payment reminders automatically?",
+        "answer": "Yes. Reminders can go out by email or SMS on a schedule you set, before and after the due date."
+      },
+      {
+        "question": "Should I build custom billing software or buy one?",
+        "answer": "Buy one if your invoicing is standard. Consider custom software if your pricing rules are unusual or billing must connect closely with your other systems."
+      }
+    ]
+  },
+  {
     "slug": "google-ads-vs-meta-ads-small-business-india",
     "title": "Google Ads vs Meta Ads for Small Businesses",
     "excerpt": "When to advertise on Google search and when to use Facebook and Instagram ads, and how a small business in India can test both without wasting budget.",
