@@ -22,6 +22,126 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "expense-reimbursement-software-india",
+    "title": "Expense Reimbursement Software: A Guide",
+    "excerpt": "How expense reimbursement software helps Indian companies handle employee claims, bills, approvals and payouts without paper forms or long email chains.",
+    "description": "A guide for companies in Hyderabad and India on expense reimbursement software: mobile claims, bill uploads, approval rules, policy limits and payroll.",
+    "date": "2026-11-26",
+    "readTime": "6 min read",
+    "category": "HRMS",
+    "service": "hrms-software-development",
+    "image": "/blog-covers/expense-reimbursement-software-india.jpg",
+    "keywords": [
+      "expense reimbursement software India",
+      "employee expense management Hyderabad",
+      "travel expense claim app",
+      "expense approval workflow",
+      "HRMS expense module"
+    ],
+    "takeaways": [
+      "Expense software lets employees submit claims with photos of bills from their phone.",
+      "Approval rules route each claim to the right manager and finance person automatically.",
+      "Policy limits flag claims that are above allowed amounts before anyone approves them.",
+      "Approved claims can flow into payroll or bank payouts with a clear record.",
+      "Reports show spending by employee, team, project and category."
+    ],
+    "content": [
+      "Expense reimbursement software lets employees claim money they spent on work, such as travel, fuel, meals, client visits or small purchases, and get it paid back through a clear online process. It replaces paper forms, loose bills and long email threads with one place where claims are submitted, approved and paid.",
+      "## Who needs it",
+      "It suits companies with field sales teams, service engineers, consultants who travel, and any business where employees regularly spend on behalf of the company. As the team grows, tracking claims in spreadsheets becomes slow and error-prone.",
+      "## Submitting claims from a phone",
+      "Employees add an expense, choose a category, enter the amount and take a photo of the bill. Trips or projects can group several expenses into one claim, so nothing gets lost between the journey and the office.",
+      "## Approval rules",
+      "Each claim goes to the right approver based on rules you set, such as the reporting manager first, then finance for amounts above a limit. Approvers can approve, reject or ask for more details with a comment, and the employee sees the status at every step.",
+      "## Policy limits and checks",
+      "You can set limits per category, grade or city, such as a daily food allowance or a per-kilometre fuel rate. Claims that cross a limit or repeat the same bill are flagged before approval, which saves finance teams from checking every line by hand.",
+      "## Payouts and payroll",
+      "Approved claims can be added to the next payroll run or paid separately, with each payout linked back to its claim. Advances given before a trip can be adjusted against the final claim.",
+      "## Reports",
+      "Managers and finance can see spending by person, team, project, client or category over any period, and export the data for accounting.",
+      "## How Abhivorn helps",
+      "We build HR and expense systems that match your approval rules and policies, as part of a full HRMS or as a standalone module. Tell us how claims are handled today and we will suggest a simple first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can employees submit expenses from their phones?",
+        "answer": "Yes. Employees can add expenses and upload bill photos from a mobile app or a mobile-friendly web page."
+      },
+      {
+        "question": "Can different approval rules apply to different teams?",
+        "answer": "Yes. Approval steps can depend on the team, the employee's grade, the expense category or the amount."
+      },
+      {
+        "question": "Can reimbursements be paid with salary?",
+        "answer": "Yes. Approved claims can be added to payroll or paid separately, depending on how your company prefers to work."
+      },
+      {
+        "question": "Does it work with our existing HR software?",
+        "answer": "Often yes. An expense module can connect with your current HR or payroll system, or be built as part of a new HRMS."
+      }
+    ]
+  },
+  {
+    "slug": "home-sample-collection-app-diagnostic-lab-india",
+    "title": "Home Sample Collection App for Labs",
+    "excerpt": "How diagnostic labs in India can use an app to book home sample collections, assign phlebotomists, track pickups and share reports online.",
+    "description": "A guide for diagnostic labs in Hyderabad and India on home sample collection apps: booking slots, phlebotomist routes, sample tracking, payments and reports.",
+    "date": "2026-11-26",
+    "readTime": "6 min read",
+    "category": "Healthcare",
+    "service": "healthcare-software-development",
+    "image": "/blog-covers/home-sample-collection-app-diagnostic-lab-india.jpg",
+    "keywords": [
+      "home sample collection app India",
+      "diagnostic lab app Hyderabad",
+      "phlebotomist booking app",
+      "lab test booking software",
+      "home blood test booking"
+    ],
+    "takeaways": [
+      "A home collection app lets patients book tests and choose a pickup slot without calling the lab.",
+      "Labs can assign phlebotomists by area and see each person's visits for the day.",
+      "Tracking each sample from pickup to the lab reduces mix-ups and delays.",
+      "Online payment and digital reports make the visit faster for patients.",
+      "Patient health data must be stored securely and shared only with consent."
+    ],
+    "content": [
+      "A home sample collection app lets patients book lab tests online and have a trained collector visit their home to take samples. For the lab, it brings bookings, collector schedules, sample tracking, payments and reports into one system instead of phone calls and paper slips.",
+      "## Who it suits",
+      "It suits standalone diagnostic labs, lab chains with several collection centres, and clinics that offer home visits for elderly patients, regular monitoring or busy families.",
+      "## Booking tests and slots",
+      "Patients choose tests or packages, see preparation instructions such as fasting, enter their address and pick a time slot. Limiting bookings per slot and per area keeps your collectors' day realistic.",
+      "## Assigning collectors",
+      "Bookings can be assigned to phlebotomists by area and time. Each collector sees their visits, patient details, tests to collect and the right tubes or containers in their own app.",
+      "## Sample tracking",
+      "Each sample can be labelled with a barcode at the patient's home and scanned again when it reaches the lab. Status updates such as collected, received and reported help the team find any delay quickly.",
+      "## Payments and reports",
+      "Patients can pay online at booking or at the visit, with the collector recording cash where needed. Once results are ready, reports can be shared securely in the app or by email.",
+      "## Privacy and data protection",
+      "Health information is sensitive personal data. Access should be limited by role, data should be encrypted, and reports should only be shared with the patient or people they have allowed, in line with India's data protection rules.",
+      "## How Abhivorn helps",
+      "We build healthcare apps and lab software for patients, collectors and lab staff, designed around how your lab works. We also offer VORQARD, our connected healthcare platform for patients, doctors, labs and pharmacies. Tell us how home collections run today and we will suggest a simple first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can patients book home collection without calling the lab?",
+        "answer": "Yes. Patients can choose tests, pick a time slot and enter their address in the app or on a booking website."
+      },
+      {
+        "question": "How are samples kept from getting mixed up?",
+        "answer": "Each sample can be barcoded at collection and scanned on arrival at the lab, so its status and owner are always clear."
+      },
+      {
+        "question": "Can collectors accept cash payments?",
+        "answer": "Yes. The collector app can record cash received, alongside online payments made at booking."
+      },
+      {
+        "question": "How are patient reports kept private?",
+        "answer": "Reports are shared only with the patient or people they authorise, with role-based access and encrypted storage."
+      }
+    ]
+  },
+  {
     "slug": "ai-product-recommendations-ecommerce-india",
     "title": "AI Product Recommendations for E-commerce",
     "excerpt": "How AI product recommendations help Indian online stores show the right items to each shopper, raise order value and bring customers back.",
