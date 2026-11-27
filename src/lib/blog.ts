@@ -22,6 +22,126 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "warehouse-management-system-india",
+    "title": "Warehouse Management Software: A Guide",
+    "excerpt": "How warehouse management software helps Indian distributors and sellers track stock by location, pick and pack orders faster and reduce dispatch errors.",
+    "description": "A guide for businesses in Hyderabad and India on warehouse management software: bin locations, barcode scanning, picking, dispatch and stock reports.",
+    "date": "2026-11-27",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/warehouse-management-system-india.jpg",
+    "keywords": [
+      "warehouse management software India",
+      "WMS Hyderabad",
+      "barcode stock tracking",
+      "order picking and dispatch software",
+      "custom warehouse software"
+    ],
+    "takeaways": [
+      "Warehouse software shows exactly where each item sits, down to the rack and bin.",
+      "Barcode scanning at receiving, picking and dispatch reduces manual entry mistakes.",
+      "Pick lists can be grouped by location so staff walk less and pack faster.",
+      "Live stock levels help avoid selling items that are not actually on the shelf.",
+      "Start with receiving, locations and dispatch, then add returns and reports."
+    ],
+    "content": [
+      "Warehouse management software (WMS) helps a business track every item in its warehouse: what came in, where it was stored, what was picked for an order and what left the building. It replaces paper registers and spreadsheets with live records that the whole team can see.",
+      "## Who needs it",
+      "It suits distributors, wholesalers, online sellers, manufacturers with finished goods stores and businesses running more than one godown. If staff often search for items, ship the wrong product or find stock counts that do not match the system, it is worth looking at.",
+      "## Receiving stock",
+      "When goods arrive, staff check them against the purchase order, scan or enter quantities and note any damage or shortage. Each item is then given a storage location so it can be found later.",
+      "## Locations and bins",
+      "The warehouse is mapped into zones, racks and bins. The software records which items sit in which bin, so anyone can find stock quickly, and new staff do not depend on someone's memory.",
+      "## Picking, packing and dispatch",
+      "Orders become pick lists sorted by location, so staff move through the warehouse in a sensible route. Scanning each item while picking confirms the right product and quantity before packing, and dispatch records note the courier or vehicle used.",
+      "## Stock counts and reports",
+      "Cycle counts let you check a few bins each day instead of closing for a full count. Reports show stock by location, slow-moving items, items near expiry and daily dispatch volumes.",
+      "## Connecting with other systems",
+      "A WMS works best when it shares data with your billing, inventory, online store or marketplace accounts, so orders flow in and stock levels stay correct everywhere.",
+      "## How Abhivorn helps",
+      "We build custom warehouse and inventory software around how your godown actually works, with mobile scanning for staff and dashboards for owners. Tell us how stock moves today and we will suggest a simple first version."
+    ],
+    "faqs": [
+      {
+        "question": "Do we need barcode scanners to use warehouse software?",
+        "answer": "Not always. Many teams start with mobile phones that scan barcodes through the camera and add dedicated scanners later if volumes grow."
+      },
+      {
+        "question": "Can it manage more than one warehouse?",
+        "answer": "Yes. Stock, transfers and reports can be tracked separately for each warehouse and combined for an overall view."
+      },
+      {
+        "question": "Can it connect with our online store or billing software?",
+        "answer": "Usually yes. Orders and stock levels can be synced with your store, marketplace accounts or billing system, depending on what those systems allow."
+      },
+      {
+        "question": "What is the best place to start?",
+        "answer": "Start with receiving, bin locations and dispatch. Once those run smoothly, add cycle counts, returns and detailed reports."
+      }
+    ]
+  },
+  {
+    "slug": "property-management-rent-collection-software-india",
+    "title": "Property Management Software: A Guide",
+    "excerpt": "How property management software helps landlords, PG owners and builders in India track units, tenants, rent, maintenance requests and agreements in one place.",
+    "description": "A guide for landlords and property managers in Hyderabad and India on property management software: tenants, rent reminders, maintenance and reports.",
+    "date": "2026-11-27",
+    "readTime": "6 min read",
+    "category": "Custom Software",
+    "service": "custom-software-development",
+    "image": "/blog-covers/property-management-rent-collection-software-india.jpg",
+    "keywords": [
+      "property management software India",
+      "rent collection app Hyderabad",
+      "PG and hostel management software",
+      "tenant management system",
+      "landlord software India"
+    ],
+    "takeaways": [
+      "Property software keeps units, tenants, agreements and rent records in one place.",
+      "Automatic reminders and online payment links help rent arrive on time.",
+      "Tenants can raise maintenance requests with photos and track their status.",
+      "Owners see occupancy, dues and expenses for each property at a glance.",
+      "Tenant documents and personal details must be stored securely."
+    ],
+    "content": [
+      "Property management software helps landlords and property managers handle rented units without notebooks, scattered chats and bank statement checks. It keeps track of which unit is let to whom, what rent is due, what has been paid and which repairs are pending.",
+      "## Who it suits",
+      "It suits landlords with several flats, PG and hostel owners, co-living operators, builders who rent out commercial or residential space, and agencies that manage properties for owners.",
+      "## Units and tenants",
+      "Each property is broken into units, rooms or beds. Tenant profiles hold contact details, move-in dates, deposit amounts and agreement documents, so you always know who is staying where and on what terms.",
+      "## Rent and reminders",
+      "Rent, maintenance charges and utility bills can be raised automatically each month. Tenants get reminders before the due date and can pay through an online link, and payments are recorded against the right unit without manual matching.",
+      "## Maintenance requests",
+      "Tenants can report a problem with a short note and photos. The request is assigned to a staff member or vendor, and both the tenant and owner can see when it is resolved.",
+      "## Owner reports",
+      "Owners can see occupancy, collected and pending rent, deposits held and expenses for each property. Agencies managing properties for others can share separate statements with each owner.",
+      "## Privacy and documents",
+      "Tenant ID proofs and agreements are personal data. Access should be limited by role, files stored securely and records handled in line with India's data protection rules.",
+      "## How Abhivorn helps",
+      "We build property and rental management software for landlords, PG operators and real estate businesses, with apps for tenants and dashboards for owners. Share how you manage properties today and we will suggest a simple first version."
+    ],
+    "faqs": [
+      {
+        "question": "Can tenants pay rent online through the software?",
+        "answer": "Yes. Rent invoices can include an online payment link, and payments are recorded automatically against the tenant's unit."
+      },
+      {
+        "question": "Does it work for PGs and hostels with beds instead of flats?",
+        "answer": "Yes. Properties can be set up by flat, room or bed, so PG and hostel owners can track each bed's occupancy and rent."
+      },
+      {
+        "question": "Can I manage properties in different cities?",
+        "answer": "Yes. Each property can be tracked separately, with combined reports across all locations."
+      },
+      {
+        "question": "How are tenant documents kept safe?",
+        "answer": "Documents are stored securely with role-based access, so only authorised staff and the owner can view them."
+      }
+    ]
+  },
+  {
     "slug": "expense-reimbursement-software-india",
     "title": "Expense Reimbursement Software: A Guide",
     "excerpt": "How expense reimbursement software helps Indian companies handle employee claims, bills, approvals and payouts without paper forms or long email chains.",
